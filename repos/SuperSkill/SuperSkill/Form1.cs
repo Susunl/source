@@ -55,10 +55,10 @@ namespace SuperSkill
             while (i <= 0x5000)
             {
                 技能地址 = (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID,(uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID,基址.人物基址)+i);
-                技能等级 = EncDec.Decrypt(全局变量.进程ID,技能地址+基址.技能等级偏移,基址.解密基址);
+                技能等级 = EncDec.Decrypt(全局变量.进程ID,技能地址+基址.技能等级,基址.解密基址);
                 if (技能等级 >= 0 && 技能等级 < 100)
                 {
-                    技能名称 = TransCtr.UnicodeToAnsi(ReadWriteCtr.ReadMemByteArray(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能名称偏移), 50));
+                    技能名称 = TransCtr.UnicodeToAnsi(ReadWriteCtr.ReadMemByteArray(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能名称), 50));
                     if (技能名称.Length > 1 && 技能名称.IndexOf("?") == -1&&技能名称.IndexOf("不使用") == -1&&总技能.IndexOf(技能名称)==-1&&技能等级>0)
                     {
                         this.ListView_Skill.Update();
@@ -81,15 +81,15 @@ namespace SuperSkill
             //int 技能等级代码;
             全局变量.技能名 = this.ListView_Skill.SelectedItems[0].SubItems[1].Text;
             技能地址1 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, 基址.人物基址) + Convert.ToUInt32(this.ListView_Skill.SelectedItems[0].Text));
-            技能等级 = EncDec.Decrypt(全局变量.进程ID, (uint)技能地址1 + 基址.技能等级偏移, 基址.解密基址);
+            技能等级 = EncDec.Decrypt(全局变量.进程ID, (uint)技能地址1 + 基址.技能等级, 基址.解密基址);
             this.ListView_SkillProperties.Items.Clear(); //清空ListView_SkillProperties内容
-            技能CD = EncDec.Decrypt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.技能冷却1偏移) + 8*(uint)(技能等级-1), 基址.解密基址) / 1000;
+            技能CD = EncDec.Decrypt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.技能冷却1) + 8*(uint)(技能等级-1), 基址.解密基址) / 1000;
             label1.Text = "当前技能cd为:" + 技能CD + "秒";
             //第一层遍历
             i1 = 0;
             while (i1 < 13)
             {
-                技能地址2 = (uint)Math.Abs(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能偏移)) + i1)) + 20));
+                技能地址2 = (uint)Math.Abs(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能)) + i1)) + 20));
 
                 if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1 && 技能地址2 > 1000000000)
                 {
@@ -99,7 +99,7 @@ namespace SuperSkill
                         技能数据2 = TransCtr.FloatToInt(技能数据);
                         this.ListView_SkillProperties.Update();
                         ListViewItem lvi = this.ListView_SkillProperties.Items.Add(技能数据2);       //liseview添加项
-                        lvi.SubItems.Add(this.ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能偏移) + "+" + Convert.ToString(i1) + "+20");      //添加次级项
+                        lvi.SubItems.Add(this.ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能) + "+" + Convert.ToString(i1) + "+20");      //添加次级项
                         lvi.SubItems.Add(Convert.ToString(技能地址2));
                         this.ListView_SkillProperties.EndUpdate();
                         总技能公式 = 总技能公式 + " " + Convert.ToString(技能地址2);
@@ -116,7 +116,7 @@ namespace SuperSkill
                 i2 = 0;
                 while (i2 < 13)
                 {
-                    技能地址2 = (uint)Math.Abs(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能偏移)) + i1)) + i2)) + 20));
+                    技能地址2 = (uint)Math.Abs(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能)) + i1)) + i2)) + 20));
 
                     if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1 && 技能地址2 > 10000000)
                     {
@@ -126,7 +126,7 @@ namespace SuperSkill
                             技能数据2 = TransCtr.FloatToInt(技能数据);
                             this.ListView_SkillProperties.Update();
                             ListViewItem lvi = this.ListView_SkillProperties.Items.Add(技能数据2);       //liseview添加项
-                            lvi.SubItems.Add(this.ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能偏移) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+20");      //添加次级项
+                            lvi.SubItems.Add(this.ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+20");      //添加次级项
                             lvi.SubItems.Add(Convert.ToString(技能地址2));
                             this.ListView_SkillProperties.EndUpdate();
                             总技能公式 = 总技能公式 + " " + Convert.ToString(技能地址2);
@@ -146,7 +146,7 @@ namespace SuperSkill
                     i3 = 0;
                     while (i3 < 13)
                     {
-                        技能地址2 = (uint)Math.Abs(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能偏移)) + i1)) + i2)) + i3)) + 20));
+                        技能地址2 = (uint)Math.Abs(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能)) + i1)) + i2)) + i3)) + 20));
 
                         if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1 && 技能地址2 > 10000000)
                         {
@@ -156,7 +156,7 @@ namespace SuperSkill
                                 技能数据2 = TransCtr.FloatToInt(技能数据);
                                 this.ListView_SkillProperties.Update();
                                 ListViewItem lvi = this.ListView_SkillProperties.Items.Add(技能数据2);       //liseview添加项
-                                lvi.SubItems.Add(this.ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能偏移) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+" + Convert.ToString(i3) + "+20");      //添加次级项
+                                lvi.SubItems.Add(this.ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+" + Convert.ToString(i3) + "+20");      //添加次级项
                                 lvi.SubItems.Add(Convert.ToString(技能地址2));
                                 this.ListView_SkillProperties.EndUpdate();
                                 总技能公式 = 总技能公式 + " " + Convert.ToString(技能地址2);
@@ -181,7 +181,7 @@ namespace SuperSkill
                         i4 = 0;
                         while (i4 < 13)
                         {
-                            技能地址2 = (uint)Math.Abs(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能偏移)) + i1)) + i2)) + i3)) + i4)) + 20));
+                            技能地址2 = (uint)Math.Abs(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能)) + i1)) + i2)) + i3)) + i4)) + 20));
 
                             if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1 && 技能地址2 > 10000000)
                             {
@@ -191,7 +191,7 @@ namespace SuperSkill
                                     技能数据2 = TransCtr.FloatToInt(技能数据);
                                     this.ListView_SkillProperties.Update();
                                     ListViewItem lvi = this.ListView_SkillProperties.Items.Add(技能数据2);       //liseview添加项
-                                    lvi.SubItems.Add(this.ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能偏移) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+" + Convert.ToString(i3) + "+" + Convert.ToString(i4) + "+20");      //添加次级项
+                                    lvi.SubItems.Add(this.ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+" + Convert.ToString(i3) + "+" + Convert.ToString(i4) + "+20");      //添加次级项
                                     lvi.SubItems.Add(Convert.ToString(技能地址2));
                                     this.ListView_SkillProperties.EndUpdate();
                                     总技能公式 = 总技能公式 + " " + Convert.ToString(技能地址2);
@@ -221,7 +221,7 @@ namespace SuperSkill
                             i5 = 0;
                             while (i5 < 13)
                             {
-                                技能地址2 = (uint)Math.Abs(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能偏移)) + i1)) + i2)) + i3)) + i4)) + i5)) + 20));
+                                技能地址2 = (uint)Math.Abs(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能)) + i1)) + i2)) + i3)) + i4)) + i5)) + 20));
 
                                 if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1 && 技能地址2 > 10000000)
                                 {
@@ -231,7 +231,7 @@ namespace SuperSkill
                                         技能数据2 = TransCtr.FloatToInt(技能数据);
                                         this.ListView_SkillProperties.Update();
                                         ListViewItem lvi = this.ListView_SkillProperties.Items.Add(技能数据2);       //liseview添加项
-                                        lvi.SubItems.Add(this.ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能偏移) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+" + Convert.ToString(i3) + "+" + Convert.ToString(i4) + "+" + Convert.ToString(i5) + "+20");      //添加次级项
+                                        lvi.SubItems.Add(this.ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+" + Convert.ToString(i3) + "+" + Convert.ToString(i4) + "+" + Convert.ToString(i5) + "+20");      //添加次级项
                                         lvi.SubItems.Add(Convert.ToString(技能地址2));
                                         this.ListView_SkillProperties.EndUpdate();
                                         总技能公式 = 总技能公式 + " " + Convert.ToString(技能地址2);
@@ -299,7 +299,7 @@ namespace SuperSkill
                     index2 = this.ListView_SkillProperties_Edit.Items[i].SubItems[0].Text.IndexOf("+", index + 1);   //公式第一个+号位置
                     t_pet = Convert.ToUInt32(this.ListView_SkillProperties_Edit.Items[i].SubItems[0].Text.Substring(index + 1, index2 - index - 1));  //技能偏移
                     t_skilladd = (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, 基址.人物基址) + t_pet);   //技能地址
-                    t_level = EncDec.Decrypt(全局变量.进程ID, (uint)t_skilladd + 基址.技能等级偏移, 基址.解密基址);   //技能等级
+                    t_level = EncDec.Decrypt(全局变量.进程ID, (uint)t_skilladd + 基址.技能等级, 基址.解密基址);   //技能等级
                     Thread.Sleep(30);   //延迟30毫秒
                     t_add = (uint)ReadWriteCtr.ReadMemCode(全局变量.进程ID, Convert.ToString(基址.人物基址) + "+" + this.ListView_SkillProperties_Edit.Items[i].SubItems[0].Text);
                     //加密

@@ -10,7 +10,7 @@ namespace SuperSkill
     {
         public static void 释放call(int 人物基质,int X坐标,int Y坐标,int Z坐标,int 代码,int 伤害)
         {
-            int 释放地址 = (int)基址.释放call;
+            int 释放地址 = (int)基址.释放CALL;
             SslnEngine.Asm asm = new SslnEngine.Asm();
             asm.Push(Z坐标);
             asm.Push(Y坐标);
