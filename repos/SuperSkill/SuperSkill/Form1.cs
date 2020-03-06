@@ -427,5 +427,27 @@ namespace SuperSkill
             }
             base.WndProc(ref m);
         }
+
+        private void 测试_Click(object sender, EventArgs e)
+        {
+            //call.释放call(基址.人物基址, 800, 255, 0, 54106, 0);
+            //byte[] i1 = { 233 };
+            //byte[] i2 = { 233 };
+            //byte[] i3 = { 233 };
+            //byte[] i4 = { 233 };
+            //byte[] i5 = { 233 };
+            //ReadWriteCtr.WriteMemByteArray(全局变量.进程ID, 0x400400, 转换.数组加法(i1, i2, i3, i4, i5), 0);
+            //string str = System.Text.Encoding.Default.GetString(转换.数组加法(i1, i2, i3, i4, i5));
+            //MessageBox.Show(str, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            功能.独家变怪();
+        }
+
+        private void 独家变怪_CheckedChanged(object sender, EventArgs e)
+        {
+            if (独家变怪.Checked == true)
+                功能.独家变怪();
+            else
+                功能.独家变怪DisAble();
+        }
     }
 }

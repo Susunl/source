@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-
+using ReadWrite;
+using SuperSkill;
 namespace SslnEngine
 {
     /// <summary>
@@ -12,7 +13,7 @@ namespace SslnEngine
         [DllImport("kernel32.dll")]
         public static extern int WaitForSingleObject(int hHandle, int dwMilliseconds);
         [DllImport("kernel32.dll")]
-        public static extern int GetProcAddress(int hModule,string lpProcName);
+        public static extern int GetProcAddress(int hModule, string lpProcName);
         [DllImport("kernel32.dll")]
         public static extern int GetModuleHandleA(string lpModuleName);
         [DllImport("kernel32.dll", EntryPoint = "CloseHandle")]
@@ -1371,6 +1372,20 @@ namespace SslnEngine
         {
             this.Asmcode = this.Asmcode + "FFE0";
         }
+        public byte[] JMP(uint 跳到地址, uint 内存地址, byte[] 附加字节)
+        {
+            uint JMP_跳转 = 跳到地址 - 内存地址 - 5;
+            byte[] i = { 233 };
+            //ReadWriteCtr.WriteMemByteArray((uint)内存地址, 转换.数组加法(i, 转换.到字节集(JMP_跳转),附加字节));
+            return 转换.数组加法(i, 转换.到字节集(JMP_跳转), 附加字节);
+        }
+        public byte[] JMP(uint 跳到地址, uint 内存地址)
+        {
+            uint JMP_跳转 = 跳到地址 - 内存地址 - 5;
+            byte[] i = { 233 };
+            //ReadWriteCtr.WriteMemByteArray((uint)内存地址,转换.数组加法(i,转换.到字节集(JMP_跳转)));
+            return 转换.数组加法(i, 转换.到字节集(JMP_跳转));
+        }
         #endregion
 
         #region Add by hcaihao.
@@ -1412,23 +1427,35 @@ namespace SslnEngine
         }
 
         #endregion
-
+        public byte[] 取汇编代码()
+        {
+            byte[] Asm = this.AsmChangebytes(this.Asmcode);
+            return Asm;
+        }
+        public void 清空汇编代码()
+        {
+            byte[] Asm = this.AsmChangebytes(this.Asmcode);
+            this.Asmcode = "";
+        }
 
         public void RunAsm(int pid)
         {
             int hwnd, addre, threadhwnd;
+            Ret();
             byte[] Asm = this.AsmChangebytes(this.Asmcode);
             if (pid != 0)
             {
                 hwnd = OpenProcess(PROCESS_ALL_ACCESS | PROCESS_CREATE_THREAD | PROCESS_VM_WRITE, 0, pid);
                 if (hwnd != 0)
                 {
-                    addre = 0x400500;// VirtualAllocEx(hwnd, 0, Asm.Length, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+                    addre = 0x400E00;// VirtualAllocEx(hwnd, 0, Asm.Length, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
                     int CallWindowProcA_addr = GetProcAddress(GetModuleHandleA("user32.dll"), "CallWindowProcA");
                     WriteProcessMemory(hwnd, addre, Asm, Asm.Length, 0);
                     threadhwnd = CreateRemoteThread(hwnd, 0, 0, CallWindowProcA_addr, addre, 0, 0);
                     WaitForSingleObject(threadhwnd, -1);
-                    VirtualFreeEx(hwnd, addre, Asm.Length, MEM_RELEASE);
+                    byte[] RAsm = new byte[Asm.Length];
+                    WriteProcessMemory(hwnd, addre, RAsm, RAsm.Length, 0);
+                    //VirtualFreeEx(hwnd, addre, Asm.Length, MEM_RELEASE);
                     CloseHandle(threadhwnd);
                     CloseHandle(hwnd);
                 }

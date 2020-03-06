@@ -58,6 +58,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.测试 = new System.Windows.Forms.Button();
+            this.独家变怪 = new System.Windows.Forms.CheckBox();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -305,11 +307,34 @@
             this.checkBox4.UseVisualStyleBackColor = true;
             this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
+            // 测试
+            // 
+            this.测试.Location = new System.Drawing.Point(544, 12);
+            this.测试.Name = "测试";
+            this.测试.Size = new System.Drawing.Size(75, 23);
+            this.测试.TabIndex = 24;
+            this.测试.Text = "测试";
+            this.测试.UseVisualStyleBackColor = true;
+            this.测试.Click += new System.EventHandler(this.测试_Click);
+            // 
+            // 独家变怪
+            // 
+            this.独家变怪.AutoSize = true;
+            this.独家变怪.Location = new System.Drawing.Point(544, 101);
+            this.独家变怪.Name = "独家变怪";
+            this.独家变怪.Size = new System.Drawing.Size(72, 16);
+            this.独家变怪.TabIndex = 25;
+            this.独家变怪.Text = "独家变怪";
+            this.独家变怪.UseVisualStyleBackColor = true;
+            this.独家变怪.CheckedChanged += new System.EventHandler(this.独家变怪_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 410);
+            this.Controls.Add(this.独家变怪);
+            this.Controls.Add(this.测试);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label3);
@@ -368,6 +393,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.Button 测试;
+        private System.Windows.Forms.CheckBox 独家变怪;
     }
 }
 

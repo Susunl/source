@@ -25,6 +25,7 @@ namespace SuperSkill
         public const uint 攻击速度1 = 2616;//A38 7度_获取
         public const uint 移动速度1 = 2608;//A30 7度_获取
         public const uint 释放速度1 = 2624;//A40 7度_获取
+        public const uint 独家变怪 = 0x2C7F3C3;
 
 
         public const uint 战令基址 = 103437504;//62A54C0 7度_获取

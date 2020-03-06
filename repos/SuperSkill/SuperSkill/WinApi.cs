@@ -94,7 +94,24 @@ namespace ReadWrite
             else
                 return BitConverter.ToInt32(temp, 0);
         }
+        public static int ReadMemInt(uint Address)
+        {
+            //声明变量
+            int a = 0;
+            byte[] temp = new byte[4];
+            IntPtr handle = new IntPtr();
 
+            if (全局变量.进程ID == -1)    //-1读取自进程
+                handle = ProcessAPI.GetCurrentProcess();
+            else
+                handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS, false, 全局变量.进程ID); //获取句柄
+            a = ReadWriteAPI.ReadProcessMemory(handle, Address, temp, 4, 0);
+            ProcessAPI.CloseHandle(handle); //关闭对象
+            if (a == 0)
+                return -1;  //读取失败返回-1
+            else
+                return BitConverter.ToInt32(temp, 0);
+        }
 
         /// <summary>
         /// 读内存字节集
@@ -103,7 +120,7 @@ namespace ReadWrite
         /// <param name="Address">地址 无符号整数型</param>
         /// <param name="Size">读取长度 0为智能读取</param>
         /// <returns>返回字节数组，失败返回空字节集</returns>
-        public static byte[] ReadMemByteArray(int ProcessID, uint Address, int Size)
+        public static byte[] ReadMemByteArray(int ProcessID, uint Address, int Size = 0)
         {
             //声明变量
             int a, t_size = 0;
@@ -132,7 +149,35 @@ namespace ReadWrite
             }
 
         }
+        public static byte[] ReadMemByteArray(uint Address, int Size = 0)
+        {
+            //声明变量
+            int a, t_size = 0;
+            IntPtr handle = new IntPtr();
+            ReadWriteAPI.MemAttribute mematt = new ReadWriteAPI.MemAttribute();
 
+            t_size = Size;
+            if (全局变量.进程ID == -1)    //-1读取自进程
+                handle = ProcessAPI.GetCurrentProcess();
+            else
+                handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS, false, 全局变量.进程ID); //获取句柄
+            if (t_size == 0)        //大小为0智能读取
+            {
+                ReadWriteAPI.VirtualQueryEx(handle, Address, mematt, 28);
+                t_size = mematt.Size + mematt.RegBaseAdd - (int)Address;
+            }
+            byte[] temp = new byte[t_size];
+            a = ReadWriteAPI.ReadProcessMemory(handle, Address, temp, t_size, 0);
+            ProcessAPI.CloseHandle(handle); //关闭对象
+            if (a != 0)
+                return temp;
+            else
+            {
+                byte[] falsedata = new byte[1];     //失败返回空字节集
+                return falsedata;
+            }
+
+        }
 
         /// <summary>
         /// 读内存整数型2
@@ -141,24 +186,24 @@ namespace ReadWrite
         /// <param name="Address">地址</param>
         /// <param name="Offsets">偏移量 整数数组</param>
         /// <returns>返回读取值，失败返回-1</returns>
-        public static int ReadMemInt2(int ProcessID, uint Address, uint[] Offsets)
+        public static int ReadMemInt2(uint Address, uint[] Offsets)
         {
             //声明变量
             int t_data = 0;
             uint t_add = Address;
             IntPtr handle = new IntPtr();
 
-            if (ProcessID == -1)    //-1读取自进程
+            if (全局变量.进程ID == -1)    //-1读取自进程
                 handle = ProcessAPI.GetCurrentProcess();
             else
-                handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS, false, ProcessID); //获取句柄
+                handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS, false, 全局变量.进程ID); //获取句柄
 
             for (int i = 0; i < Offsets.Length; i++)
             {
-                t_data = ReadMemInt(ProcessID, t_add);
+                t_data = ReadMemInt(全局变量.进程ID, t_add);
                 t_add = (uint)t_data + Offsets[i];
             }
-            t_data = ReadMemInt(ProcessID, t_add);
+            t_data = ReadMemInt(全局变量.进程ID, t_add);
             ProcessAPI.CloseHandle(handle); //关闭对象
             if (t_data == 0)
                 return -1;  //失败返回-1
@@ -195,9 +240,32 @@ namespace ReadWrite
             }
             index1 = t_add.LastIndexOf("+");
             offsets[offsets.Length - 1] = Convert.ToUInt32(t_add.Substring(index1 + 1, t_add.Length - index1 - 1));
-            return ReadMemInt2(ProcessID, baseadd, offsets);
+            return ReadMemInt2(baseadd, offsets);
         }
+        public static int ReadMemCode(string Address)
+        {
+            //声明变量
+            uint baseadd = 0;
+            int index1 = -1, index2 = 0, count = 0;
+            string t_add = Address;
 
+            if (t_add.Length < 2)   //地址小于2位数即地址错误，返回-1
+                return -1;
+            count = t_add.Length - t_add.Replace("+", "").Length;   //计算有几个+号，用总长度-去除+号后的长度，即+号数量
+            uint[] offsets = new uint[count];                       //声明新数组，储存偏移
+            index2 = t_add.IndexOf("+", index1 + 1);                //获得首个+号位置
+            baseadd = Convert.ToUInt32(t_add.Substring(index1 + 1, index2 - index1 - 1));   //获得基址
+            index1 = index2;
+            for (int i = 0; i < (count - 1); i++)                   //循环获得偏移
+            {
+                index2 = t_add.IndexOf("+", index1 + 1);
+                offsets[i] = Convert.ToUInt32(t_add.Substring(index1 + 1, index2 - index1 - 1));
+                index1 = index2;
+            }
+            index1 = t_add.LastIndexOf("+");
+            offsets[offsets.Length - 1] = Convert.ToUInt32(t_add.Substring(index1 + 1, t_add.Length - index1 - 1));
+            return ReadMemInt2(baseadd, offsets);
+        }
 
         /// <summary>
         /// 写内存整数型
@@ -225,7 +293,25 @@ namespace ReadWrite
             else
                 return true;
         }
+        public static bool WriteMemInt(uint Address, int Data)
+        {
+            //声明变量
+            int a = 0;
+            IntPtr handle = new IntPtr();
+            byte[] temp = new byte[4];
+            temp = BitConverter.GetBytes(Data);
 
+            if (全局变量.进程ID == -1)    //-1为自进程
+                handle = ProcessAPI.GetCurrentProcess();
+            else
+                handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS, false, 全局变量.进程ID); //获取句柄
+            a = ReadWriteAPI.WriteProcessMemory(handle, Address, temp, 4, 0);
+            ProcessAPI.CloseHandle(handle); //关闭对象
+            if (a == 0)         //返回bool型
+                return false;
+            else
+                return true;
+        }
 
         /// <summary>
         /// 写内存字节集
@@ -235,7 +321,7 @@ namespace ReadWrite
         /// <param name="Data">写入数据 字节数组型</param>
         /// <param name="Size">写入长度 0为完整长度</param>
         /// <returns>返回是否成功</returns>
-        public static bool WriteMemByteArray(int ProcessID, uint Address, byte[] Data, int Size)
+        public static bool WriteMemByteArray(int ProcessID, uint Address, byte[] Data, int Size = 0)
         {
             //声明变量
             int a = 0;
@@ -245,6 +331,26 @@ namespace ReadWrite
                 handle = ProcessAPI.GetCurrentProcess();
             else
                 handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS, false, ProcessID); //获取句柄
+            if (Size == 0)
+                a = ReadWriteAPI.WriteProcessMemory(handle, Address, Data, Data.Length, 0);
+            else
+                a = ReadWriteAPI.WriteProcessMemory(handle, Address, Data, Size, 0);
+            ProcessAPI.CloseHandle(handle); //关闭对象
+            if (a == 0)         //返回bool型
+                return false;
+            else
+                return true;
+        }
+        public static bool WriteMemByteArray(uint Address, byte[] Data, int Size = 0)
+        {
+            //声明变量
+            int a = 0;
+            IntPtr handle = new IntPtr();
+
+            if (全局变量.进程ID == -1)    //-1为自进程
+                handle = ProcessAPI.GetCurrentProcess();
+            else
+                handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS, false, 全局变量.进程ID); //获取句柄
             if (Size == 0)
                 a = ReadWriteAPI.WriteProcessMemory(handle, Address, Data, Data.Length, 0);
             else
@@ -451,6 +557,23 @@ namespace EncryptionDecrypt
             esi = edx << 16;
             esi = esi | edx;
             esi = esi ^ ReadWriteCtr.ReadMemInt(ProcessID, Address + 4);
+            return (esi);
+        }
+        public static int Decrypt(uint Address, uint DecryptionAdd)
+        {
+            //声明变量
+            int eax, edx, esi = 0;
+
+            eax = ReadWriteCtr.ReadMemInt(全局变量.进程ID, Address);
+            esi = ReadWriteCtr.ReadMemInt(全局变量.进程ID, DecryptionAdd);
+            edx = eax >> 16;
+            edx = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(esi + edx * 4 + 36));
+            eax = eax & 65535;
+            eax = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(edx + eax * 4 + 8468));
+            edx = eax & 65535;
+            esi = edx << 16;
+            esi = esi | edx;
+            esi = esi ^ ReadWriteCtr.ReadMemInt(全局变量.进程ID, Address + 4);
             return (esi);
         }
     }

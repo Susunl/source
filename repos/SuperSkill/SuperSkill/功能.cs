@@ -3,6 +3,7 @@ using ReadWrite;
 using System;
 using System.Windows.Forms;
 using Transform;
+using SslnEngine;
 
 namespace SuperSkill
 {
@@ -143,6 +144,29 @@ namespace SuperSkill
             int i;
             i = ReadWriteCtr.ReadMemInt(全局变量.进程ID, 基址.游戏状态);
             return i;
+        }
+        public static void 独家变怪(int 怪物代码 = 64024)
+        {
+            Asm asm = new Asm();
+            byte[] 附加字节 = { 0x90, 0x90, 0x90, 0x90 };
+            byte[] array = asm.JMP(0x400800, 基址.独家变怪,附加字节);
+            ReadWriteCtr.WriteMemByteArray(基址.独家变怪, array);
+            asm.Mov_EAX(怪物代码);
+            asm.Push_EAX();
+            asm.Mov_ECX((int)基址.怪物目录);
+            ReadWriteCtr.WriteMemByteArray(0x400800, 转换.数组加法(asm.取汇编代码(), asm.JMP(基址.独家变怪 + 9, 0x40080B)));
+            asm.清空汇编代码();
+        }
+        public static void 独家变怪DisAble()
+        {
+            Asm asm = new Asm();
+            asm.Mov_EDX_DWORD_Ptr_EBP_Add(8);
+            asm.Push_EDX();
+            asm.Mov_ECX((int)基址.怪物目录);
+            ReadWriteCtr.WriteMemByteArray(基址.独家变怪, asm.取汇编代码());
+            asm.清空汇编代码();
+            byte[] i = new byte[50];
+            ReadWriteCtr.WriteMemByteArray(0x400800,i);
         }
     }
 
