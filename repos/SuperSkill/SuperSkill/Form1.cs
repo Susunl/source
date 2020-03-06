@@ -1,13 +1,9 @@
 ﻿using EncryptionDecrypt;
-using HotKeys;
 using ProcessCtr;
 using ReadWrite;
 using System;
-using System.Drawing;
-using System.Media;
 using System.Threading;
 using System.Windows.Forms;
-using System.Xml.Linq;
 using Transform;
 using KoalaStudio.BookshopManager;
 
@@ -24,6 +20,10 @@ namespace SuperSkill
         {
             SysTime.Text
                     = "当前时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            if (全局变量.评分开关 == true)
+            {
+                功能.一键评分();
+            }
         }
         /// 窗口1创建完毕过后干的事情
         private void Form1_Load(object sender, EventArgs e)
@@ -370,22 +370,25 @@ namespace SuperSkill
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            功能.技能无CD();
+            if (checkBox1.Checked == true)
+            {
+                功能.技能无CD();
+                功能.超级三速();
+                全局变量.评分开关 = true;
+            }
+            else
+            {
+                功能.技能无CDDisAble();
+                功能.超级三速DisAble();
+                全局变量.评分开关 = false;
+            }
         }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            功能.超级三速();
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            功能.一键评分();
-        }
-
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-            功能.全屏吸物();
+            if (checkBox4.Checked == true)
+                功能.全屏吸物();
+            else
+                功能.全屏吸物DisAble();
         }
 
         private void Form1_Activated(object sender, EventArgs e)
@@ -399,7 +402,7 @@ namespace SuperSkill
         {
             HotKey.UnregisterHotKey(Handle, 100);
             HotKey.UnregisterHotKey(Handle, 101);
-            HotKey.UnregisterHotKey(Handle, 102);
+            //HotKey.UnregisterHotKey(Handle, 102);
         }
         protected override void WndProc(ref Message m)
         {
@@ -416,9 +419,9 @@ namespace SuperSkill
                         case 101:    //按下的是Ctrl+B
                             功能.全屏吸物();                 //此处填写快捷键响应代码
                             break;
-                        case 102:    //按下的是Alt+D
-                            功能.一键评分();         //此处填写快捷键响应代码
-                            break;
+                        //case 102:    //按下的是Alt+D
+                        //    功能.一键评分();         //此处填写快捷键响应代码
+                        //    break;
                     }
                     break;
             }
