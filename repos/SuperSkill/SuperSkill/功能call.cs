@@ -28,7 +28,20 @@ namespace SuperSkill
             asm.RunAsm(全局变量.进程ID);
         }
 
-
+        public static void 物品CALL(int 物品代码)
+        {
+            //int 触发基址;
+            //int 物品call;
+            Asm asm = new Asm();
+            asm.Mov_ECX(物品代码);
+            asm.Mov_EAX(ReadWriteCtr.ReadMemInt(基址.人物基址));
+            asm.Mov_EDX_DWORD_Ptr_EAX_Add(0);
+            asm.Mov_EDX_DWORD_Ptr_EDX_Add((int)基址.物品CALL);
+            asm.Push_ECX();
+            asm.Mov_ECX_EAX();
+            asm.Call_EDX();
+            asm.RunAsm(全局变量.进程ID);
+        }
 
 
 

@@ -4,11 +4,18 @@ using System;
 using System.Windows.Forms;
 using Transform;
 using SslnEngine;
+using Org.BouncyCastle.Utilities;
 
 namespace SuperSkill
 {
     public class 功能
     {
+        public static bool BytesCompare_Base64(byte[] b1, byte[] b2)
+        {
+            //if (b1 == null || b2 == null) return false;
+            //if (b1.Length != b2.Length) return false;
+            return string.Compare(Convert.ToBase64String(b1), Convert.ToBase64String(b2), false) == 0 ? true : false;
+        }
         public static void 超级三速()
         {
             int i;
@@ -167,6 +174,28 @@ namespace SuperSkill
             asm.清空汇编代码();
             byte[] i = new byte[50];
             ReadWriteCtr.WriteMemByteArray(0x400800,i);
+        }
+        public static uint 内存搜索(int 初始地址,int 结束地址,byte[] buffer)
+        {
+            //ReadWriteCtr.ReadMemByteArray(0x7E608850, 20);
+            //BytesCompare_Base64(tmp, ReadWriteCtr.ReadMemByteArray(0x7E608850, 20));
+            int tmp = 初始地址;
+            while (tmp < 结束地址)
+            {
+                //ReadWriteCtr.ReadMemByteArray(全局变量.进程ID,(uint)tmp, buffer.Length);
+                //BytesCompare_Base64(buffer, ReadWriteCtr.ReadMemByteArray(全局变量.进程ID, (uint)tmp, buffer.Length));
+                if (Equals(buffer, ReadWriteCtr.ReadMemByteArray(全局变量.进程ID, (uint)tmp, buffer.Length)))
+                    break;
+                tmp += buffer.Length;
+            }
+            return (uint)tmp;
+        }
+        public static uint 内存药剂()
+        {
+
+            byte[] tmp = { 0x46, 00, 00, 00, 0xE8, 03, 00, 00, 01, 00, 00, 00, 01, 00, 00, 00 };
+            return 内存搜索(0x70000000,0x7FFFFFFF,tmp);
+
         }
     }
 

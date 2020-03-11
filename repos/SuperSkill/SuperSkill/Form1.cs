@@ -438,8 +438,11 @@ namespace SuperSkill
             //byte[] i5 = { 233 };
             //ReadWriteCtr.WriteMemByteArray(全局变量.进程ID, 0x400400, 转换.数组加法(i1, i2, i3, i4, i5), 0);
             //string str = System.Text.Encoding.Default.GetString(转换.数组加法(i1, i2, i3, i4, i5));
-            //MessageBox.Show(str, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            功能.独家变怪();
+            MessageBox.Show(Convert.ToString(全局变量.进程ID), "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //功能.独家变怪();
+            //call.物品CALL(1106);
+            //uint tmp = 功能.内存药剂();
+            //MessageBox.Show(Convert.ToString(tmp), "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void 独家变怪_CheckedChanged(object sender, EventArgs e)
