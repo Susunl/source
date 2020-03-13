@@ -61,7 +61,7 @@ namespace ReadWrite
         /// <param name="Length">长度</param>
         /// <returns></returns>
         [DllImport("kernel32.dll")]
-        public static extern int VirtualQueryEx(IntPtr handle, uint address, ReadWriteAPI.MemAttribute info, int Length);
+        public static extern int VirtualQueryEx(IntPtr handle, uint address, MemAttribute info, int Length);
 
     }
 

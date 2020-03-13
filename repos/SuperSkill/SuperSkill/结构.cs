@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SuperSkill
 {
-    class 结构
+    
+    public class 结构
     {
+
+
+
     }
 }

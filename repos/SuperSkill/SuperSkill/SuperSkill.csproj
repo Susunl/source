@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithm.cs" />
     <Compile Include="HotKeys.cs" />
     <Compile Include="ScanMemory1.cs" />
     <Compile Include="内存搜索.cs" />

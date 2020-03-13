@@ -179,6 +179,9 @@ namespace SuperSkill
         {
             //ReadWriteCtr.ReadMemByteArray(0x7E608850, 20);
             //BytesCompare_Base64(tmp, ReadWriteCtr.ReadMemByteArray(0x7E608850, 20));
+            byte[] i = { 1,1,1,2,1,1};
+            byte[] k = { 1, 1, 2 };
+            int j = Array.IndexOf(i,k);
             int tmp = 初始地址;
             while (tmp < 结束地址)
             {

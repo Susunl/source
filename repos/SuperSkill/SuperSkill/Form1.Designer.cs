@@ -60,6 +60,7 @@
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.测试 = new System.Windows.Forms.Button();
             this.独家变怪 = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -328,11 +329,22 @@
             this.独家变怪.UseVisualStyleBackColor = true;
             this.独家变怪.CheckedChanged += new System.EventHandler(this.独家变怪_CheckedChanged);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(542, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 12);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Made By Susunl";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 410);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.独家变怪);
             this.Controls.Add(this.测试);
             this.Controls.Add(this.checkBox4);
@@ -395,6 +407,7 @@
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.Button 测试;
         private System.Windows.Forms.CheckBox 独家变怪;
+        private System.Windows.Forms.Label label4;
     }
 }
 

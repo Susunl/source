@@ -6,6 +6,7 @@ using System.Threading;
 using System.Windows.Forms;
 using Transform;
 using KoalaStudio.BookshopManager;
+using System.Runtime.InteropServices;
 
 namespace SuperSkill
 {
@@ -427,7 +428,9 @@ namespace SuperSkill
             }
             base.WndProc(ref m);
         }
-
+        [DllImport("Dll1.dll")]
+        public static extern int SearchMemory(int 进程ID,byte[] buffer,int buffer_size);
+        
         private void 测试_Click(object sender, EventArgs e)
         {
             //call.释放call(基址.人物基址, 800, 255, 0, 54106, 0);
@@ -438,11 +441,17 @@ namespace SuperSkill
             //byte[] i5 = { 233 };
             //ReadWriteCtr.WriteMemByteArray(全局变量.进程ID, 0x400400, 转换.数组加法(i1, i2, i3, i4, i5), 0);
             //string str = System.Text.Encoding.Default.GetString(转换.数组加法(i1, i2, i3, i4, i5));
-            MessageBox.Show(Convert.ToString(全局变量.进程ID), "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            byte[] i = { 0xF0, 05, 00, 00, 0xE8, 03, 00, 00, 00, 00, 00, 00, 01, 00, 00, 00 };
+            //SearchMemory(全局变量.进程ID, i, i.Length);
+            MessageBox.Show(Convert.ToString(SearchMemory(全局变量.进程ID, i, i.Length)), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //功能.独家变怪();
-            //call.物品CALL(1106);
+            //call.物品CALL(1111);
             //uint tmp = 功能.内存药剂();
             //MessageBox.Show(Convert.ToString(tmp), "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //byte[] i = { 1, 1, 1, 2, 1, 1 };
+            //byte[] k = { 1, 1, 2 };
+            //int j = Algorithm.Sunday(i, k);
+            //MessageBox.Show(Convert.ToString(j), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void 独家变怪_CheckedChanged(object sender, EventArgs e)
