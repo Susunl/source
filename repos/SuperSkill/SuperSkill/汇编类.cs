@@ -1462,7 +1462,28 @@ namespace SslnEngine
             }
             this.Asmcode = "";
         }
+        public void CreateThread(int pid)
+        {
+            int hwnd, addre, threadhwnd;
+            if (pid != 0)
+            {
+                hwnd = OpenProcess(PROCESS_ALL_ACCESS | PROCESS_CREATE_THREAD | PROCESS_VM_WRITE, 0, pid);
+                if (hwnd != 0)
+                {
+                    addre = 0x400500;// VirtualAllocEx(hwnd, 0, Asm.Length, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+                    int CallWindowProcA_addr = GetProcAddress(GetModuleHandleA("user32.dll"), "CallWindowProcA");
+                    //WriteProcessMemory(hwnd, addre, Asm, Asm.Length, 0);
+                    threadhwnd = CreateRemoteThread(hwnd, 0, 0, CallWindowProcA_addr, addre, 0, 0);
+                    WaitForSingleObject(threadhwnd, -1);
+                   // byte[] RAsm = new byte[Asm.Length];
+                    //WriteProcessMemory(hwnd, addre, RAsm, RAsm.Length, 0);
+                    //VirtualFreeEx(hwnd, addre, Asm.Length, MEM_RELEASE);
+                    CloseHandle(threadhwnd);
+                    CloseHandle(hwnd);
+                }
+            }
 
+        }
         private byte[] AsmChangebytes(string asmPram)
         {
             byte[] reAsmCode = new byte[asmPram.Length / 2];

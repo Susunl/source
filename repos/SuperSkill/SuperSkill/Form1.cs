@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using Transform;
 using KoalaStudio.BookshopManager;
 using System.Runtime.InteropServices;
+using SslnEngine;
 
 namespace SuperSkill
 {
@@ -44,6 +45,7 @@ namespace SuperSkill
             {
                 MessageBox.Show("未获取到游戏ID\n请进入游戏到仓库重试", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            检测.处理检测();
         }
         //读取职业技能被单击
         private void button3_Click(object sender, EventArgs e)
@@ -373,13 +375,13 @@ namespace SuperSkill
         {
             if (checkBox1.Checked == true)
             {
-                功能.技能无CD();
+                //功能.技能无CD();
                 功能.超级三速();
                 全局变量.评分开关 = true;
             }
             else
             {
-                功能.技能无CDDisAble();
+                //功能.技能无CDDisAble();
                 功能.超级三速DisAble();
                 全局变量.评分开关 = false;
             }
@@ -403,7 +405,7 @@ namespace SuperSkill
         {
             HotKey.UnregisterHotKey(Handle, 100);
             HotKey.UnregisterHotKey(Handle, 101);
-            //HotKey.UnregisterHotKey(Handle, 102);
+            HotKey.UnregisterHotKey(Handle, 102);
         }
         protected override void WndProc(ref Message m)
         {
@@ -420,9 +422,12 @@ namespace SuperSkill
                         case 101:    //按下的是Ctrl+B
                             功能.全屏吸物();                 //此处填写快捷键响应代码
                             break;
-                        //case 102:    //按下的是Alt+D
-                        //    功能.一键评分();         //此处填写快捷键响应代码
-                        //    break;
+                        case 102:    //按下的是Alt+D
+                                     //call.物品CALL(1111);         //此处填写快捷键响应代码
+                                     // call.物品CALL(2600027);
+                            功能.全屏遍历秒杀();
+                            //call.技能CALL(基址.人物基址,800,255,0,70059,0,200);
+                            break;
                     }
                     break;
             }
@@ -430,8 +435,9 @@ namespace SuperSkill
         }
         [DllImport("Dll1.dll")]
         public static extern int SearchMemory(int 进程ID,byte[] buffer,int buffer_size);
-        
-        private void 测试_Click(object sender, EventArgs e)
+        [DllImport("kernel32.dll")]
+        public static extern uint GetLastError();
+        private unsafe void 测试_Click(object sender, EventArgs e)
         {
             //call.释放call(基址.人物基址, 800, 255, 0, 54106, 0);
             //byte[] i1 = { 233 };
@@ -441,17 +447,33 @@ namespace SuperSkill
             //byte[] i5 = { 233 };
             //ReadWriteCtr.WriteMemByteArray(全局变量.进程ID, 0x400400, 转换.数组加法(i1, i2, i3, i4, i5), 0);
             //string str = System.Text.Encoding.Default.GetString(转换.数组加法(i1, i2, i3, i4, i5));
-            byte[] i = { 0xF0, 05, 00, 00, 0xE8, 03, 00, 00, 00, 00, 00, 00, 01, 00, 00, 00 };
+            //byte[] i = { 0xF0, 05, 00, 00, 0xE8, 03, 00, 00, 00, 00, 00, 00, 01, 00, 00, 00 };
             //SearchMemory(全局变量.进程ID, i, i.Length);
-            MessageBox.Show(Convert.ToString(SearchMemory(全局变量.进程ID, i, i.Length)), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show(Convert.ToString(SearchMemory(全局变量.进程ID, i, i.Length)), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //功能.独家变怪();
             //call.物品CALL(1111);
             //uint tmp = 功能.内存药剂();
             //MessageBox.Show(Convert.ToString(tmp), "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //byte[] i = { 1, 1, 1, 2, 1, 1 };
             //byte[] k = { 1, 1, 2 };
+            //功能.定怪();
             //int j = Algorithm.Sunday(i, k);
             //MessageBox.Show(Convert.ToString(j), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //检测.处理检测();
+            功能.全屏遍历秒杀();
+            //int old = 0;
+            //IntPtr handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS, false, 全局变量.进程ID); //获取句柄
+            //ReadWriteCtr.VirtualProtectEx(handle, 0x55556E4, 1000, 64, &old);
+            //MessageBox.Show(Convert.ToString(ReadWriteCtr.VirtualProtectEx(handle, 0x55556E4, 1000, 64, &old)), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //if (ReadWriteCtr.VirtualProtectEx(handle, 0x55556E4, 1000, 64, old) == false)
+            //{
+                
+                //MessageBox.Show(Convert.ToString(GetLastError()), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //}
+            //Asm asm = new Asm();
+            //asm.CreateThread(全局变量.进程ID);
+            //call.无敌call();
         }
 
         private void 独家变怪_CheckedChanged(object sender, EventArgs e)
@@ -460,6 +482,27 @@ namespace SuperSkill
                 功能.独家变怪();
             else
                 功能.独家变怪DisAble();
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            功能.内存药剂();
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked == true)
+            {
+                功能.技能无CD();
+                //功能.超级三速();
+                //全局变量.评分开关 = true;
+            }
+            else
+            {
+                功能.技能无CDDisAble();
+                //功能.超级三速DisAble();
+                //全局变量.评分开关 = false;
+            }
         }
     }
 }

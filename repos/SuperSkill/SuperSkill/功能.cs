@@ -5,11 +5,14 @@ using System.Windows.Forms;
 using Transform;
 using SslnEngine;
 using Org.BouncyCastle.Utilities;
+using System.Runtime.InteropServices;
 
 namespace SuperSkill
 {
     public class 功能
     {
+        [DllImport("Dll1.dll")]
+        public static extern int SearchMemory(int 进程ID, byte[] buffer, int buffer_size);
         public static bool BytesCompare_Base64(byte[] b1, byte[] b2)
         {
             //if (b1 == null || b2 == null) return false;
@@ -142,6 +145,35 @@ namespace SuperSkill
             //ReadWriteCtr.WriteMemInt(全局变量.进程ID, 基址.自动捡物, 1300959860);
 
         }
+        public static void 定怪()
+        {
+            if (判断_游戏状态() == 3)
+            {
+                int Time = 0;
+                int 人物地址 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, 基址.人物基址);
+                int 地图地址 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(人物地址) + 基址.地图偏移);
+                int 对象数量 = (ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.尾地址)) - ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.首地址))) / 4;
+                for (int i = 1; i <= 对象数量; i++)
+                {
+                    int OBJ数据 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.首地址)) + (uint)Time);
+                    Time = Time + 4;
+                    int OBJ类型 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(OBJ数据 + 基址.类型偏移));
+                    if (OBJ类型 == 529 || OBJ类型 == 545 || OBJ类型 == 273)
+                    {
+                        //ReadWriteCtr.WriteMemInt((uint)(OBJ数据 + 基址.不死偏移),12);
+                        EncDec.Encryption(全局变量.进程ID, (uint)(OBJ数据 + 基址.不死偏移),12,基址.解密基址);
+                    
+                    }
+
+
+                }
+            }
+
+
+
+
+
+        }
         public static void 全屏吸物DisAble()
         {
             ReadWriteCtr.WriteMemInt(全局变量.进程ID, 基址.自动捡物, 1300959860);
@@ -175,29 +207,69 @@ namespace SuperSkill
             byte[] i = new byte[50];
             ReadWriteCtr.WriteMemByteArray(0x400800,i);
         }
-        public static uint 内存搜索(int 初始地址,int 结束地址,byte[] buffer)
+        public static void 内存药剂()
         {
-            //ReadWriteCtr.ReadMemByteArray(0x7E608850, 20);
-            //BytesCompare_Base64(tmp, ReadWriteCtr.ReadMemByteArray(0x7E608850, 20));
-            byte[] i = { 1,1,1,2,1,1};
-            byte[] k = { 1, 1, 2 };
-            int j = Array.IndexOf(i,k);
-            int tmp = 初始地址;
-            while (tmp < 结束地址)
+            byte[] i = { 0xF0, 05, 00, 00, 0xE8, 03, 00, 00, 00, 00, 00, 00, 01, 00, 00, 00 };
+            int j = SearchMemory(全局变量.进程ID, i, i.Length);
+            if (ReadWriteCtr.ReadMemInt((uint)j) == 1520)
             {
-                //ReadWriteCtr.ReadMemByteArray(全局变量.进程ID,(uint)tmp, buffer.Length);
-                //BytesCompare_Base64(buffer, ReadWriteCtr.ReadMemByteArray(全局变量.进程ID, (uint)tmp, buffer.Length));
-                if (Equals(buffer, ReadWriteCtr.ReadMemByteArray(全局变量.进程ID, (uint)tmp, buffer.Length)))
-                    break;
-                tmp += buffer.Length;
+                ReadWriteCtr.WriteMemInt((uint)(j), 0);
+                ReadWriteCtr.WriteMemInt((uint)(j + 0x8), 1);
+                ReadWriteCtr.WriteMemInt((uint)(j + 0x58), 5);
+                ReadWriteCtr.WriteMemInt((uint)(j + 0x58 + 0x4), 999999999);
+                ReadWriteCtr.WriteMemInt((uint)(j + 0x58 + 0x4 + 0x4), 99999999);
+                ReadWriteCtr.WriteMemInt((uint)(j + 0x58 + 0x4 + 0x8), 1);
+                ReadWriteCtr.WriteMemInt((uint)(j + 0x58 + 0x4 + 0x8 + 0x4), 1);
+                ReadWriteCtr.WriteMemInt((uint)(j + 0x58 + 0x4 + 0x8 + 0x4 + 0x4), 2147483640);
+                MessageBox.Show("成功 开始奔放 + " + Convert.ToString(j) + "   提示 进图波浪开始奔放", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            return (uint)tmp;
-        }
-        public static uint 内存药剂()
-        {
+            else 
+            {
+                MessageBox.Show("失败 请重试", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            byte[] tmp = { 0x46, 00, 00, 00, 0xE8, 03, 00, 00, 01, 00, 00, 00, 01, 00, 00, 00 };
-            return 内存搜索(0x70000000,0x7FFFFFFF,tmp);
+            }
+        }
+        public static void 全屏遍历秒杀()
+        {
+            int 人物地址;
+            int 地图地址;
+            int 对象数量;
+            int Time = 0;
+            int OBJ数据;
+            int OBJ类型;
+            int 数量 = 0;
+            int OBJ阵营;
+            if (判断_游戏状态() == 3)
+            {
+                //ReadWriteCtr.WriteMemInt(全局变量.进程ID, 基址.自动捡物, 1300955444);
+                人物地址 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, 基址.人物基址);
+                地图地址 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(人物地址) + 基址.地图偏移);
+                对象数量 = (ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.尾地址)) - ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.首地址))) / 4;
+                for (int i = 1; i <= 对象数量; i++)
+                {
+                    OBJ数据 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.首地址)) + (uint)Time);
+                    Time = Time + 4;
+                    OBJ类型 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(OBJ数据 + 基址.类型偏移));
+                    OBJ阵营 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(OBJ数据 + 基址.阵营偏移));
+                    if (OBJ类型 == 529 || OBJ类型 == 545 || OBJ类型 == 273)
+                    {
+                        if (OBJ阵营 != 0)
+                        {
+                            
+                                //MessageBox.Show(Convert.ToString(OBJ数据), "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                call.miss扣血call(OBJ数据);
+                                //数量 += 1;
+                                //if (数量 >= 100)
+                                    //break;
+                            
+                        }
+                    }
+                }
+
+            }
+            else
+                return;
+            //ReadWriteCtr.WriteMemInt(全局变量.进程ID, 基址.自动捡物, 1300959860);
 
         }
     }

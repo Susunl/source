@@ -14,9 +14,18 @@ namespace ReadWrite
     /// <summary>
     /// 类:内存读写API
     /// </summary>
+
+    
     public class ReadWriteAPI
     {
-        public const int PROCESS_ALL_ACCESS = 2035711;  //PROCESS_ALL_ACCESS常量
+        public const int PAGE_EXECUTE_READWRITE = 0x4;
+        public const int MEM_COMMIT = 4096;
+        public const int MEM_RELEASE = 0x8000;
+        public const int MEM_DECOMMIT = 0x4000;
+        public const int PROCESS_ALL_ACCESS = 0x1F0FFF;
+        public const int PROCESS_CREATE_THREAD = 0x2;
+        public const int PROCESS_VM_OPERATION = 0x8;
+        public const int PROCESS_VM_WRITE = 0x20;
 
         public struct MemAttribute      //自定义数据类型内存属性
         {
@@ -293,6 +302,25 @@ namespace ReadWrite
             else
                 return true;
         }
+        public static bool WriteMemInt(uint Address, float Data)
+        {
+            //声明变量
+            int a = 0;
+            IntPtr handle = new IntPtr();
+            byte[] temp = new byte[4];
+            temp = BitConverter.GetBytes(Data);
+
+            if (全局变量.进程ID == -1)    //-1为自进程
+                handle = ProcessAPI.GetCurrentProcess();
+            else
+                handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS, false, 全局变量.进程ID); //获取句柄
+            a = ReadWriteAPI.WriteProcessMemory(handle, Address, temp, 4, 0);
+            ProcessAPI.CloseHandle(handle); //关闭对象
+            if (a == 0)         //返回bool型
+                return false;
+            else
+                return true;
+        }
         public static bool WriteMemInt(uint Address, int Data)
         {
             //声明变量
@@ -341,20 +369,25 @@ namespace ReadWrite
             else
                 return true;
         }
-        public static bool WriteMemByteArray(uint Address, byte[] Data, int Size = 0)
+        [DllImport("kernel32.dll")]
+        public static unsafe extern bool VirtualProtectEx(IntPtr handle, int address, int size,int flNewProtect,[Out] int* lpflOldProtect);
+        public static unsafe bool WriteMemByteArray(uint Address, byte[] Data, int Size = 0)
         {
             //声明变量
-            int a = 0;
-            IntPtr handle = new IntPtr();
-
+            int a;
+            IntPtr handle ;
+            int old = 0;
+            //VirtualProtectEx(handle, (int)Address, Data.Length, 64, old);
             if (全局变量.进程ID == -1)    //-1为自进程
                 handle = ProcessAPI.GetCurrentProcess();
             else
-                handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS, false, 全局变量.进程ID); //获取句柄
+                handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS | ReadWriteAPI.PROCESS_CREATE_THREAD | ReadWriteAPI.PROCESS_VM_WRITE, false, 全局变量.进程ID); //获取句柄
+            VirtualProtectEx(handle, (int)Address, Data.Length, 64, &old);
             if (Size == 0)
                 a = ReadWriteAPI.WriteProcessMemory(handle, Address, Data, Data.Length, 0);
             else
                 a = ReadWriteAPI.WriteProcessMemory(handle, Address, Data, Size, 0);
+            VirtualProtectEx(handle, (int)Address, Data.Length, old, &old);
             ProcessAPI.CloseHandle(handle); //关闭对象
             if (a == 0)         //返回bool型
                 return false;

@@ -3,7 +3,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>10</ID>
-      <Description>"46 00 00 00 E8 03 00 00 00 00 00 00 01 00 00 00 00 00 00 00"</Description>
+      <Description>"F0 05 00 00 E8 03 00 00 00 00 00 00 01 00 00 00 00 00 00 00"</Description>
       <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
     </CheatEntry>
@@ -17,12 +17,14 @@
     <CheatEntry>
       <ID>2</ID>
       <Description>"F1开启药剂buff，图内使用药剂即可"</Description>
+      <LastState Value="1520" RealAddress="7D658850"/>
       <VariableType>4 Bytes</VariableType>
-      <Address>7D39DD50</Address>
+      <Address>7D658850</Address>
       <CheatEntries>
         <CheatEntry>
           <ID>12</ID>
           <Description>"对所有队友有效"</Description>
+          <LastState Value="1" Activated="1" RealAddress="7D658858"/>
           <VariableType>4 Bytes</VariableType>
           <Address>+8</Address>
           <Hotkeys>
@@ -46,6 +48,7 @@
         <CheatEntry>
           <ID>3</ID>
           <Description>"改5 类型"</Description>
+          <LastState Value="5" Activated="1" RealAddress="7D6588A8"/>
           <VariableType>4 Bytes</VariableType>
           <Address>+58</Address>
           <Hotkeys>
@@ -64,11 +67,20 @@
               <Value>5</Value>
               <ID>1</ID>
             </Hotkey>
+            <Hotkey>
+              <Action>Increase Value</Action>
+              <Keys>
+                <Key>33</Key>
+              </Keys>
+              <Value>1</Value>
+              <ID>2</ID>
+            </Hotkey>
           </Hotkeys>
         </CheatEntry>
         <CheatEntry>
           <ID>4</ID>
           <Description>"时间"</Description>
+          <LastState Value="999999999" Activated="1" RealAddress="7D6588AC"/>
           <VariableType>4 Bytes</VariableType>
           <Address>+58+4</Address>
           <Hotkeys>
@@ -92,6 +104,7 @@
         <CheatEntry>
           <ID>7</ID>
           <Description>"触发次数后无效 可不改"</Description>
+          <LastState Value="99999999" Activated="1" RealAddress="7D6588B0"/>
           <VariableType>4 Bytes</VariableType>
           <Address>+58+4+4</Address>
           <Hotkeys>
@@ -115,6 +128,7 @@
         <CheatEntry>
           <ID>5</ID>
           <Description>"对队友生效"</Description>
+          <LastState Value="1" Activated="1" RealAddress="7D6588B4"/>
           <VariableType>4 Bytes</VariableType>
           <Address>+58+4+8</Address>
           <Hotkeys>
@@ -138,6 +152,7 @@
         <CheatEntry>
           <ID>9</ID>
           <Description>"生效"</Description>
+          <LastState Value="1" Activated="1" RealAddress="7D6588B8"/>
           <VariableType>4 Bytes</VariableType>
           <Address>+58+4+8+4</Address>
           <Hotkeys>
@@ -161,6 +176,7 @@
         <CheatEntry>
           <ID>8</ID>
           <Description>"伤害"</Description>
+          <LastState Value="2147483640" Activated="1" RealAddress="7D6588BC"/>
           <VariableType>4 Bytes</VariableType>
           <Address>+58+4+8+4+4</Address>
           <Hotkeys>
@@ -176,18 +192,12 @@
               <Keys>
                 <Key>112</Key>
               </Keys>
-              <Value>2999999999</Value>
+              <Value>2147483640</Value>
               <ID>1</ID>
             </Hotkey>
           </Hotkeys>
         </CheatEntry>
       </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>17</ID>
-      <Description>"1915522160"</Description>
-      <LastState Value="" RealAddress="00000000"/>
-      <GroupHeader>1</GroupHeader>
     </CheatEntry>
   </CheatEntries>
   <UserdefinedSymbols>

@@ -11,4 +11,9 @@ C:\Users\Susunl\Desktop\svchost.pdb
 C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Release\svchost.exe
 C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Release\svchost.pdb
 C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Release\SuperSkill.csproj.CopyComplete
+C:\Users\Susunl\Desktop\svchost.exe.manifest
+C:\Users\Susunl\Desktop\svchost.application
+C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Release\svchost.TrustInfo.xml
+C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Release\svchost.exe.manifest
+C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Release\svchost.application
 C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Release\SuperSkill.csprojAssemblyReference.cache
