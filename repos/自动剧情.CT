@@ -1,0 +1,7941 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="29">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1120075224</ID>
+      <Description>"-- Home键启动 --"</Description>
+      <LastState Activated="1"/>
+      <Color>808000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>define(yuliupilao,400440)
+define(dengjishezhi,#83)
+
+alloc(Yun_Qi,28360)
+label(new)
+label(shifoudaodajuese)//
+label(Yun_Qi_end)
+label(yidaodajuese)//
+label(TenRpcs_hook)
+label(TenRpcs_hookend)
+label(huoqvjueseshuliang)//
+label(huoqvjueseweizhi)//
+label(OBJgaishanghai)//
+label(obj)
+label(qiantaianjian)//
+label(qiantaizhixingEscanjian)//
+label(qiantaizhixingF10anjian)//
+label(panduanshifouzhixingqiangshun)//
+label(panduanshifouzhixingqiangshunend)//
+label(chulishijian)//
+label(gongnengwanbi_End)//
+label(gongnengwanbi_104_End)//
+label(gongnengwanbi_291100293_End)//
+label(xuantruqueren_End)//
+label(whileaddr_1)
+label(whileaddr_2)
+label(whileaddr_End)
+label(chuangjianshuju_End)//
+label(guotuqueren_End)//
+label(tongguanjiesuan_End)//
+label(fanpaijiesuan_bagen)//
+label(fanpaijiesuan_bagen_1)//
+label(fanpaijiesuan_bagen_2)/
+label(fanpaijiesuan_End)//
+label(guaiwusiwang_bagen)//
+label(guaiwusiwang_End)//
+label(chulishijian_End)//
+label(ditubianhao)//
+label(ditudengji)//
+label(BOSSzuobiao_hengzhouzuobiao)//
+label(BOSSzuobiao_zongzhouzuobiao)//
+label(dangqianzuobiao_hengzhouzuobiao)//
+label(dangqianzuobiao_zongzhouzuobiao)//
+label(Monsternumber)
+label(Thenumberofdeaths)
+label(guaiwushuliang_gonggao)//
+label(tiqvcailiao_gonggao)//
+label(GM_hook)
+label(GM_xor)
+label(GM_mov)
+label(zhisuijishuzhongzi)//
+label(qvsuijishu)//
+label(diaoyonchuangkou)//
+label(zhi_400448wei0)//
+label(diaoyonchuangkou_End)//
+label(diaoyonchuangkou_257)//
+label(diaoyonchuangkou_jintu)//
+label(diaoyonchuangkou_huicheng)//
+label(zengjiashanghai_panduan_1)//
+label(diaoyonchuangkou_1)//
+label(toumingwudi_panduan_1)//
+label(diaoyonchuangkou_2)//
+label(diuqizhuangbei_panduan_1)//
+label(diaoyonchuangkou_3)//
+label(zisezhuangbei_panduan_1)//
+label(diaoyonchuangkou_4)//
+label(shuntufangshi_1_end)//
+label(shuntufangshi_2_end)//
+label(shuntufangshi_3_end)//
+label(diaoyonchuangkou_5)//
+label(diaoyonchuangkou_260)//
+label(diaoyonchuangkou_F1)//
+label(diaoyonchuangkou_F2)//
+label(diaoyonchuangkou_F3)//
+label(diaoyonchuangkou_F4)//
+label(diaoyonchuangkou_F5)//
+label(diaoyonchuangkou_F6)//
+label(diaoyonchuangkou_F7)//
+label(diaoyonchuangkou_F8)//
+label(diaoyonchuangkou_F9)//
+label(diaoyonchuangkou_F11)//
+label(juqingkaiguan_panduan_1)//
+label(diaoyonchuangkou_F12)//
+label(guanbishuntu_gonggao)//
+label(kaiqijuqing_gonggao)//
+label(guanbijuqing_gonggao)//
+label(kaiqishuntu_gonggao)//
+label(F2kaiguan_panduan_1)//
+label(F5kaiguan_panduan_1)//
+label(F6kaiguan_panduan_1)//
+label(F8kaiguan_panduan_1)//
+label(zidongguotu_panduan_1)//
+label(zidongguotu_panduan)//
+label(zidongquanpingjineng)//
+label(zidongshuntu_panduan)//
+label(zhixingqiangshun_bagen)//
+label(guanbixunhuan_gonggap)//
+label(kaiqixunhuan_gonggap)//
+label(xunhuanditu_duanzhi_1)//
+label(xunhuanditu_panduan)//
+label(lingzhufangjian_panduan)//
+label(keyishuntu_panduan)//
+label(xuyaoguotu_panduan)//
+label(dajianzhuwu_panduan)//
+label(dajianzhuwu_panduan_0)//
+label(fenjiezhuangbei_panduan)//
+label(shengyupilao_panduan)//
+label(fenjiezhuangbei_panduan_0)//
+label(huoqvshengyu_pilao)//
+label(chengzhengyidongpanduan)//
+label(chengzhengyidongshuju)//
+label(dituID)//
+label(chengzhengshunhuancishu)//
+label(quanshishichang)//
+label(kongbudeqixidi)//
+label(lukedejuguangjing)//
+label(telunsifadianzhan)//
+label(wangmingshazhen)//
+label(yijie)//
+label(yijiecishu)//
+label(zidongyijiekaiguan)//
+label(yijierenwukaiguan)//
+label(chengzhengyidongpanduanbagen)//
+label(chengzhengyidongpanduankaishizhixing)//
+label(chengzhengyidongpanduanxunhuan)//
+label(zubao_chengzhenyidong)//
+label(quanzidongjieshu)//
+label(dengjibuzu_gonggao)//
+label(kaiqishanghai_gonggao)//
+label(guanbishanghai_gonggao)//
+label(zidongkaiguan_pasnduan)//
+label(gongnengzhixing_panduan)//
+label(juqingkaiguan_panduan)//
+label(juqingzhixing_panduan)//
+label(toumingwudi_panduan)//
+label(zengjiashanghai_panduan)//
+label(diuqizhuangbei_panduan)//
+label(zisezhuangbei_panduan)//
+label(shuntufangshi)//
+label(zidongzhixing_panduan)//
+label(guanbizidong_gonggao)//
+label(zidongpilao_gonggao)//
+label(juqingpilao_gonggao)//
+label(F1kaiguan_panduan_1)//
+label(diaoyonchuangkou_weizhi_0)//
+label(diaoyonchuangkou_weizhi_genghuanjuese)//
+label(diaoyonchuangkou_weizhi_genghuanjuese_end)//
+label(diaoyonchuangkou_weizhi_GO)//
+label(qianwangshenzhezhiminghao)
+label(diaoyonchuangkou_xuantu_yijie)
+label(diaoyonchuangkou_xuantu_kaishi)
+label(diaoyonchuangkou_weizhi_1)
+label(diaoyonchuangkou_jintu)
+label(diaoyonchuangkou_chutuchuli)
+label(diaoyonchuangkou_zidong)
+label(diaoyonchuangkou_weizhi_juqing_0)
+label(diaoyonchuangkou_weizhi_juqing_1)
+label(diaoyonchuangkou_weizhi_juqing_jishu)
+label(diaoyonchuangkou_weizhi_juqing_2)
+label(diaoyonchuangkou_juqing_huicheng)
+label(diaoyonchuangkou_juqing)
+label(tongyonggongnengdiaoyong_1_end)
+label(tongyonggongnengdiaoyong_2_bagen)
+label(tongyonggongnengdiaoyong_2_end)
+label(tongyonggongnengdiaoyong_3_end)
+label(tongyonggongnengdiaoyong_11_end)
+label(tongyonggongnengdiaoyong_13_end)
+label(tongyonggongnengdiaoyong_14_end)
+label(tongyonggongnengdiaoyong_15_end)
+label(tongyonggongnengdiaoyong_16_end)
+label(tongyonggongnengdiaoyong_17_end)
+label(tongyonggongnengdiaoyong_18_end)
+label(tongyonggongnengdiaoyong_19_end)
+label(tongyonggongnengdiaoyong_20_end)
+label(tongyonggongnengdiaoyong_21_end)
+label(chuangkoudiaoyong_tunei)
+label(kaiqijianzhu_gonggao)
+label(guanbijianzhu_gonggao)
+label(kaiqifenjie_gonggao)
+label(guanbifenjie_gonggao)
+label(diaoyonchuangkou_192)
+label(diaoyonchuangkou_shang)
+label(diaoyonchuangkou_xia)
+label(diaoyonchuangkou_zuo)
+label(diaoyonchuangkou_you)
+label(diaoyonchuangkou_Ret)
+label(Receivingpointer)
+label(lpPrevWndFunc)
+label(hwnd)
+label(jintushijian_panduan)
+label(quanpingjishu_panduan)
+label(shuatujishu_panduan)
+label(juqingshuatu_gonggao)
+label(zidongshuatu_gonggao)
+label(lingzhufangjian_zidong)
+label(lingzhufangjian_juqing)
+label(memcryint)
+label(memcpyStub)
+label(prompt)
+label(Encryption)
+label(_698D1140)
+label(_698D1150)
+label(_698D115F)
+label(_698D116D)
+label(_698D1170)
+label(wanchengyijierenwu)
+label(wanchengyijierenwulop)
+label(wanchengyijierenwuxiaoxunhuanshou)
+label(wanchengyijierenwuxiaoxunhuanshouend)
+label(wanchengyijierenwuend)
+label(zidongjuwu)
+label(zidongjuwuend)
+label(zidonggengguai)
+label(zidonggengguaixunhuanshou)
+label(zidonggengguaixiayigeleixing)
+label(zidonggengguaixunhuanpanduanzhenyin)
+label(zidonggengguaikaishiqvzuobiao)
+label(zidonggengguaizuobiaoweikong)
+label(zidonggengguai_push_400430)
+label(zidonggengguai_push_400430end)
+label(zidonggengguaixunhuaixiayige)
+label(zidonggengguaiend)
+label(_CreateThread)
+label(tijiaorenwu)
+label(tijiaorenwuend)
+label(yizhixingjueseshuliang)
+label(zubao_zidonghuanjuese)
+label(zubao_zidonghuanjuese_GO)
+label(zubao_zidonghuanjuesebagen)
+label(zuibao_xuantu)
+label(zuibao_jintu)
+label(zuibao_juqing)
+label(zubao_chutu)
+label(zubao_chutuchuli)
+label(zubao_chulizhuangbei)
+label(zubao_fenjiezhuangbei)
+label(zubao_chushouzhuangbei)
+label(zubao_diuqizhuangbei)
+label(chulizhuangbei)
+label(chulizhuangbeibagen)
+label(chulizhuangbeibegin)
+label(chulizhuangbeibegin2)
+label(chulizhuangbeibege)
+label(chulizhuangbeinext)
+label(chulizhuangbeiend)
+label(buffer)
+label(miyaoCALL)
+label(keyjne_1)
+label(jiamibaoCALL)
+label(encrypt7509_4)
+label(encrypt7509_8)
+label(encryptEB1A)
+label(sendpacket)
+label(shifouyikaimen)
+label(shifouligzhufang)
+label(shifouligzhufangend)
+label(zubaoshuntu)
+label(zubaoshuntu_2_end)
+label(zubaoshuntu_3_end)
+label(zubaoshuntu_0_end)
+label(zubaoshuntu_1_end)
+label(suntuS)
+label(suntuX)
+label(suntuZ)
+label(suntuY)
+label(zuobiaoCALL)
+label(piaoyicanshu)
+label(piaoyiCALL)
+label(zuobiaoshuntu)
+label(zubaoqiangshun)
+label(zuobiaoshuntu_0_End)
+label(zuobiaoshuntu_1_End)
+label(zuobiaoshuntu_2_End)
+label(zuobiaoshuntu_3_End)
+label(zuobiaoshuntu_4_End)
+label(zuobiaoshuntu_End)
+label(Pickingthings)
+label(decrypt)
+label(jmp_addr)
+label(jmpaddrv)
+label(DNF)
+label(juesedengji_gonggao)
+label(juesepilao_gonggao)
+label(jueseshuliang_gonggao)
+label(baotouchangdu_gonggao)
+label(kaishijihuo_gonggao)
+label(wanchengrenwu_gonggao)
+label(tingzhifuzhu_gonggao)
+label(huifufuzhu_gonggao)
+label(kaiqiwudi_gonggao)
+label(guanbiwudi_gonggao)
+label(kaiqidiuqi_gonggao)
+label(guanbidiuqi_gonggao)
+label(fenjiejiazi_gonggao)
+label(chushoujiazi_gonggao)
+label(zuobiaoguotu_gonggao)
+label(qiangzhiguotu_gonggao)
+label(bengpaoguotu_gonggao)
+label(kongzhongrubao_gonggao)
+label(tiqvrubao_gonggao)
+label(juwurubao_gonggao)
+label(qvdangqianhengzhou)
+label(qvdangqianzongzhou)
+label(qvlingzhuhengzhou)
+label(qvlingzhuzongzhou)
+label(panduan_zuobiaoxiangdeng)
+label(panduan_zuobiaoxiangdengend)
+label(shuntuchuli)
+label(shengchengditu)
+label(shengchengditugaoxunhuanbagen)
+label(shengchengditukuanxunhuanbagen)
+label(shengchengditukuanxunhuanend)
+label(shengchengditugaoxunhuanend)
+label(panduanfangxiang)
+label(panduanfangxiang_1)
+label(panduanfangxiang_2)
+label(panduanfangxiangend)
+label(lujinsuanfa)
+label(lujinsuanfa_kaifangliebiaoxunhuanbagen)
+label(lujinsuanfa_kaifangliebiaoxiaoxunhuanbagen)
+label(lujinsuanfa_dituFdianbijiao)
+label(lujinsuanfa_kaifangliebiaoxiaoxunhuannext)
+label(lujinsuanfa_kaifangliebiaoxiaoxunhuanend)
+label(lujinsuanfa_beijingyanse_chenghuang1)
+label(lujinsuanfa_beijingyanse_chenghuang2)
+label(lujinsuanfa_guanbiliebiao1)
+label(lujinsuanfa_guanbiliebiaoxunhuanbagen)
+label(lujingsuanfa_guanbiliebiaozhongxunhuanbagen)
+label(lujinsuanfa_guanbiliebiaoxiaoxunhuanbagen)
+label(lujinsuanfa_guanbiliebiaoxiaoxunhuannext)
+label(lujinsuanfa_guanbiliebiaoxiaoxunhuanend)
+label(lujinsuanfa_zoufashuzu_charuchengyuan)
+label(lujinsuanfa_guanbiliebiaozhongxunhuannext)
+label(lujinsuanfa_guanbiliebiaoxunhuannext)
+label(lujinsuanfa_guanbiliebiaoxunhuanend)
+label(lujinsuanfa_wunaoxunhuan4cibagen)
+label(lujinsuanfa_wunaoxunhuandi1ciend)
+label(lujinsuanfa_wunaoxunhuandi2ciend)
+label(lujinsuanfa_wunaoxunhuandi3ciend)
+label(lujinsuanfa_wunaoxunhuandi4ciend)
+label(lujinsuanfa_panduanyicunzaiguanbiliebiaosunhuanendbagen)
+label(lujinsuanfa_panduanyicunzaiguanbiliebiaosunhuanendnext)
+label(lujinsuanfa_panduanyicunzaiguanbiliebiaosunhuanendend)
+label(lujinsuanfa_panduanyicunzaikaifangliebiaoxunhuankaishi)
+label(lujinsuanfa_panduanyicunzaikaifangliebiaoxunhuanbagen)
+label(lujinsuanfa_ju_yujiGzhi_14)
+label(lujinsuanfa_dituGdianpanduan)
+label(lujinsuanfa_panduanyicunzaikaifangliebiaoxunhuannext)
+label(lujinsuanfa_panduanyicunzaikaifangliebiaoxunhuanend)
+label(lujinsuanfa_ju_yujiGzhi_10fuzhi)
+label(lujingsuanfa_dituGdianfuzhi)
+label(lujingsuanfa_wunaixunhuan4cinext)
+label(lujingsuanfa_wunaixunhuan4ciend)
+label(lujinsuanfaend)
+label(ditushuju)
+label(guotuio)
+label(ditutongdaoxunhuanbagen)
+label(ditutongdaoxunhuanend)
+label(ditushujushuntufangshi)
+label(ditushujuend)
+label(zhenglizuobiao)
+label(zhenglizuobiao_zoufashuzuxunhuanbagen)
+label(zhenglizuobiao_zoufashuzuxunhuannext)
+label(zhenglizuobiaoend)
+label(jisuanfangxiang)
+label(jisuanfangxiangpanduan1)
+label(jisuanfangxiangpanduan2)
+label(jisuanfangxiangpanduan3)
+label(jisuanfangxiangpanduan4)
+label(jisuanfangxiangend)
+label(shanchuchenyuan)
+label(shanchuchenyuanbagen)
+label(shanchuchenyuanend)
+label(charuchengyuan)
+label(charuchengyuanbagen)
+label(charuchengyuanweizhi)
+label(charuchengyuanfree_end)
+label(charuchengyuanend)
+label(shujuduanbagen)
+label(dangqianfangjian)
+label(xiagefangjian)
+label(ditubianhao)
+label(ditukuandu)
+label(ditugaodu)
+label(ditukuanduEx)
+label(ditugaoduEx)
+label(fangjianshuliang)
+label(ditutongdao)
+label(dituqidian_hengzhouzuobiao)
+label(dituqidian_zongzhouzuobiao)
+label(dituzhongdian_hengzhouzuobiao)
+label(dituzhongdian_zongzhouzuobiao)
+label(kaifangliebiaogeshu)
+label(kaifangliebiao_dituFdian)
+label(kaifangliebiao_dituGdian)
+label(kaifangliebiao_dituHdian)
+label(kaifangliebiao_dangqianzuobiao_hengzhouzuobiao)
+label(kaifangliebiao_dangqianzuobiao_zongzhouzuobiao)
+label(kaifangliebiao_zuizhongzuobiao_hengzhouzuobiao)
+label(kaifangliebiao_zuizhongzuobiao_zongzhouzuobiao)
+label(guanbiliebiaogeshu)
+label(zoufashuju_geshu)
+label(linshijiedian)
+label(linshijiedian_dituFdian)
+label(linshijiedian_dituGdian)
+label(linshijiedian_dituHdian)
+label(linshijiedian_dangqianzuobiao_hengzhouzuobiao)
+label(linshijiedian_dangqianzuobiao_zongzhouzuobiao)
+label(linshijiedian_zuizhongzuobiao_hengzhouzuobiao)
+label(linshijiedian_zuizhongzuobiao_zongzhouzuobiao)
+label(daijiancezuobiao_hengzhouzuobiao)
+label(daijiancezuobiao_zongzhouzuobiao)
+label(daijiancejiedian_dituFdian)
+label(daijiancejiedian_dituGdian)
+label(daijiancejiedian_dituHdian)
+label(daijiancejiedian_dangqianzuobiao_hengzhouzuobiao)
+label(daijiancejiedian_dangqianzuobiao_zongzhouzuobiao)
+label(daijiancejiedian_zuizhongzuobiao_hengzhouzuobiao)
+label(daijiancejiedian_zuizhongzuobiao_zongzhouzuobiao)
+label(ditubiaoqian_eijingyanse)
+label(shujuduanend)
+label(fangxiangjihe)
+label(juqingjintushuju)
+label(zhuxianzidong)
+label(zhuxianzidongyincangrenwufubenyouxianend)
+label(zhuxianzidongchongxinhuanjuese)
+label(zhuxianzidongrenwuyiwancheng)
+label(zhuxianzidongdengjizidong)
+label(zhuxianzidongend)
+label(jishapixiupaichengyuan)
+label(zhixingqvyuCALL)
+label(zhixingqvyuCALL7101end)
+label(zhixingqvyuCALLend)
+label(xianchengpanduanzhuxian)
+label(xianchengpanduanzhuxiankaishijierenwu)
+label(xianchengpanduanzhuxianchangzhuwanchengrenwu)
+label(xianchengpanduanzhuxianpanduanrenwuzhuangtai)
+label(xianchengpanduanzhuxianyincangrenwuzhuangtai)
+label(xianchengpanduanzhuxianyincangfubenwancheng)
+label(xianchengpanduanzhuxianpanduanxunzhaowenbenseeking)
+label(xianchengpanduanzhuxianqiangzhiwancheng)
+label(xianchengpanduanzhuxianpanduanbunengqiangzhiwancheng)
+label(xianchengpanduanzhuxianpanduanzaicixunzhaowenbenseekingseeking)
+label(xianchengpanduanend)
+label(tiaoguoshuju)
+label(tiaoguoshujuxunhuanshou)
+label(tiaoguoshujuend)
+label(hunt_enemy)
+label(qiangzhiwancheng)
+label(qiangzhiwanchengxunhuanshou)
+label(qiangzhiwanchengend)
+label(clear_map)
+label(seeking)
+label(fubenwancheng)
+label(fubenwanchengxunhuanshou)
+label(fubenwanchengend)
+label(huoqvrenwushuju)
+label(renwushujusunhuanshou)
+label(renwushujuend)
+label(zhuxianshuju)
+label(zhuxianshujuxunhuanshou)
+label(zhuxianshujuend)
+label(yincangzhuxian)
+label(yincangzhuxianxunhuanshou)
+label(yincangzhuxianend)
+label(jieqvzhuxian)
+label(jieqvzhuxianxunhuanshou)
+label(jieqvzuxianend)
+label(chazhaozhidingrenwuID)
+label(chazhaozhidingrenwuIDxunhuanshou)
+label(chazhaozhidingrenwuIDmingcheng2)
+label(chazhaozhidingrenwuIDzhaodaorenwu)
+label(chazhaozhidingrenwuIDend)
+label(wanchengcishu)
+label(wanchengcishubudeng1FF)
+label(wanchengcishushengyucishu1FF)
+label(wanchengcishushengyucishu40000)
+label(wanchengcishushengyucishu40000end)
+label(wanchengcishuxunhuanshou)
+label(wanchengcishuxunhuanshou1)
+label(wanchengcishujiajia)
+label(wanchengcishuetiaochuxunhuan)
+label(wanchengcishuends)
+label(wanchengcishuend)
+label(renwucishu)
+label(renwucishuxuhuanshou)
+label(renwucishuend)
+label(renwuditu)
+label(renwuzhuangtai)
+label(renwuzhuangtaixunhuanshou)
+label(renwuzhuangtaiend)
+label(zhuxianshuju_renwubianhao)
+label(zhuxianshuju_renwuyaoqiu)
+label(zhuxianshuju_renwucishu)
+label(zhuxianshuju_renwufuben)
+label(zhuxianshuju_renwucailiao)
+label(zhuxianshuju_shifoutiaoguo)
+label(yincangzhuxianshuju_renwubianhao)
+label(yincangzhuxianshuju_renwuyaoqiu)
+label(yincangzhuxianshuju_renwucishu)
+label(yincangzhuxianshuju_renwufuben)
+label(yincangzhuxianshuju_renwucailiao)
+label(yincangzhuxianshuju_shifoutiaoguo)
+label(ReadMemory)
+label(Decryption)
+label(linshikongbai_dizhi)
+label(_ReadProcessMemory)
+
+define(CHAR,67053E0)//人物基址
+define(score,65AF41C)//评分基址
+define(BACKPACK,65B0894)//背包基址
+define(fatigue1,67054AC)//当前疲劳
+define(fatigue2,67054B4)//最大疲劳
+
+define(SD,65B0890)//商店基址
+define(LB,2FFA860)//喇叭公告
+define(GGECX,4141ED0)//公告ECX
+define(GGCALL,2FFA670)//公告CALL
+define(SJ,020A030)//时间基址
+
+define(DECRYPT_BASE,6742FB0)//解密基址
+define(PACKET_BASE,6738724)//发包基址
+define(BUFFER_CALL,3D88C70)//缓冲CALL
+define(ENCRYPT_CALL,3D88D80)//加密包CALL
+define(KeyCALL,3F1B3E0)//密钥CALL
+define(SEND_CALL,3D8A5D0)//发包CALL
+define(shoubaoCALL,2A9C600)//收包CALL
+
+
+define(shifangCALL,290D770)//释放CALL
+define(nanqiangCALL, 290CD40)//男枪CALL
+define(wudiCALL,3DA20E0)//无敌CALL
+define(OBJshanghai_1,2DFC1D1)//OBJ伤害_1
+define(GMquanxianmoshi,20A6F60)//GM权限模式
+define(zidongjianwu,2E70E32)//自动捡物
+define(renwujizhi,65B08D0)//任务基址
+define(wanchengCALL,2447620)//完成CALL
+define(jieshouCALL,2447720)//接受CALL
+define(tijiaoCALL,24476A0)//提交CALL
+
+define(fubenmingchen,65DA678)//副本名称
+define(fubenbianhao,659879C)//副本编号
+define(juqingcanshu1,24F2570)//剧情参数1
+define(juqingcanshu2,24F20F0)//剧情参数2
+define(xuantuCALL,3D3FA80)//选图CALL
+define(jintuCALL,3D65400)//剧情参数3
+define(huichengCALL,27FF0F0)//回城CALL
+
+define(ruzhuaiCALL,2818EB0)//入栈CALL
+define(yidongCALL,238D850)//移动CALL
+define(yidongpianyi1,764)//移动偏移_1
+define(yidongpianyi2,76C)//移动偏移_2
+
+define(shifoukaimen,118)//是否开门
+define(menxingpianyi,CC)//门型偏移
+define(dangqianfangjianX,E6C)//当前房间X
+define(dangqianfangjianY,E70)//当前房间Y
+define(BOSSfangjianX,F24)//BOSS房间X
+define(BOSSfangjianY,F2C)//BOSS房间Y
+define(Axingpianyi_0,CC)//A星偏移_0
+define(Axingpianyi_1,33C)//A星偏移_1
+define(Axingpianyi_2,350)//A星偏移_2
+define(Axingpianyi_3,D0)//A星偏移_3
+define(Axingpianyi_4,D4)//A星偏移_4
+define(Axingpianyi_5,21C)//A星偏移_5
+define(zuobiaoshuntupianyi,1B48)//坐标顺图
+define(zhenyingpianyi,95C)//阵营偏移
+define(ditupianyi,DC)//地图偏移
+define(leixingpianyi,B8)//类型偏移
+define(qvzuobiaopianyi,D8)//取坐标call
+define(zuobiaoCALLpianyi,0CC)//坐标CALL偏移==
+define(guaiwuxieliang,3FD0)//当前血量偏移
+
+define(weizhijizhi,64C8DC4)//位置基址
+define(juesejizhi,65AF72C)//角色基址
+define(juesednegji,65987EC)//角色等级
+define(juesepianyi,0B4)//角色偏移
+define(jueseshuliangpianyi,BB6)//角色数量偏移
+define(qvjueseweizhi,180)//取角色位置
+
+define(shoubao_jiemianqiehuan,#24)//收包_界面切换
+define(shoubao_xuantujiemian,#27)//收包_选图界面
+define(shoubao_xuantuqueren,#28)//收包_选图确认
+define(shoubao_chuangjianshuju,#29)//收包_创建数据
+define(shoubao_guotuqueren,#30)//收包_过图确认
+define(shoubao_lingzhusiwang,#31)//收包_领主死亡
+define(shoubao_tongguanjiesuan,#34)//收包_通关结算
+define(shoubao_guaiwusiwang,#38)//收包_怪物死亡
+define(shoubao_fanpaijiesuan,#261)//收包_翻牌结算
+define(shoubao_dutiaowanbi,#1103)//收包_读条完毕4248
+define(shoubao_gongnengwanbi,#1117)//收包_功能完毕4373
+
+define(chengzhenID,6597418)//剧情副本ID64683E8
+define(qvyufuzhi,6737800)//区域参数
+define(qvyupianyi,E3C4)//区域偏移
+define(qvyuCALL,3D027C0)//区域CALL
+define(tiaoguoCALL,21C45B0)//跳过CALL
+define(renwushuju,65923E0)//任务数据
+define(renwuzhizhen,2447600)//任务指针
+define(renwuleixing,184)//任务类型
+
+define(renwutiaoguopianyi,24C)//任务完成等级
+define(renwutiaojianpianyi,358)//任务条件
+define(renwufuben,32C)//任务副本A
+define(pingbiduihua,3ADC2E3)//屏蔽对话
+define(zhicaijizhi,65AF6C8)//制裁基址
+define(diuqiCALL,2B83490)//丢弃CALL
+
+Yun_Qi:
+push ebp
+mov ebp,esp
+push new
+call _CreateThread
+mov esp,ebp
+pop ebp
+ret
+
+new:
+push DNF
+push DNF
+call FindWindowA
+mov [hwnd],eax
+cmp eax,0
+je new
+
+shifoudaodajuese:
+push CHAR
+call ReadMemory
+test eax,eax
+je shifoudaodajuese
+mov [400448],1
+cmp [400444],0
+jne Yun_Qi_end
+push FFFF00FF
+push #56
+push kaishijihuo_gonggao
+call prompt
+push diaoyonchuangkou
+push -4
+push [hwnd]
+call SetWindowLongA
+mov [lpPrevWndFunc],eax
+mov [400444],eax
+mov [yuliupilao],0
+push GM_hook
+push GMquanxianmoshi
+call jmp_addr
+push 1
+push #114
+push zidongjianwu
+call memcryint
+//mov [400434],quanpingshanghai
+push TenRpcs_hook
+mov eax,shoubaoCALL
+add eax,0f
+push eax//拦截收包_B//独家收包
+call jmp_addr
+
+Yun_Qi_end:
+ret
+
+TenRpcs_hook:
+pushad
+pushfd
+call chulishijian
+popfd
+popad
+TenRpcs_hookend:
+movzx edi,word ptr [ebx+01]
+mov eax,0C7
+jmp shoubaoCALL+18
+ret 8
+
+huoqvjueseshuliang:
+mov eax,[juesejizhi]
+mov eax,[eax+juesepianyi]
+mov eax,[eax+jueseshuliangpianyi]
+ret
+
+huoqvjueseweizhi:
+mov eax,[juesejizhi]
+mov eax,[eax+qvjueseweizhi]
+ret
+
+OBJgaishanghai:
+cmp [esi+zhenyingpianyi],0
+jne obj
+mov eax,[400434]
+mov [ebp-000001B0],eax
+obj:
+mov eax,[ebp-000001B0]
+push OBJshanghai_1+6
+ret
+
+qiantaianjian:
+push ebp
+mov ebp,esp
+mov eax,dword ptr [ebp+8]
+push eax
+call SetFocus
+push 1
+mov ecx,dword ptr [ebp+8]
+push ecx
+call ShowWindow
+mov edx,dword ptr [ebp+8]
+push edx
+call SetForegroundWindow
+push #250
+push #100
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+push 0
+push 0
+push 0
+movzx eax,byte ptr [ebp+0c]
+push eax
+call MapVirtualKeyA
+push eax
+movzx ecx,byte ptr [ebp+0c]
+push ecx
+call keybd_event
+push #60
+push #30
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+push 0
+push 2
+push 0
+movzx edx,byte ptr [ebp+0c]
+push edx
+call MapVirtualKeyA
+push eax
+movzx eax,byte ptr [ebp+0c]
+push eax
+call keybd_event
+pop ebp
+ret 8
+
+qiantaizhixingEscanjian:
+push ebp
+mov ebp,esp
+push #27 //esc键
+push [hwnd]
+call qiantaianjian
+mov esp,ebp
+pop ebp
+ret
+
+qiantaizhixingF10anjian:
+push ebp
+mov ebp,esp
+push #121 //F10键
+push [hwnd]
+call qiantaianjian
+push #1000
+push #600
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+push #121 //F10键
+push [hwnd]
+call qiantaianjian
+push #700
+push #500
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+push #121 //F10键
+push [hwnd]
+call qiantaianjian
+call qiantaizhixingEscanjian
+push #600
+push #400
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+push #121 //F10键
+push [hwnd]
+call qiantaianjian
+mov esp,ebp
+pop ebp
+ret
+
+panduanshifouzhixingqiangshun:
+mov eax,1
+cmp [ditubianhao],#15
+je panduanshifouzhixingqiangshunend
+cmp [ditubianhao],#88
+je panduanshifouzhixingqiangshunend
+cmp [ditubianhao],#2911003
+je panduanshifouzhixingqiangshunend
+cmp [ditubianhao],#235
+je panduanshifouzhixingqiangshunend
+xor eax,eax
+panduanshifouzhixingqiangshunend:
+ret
+
+chulishijian:
+push ebp
+mov ebp,esp
+cmp [400448],0
+je chulishijian_End
+sub esp,2c
+xor eax,eax
+mov edi,ebx//指针
+movzx edx,Word ptr DS:[ebx+01]
+mov [ebp-4],edx//包头
+movzx edx,Word ptr DS:[ebx+03]
+mov [ebp-8],edx//长度
+mov [ebp-0c],eax//数量
+mov [ebp-10],eax//变量
+mov [ebp-14],eax//for_次数
+mov [ebp-18],eax//for_i
+mov [ebp-1c],eax//编号
+mov [ebp-20],eax//死亡数量
+mov [ebp-24],eax//
+mov [ebp-28],eax//
+mov [ebp-2c],eax//
+/*
+cmp [ebp-4],2
+JE 处理事件_End
+cmp [ebp-4],3
+JE 处理事件_End
+cmp [ebp-4],6
+JE 处理事件_End
+cmp [ebp-4],9
+JE 处理事件_End
+cmp [ebp-4],#32
+JE 处理事件_End
+cmp [ebp-4],#45
+JE 处理事件_End
+cmp [ebp-4],#119
+JE 处理事件_End
+cmp [ebp-4],#373
+JE 处理事件_End
+cmp [ebp-4],#610
+JE 处理事件_End
+push [ebp-8]
+push [ebp-4]
+push baotouchangdu_gonggao
+push linshikongbai_dizhi
+call wsprintfW //(包头?  \t  长度?,[ebp+4],[ebp+8])
+add esp,10
+push ffff00ff
+push 27
+push linshikongbai_dizhi
+call prompt
+push 100
+push 01
+push linshikongbai_dizhi
+call msvcrt.memset
+add esp,0c
+*/
+cmp [ebp-4],shoubao_gongnengwanbi
+jne gongnengwanbi_End
+cmp [ditubianhao],#104
+jne gongnengwanbi_104_End
+push 0
+push #207
+push #307
+push [CHAR]
+call zuobiaoCALL
+jmp gongnengwanbi_291100293_End
+
+gongnengwanbi_104_End:
+cmp [ditubianhao],#2911002
+jne gongnengwanbi_291100293_End
+push 0
+push #369
+push #1377
+push [CHAR]
+call zuobiaoCALL
+
+gongnengwanbi_291100293_End:
+cmp [Monsternumber],0
+jne gongnengwanbi_End
+call panduanshifouzhixingqiangshun
+test eax,eax
+je gongnengwanbi_End
+push #6666
+push 0
+push #8232
+push [hwnd]
+call SendMessageA
+mov [xuyaoguotu_panduan],0
+mov [keyishuntu_panduan],0
+
+gongnengwanbi_End:
+cmp [ebp-4],shoubao_xuantuqueren
+jne xuantruqueren_End
+mov eax,[edi+10]
+mov [ditubianhao],eax
+mov eax,[edi+14]
+mov [ditudengji],eax
+movzx eax,byte ptr DS:[edi+18]
+mov [BOSSzuobiao_hengzhouzuobiao],eax
+movzx eax,byte ptr DS:[edi+19]
+mov [BOSSzuobiao_zongzhouzuobiao],eax
+
+xuantruqueren_End:
+cmp [ebp-4],shoubao_chuangjianshuju
+jne chuangjianshuju_End
+mov [keyishuntu_panduan],0
+mov [xuyaoguotu_panduan],0
+movzx eax,byte ptr DS:[edi+10]
+mov [dangqianzuobiao_hengzhouzuobiao],eax
+movzx eax,byte ptr DS:[edi+11]
+mov [dangqianzuobiao_zongzhouzuobiao],eax
+mov [Monsternumber],0
+mov [Thenumberofdeaths],0
+mov [ebp-18],0
+movzx eax,byte ptr DS:[edi+22]
+mov [ebp-0c],eax
+//jne whileaddr_2 //不在这入包
+cmp [ebp-0c],#130
+jg chuangjianshuju_End
+sub eax,1
+imul eax,eax,#22
+mov [ebp-10],eax
+movzx eax,byte ptr DS:[edi+39+eax]
+mov [ebp-14],eax
+cmp [ebp-14],0
+je whileaddr_2
+cmp [ebp-14],#20
+jg whileaddr_2
+cmp [ebp-14],0
+jl whileaddr_2
+push [ebp-14]
+push tiqvcailiao_gonggao
+push linshikongbai_dizhi
+call wsprintfW
+add esp,0c
+push FFFF0020
+push #58
+push linshikongbai_dizhi
+call prompt
+push 200
+push 0
+push linshikongbai_dizhi
+call msvcrt.memset
+add esp,0c
+
+whileaddr_1:
+mov edx,[ebp-10]
+imul eax,[ebp-18],#21
+lea eax,[eax+edi+3B]
+mov eax,[eax+edx]
+mov [ebp-1c],eax
+push 0
+push 0
+push [ebp-1c]
+call Pickingthings
+inc [ebp-18]
+mov eax,[ebp-18]
+cmp eax,[ebp-14]
+jl whileaddr_1
+mov [ebp-18],0
+
+whileaddr_2:
+mov eax,[ebp-18]
+cmp eax,[ebp-0c]
+jge whileaddr_End
+imul edx,[ebp-18],#22
+movzx eax,Word ptr DS:[edx+edi+34]
+mov [ebp-1c],eax
+inc [ebp-18]
+cmp [edx+edi+2B],#54526//胶囊宝宝
+je whileaddr_2
+cmp [edx+edi+2B],#110110//胶囊宝宝建筑
+je whileaddr_2
+cmp [ebp-1c],0
+je whileaddr_2
+inc [Monsternumber]
+jmp whileaddr_2
+
+whileaddr_End:
+push [Monsternumber]
+push guaiwushuliang_gonggao
+push linshikongbai_dizhi
+call wsprintfW
+add esp,0c
+push FF8FFF00
+push 10
+push linshikongbai_dizhi
+call prompt
+push 200
+push 0
+push linshikongbai_dizhi
+call msvcrt.memset
+add esp,0c
+mov [ebp-18],0
+cmp [Monsternumber],0
+jne chuangjianshuju_End
+call panduanshifouzhixingqiangshun
+test eax,eax
+je chuangjianshuju_End
+push #37
+call buffer
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+call sendpacket
+
+chuangjianshuju_End:
+cmp [ebp-4],shoubao_guotuqueren
+jne guotuqueren_End
+mov [keyishuntu_panduan],1
+mov [quanpingjishu_panduan],0
+mov [quanpingjishu_panduan+4],0
+
+guotuqueren_End:
+cmp [ebp-4],shoubao_tongguanjiesuan
+jne tongguanjiesuan_End
+push #69
+call buffer
+call sendpacket
+push #70
+call buffer
+call sendpacket
+push #71
+call buffer
+push 0
+push 1
+call jiamibaoCALL
+push 4
+push 0
+call qvsuijishu
+push eax
+push 1
+call jiamibaoCALL
+call sendpacket
+push #1465//1465
+call buffer
+call sendpacket
+
+tongguanjiesuan_End:
+cmp [ebp-4],shoubao_fanpaijiesuan
+jne fanpaijiesuan_End
+push fubenmingchen
+call msvcrt.wcslen
+add esp,4
+cmp eax,2
+jl fanpaijiesuan_bagen_2
+imul ecx,eax,2
+push esi
+mov esi,fubenmingchen
+fanpaijiesuan_bagen:
+movzx eax,byte ptr DS:[esi]
+cmp eax,20
+jne fanpaijiesuan_bagen_1
+movzx eax,byte ptr DS:[esi+1]
+cmp eax,0
+jne fanpaijiesuan_bagen_1
+push 1
+push 0
+push esi
+call memcryint
+mov ecx,1
+fanpaijiesuan_bagen_1:
+inc esi
+loop fanpaijiesuan_bagen
+pop esi
+fanpaijiesuan_bagen_2:
+inc [shuatujishu_panduan]
+push [shuatujishu_panduan]
+push fubenmingchen
+cmp [xunhuanditu_panduan],1
+je lingzhufangjian_zidong
+cmp [ditudengji],4
+je lingzhufangjian_zidong
+push juqingshuatu_gonggao
+jmp lingzhufangjian_juqing
+lingzhufangjian_zidong:
+push zidongshuatu_gonggao
+lingzhufangjian_juqing:
+push linshikongbai_dizhi
+call wsprintfW
+add esp,10
+push FF8FFF00
+push 27
+push linshikongbai_dizhi
+call prompt
+push 200
+push 0
+push linshikongbai_dizhi
+call msvcrt.memset
+add esp,0c
+call chulizhuangbei
+mov [lingzhufangjian_panduan],1
+cmp [xunhuanditu_panduan],1
+jne fanpaijiesuan_End
+push qiantaizhixingEscanjian
+call _CreateThread
+
+fanpaijiesuan_End:
+cmp [ebp-4],shoubao_guaiwusiwang
+jne guaiwusiwang_End
+cmp [ebp-8],#28
+je guaiwusiwang_bagen
+movzx eax,byte ptr DS:[edi+12]
+mov [ebp-14],eax
+mov [ebp-18],0
+cmp [ebp-14],1
+jl guaiwusiwang_bagen
+cmp [ebp-14],#48
+jg guaiwusiwang_bagen
+
+while38addr:
+mov eax,[edi+14]
+add eax,[ebp-18]
+mov [ebp-1c],eax
+push 0
+push 0
+push [ebp-1c]
+call Pickingthings
+inc [ebp-18]
+mov eax,[ebp-18]
+cmp eax,[ebp-14]
+jl while38addr
+
+guaiwusiwang_bagen:
+inc [Thenumberofdeaths]
+mov eax,[Thenumberofdeaths]
+cmp eax,[Monsternumber]
+jl guaiwusiwang_End
+push [BOSSzuobiao_zongzhouzuobiao]
+push [BOSSzuobiao_hengzhouzuobiao]
+push [dangqianzuobiao_zongzhouzuobiao]
+push [dangqianzuobiao_hengzhouzuobiao]
+call panduan_zuobiaoxiangdeng
+cmp eax,1
+je guaiwusiwang_End
+cmp [zidongguotu_panduan],1
+je guaiwusiwang_End
+mov [xuyaoguotu_panduan],1
+guaiwusiwang_End:
+chulishijian_End:
+mov esp,ebp
+pop ebp
+ret
+
+GM_hook:
+push eax
+mov eax,[CHAR]
+cmp eax,0
+je GM_xor
+mov eax,[eax+ditupianyi]
+cmp eax,0
+jne GM_xor
+cmp ecx,[juesejizhi]
+jz GM_mov
+GM_xor:
+pop eax
+xor al, al
+ret
+GM_mov:
+pop eax
+mov al, 01
+ret
+
+zhisuijishuzhongzi:
+push 0
+call time
+push eax
+call srand
+add esp,8
+ret
+
+qvsuijishu:
+push ebp
+mov ebp,esp
+call rand
+cdq
+idiv [ebp+0C]
+add edx,[ebp+08]
+mov eax,edx
+pop ebp
+ret 8
+
+jinruditu:
+push ebp
+mov ebp,esp
+push -01
+push 00
+push 00
+push [ebp+0c]
+push [ebp+08]
+call juqingcanshu1
+mov ecx,eax
+call juqingcanshu2
+mov ecx,eax
+call jintuCALL
+mov esp,ebp
+pop ebp
+ret 8
+
+huoqvshengyu_pilao:
+push fatigue1
+call Decryption
+mov edx,eax
+push edx
+push fatigue2
+call Decryption
+pop edx
+sub eax,edx
+ret
+
+chengzhengyidongpanduan:
+mov [chengzhengshunhuancishu],0
+push #200
+push #100
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+cmp [zidongyijiekaiguan],1
+je chengzhengyidongpanduanbagen
+call huoqvshengyu_pilao
+cmp eax,[yuliupilao]
+jg  chengzhengyidongpanduanbagen
+push FF00FF00
+push 27
+push juesepilao_gonggao
+call prompt
+mov [zidongzhixing_panduan],4
+ret
+
+chengzhengyidongpanduanbagen:
+cmp [400438],0
+jne chengzhengyidongpanduankaishizhixing
+mov eax,[juesednegji]
+cmp eax,dengjishezhi
+jge chengzhengyidongpanduankaishizhixing
+push eax
+push juesedengji_gonggao
+push linshikongbai_dizhi
+call wsprintfW
+add esp,0c
+push FFFF00FF
+push 27
+push linshikongbai_dizhi
+call prompt
+push 100
+push 0
+push linshikongbai_dizhi
+call msvcrt.memset
+add esp,0c
+mov [zidongzhixing_panduan],4
+ret
+
+chengzhengyidongpanduankaishizhixing:
+push [dituID]
+call zhixingqvyuCALL
+push #200
+push #100
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+mov eax,[chengzhenID]
+cmp [chengzhengyidongshuju],eax
+jne chengzhengyidongpanduanxunhuan
+mov [zidongzhixing_panduan],3
+ret
+
+chengzhengyidongpanduanxunhuan:
+inc [chengzhengshunhuancishu]
+imul eax,[chengzhengshunhuancishu],14
+add eax,quanshishichang
+push 14
+push eax
+push chengzhengyidongshuju
+call memcpyStub
+cmp [chengzhengshunhuancishu],4
+jle chengzhengyidongpanduanbagen
+jmp quanzidongjieshu
+
+zubao_chengzhenyidong:
+push #36
+call buffer
+mov eax,[chengzhengyidongshuju]//#30
+push eax
+push 1
+call jiamibaoCALL
+mov eax,[chengzhengyidongshuju+4]//2
+push eax
+push 1
+call jiamibaoCALL
+mov eax,[chengzhengyidongshuju+8]//500
+push eax
+push 2
+call jiamibaoCALL
+mov eax,[chengzhengyidongshuju+0c]//300
+push eax
+push 2
+call jiamibaoCALL
+push 5
+push 1
+call jiamibaoCALL
+push 1
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 1
+call jiamibaoCALL
+call sendpacket
+ret
+
+quanzidongjieshu:
+mov eax,[yizhixingjueseshuliang]
+inc eax
+push eax
+push dengjibuzu_gonggao
+push linshikongbai_dizhi
+call wsprintfW
+add esp,0c
+push FFFF00FF
+push 27
+push linshikongbai_dizhi
+call prompt
+push 100
+push 0
+push linshikongbai_dizhi
+call msvcrt.memset
+add  esp,0c
+mov [yizhixingjueseshuliang],0
+mov [zidongzhixing_panduan],0
+mov [zidongkaiguan_pasnduan],0
+ret
+
+diaoyonchuangkou:
+push edi
+mov edi,esp
+cmp [edi+0c],#257
+jne diaoyonchuangkou_257
+cmp [edi+10],#35//End键
+jne diaoyonchuangkou_End
+cmp [400448],0
+je zhi_400448wei0
+mov [400448],0
+push CCFFFF00
+push 27
+push tingzhifuzhu_gonggao
+call prompt
+mov [keyishuntu_panduan],0
+mov eax,[CHAR]
+cmp eax,0
+je diaoyonchuangkou_End
+mov eax,[eax+ditupianyi]
+cmp eax,0
+je diaoyonchuangkou_End
+push 300
+push 200
+push #8238
+push [hwnd]
+call SendMessageA
+jmp diaoyonchuangkou_End
+
+zhi_400448wei0:
+mov [400448],1
+push CCFFFF00
+push 27
+push huifufuzhu_gonggao
+call prompt
+mov [guotuio],0
+mov [piaoyicanshu],0
+mov [keyishuntu_panduan],1
+mov [juqingzhixing_panduan],1
+
+diaoyonchuangkou_End:
+cmp [400448],1
+jne diaoyonchuangkou_Ret
+cmp [edi+10],#112//F1键
+jne diaoyonchuangkou_F1
+cmp [zidongkaiguan_pasnduan],0
+je F1kaiguan_panduan_1
+mov [zidongkaiguan_pasnduan],0
+mov [zidongzhixing_panduan],0
+push CCFFFF00
+push 27
+push guanbizidong_gonggao
+call prompt
+jmp diaoyonchuangkou_F1
+
+F1kaiguan_panduan_1:
+push CCFFFF00
+push 27
+push kaiqidegonggao
+call prompt
+push 14
+push kongbudeqixidi
+push chengzhengyidongshuju
+call memcpyStub
+mov [zidongkaiguan_pasnduan],1
+mov [zidongzhixing_panduan],1
+mov [juqingkaiguan_panduan],0
+
+diaoyonchuangkou_F1:
+cmp [edi+10],#113//F2键
+jne diaoyonchuangkou_F2
+cmp [zidongkaiguan_pasnduan],0
+je F2kaiguan_panduan_1
+mov [zidongkaiguan_pasnduan],0
+mov [zidongzhixing_panduan],0
+push CCFFFF00
+push 27
+push guanbizidong_gonggao
+call prompt
+jmp diaoyonchuangkou_F2
+
+F2kaiguan_panduan_1:
+push CCFFFF00
+push 27
+push kaiqidegonggao
+call prompt
+push 14
+push quanshishichang
+push chengzhengyidongshuju
+call memcpyStub
+mov [zidongkaiguan_pasnduan],1
+mov [zidongzhixing_panduan],1
+mov [juqingkaiguan_panduan],0
+
+diaoyonchuangkou_F2:
+cmp [edi+10],#114//F3键
+jne diaoyonchuangkou_F3
+cmp [dajianzhuwu_panduan],1
+je dajianzhuwu_panduan_0
+mov [dajianzhuwu_panduan],1
+push CCFFFF00
+push 27
+push kaiqijianzhu_gonggao
+call prompt
+jmp diaoyonchuangkou_F3
+
+dajianzhuwu_panduan_0:
+mov [dajianzhuwu_panduan],0
+push CCFFFF00
+push 27
+push guanbijianzhu_gonggao
+call prompt
+
+diaoyonchuangkou_F3:
+cmp [edi+10],#115//F4键
+jne diaoyonchuangkou_F4
+cmp [fenjiezhuangbei_panduan],1
+je fenjiezhuangbei_panduan_0
+mov [fenjiezhuangbei_panduan],1
+push CCFFFF00
+push 27
+push kaiqifenjie_gonggao
+call prompt
+call chulizhuangbei
+jmp diaoyonchuangkou_F4
+
+fenjiezhuangbei_panduan_0:
+mov [fenjiezhuangbei_panduan],0
+push CCFFFF00
+push 27
+push guanbifenjie_gonggao
+call prompt
+
+diaoyonchuangkou_F4:
+cmp [edi+10],#116//F5键
+jne diaoyonchuangkou_F5
+cmp [zidongkaiguan_pasnduan],0
+je F5kaiguan_panduan_1
+mov [zidongkaiguan_pasnduan],0
+mov [zidongzhixing_panduan],0
+push CCFFFF00
+push 27
+push guanbizidong_gonggao
+call prompt
+jmp diaoyonchuangkou_F5
+
+F5kaiguan_panduan_1:
+push CCFFFF00
+push 27
+push kaiqidegonggao
+call prompt
+push 14
+push lukedejuguangjing
+push chengzhengyidongshuju
+call memcpyStub
+mov [zidongkaiguan_pasnduan],1
+mov [zidongzhixing_panduan],1
+mov [juqingkaiguan_panduan],0
+
+diaoyonchuangkou_F5:
+cmp [edi+10],#117//F6键
+jne diaoyonchuangkou_F6
+cmp [zidongkaiguan_pasnduan],0
+je F6kaiguan_panduan_1
+mov [zidongkaiguan_pasnduan],0
+mov [zidongzhixing_panduan],0
+push CCFFFF00
+push 27
+push guanbizidong_gonggao
+call prompt
+jmp diaoyonchuangkou_F6
+
+F6kaiguan_panduan_1:
+push CCFFFF00
+push 27
+push kaiqidegonggao
+call prompt
+push 14
+push wangmingshazhen
+push chengzhengyidongshuju
+call memcpyStub
+mov [zidongkaiguan_pasnduan],1
+mov [zidongzhixing_panduan],1
+mov [juqingkaiguan_panduan],0
+
+diaoyonchuangkou_F6:
+cmp [edi+10],#118//F7键
+jne diaoyonchuangkou_F7
+
+diaoyonchuangkou_F7:
+cmp [edi+10],#119//F8键
+jne diaoyonchuangkou_F8
+cmp [zidongkaiguan_pasnduan],0
+je F8kaiguan_panduan_1
+mov [zidongkaiguan_pasnduan],0
+mov [zidongzhixing_panduan],0
+mov [zidongyijiekaiguan],0
+push CCFFFF00
+push 27
+push guanbizidong_gonggao
+call prompt
+jmp diaoyonchuangkou_F8
+
+F8kaiguan_panduan_1:
+push CCFFFF00
+push 27
+push kaiqidegonggao
+call prompt
+push 14
+push yijie
+push chengzhengyidongshuju
+call memcpyStub
+mov [yijiecishu],0
+mov [zidongyijiekaiguan],1
+mov [zidongkaiguan_pasnduan],1
+mov [zidongzhixing_panduan],1
+mov [yijierenwukaiguan],0
+
+diaoyonchuangkou_F8:
+cmp [edi+10],#120//F9键
+jne diaoyonchuangkou_F9
+cmp [xunhuanditu_panduan],0
+je xunhuanditu_duanzhi_1
+mov [xunhuanditu_panduan],0
+push CCFFFF00
+push 27
+push guanbixunhuan_gonggap
+call prompt
+jmp diaoyonchuangkou_F9
+
+xunhuanditu_duanzhi_1:
+mov [xunhuanditu_panduan],1
+push CCFFFF00
+push 27
+push kaiqixunhuan_gonggap
+call prompt
+mov [dajianzhuwu_panduan],1
+
+diaoyonchuangkou_F9:
+cmp [edi+10],#122//F11键
+jne diaoyonchuangkou_F11
+cmp [zidongguotu_panduan],0
+je zidongguotu_panduan_1
+mov [zidongguotu_panduan],0
+push CCFFFF00
+push 27
+push kaiqishuntu_gonggao
+call prompt
+jmp diaoyonchuangkou_F11
+
+zidongguotu_panduan_1:
+mov [zidongguotu_panduan],1
+push CCFFFF00
+push 27
+push guanbishuntu_gonggao
+call prompt
+
+diaoyonchuangkou_F11:
+cmp [edi+10],#123//F12键
+jne diaoyonchuangkou_F12
+cmp [juqingkaiguan_panduan],0
+je juqingkaiguan_panduan_1
+mov [juqingkaiguan_panduan],0
+push CCFFFF00
+push 27
+push guanbijuqing_gonggao
+call prompt
+push 1
+push #116
+push pingbiduihua
+call memcryint
+jmp diaoyonchuangkou_F12
+
+juqingkaiguan_panduan_1:
+mov [juqingkaiguan_panduan],1
+mov [juqingzhixing_panduan],1
+mov [zidongyijiekaiguan],0
+mov [zidongkaiguan_pasnduan],0
+push CCFFFF00
+push 27
+push kaiqijuqing_gonggao
+call prompt
+push 1
+push #117
+push pingbiduihua
+call memcryint
+
+diaoyonchuangkou_F12:
+cmp [edi+10],#192//~键
+jne diaoyonchuangkou_192
+call wanchengyijierenwu
+diaoyonchuangkou_192:
+
+diaoyonchuangkou_257:
+cmp [400448],1
+jne diaoyonchuangkou_Ret
+cmp [zidongkaiguan_pasnduan],0
+je diaoyonchuangkou_zidong
+cmp [zidongzhixing_panduan],0
+jne diaoyonchuangkou_weizhi_0
+cmp [weizhijizhi],0
+jne diaoyonchuangkou_weizhi_0
+mov [zidongzhixing_panduan],1
+call zubao_zidonghuanjuese
+test eax,eax
+jne diaoyonchuangkou_weizhi_0
+push ecx
+push [yizhixingjueseshuliang]
+push zidongpilao_gonggao
+push linshikongbai_dizhi
+call wsprintfW
+add esp,10
+push FFFF00FF
+push 27
+push linshikongbai_dizhi
+call prompt
+push 100
+push 0
+push linshikongbai_dizhi
+call msvcrt.memset
+add  esp,0c
+mov [yizhixingjueseshuliang],0
+mov [zidongkaiguan_pasnduan],0
+mov [zidongzhixing_panduan],0
+
+diaoyonchuangkou_weizhi_0:
+cmp [weizhijizhi],1
+jne diaoyonchuangkou_weizhi_1
+cmp [400438],0
+je diaoyonchuangkou_weizhi_genghuanjuese
+mov eax,[400438]
+mov [dituID],eax
+
+diaoyonchuangkou_weizhi_genghuanjuese:
+cmp [zidongzhixing_panduan],4
+jne diaoyonchuangkou_weizhi_genghuanjuese_end
+mov [zidongzhixing_panduan],0
+call zubao_tiaozhuandaojuese
+
+diaoyonchuangkou_weizhi_genghuanjuese_end:
+cmp [zidongzhixing_panduan],1
+jne diaoyonchuangkou_weizhi_GO
+mov [zidongzhixing_panduan],2
+mov [dajianzhuwu_panduan],1
+push chengzhengyidongpanduan
+call _CreateThread
+
+diaoyonchuangkou_weizhi_GO:
+cmp [zidongzhixing_panduan],3
+jne diaoyonchuangkou_weizhi_1
+mov eax,lingzhufangjian_panduan
+mov [eax+c],5
+cmp [zidongyijiekaiguan],0
+je diaoyonchuangkou_xuantu_kaishi
+cmp [yijierenwukaiguan],1
+je diaoyonchuangkou_xuantu_yijie
+mov [yijierenwukaiguan],1
+push qianwangshenzhezhiminghao
+call chazhaozhidingrenwuID
+test eax,eax
+je diaoyonchuangkou_xuantu_yijie
+push eax
+push eax
+call jieshouCALL
+pop eax
+push eax
+push -1
+push 0
+push eax
+call wanchengCALL
+call tijiaorenwu
+jmp diaoyonchuangkou_xuantu_yijie
+
+diaoyonchuangkou_xuantu_yijie:
+mov [lingzhufangjian_panduan+c],3
+cmp [yijiecishu],5
+jne diaoyonchuangkou_xuantu_kaishi
+mov [zidongzhixing_panduan],0
+mov [yijiecishu],0
+mov [yijierenwukaiguan],0
+call zubao_tiaozhuandaojuese
+
+diaoyonchuangkou_xuantu_kaishi:
+call zuibao_xuantu
+mov [lingzhufangjian_panduan+8],0
+
+diaoyonchuangkou_weizhi_1:
+cmp [weizhijizhi],2
+jne diaoyonchuangkou_jintu
+cmp [dituID],0
+je diaoyonchuangkou_jintu
+cmp [zidongyijiekaiguan],1
+jne diaoyonchuangkou_jintu_yijie
+mov eax,lingzhufangjian_panduan
+inc [eax+8]
+cmp [eax+8],#900 //等待进图时间 到900后还进不去自动换下个角色
+jl  diaoyonchuangkou_jintu_yijie
+mov [zidongzhixing_panduan],0
+mov [yijiecishu],0
+mov [yijierenwukaiguan],0
+call zubao_chutu
+call zubao_tiaozhuandaojuese
+
+diaoyonchuangkou_jintu_yijie:
+mov eax,lingzhufangjian_panduan
+cmp [eax+c],0
+je diaoyonchuangkou_jintu
+sub [eax+c],1
+push [eax+c]
+push [dituID]
+call zuibao_jintu
+push 8
+push 1
+call qvsuijishu
+mov [shengyupilao_panduan],eax
+
+diaoyonchuangkou_jintu:
+cmp [weizhijizhi],3
+jl  diaoyonchuangkou_zidong
+mov edx,[fubenbianhao]
+mov [dituID],edx
+cmp [lingzhufangjian_panduan],0
+je diaoyonchuangkou_zidong
+cmp [zidongyijiekaiguan],1
+je diaoyonchuangkou_chutuchuli
+call huoqvshengyu_pilao
+cmp eax,[yuliupilao]
+jg diaoyonchuangkou_chutuchuli
+mov [zidongzhixing_panduan],4
+
+diaoyonchuangkou_chutuchuli:
+call zidonggengguai
+test ecx,ecx
+jne diaoyonchuangkou_zidong
+mov [lingzhufangjian_panduan],0
+call zubao_chutu
+cmp [zidongyijiekaiguan],0
+je diaoyonchuangkou_zidong
+inc [yijiecishu]
+
+diaoyonchuangkou_zidong:
+cmp [juqingkaiguan_panduan],0
+je diaoyonchuangkou_juqing
+cmp [juqingzhixing_panduan],0
+jne diaoyonchuangkou_weizhi_juqing_0
+cmp [weizhijizhi],0
+jne diaoyonchuangkou_weizhi_juqing_0
+mov [juqingzhixing_panduan],1
+call zubao_zidonghuanjuese
+test eax,eax
+jne diaoyonchuangkou_weizhi_juqing_0
+push ecx
+push [yizhixingjueseshuliang]
+push juqingpilao_gonggao
+push linshikongbai_dizhi
+call wsprintfW
+add esp,10
+push FFFF00FF
+push 27
+push linshikongbai_dizhi
+call prompt
+push 100
+push 0
+push linshikongbai_dizhi
+call msvcrt.memset
+add  esp,0c
+mov [yizhixingjueseshuliang],0
+mov [juqingkaiguan_panduan],0
+mov [juqingzhixing_panduan],0
+
+diaoyonchuangkou_weizhi_juqing_0:
+cmp [weizhijizhi],1
+jne diaoyonchuangkou_weizhi_juqing_1
+cmp [juqingzhixing_panduan],1
+jne diaoyonchuangkou_weizhi_juqing_1_end
+mov [juqingzhixing_panduan],0
+push zhuxianzidong
+call _CreateThread
+mov [lingzhufangjian_panduan+8],0
+
+diaoyonchuangkou_weizhi_juqing_1_end:
+cmp [juqingzhixing_panduan],4
+jne diaoyonchuangkou_weizhi_genghuanjuese_1
+mov [juqingzhixing_panduan],0
+call zubao_tiaozhuandaojuese
+diaoyonchuangkou_weizhi_genghuanjuese_1:
+
+
+diaoyonchuangkou_weizhi_juqing_1:
+cmp [weizhijizhi],2
+jne diaoyonchuangkou_weizhi_juqing_2
+
+cmp [dituID],0
+je diaoyonchuangkou_weizhi_juqing_2
+mov eax,lingzhufangjian_panduan
+inc [eax+8]
+cmp [eax+8],#900//进图超时
+jl diaoyonchuangkou_weizhi_juqing_jishu
+mov [lingzhufangjian_panduan+8],0
+call zubao_chutu
+
+diaoyonchuangkou_weizhi_juqing_jishu:
+mov eax,lingzhufangjian_panduan
+cmp [eax+c],0
+jl diaoyonchuangkou_weizhi_juqing_2
+mov  [eax+8],0
+push [zhuxianshuju_renwubianhao]
+push [eax+c]
+sub [eax+c],1
+push [dituID]
+call zuibao_juqing
+mov [juqingzhixing_panduan],1
+
+diaoyonchuangkou_weizhi_juqing_2:
+cmp [weizhijizhi],3
+jne diaoyonchuangkou_juqing
+cmp [lingzhufangjian_panduan],0
+je diaoyonchuangkou_juqing
+mov eax,lingzhufangjian_panduan
+inc [eax+8]
+cmp [eax+8],#1550
+jge diaoyonchuangkou_juqing_huicheng
+call zidonggengguai
+test ecx,ecx
+jne diaoyonchuangkou_juqing
+push [zhuxianshuju_renwubianhao]
+call renwuzhuangtai
+cmp eax,2
+je diaoyonchuangkou_juqing_huicheng
+cmp [lingzhufangjian_panduan+4],#5588
+je diaoyonchuangkou_juqing_huicheng
+mov eax,lingzhufangjian_panduan
+inc [eax+c]
+cmp [eax+c],#600//等待时间回城
+jl diaoyonchuangkou_juqing
+
+diaoyonchuangkou_juqing_huicheng:
+mov [lingzhufangjian_panduan],0
+call zubao_chutu
+
+diaoyonchuangkou_juqing:
+cmp [edi+0c],#8227
+jne tongyonggongnengdiaoyong_1_end
+cmp [edi+14],#1111
+jne tongyonggongnengdiaoyong_1_end
+push [edi+10]
+call jieshouCALL
+jmp diaoyonchuangkou_Ret
+
+tongyonggongnengdiaoyong_1_end:
+cmp [edi+0c],#8228
+jne tongyonggongnengdiaoyong_2_end
+cmp [gongnengzhixing_panduan],2
+jne tongyonggongnengdiaoyong_2_end
+mov [gongnengzhixing_panduan],0
+mov ecx,[edi+14]
+test ecx,ecx
+jle tongyonggongnengdiaoyong_2_end
+
+tongyonggongnengdiaoyong_2_bagen:
+push ecx
+push -1
+push 0
+push [edi+10]
+call wanchengCALL
+pop ecx
+loop tongyonggongnengdiaoyong_2_bagen
+jmp diaoyonchuangkou_Ret
+
+tongyonggongnengdiaoyong_2_end:
+cmp [edi+0c],#8229
+jne tongyonggongnengdiaoyong_3_end
+cmp [edi+14],#3333
+jne tongyonggongnengdiaoyong_3_end
+mov [gongnengzhixing_panduan],0
+push [edi+10]
+call tijiaorenwu
+jmp diaoyonchuangkou_Ret
+
+tongyonggongnengdiaoyong_3_end:
+cmp [edi+0c],#8230
+jne tongyonggongnengdiaoyong_11_end
+cmp [edi+10],#4444
+jne tongyonggongnengdiaoyong_11_end
+cmp [edi+14],#4444
+jne tongyonggongnengdiaoyong_11_end
+mov [gongnengzhixing_panduan],0
+call zuibao_xuantu
+jmp diaoyonchuangkou_Ret
+
+tongyonggongnengdiaoyong_11_end:
+cmp [edi+0c],#8231
+jne tongyonggongnengdiaoyong_13_end
+cmp [edi+10],#5555
+jne tongyonggongnengdiaoyong_13_end
+cmp [edi+14],#5555
+jne tongyonggongnengdiaoyong_13_end
+mov [gongnengzhixing_panduan],0
+call zubao_chengzhenyidong
+jmp diaoyonchuangkou_Ret
+
+tongyonggongnengdiaoyong_13_end:
+cmp [edi+0c],#8232
+jne tongyonggongnengdiaoyong_14_end
+cmp [edi+14],#6666
+jne tongyonggongnengdiaoyong_14_end
+mov eax,[edi+10]
+mov [guotuio],eax
+call shuntuchuli
+jmp diaoyonchuangkou_Ret
+
+tongyonggongnengdiaoyong_14_end:
+cmp [edi+0c],#8233
+jne tongyonggongnengdiaoyong_15_end
+cmp [edi+14],#7777
+jne tongyonggongnengdiaoyong_15_end
+push 1
+push 1
+push [edi+10]
+mov ecx,[BACKPACK]
+call diuqiCALL
+jmp diaoyonchuangkou_Ret
+
+tongyonggongnengdiaoyong_15_end:
+cmp [edi+0c],#8234
+jne tongyonggongnengdiaoyong_16_end
+cmp [edi+14],#8888
+jne tongyonggongnengdiaoyong_16_end
+push #22
+call buffer
+push 0
+push 1
+call jiamibaoCALL
+push [edi+10]
+push 2
+call jiamibaoCALL
+push 1
+push 4
+call jiamibaoCALL
+push #154
+push 4
+call jiamibaoCALL
+push #72
+push 4
+call jiamibaoCALL
+mov eax,[edi+10]
+inc eax
+imul eax,eax,2
+inc eax
+push eax
+push 4
+call jiamibaoCALL
+call sendpacket
+jmp diaoyonchuangkou_Ret
+
+tongyonggongnengdiaoyong_16_end:
+cmp [edi+0c],#8235
+jne tongyonggongnengdiaoyong_17_end
+cmp [edi+14],#9999
+jne tongyonggongnengdiaoyong_17_end
+push #26
+call buffer
+push [edi+10]
+push 2
+call jiamibaoCALL
+push 0
+push 1
+call jiamibaoCALL
+push FFFF
+push 2
+call jiamibaoCALL
+push 13F
+push 4
+call jiamibaoCALL
+call sendpacket
+jmp diaoyonchuangkou_Ret
+
+tongyonggongnengdiaoyong_17_end:
+cmp [edi+0c],#8236
+jne tongyonggongnengdiaoyong_18_end
+cmp [edi+14],#10000
+jne tongyonggongnengdiaoyong_18_end
+push #20
+call buffer
+push 6
+push 4
+call jiamibaoCALL
+push #16
+push 1
+call jiamibaoCALL
+push 0
+push 1
+call jiamibaoCALL
+push #24
+push 1
+call jiamibaoCALL
+push 1//整理位置
+push 1
+call jiamibaoCALL
+push #32
+push 1
+call jiamibaoCALL
+push 0
+push 1
+call jiamibaoCALL
+call sendpacket
+jmp diaoyonchuangkou_Ret
+
+tongyonggongnengdiaoyong_18_end:
+cmp [edi+0c],#8237
+jne tongyonggongnengdiaoyong_19_end
+cmp [edi+14],#11000
+jne tongyonggongnengdiaoyong_19_end
+push [piaoyicanshu+0c]
+push [piaoyicanshu+8]
+push [piaoyicanshu+4]
+push [piaoyicanshu]
+call piaoyiCALL
+mov [piaoyicanshu],0
+jmp diaoyonchuangkou_Ret
+
+tongyonggongnengdiaoyong_19_end:
+cmp [gongnengzhixing_panduan],#20
+jne tongyonggongnengdiaoyong_20_end
+mov [gongnengzhixing_panduan],0
+mov ecx,[renwujizhi]
+push 0
+push 1
+call tiaoguoCALL
+jmp diaoyonchuangkou_Ret
+
+tongyonggongnengdiaoyong_20_end:
+cmp [edi+0c],#8238
+jne tongyonggongnengdiaoyong_21_end
+push [edi+14]
+push [edi+10]
+push 50
+push [CHAR]
+call piaoyiCALL
+mov [piaoyicanshu],0
+jmp diaoyonchuangkou_Ret
+
+tongyonggongnengdiaoyong_21_end:
+cmp [weizhijizhi],3
+jl  diaoyonchuangkou_huicheng
+cmp [xunhuanditu_panduan],1
+jne diaoyonchuangkou_huicheng
+mov edx,[fubenbianhao]
+mov [dituID],edx
+cmp [lingzhufangjian_panduan],0
+je diaoyonchuangkou_huicheng
+call zidonggengguai
+test ecx,ecx
+jne diaoyonchuangkou_huicheng
+mov [lingzhufangjian_panduan],0
+//call huichengCALL
+// push #42
+// call buffer
+// call sendpacket
+push qiantaizhixingF10anjian
+call _CreateThread
+jmp diaoyonchuangkou_Ret
+
+diaoyonchuangkou_huicheng:
+cmp [edi+0c],#260
+jne diaoyonchuangkou_260
+cmp [edi+10],#49//1键
+jne diaoyonchuangkou_1
+cmp [zengjiashanghai_panduan],0
+je zengjiashanghai_panduan_1
+mov [zengjiashanghai_panduan],0
+push 6
+push obj
+push OBJshanghai_1
+call memcpyStub
+push CCFFFF00
+push 27
+push guanbishanghai_gonggao
+call prompt
+jmp diaoyonchuangkou_1
+
+zengjiashanghai_panduan_1:
+mov [zengjiashanghai_panduan],1
+push OBJgaishanghai
+push OBJshanghai_1
+call jmp_addr
+push CCFFFF00
+push 27
+push kaiqishanghai_gonggao
+call prompt
+
+diaoyonchuangkou_1:
+cmp [edi+10],#50//2键
+jne diaoyonchuangkou_2
+cmp [toumingwudi_panduan],0
+je toumingwudi_panduan_1
+mov [toumingwudi_panduan],0
+push CCFFFF00
+push 27
+push guanbiwudi_gonggao
+call prompt
+jmp diaoyonchuangkou_2
+
+toumingwudi_panduan_1:
+mov [toumingwudi_panduan],1
+push CCFFFF00
+push 27
+push kaiqiwudi_gonggao
+call prompt
+
+diaoyonchuangkou_2:
+cmp [edi+10],#51//3键
+jne diaoyonchuangkou_3
+cmp [diuqizhuangbei_panduan],0
+je diuqizhuangbei_panduan_1
+mov [diuqizhuangbei_panduan],0
+push CCFFFF00
+push 27
+push guanbidiuqi_gonggao
+call prompt
+jmp diaoyonchuangkou_3
+
+diuqizhuangbei_panduan_1:
+mov [diuqizhuangbei_panduan],1
+mov [fenjiezhuangbei_panduan],1
+push CCFFFF00
+push 27
+push kaiqidiuqi_gonggao
+call prompt
+
+diaoyonchuangkou_3:
+cmp [edi+10],#52//4键
+jne diaoyonchuangkou_4
+mov [fenjiezhuangbei_panduan],1
+cmp [zisezhuangbei_panduan],0
+je zisezhuangbei_panduan_1
+mov [zisezhuangbei_panduan],0
+push CCFFFF00
+push 27
+push chushoujiazi_gonggao
+call prompt
+jmp diaoyonchuangkou_4
+
+zisezhuangbei_panduan_1:
+mov [zisezhuangbei_panduan],1
+push CCFFFF00
+push 27
+push fenjiejiazi_gonggao
+call prompt
+
+diaoyonchuangkou_4:
+cmp [edi+10],#53//5键
+jne diaoyonchuangkou_5
+inc [shuntufangshi]
+cmp [shuntufangshi],1
+jne shuntufangshi_1_end
+push CCFFFF00
+push 27
+push bengpaoguotu_gonggao
+call prompt
+
+mov [guotuio],0
+shuntufangshi_1_end:
+cmp [shuntufangshi],2
+jne shuntufangshi_2_end
+push CCFFFF00
+push 27
+push qiangzhiguotu_gonggao
+call prompt
+
+shuntufangshi_2_end:
+cmp [shuntufangshi],3
+jl shuntufangshi_3_end
+mov [shuntufangshi],0
+push CCFFFF00
+push 27
+push zuobiaoguotu_gonggao
+call prompt
+mov [guotuio],0
+shuntufangshi_3_end:
+
+diaoyonchuangkou_5:
+mov eax,[CHAR]
+test eax,eax
+je diaoyonchuangkou_260
+mov eax,[eax+ditupianyi]
+test eax,eax
+je diaoyonchuangkou_260
+cmp [edi+10],#38
+jne diaoyonchuangkou_shang
+push suntuS
+call _CreateThread
+
+diaoyonchuangkou_shang:
+cmp [edi+10],#40
+jne diaoyonchuangkou_xia
+push suntuX
+call _CreateThread
+
+diaoyonchuangkou_xia:
+cmp [edi+10],#37
+jne diaoyonchuangkou_zuo
+push suntuZ
+call _CreateThread
+
+diaoyonchuangkou_zuo:
+cmp [edi+10],#39
+jne diaoyonchuangkou_you
+push suntuY
+call _CreateThread
+diaoyonchuangkou_you:
+
+diaoyonchuangkou_260:
+mov eax,[CHAR]
+test eax,eax
+je diaoyonchuangkou_Ret
+mov eax,[eax+ditupianyi]
+test eax,eax
+jne chuangkoudiaoyong_tunei
+mov [keyishuntu_panduan],0
+mov [jintushijian_panduan],0
+mov [lingzhufangjian_panduan],0
+mov [lingzhufangjian_panduan+10],0
+mov [guotuio],0
+mov [lingzhufangjian_panduan+14],0
+jmp diaoyonchuangkou_Ret
+
+chuangkoudiaoyong_tunei:
+cmp [keyishuntu_panduan],0
+je diaoyonchuangkou_Ret
+cmp [lingzhufangjian_panduan+10],1
+je diaoyonchuangkou_pingfen
+call shifouligzhufang
+cmp eax,1
+jne diaoyonchuangkou_pingfen
+mov [lingzhufangjian_panduan+10],1
+mov eax,[score]
+push #999999
+add eax,110
+push eax
+call Encryption
+
+diaoyonchuangkou_pingfen:
+cmp [toumingwudi_panduan],0
+je zidongquanpingjineng
+cmp [lingzhufangjian_panduan+14],0
+jne zidongquanpingjineng
+mov [lingzhufangjian_panduan+14],1
+mov ecx,[CHAR]
+push -1
+push 1
+push 1
+push 1
+mov ecx,[CHAR]
+call wudiCALL
+
+zidongquanpingjineng:
+inc [quanpingjishu_panduan]
+cmp [quanpingjishu_panduan],#9
+jne diaoyonchuangkou_Ret
+mov [quanpingjishu_panduan],0
+call zidonggengguai
+test ecx,ecx
+jne diaoyonchuangkou_Ret
+test eax,eax
+je zidongshuntu_panduan
+inc [quanpingjishu_panduan+4]
+cmp [quanpingjishu_panduan+4],#30//超时也顺图
+jne diaoyonchuangkou_Ret
+
+zidongshuntu_panduan:
+mov [quanpingjishu_panduan+4],0
+cmp [zidongguotu_panduan],1
+je diaoyonchuangkou_Ret
+call panduanshifouzhixingqiangshun
+test eax,eax
+jne zhixingqiangshun_bagen
+cmp [shuntufangshi],2
+je zhixingqiangshun_bagen
+cmp [guotuio],0
+jne diaoyonchuangkou_Ret
+mov [guotuio],1
+push shuntuchuli
+call _CreateThread
+jmp diaoyonchuangkou_Ret
+
+zhixingqiangshun_bagen:
+mov [zidongguotu_panduan],0
+push #6666
+push 0
+push #8232
+push [hwnd]
+call SendMessageA
+
+diaoyonchuangkou_Ret:
+push [edi+14]
+push [edi+10]
+push [edi+0c]
+push [edi+8]
+push [lpPrevWndFunc]
+call CallWindowProcA
+mov esp,edi
+pop edi
+ret 10
+
+zhuxianzidong:
+push ebp
+mov ebp,esp
+push #1500
+push #800
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+mov [lingzhufangjian_panduan+4],0
+call xianchengpanduanzhuxian
+cmp [juqingkaiguan_panduan],0
+je zhuxianzidongend
+cmp [400448],0
+je zhuxianzidongend
+cmp [zhuxianshuju_renwufuben],0
+je zhuxianzidongdengjizidong
+mov [lingzhufangjian_panduan+c],0
+mov eax,[zhuxianshuju_renwufuben]
+mov [dituID],eax
+cmp [yincangzhuxianshuju_renwufuben],0
+je zhuxianzidongyincangrenwufubenyouxianend
+mov eax,[yincangzhuxianshuju_renwufuben]
+mov [dituID],eax
+zhuxianzidongyincangrenwufubenyouxianend:
+call huoqvshengyu_pilao
+cmp eax,[yuliupilao]
+jle zhuxianzidongchongxinhuanjuese
+push #800
+push #300
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+cmp [dituID],0
+je zhuxianzidongdengjizidong
+push [zhuxianshuju_renwubianhao]
+call renwuzhuangtai
+cmp eax,2
+je zhuxianzidongrenwuyiwancheng
+push [yincangzhuxianshuju_renwubianhao]
+call renwuzhuangtai
+cmp eax,2
+je zhuxianzidongrenwuyiwancheng
+push [dituID]
+call zhixingqvyuCALL
+push #800
+push #300
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+push #4444
+push #4444
+push #8230
+push [hwnd]
+call SendMessageA
+jmp zhuxianzidongend
+zhuxianzidongchongxinhuanjuese:
+push FF00FF00
+push 27
+push juesepilao_gonggao
+call prompt
+mov eax,yincangzhuxianshuju_shifoutiaoguo
+sub eax,zhuxianshuju_renwubianhao
+push eax
+push 0
+push zhuxianshuju_renwubianhao
+call msvcrt.memset
+add esp,0c
+mov [juqingzhixing_panduan],4
+jmp zhuxianzidongend
+zhuxianzidongrenwuyiwancheng:
+push #3333
+push [yincangzhuxianshuju_renwubianhao]
+push #8229
+push [hwnd]
+call SendMessageA
+push #200
+call KERNELBASE.Sleep
+push #3333
+push [zhuxianshuju_renwubianhao]
+push #8229
+push [hwnd]
+call SendMessageA
+mov [juqingzhixing_panduan],1
+jmp zhuxianzidongend
+zhuxianzidongdengjizidong:
+imul eax,[juesednegji],0c
+add eax,juqingjintushuju
+mov edx,[eax+4]
+mov [dituID],edx
+mov edx,[eax+8]
+mov [lingzhufangjian_panduan+c],edx
+mov [lingzhufangjian_panduan+4],#5588
+cmp [eax],#95
+je zhuxianzidongyincangrenwufubenyouxianend
+cmp [eax],#91
+jle zhuxianzidongyincangrenwufubenyouxianend
+push niwudehujiao
+call chazhaozhidingrenwuID
+test eax,eax
+je zhuxianzidongdengjizidong_jishapixiupaichengyuan
+mov [zhuxianshuju_renwubianhao],eax
+push #1111
+push [zhuxianshuju_renwubianhao]
+push #8227
+push [hwnd]
+call SendMessageA
+push #200
+push #100
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+push 1
+push [zhuxianshuju_renwubianhao]
+push #8228
+push [hwnd]
+call SendMessageA
+push #200
+push #100
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+push #3333
+push [zhuxianshuju_renwubianhao]
+push #8229
+push [hwnd]
+call SendMessageA
+push #200
+push #100
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+zhuxianzidongdengjizidong_jishapixiupaichengyuan:
+push jishapixiupaichengyuan
+call chazhaozhidingrenwuID
+mov [zhuxianshuju_renwubianhao],eax
+push #1111
+push [zhuxianshuju_renwubianhao]
+push #8227
+push [hwnd]
+call SendMessageA
+push #200
+push #100
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+jmp zhuxianzidongyincangrenwufubenyouxianend
+zhuxianzidongend:
+mov esp,ebp
+pop ebp
+ret
+
+zhixingqvyuCALL:
+push ebp
+mov ebp,esp
+sub esp,4
+mov ecx,[qvyufuzhi]
+mov [ebp-04],ecx
+push [ebp+08]
+push 0FF
+call qvyuCALL
+cmp [ebp+8],#7101
+jl zhixingqvyuCALL7101end
+cmp [ebp+8],#7107
+jg zhixingqvyuCALL7101end
+mov [chengzhengyidongshuju],#17
+mov [chengzhengyidongshuju+4],#3
+mov [chengzhengyidongshuju+8],#798
+mov [chengzhengyidongshuju+0c],#359
+push #5555
+push #5555
+push #8231
+push [hwnd]
+call SendMessageA
+jmp zhixingqvyuCALLend
+zhixingqvyuCALL7101end:
+mov edx,[ebp-04]
+mov eax,[edx+qvyupianyi]
+mov [chengzhengyidongshuju],eax
+mov eax,[edx+qvyupianyi+4]
+mov [chengzhengyidongshuju+4],eax
+mov eax,[edx+qvyupianyi+8]
+mov [chengzhengyidongshuju+8],eax
+mov eax,[edx+qvyupianyi+0c]
+mov [chengzhengyidongshuju+0c],eax
+cmp [chengzhengyidongshuju],0
+je zhixingqvyuCALLend
+push #5555
+push #5555
+push #8231
+push [hwnd]
+call SendMessageA
+zhixingqvyuCALLend:
+mov esp,ebp
+pop ebp
+ret 4
+
+xianchengpanduanzhuxian:
+push ebp
+mov ebp,esp
+xianchengpanduanzhuxiankaishijierenwu:
+cmp [400448],0
+je xianchengpanduanend
+cmp [juqingkaiguan_panduan],0
+je xianchengpanduanend
+mov eax,yincangzhuxianshuju_shifoutiaoguo
+sub eax,zhuxianshuju_renwubianhao
+push eax
+push 0
+push zhuxianshuju_renwubianhao
+call msvcrt.memset
+add esp,0c
+call jieqvzhuxian
+cmp eax,0
+jg xianchengpanduanzhuxianchangzhuwanchengrenwu
+call yincangzhuxian
+cmp eax,0
+je xianchengpanduanend
+xianchengpanduanzhuxianchangzhuwanchengrenwu:
+call huoqvrenwushuju
+call zhuxianshuju
+cmp [yincangzhuxianshuju_renwufuben],#239
+je xianchengpanduanzhuxianchangzhuwanchengrenwu_tiaoguoshuju
+cmp [yincangzhuxianshuju_renwufuben],#32
+jne xianchengpanduanzhuxianchangzhuwanchengrenwu_1
+xianchengpanduanzhuxianchangzhuwanchengrenwu_tiaoguoshuju:
+call tiaoguoshuju
+test eax,eax
+je xianchengpanduanzhuxianchangzhuwanchengrenwu_1
+mov [gongnengzhixing_panduan],#20
+push #1200
+push #800
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+jmp xianchengpanduanzhuxiankaishijierenwu
+xianchengpanduanzhuxianchangzhuwanchengrenwu_1:
+push yincangzhuxianshuju_renwuyaoqiu
+call qiangzhiwancheng
+cmp eax,1
+jne xianchengpanduanzhuxianyincangfubenwancheng
+push [yincangzhuxianshuju_renwubianhao]
+call renwuzhuangtai
+cmp eax,2
+je xianchengpanduanzhuxianyincangrenwuzhuangtai
+mov [gongnengzhixing_panduan],2
+push [yincangzhuxianshuju_renwucishu]
+push [yincangzhuxianshuju_renwubianhao]
+push #8228
+push [hwnd]
+call SendMessageA
+push #1000
+push #600
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+cmp [gongnengzhixing_panduan],2
+je xianchengpanduanzhuxiankaishijierenwu
+push [yincangzhuxianshuju_renwubianhao]
+call renwuzhuangtai
+cmp eax,1
+je xianchengpanduanend
+xianchengpanduanzhuxianyincangrenwuzhuangtai:
+push #3333
+push [yincangzhuxianshuju_renwubianhao]
+push #8229
+push [hwnd]
+call SendMessageA
+push #1200
+push #800
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+jmp xianchengpanduanzhuxiankaishijierenwu
+xianchengpanduanzhuxianyincangfubenwancheng:
+push yincangzhuxianshuju_renwuyaoqiu
+call fubenwancheng
+cmp eax,1
+jne xianchengpanduanzhuxianqiangzhiwancheng
+push #1000
+push #300
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+push [yincangzhuxianshuju_renwubianhao]
+call renwuzhuangtai
+cmp eax,2
+jne xianchengpanduanzhuxianpanduanxunzhaowenbenseeking
+push #3333
+push [yincangzhuxianshuju_renwubianhao]
+push #8229
+push [hwnd]
+call SendMessageA
+push #1200
+push #800
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+jmp xianchengpanduanzhuxiankaishijierenwu
+xianchengpanduanzhuxianpanduanxunzhaowenbenseeking:
+cmp [yincangzhuxianshuju_renwufuben],0
+jne  xianchengpanduanend
+push yincangzhuxianshuju_renwuyaoqiu
+call msvcrt.wcslen
+add esp,4
+test eax,eax
+je xianchengpanduanend
+push seeking
+push yincangzhuxianshuju_renwuyaoqiu
+call msvcrt.wcsstr
+add esp,8
+test eax,eax
+je xianchengpanduanend
+
+call tiaoguoshuju
+cmp eax,1
+jne xianchengpanduanend
+mov [gongnengzhixing_panduan],#20
+push #1200
+push #800
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+jmp xianchengpanduanzhuxiankaishijierenwu
+xianchengpanduanzhuxianqiangzhiwancheng:
+cmp [zhuxianshuju_renwufuben],#239
+je xianchengpanduanzhuxianpanduanseeking_engtiaoguoshuju
+cmp [zhuxianshuju_renwufuben],#32
+jne xianchengpanduanzhuxianqiangzhiwancheng_1
+xianchengpanduanzhuxianpanduanseeking_engtiaoguoshuju:
+call tiaoguoshuju
+test eax,eax
+je xianchengpanduanzhuxianqiangzhiwancheng_1
+mov [gongnengzhixing_panduan],#20
+push #1200
+push #800
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+jmp xianchengpanduanzhuxiankaishijierenwu
+xianchengpanduanzhuxianqiangzhiwancheng_1:
+push zhuxianshuju_renwuyaoqiu
+call qiangzhiwancheng
+cmp eax,1
+jne xianchengpanduanzhuxianpanduanbunengqiangzhiwancheng
+push [zhuxianshuju_renwubianhao]
+call renwuzhuangtai
+cmp eax,2
+je xianchengpanduanzhuxianpanduanrenwuzhuangtai
+mov [gongnengzhixing_panduan],2
+push [zhuxianshuju_renwucishu]
+push [zhuxianshuju_renwubianhao]
+push #8228
+push [hwnd]
+call SendMessageA
+push #800
+push #600
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+cmp [gongnengzhixing_panduan],2
+je xianchengpanduanzhuxiankaishijierenwu
+push [zhuxianshuju_renwubianhao]
+call renwuzhuangtai
+cmp eax,1
+je xianchengpanduanend
+xianchengpanduanzhuxianpanduanrenwuzhuangtai:
+push #3333
+push [zhuxianshuju_renwubianhao]
+push #8229
+push [hwnd]
+call SendMessageA
+push #1200
+push #800
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+jmp xianchengpanduanzhuxiankaishijierenwu
+xianchengpanduanzhuxianpanduanbunengqiangzhiwancheng:
+push zhuxianshuju_renwuyaoqiu
+call fubenwancheng
+cmp eax,1
+jne xianchengpanduanend
+push #1000
+push #300
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+push [zhuxianshuju_renwubianhao]
+call renwuzhuangtai
+cmp eax,2
+jne xianchengpanduanzhuxianpanduanzaicixunzhaowenbenseekingseeking
+push #3333
+push [zhuxianshuju_renwubianhao]
+push #8229
+push [hwnd]
+call SendMessageA
+push #1200
+push #800
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+jmp xianchengpanduanzhuxiankaishijierenwu
+xianchengpanduanzhuxianpanduanzaicixunzhaowenbenseekingseeking:
+cmp [zhuxianshuju_renwufuben],0
+jne  xianchengpanduanend
+push zhuxianshuju_renwuyaoqiu
+call msvcrt.wcslen
+add esp,4
+test eax,eax
+je xianchengpanduanend
+push seeking
+push zhuxianshuju_renwuyaoqiu
+call msvcrt.wcsstr
+add esp,8
+test eax,eax
+je xianchengpanduanend
+call tiaoguoshuju
+cmp eax,1
+jne xianchengpanduanend
+mov [gongnengzhixing_panduan],#20
+push #1200
+push #800
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+jmp xianchengpanduanzhuxiankaishijierenwu
+xianchengpanduanend:
+mov esp,ebp
+pop ebp
+ret
+
+tiaoguoshuju:
+push ebp
+mov ebp,esp
+xor eax,eax
+cmp [zhicaijizhi],4
+je tiaoguoshujuend
+sub esp,0c
+mov eax,[renwujizhi]
+mov ecx,[eax+68]
+mov [ebp-4],ecx
+mov eax,[eax+6C]
+sub eax,ecx
+cdq
+mov ecx,4
+div ecx
+mov [ebp-8],eax
+mov [ebp-0c],0
+tiaoguoshujuxunhuanshou:
+xor eax,eax
+mov edx,[ebp-8]
+cmp [ebp-0c],edx
+jge tiaoguoshujuend
+imul eax,[ebp-0c],4
+add eax,[ebp-4]
+mov edx,[eax]
+inc [ebp-0c]
+cmp [edx+renwuleixing],0
+jne tiaoguoshujuxunhuanshou
+mov eax,[edx]
+mov [zhuxianshuju_renwubianhao],eax
+mov eax,1
+mov ecx,[edx+renwutiaoguopianyi]
+cmp ecx,[juesednegji]
+jl tiaoguoshujuend
+xor eax,eax
+tiaoguoshujuend:
+mov esp,ebp
+pop ebp
+ret
+
+qiangzhiwancheng:
+push ebp
+mov ebp,esp
+push [ebp+8]
+call msvcrt.wcslen
+add esp,4
+mov ecx,eax
+xor eax,eax
+test ecx,ecx
+je qiangzhiwanchengend
+sub esp,8
+mov [ebp-4],0
+mov [ebp-8],hunt_enemy
+qiangzhiwanchengxunhuanshou:
+xor eax,eax
+cmp [ebp-4],9
+jge qiangzhiwanchengend
+push [ebp-8]
+push [ebp+8]
+call msvcrt.wcsstr
+add esp,8
+mov ecx,eax
+mov eax,1
+test ecx,ecx
+jne qiangzhiwanchengend
+push [ebp-8]
+call msvcrt.wcslen
+add esp,4
+inc eax
+imul eax,eax,2
+add [ebp-8],eax
+inc [ebp-4]
+jmp qiangzhiwanchengxunhuanshou
+
+qiangzhiwanchengend:
+mov esp,ebp
+pop ebp
+ret 4
+
+fubenwancheng:
+push ebp
+mov ebp,esp
+push [ebp+8]
+call msvcrt.wcslen
+add esp,4
+mov ecx,eax
+xor eax,eax
+test ecx,ecx
+je fubenwanchengend
+sub esp,8
+mov [ebp-4],0
+mov [ebp-8],clear_map
+fubenwanchengxunhuanshou:
+xor eax,eax
+cmp [ebp-4],2
+jge fubenwanchengend
+push [ebp-8]
+push [ebp+8]
+call msvcrt.wcsstr
+add esp,8
+mov ecx,eax
+mov eax,1
+test ecx,ecx
+jne fubenwanchengend
+push [ebp-8]
+call msvcrt.wcslen
+add esp,4
+inc eax
+imul eax,eax,2
+add [ebp-8],eax
+inc [ebp-4]
+jmp fubenwanchengxunhuanshou
+fubenwanchengend:
+mov esp,ebp
+pop ebp
+ret 4
+
+huoqvrenwushuju:
+push ebp
+mov ebp,esp
+sub esp,0c
+mov eax,[renwujizhi]
+mov ecx,[eax+68]
+mov [ebp-4],ecx
+mov eax,[eax+6C]
+sub eax,ecx
+cdq
+mov ecx,4
+div ecx
+mov [ebp-8],eax
+mov [ebp-0c],0
+renwushujusunhuanshou:
+mov edx,[ebp-8]
+cmp [ebp-0c],edx
+jge renwushujuend
+imul eax,[ebp-0c],4
+add eax,[ebp-4]
+mov edx,[eax]
+inc [ebp-0c]
+mov eax,edx
+add eax,renwuleixing
+push edx
+push eax
+call duzhengshu
+pop edx
+cmp ecx,0
+jne renwushujusunhuanshou
+cmp eax,0
+jne renwushujusunhuanshou
+mov eax,[edx]
+mov [zhuxianshuju_renwubianhao],eax
+mov eax,[edx+renwutiaojianpianyi]
+push eax
+push zhuxianshuju_renwuyaoqiu
+call wcscat
+add esp,8
+push [zhuxianshuju_renwubianhao]
+call renwuditu
+mov [zhuxianshuju_renwufuben],eax
+push [zhuxianshuju_renwubianhao]
+call renwucishu
+push eax
+call wanchengcishu
+mov [zhuxianshuju_renwucishu],eax
+push [zhuxianshuju_renwufuben]
+push eax
+push [zhuxianshuju_renwubianhao]
+push zhuxianshuju_renwuyaoqiu
+push renwushuju_gonggao
+push linshikongbai_dizhi
+call wsprintfW
+add esp,18
+push CCFFFF00
+push 10
+push linshikongbai_dizhi
+call prompt
+push 200
+push 0
+push linshikongbai_dizhi
+call msvcrt.memset
+add esp,0c
+renwushujuend:
+mov esp,ebp
+pop ebp
+ret
+
+zhuxianshuju:
+push ebp
+mov ebp,esp
+sub esp,10
+mov eax,[renwujizhi]
+mov ecx,[eax+8]
+mov [ebp-4],ecx
+mov eax,[eax+0c]
+sub eax,ecx
+cdq
+mov ecx,0c
+div ecx
+mov [ebp-8],eax
+mov [ebp-0c],0
+zhuxianshujuxunhuanshou:
+mov edx,[ebp-8]
+cmp [ebp-0c],edx
+jge zhuxianshujuend
+imul eax,[ebp-0c],0c
+add eax,[ebp-4]
+mov edx,[eax]
+inc [ebp-0c]
+cmp [edx+renwuleixing],#11
+jne zhuxianshujuxunhuanshou
+mov eax,[edx]
+mov [yincangzhuxianshuju_renwubianhao],eax
+mov eax,[edx+renwutiaojianpianyi]
+push eax
+push yincangzhuxianshuju_renwuyaoqiu
+call wcscat
+add esp,8
+push [yincangzhuxianshuju_renwubianhao]
+call renwuditu
+mov [yincangzhuxianshuju_renwufuben],eax
+push [yincangzhuxianshuju_renwubianhao]
+call renwucishu
+push eax
+call wanchengcishu
+mov [yincangzhuxianshuju_renwucishu],eax
+push [yincangzhuxianshuju_renwufuben]
+push eax
+push [yincangzhuxianshuju_renwubianhao]
+push yincangzhuxianshuju_renwuyaoqiu
+push zhuxianshuju_gonggao
+push linshikongbai_dizhi
+call wsprintfW
+add esp,18
+push CCFFFF00
+push 10
+push linshikongbai_dizhi
+call prompt
+push 200
+push 0
+push linshikongbai_dizhi
+call msvcrt.memset
+add esp,0c
+zhuxianshujuend:
+mov esp,ebp
+pop ebp
+ret
+
+yincangzhuxian:
+push ebp
+mov ebp,esp
+sub esp,0c
+mov edx,[renwujizhi]
+mov ecx,[edx+8]
+mov [ebp-4],ecx
+mov eax,[edx+0c]
+sub eax,ecx
+cdq
+mov ecx,0c
+div ecx
+mov [ebp-8],eax
+mov [ebp-0c],0
+yincangzhuxianxunhuanshou:
+xor eax,eax
+mov edx,[ebp-8]
+cmp [ebp-0c],edx
+jge yincangzhuxianend
+mov edx,[ebp-4]
+imul eax,[ebp-0c],0c
+mov edx,[edx+eax]
+inc [ebp-0c]
+cmp [edx+renwuleixing],#11
+jne yincangzhuxianxunhuanshou
+mov eax,[edx]
+yincangzhuxianend:
+mov esp,ebp
+pop ebp
+ret
+
+jieqvzhuxian:
+push ebp
+mov ebp,esp
+sub esp,0c
+mov eax,[renwujizhi]
+mov ecx,[eax+68]
+mov [ebp-4],ecx
+mov eax,[eax+6C]
+sub eax,ecx
+cdq
+mov ecx,4
+div ecx
+mov [ebp-8],eax
+mov [ebp-0c],0
+jieqvzhuxianxunhuanshou:
+xor eax,eax
+mov edx,[ebp-8]
+cmp [ebp-0c],edx
+jge jieqvzuxianend
+imul eax,[ebp-0c],4
+add eax,[ebp-4]
+mov edx,[eax]
+inc [ebp-0c]
+cmp [edx+renwuleixing],0
+jne jieqvzhuxianxunhuanshou
+mov eax,[edx]
+mov [zhuxianshuju_renwubianhao],eax
+push eax
+call renwuzhuangtai
+test eax,eax
+jne jieqvzuxianend
+mov [gongnengzhixing_panduan],1
+push #1111
+push [zhuxianshuju_renwubianhao]
+push #8227
+push [hwnd]
+call SendMessageA
+push #500
+push #200
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+sub [ebp-0c],1
+cmp [gongnengzhixing_panduan],1
+je jieqvzhuxianxunhuanshou
+jieqvzuxianend:
+mov eax,[zhuxianshuju_renwubianhao]
+mov esp,ebp
+pop ebp
+ret
+
+chazhaozhidingrenwuID:
+push ebp
+mov ebp,esp
+sub esp,10
+mov eax,[renwujizhi]
+mov ecx,[eax+68]
+mov [ebp-4],ecx
+mov eax,[eax+6C]
+sub eax,ecx
+cdq
+mov ecx,4
+div ecx
+mov [ebp-8],eax
+mov [ebp-0c],0
+chazhaozhidingrenwuIDxunhuanshou:
+xor eax,eax
+mov edx,[ebp-8]
+cmp [ebp-0c],edx
+jge chazhaozhidingrenwuIDend
+imul eax,[ebp-0c],4
+add eax,[ebp-4]
+mov edx,[eax]
+mov [ebp-10],edx
+inc [ebp-0c]
+mov eax,[edx+1c]
+cmp eax,7
+jne chazhaozhidingrenwuIDmingcheng2
+add edx,8
+push edx
+push [ebp+8]
+call msvcrt.wcsstr
+add esp,8
+test eax,eax
+jne chazhaozhidingrenwuIDzhaodaorenwu
+jmp chazhaozhidingrenwuIDxunhuanshou
+chazhaozhidingrenwuIDmingcheng2:
+mov edx,[ebp-10]
+push [edx+8]
+push [ebp+8]
+call msvcrt.wcsstr
+add esp,8
+test eax,eax
+je chazhaozhidingrenwuIDxunhuanshou
+chazhaozhidingrenwuIDzhaodaorenwu:
+mov edx,[ebp-10]
+mov eax,[edx]
+chazhaozhidingrenwuIDend:
+mov esp,ebp
+pop ebp
+ret 4
+
+wanchengcishu:
+push ebp
+mov ebp,esp
+mov ecx,[ebp+08]
+sub esp,0C
+cmp ecx,200
+jnl wanchengcishubudeng1FF
+mov eax,ecx
+mov esp,ebp
+pop ebp
+ret 4
+wanchengcishubudeng1FF:
+je wanchengcishuends
+push esi
+mov esi,ecx
+and esi,1FF
+sub ecx,esi
+mov [ebp-0C],esi
+mov eax,ecx
+push edi
+cmp ecx,40000
+jnge wanchengcishushengyucishu1FF
+and eax,8003FFFF
+jns wanchengcishushengyucishu1FF
+dec eax
+or eax,FFFC0000
+inc eax
+wanchengcishushengyucishu1FF:
+cdq
+and edx,1FF
+add eax,edx
+sar eax,09
+mov [ebp-08],eax
+imul eax,esi,FFFFFE00
+add ecx,eax
+cmp ecx,40000
+jnl wanchengcishushengyucishu40000
+mov [ebp-04],0
+jmp wanchengcishushengyucishu40000end
+wanchengcishushengyucishu40000:
+mov eax,ecx
+cdq
+and edx,3FFFF
+add eax,edx
+sar eax,12
+mov [ebp-04],eax
+wanchengcishushengyucishu40000end:
+mov ecx,2
+wanchengcishuxunhuanshou:
+mov edi,1
+xor eax,eax
+db 0F 1F 80 00 00 00 00
+wanchengcishuxunhuanshou1:
+mov edx,[ebp+eax*4-0C]
+mov esi,[ebp+eax*4-08]
+cmp edx,esi
+jle wanchengcishujiajia
+mov [ebp+eax*4-0C],esi
+xor edi,edi
+mov [ebp+eax*4-08],edx
+wanchengcishujiajia:
+inc eax
+cmp eax,ecx
+jnge wanchengcishuxunhuanshou1
+test edi,edi
+jne wanchengcishuetiaochuxunhuan
+dec ecx
+test ecx,ecx
+jg wanchengcishuxunhuanshou
+wanchengcishuetiaochuxunhuan:
+mov eax,[ebp-04]
+pop edi
+pop esi
+test eax,eax
+jne wanchengcishuend
+wanchengcishuends:
+mov eax,1
+wanchengcishuend:
+mov esp,ebp
+pop ebp
+ret 4
+
+renwucishu:
+push ebp
+mov ebp,esp
+sub esp,10
+mov edx,[renwujizhi]
+mov ecx,[edx+8]
+mov [ebp-4],ecx
+mov eax,[edx+0c]
+sub eax,ecx
+cdq
+mov ecx,0c
+div ecx
+mov [ebp-8],eax
+mov [ebp-0c],0
+renwucishuxuhuanshou:
+mov eax,-1
+mov edx,[ebp-8]
+cmp [ebp-0c],edx
+jge renwucishuend
+imul ecx,[ebp-0c],0c
+add ecx,[ebp-4]
+mov eax,[ecx]
+mov eax,[eax]
+inc [ebp-0c]
+cmp [ebp+8],eax
+jne renwucishuxuhuanshou
+add ecx,4
+push ecx
+call Decryption
+renwucishuend:
+mov esp,ebp
+pop ebp
+ret 4
+
+renwuditu:
+mov ecx,renwushuju
+push [esp+4]
+call renwuzhizhen
+add eax,renwufuben
+push eax
+call duzhengshu
+push eax
+call duzhengshu
+ret 4
+
+renwuzhuangtai:
+push ebp
+mov ebp,esp
+xor eax,eax
+cmp [ebp+8],0
+je renwuzhuangtaiend
+sub esp,0c
+mov edx,[renwujizhi]
+mov ecx,[edx+8]
+mov [ebp-4],ecx
+mov eax,[edx+0c]
+sub eax,ecx
+cdq
+mov ecx,0c
+div ecx
+mov [ebp-8],eax
+mov [ebp-0c],0
+renwuzhuangtaixunhuanshou:
+xor eax,eax
+mov edx,[ebp-8]
+cmp [ebp-0c],edx
+jge renwuzhuangtaiend
+imul ecx,[ebp-0c],0c
+add ecx,[ebp-4]
+mov eax,[ecx]
+mov eax,[eax]
+add ecx,4
+inc [ebp-0c]
+cmp [ebp+8],eax
+jne renwuzhuangtaixunhuanshou
+push ecx
+call Decryption
+mov ecx,eax
+mov eax,1
+cmp ecx,0
+jg renwuzhuangtaiend
+mov eax,2
+cmp ecx,0
+je renwuzhuangtaiend
+mov eax,1
+renwuzhuangtaiend:
+mov esp,ebp
+pop ebp
+ret 4
+
+memcryint:
+mov eax,[esp+08]
+mov ecx,[esp+0C]
+push ecx
+lea edx,[esp+0C]
+mov [esp+0C],eax
+mov eax,[esp+08]
+push edx
+push eax
+call memcpyStub
+ret c
+
+memcpyStub:
+push ecx
+push ebx
+mov ebx,[esp+14]
+push ebp
+mov ebp,[esp+10]
+push esi
+push edi
+lea eax,[esp+10]
+push eax
+push 40
+push ebx
+push ebp
+mov [esp+20],00000000
+call VirtualProtect
+cld
+mov ecx,[esp+20]
+mov esi,[esp+1C]
+mov edi,[esp+18]
+db F3 A4
+mov ecx,[esp+10]
+push 00
+push ecx
+push ebx
+push ebp
+call VirtualProtect
+pop edi
+pop esi
+pop ebp
+pop ebx
+pop ecx
+ret c
+
+prompt:
+push ebp
+mov ebp,esp
+mov ecx,[SD]
+mov ecx,[ecx+54]
+push 0
+push 0
+push 0
+push 0
+push 0
+push [ebp+0c]
+push [ebp+10] //0FF0000FF
+push [ebp+8]
+call LB
+mov esp,ebp
+pop ebp
+ret 0c
+
+Encryption:
+push ebp
+mov ebp,esp
+mov eax,[DECRYPT_BASE]
+push ebx
+mov ebx,[ebp+08]
+push esi
+push edi
+mov ecx,[ebx]
+mov edx,ecx
+sar edx,10
+movzx ecx,cx
+mov eax,[eax+edx*4+24]
+mov edx,[ebp+0C]
+lea eax,[eax+ecx*4]
+mov ecx,[eax+00002114]
+add eax,00002114
+movzx esi,cx
+mov [ebp+08],eax
+movzx eax,cx
+mov ecx,ebx
+imul edi,eax,00010001
+xor eax,eax
+and ecx,0F
+jne _698D1140
+mov eax,edx
+sar eax,10
+sub eax,esi
+add eax,edx
+jmp _698D116D
+_698D1140:
+cmp ecx,04
+jne _698D1150
+mov ecx,edx
+mov eax,edx
+sar ecx,10
+sub eax,ecx
+jmp _698D116D
+_698D1150:
+cmp ecx,08
+jne _698D115F
+mov eax,edx
+sar eax,10
+imul eax,edx
+jmp _698D116D
+_698D115F:
+cmp ecx,0C
+jne _698D1170
+mov eax,edx
+sar eax,10
+add eax,edx
+add eax,esi
+_698D116D:
+movzx eax,ax
+_698D1170:
+mov ecx,[ebp+08]
+xor edi,edx
+mov [ebx+04],edi
+xor eax,esi
+pop edi
+pop esi
+mov [ecx+02],ax
+pop ebx
+pop ebp
+ret 8
+
+wanchengyijierenwu:
+pushad
+push FFFF00FF
+push 10
+push wanchengrenwu_gonggao
+call prompt
+mov ebx,[renwujizhi]
+mov eax,[ebx+8]
+mov ebx,[ebx+C]
+sub ebx,eax
+wanchengyijierenwulop:
+cmp ebx,0
+je wanchengyijierenwuend
+mov ecx,[eax]
+mov ecx,[ecx]
+pushad
+push ebp
+mov ebp,esp
+sub esp,4
+mov [ebp-4],ecx
+push [ebp-4]
+call renwucishu
+push eax
+call wanchengcishu
+mov ecx,eax
+test eax,eax
+je wanchengyijierenwuxiaoxunhuanshouend
+cmp ecx,#50
+jl wanchengyijierenwuxiaoxunhuanshou
+push #50
+push 5
+call qvsuijishu
+mov ecx,eax
+wanchengyijierenwuxiaoxunhuanshou:
+mov [gongnengzhixing_panduan],2
+push ecx
+push [ebp-4]
+push #8228
+push [hwnd]
+call SendMessageA
+wanchengyijierenwuxiaoxunhuanshouend:
+push #3333
+push [ebp-4]
+push #8229
+push [hwnd]
+call SendMessageA
+mov esp,ebp
+pop ebp
+popad
+add eax,C
+sub ebx,C
+jmp wanchengyijierenwulop
+wanchengyijierenwuend:
+popad
+ret
+
+zidongjuwu:
+push edi
+mov edi,esp
+sub esp,8
+mov ecx,dword [CHAR]
+mov eax,dword [ecx]
+mov eax,dword [eax+qvzuobiaopianyi]
+test eax,eax
+je zidongjuwuend
+push 0
+call eax
+mov [edi-4],eax
+mov ecx,dword [CHAR]
+mov eax,dword [ecx]
+mov eax,dword [eax+qvzuobiaopianyi]
+test eax,eax
+je zidongjuwuend
+push 1
+call eax
+mov [edi-8],eax
+push 0
+push [edi-8]
+push [edi-4]
+push [edi+08]
+call zuobiaoCALL
+zidongjuwuend:
+mov esp,edi
+pop edi
+ret 4
+
+zidonggengguai:
+push esi
+mov esi,esp
+sub esp,28
+mov [esi-14],0
+mov [esi-18],0
+mov eax,[CHAR]
+cmp eax,0
+je zidonggengguaiend
+mov [esi-4],eax
+mov ecx,[eax+ditupianyi]
+cmp ecx,0
+je zidonggengguaiend
+mov edx,[ecx+c0]
+mov [esi-20],edx
+mov eax,[ecx+c4]
+sub eax,edx
+cdq
+mov ecx,4
+div ecx
+mov [esi-8],eax
+mov [esi-0c],0
+zidonggengguaixunhuanshou:
+mov eax,[esi-0c]
+cmp eax,[esi-8]
+jge zidonggengguaiend
+mov edx,[esi-20]
+mov eax,[eax*4+edx]
+mov [esi-10],eax
+mov eax,[eax+leixingpianyi]
+cmp eax,#529
+je zidonggengguaixunhuanpanduanzhenyin
+cmp eax,#545//哥布林投石车
+je zidonggengguaikaishiqvzuobiao
+cmp eax,#273
+je zidonggengguaixunhuanpanduanzhenyin
+cmp eax,#289
+jne zidonggengguaixiayigeleixing
+/*
+mov [esi-14],1
+inc [esi-18]
+pushad
+push [esi-10]
+call zidongjuwu
+popad
+*/
+jmp zidonggengguaixunhuaixiayige
+zidonggengguaixiayigeleixing:
+cmp eax,#1057
+jne zidonggengguaixunhuaixiayige
+cmp [dajianzhuwu_panduan],1
+je zidonggengguaikaishiqvzuobiao
+jmp zidonggengguaixunhuaixiayige
+zidonggengguaixunhuanpanduanzhenyin:
+mov eax,[esi-10]
+cmp [eax+zhenyingpianyi],0
+je zidonggengguaixunhuaixiayige
+mov [esi-14],1
+cmp [eax+guaiwuxieliang],0
+je zidonggengguaixunhuaixiayige
+inc [esi-18]
+zidonggengguaikaishiqvzuobiao:
+cmp [esi-18],3
+je zidonggengguaixunhuaixiayige
+mov ecx,[esi-10]
+mov eax,[ecx]
+mov eax,[eax+qvzuobiaopianyi]
+push 1
+call eax
+cmp eax,0
+jle zidonggengguaizuobiaoweikong
+mov [esi-24],eax
+mov ecx,[esi-10]
+mov eax,[ecx]
+mov eax,[eax+qvzuobiaopianyi]
+push 0
+call eax
+cmp eax,0
+jle zidonggengguaizuobiaoweikong
+mov [esi-28],eax
+push 0
+push [esi-24]
+push eax
+push [esi-4]
+call zuobiaoCALL
+zidonggengguaizuobiaoweikong:
+cmp [400430],0
+jne zidonggengguai_push_400430
+//mov eax,quanpingdaima
+jmp zidonggengguai_push_400430end
+zidonggengguai_push_400430:
+mov eax,[400430]
+zidonggengguai_push_400430end:
+push [esi-18]
+push 10
+push -2
+push 0
+push [400430]
+push eax
+push [esi-4]
+call nanqiangCALL
+add esp,1c
+zidonggengguaixunhuaixiayige:
+inc [esi-0c]
+jmp zidonggengguaixunhuanshou
+zidonggengguaiend:
+mov eax,[esi-14]
+mov ecx,[esi-18]
+mov esp,esi
+pop esi
+ret
+
+
+
+_CreateThread:
+push esi
+mov esi,esp
+push 0
+push 0
+push 0
+mov eax,dword ptr [esi+8]
+push eax
+push 0
+push 0
+call CreateThread
+push eax
+call CloseHandle
+pop esi
+ret 4
+
+tijiaorenwu:
+mov eax,[esp+4]
+test eax,eax
+je tijiaorenwuend
+push 1
+push -1
+push eax
+mov ecx,[renwujizhi]
+call tijiaoCALL
+tijiaorenwuend:
+ret 4
+
+zubao_tiaozhuandaojuese:
+push 7
+call buffer
+call sendpacket
+ret
+
+zubao_zidonghuanjuese:
+push esi
+push edi
+call huoqvjueseweizhi
+mov edi,eax
+zubao_zidonghuanjuese_GO:
+call huoqvjueseshuliang
+mov esi,eax
+inc [yizhixingjueseshuliang]
+inc edi
+cmp edi,esi
+je zubao_zidonghuanjuesebagen1
+cmp [40042C],edi
+je zubao_zidonghuanjuesebagen1
+push esi
+mov eax,edi
+inc eax
+push eax
+push jueseshuliang_gonggao
+push linshikongbai_dizhi
+call wsprintfW
+add esp,10
+push FFFF00FF//FFFF0055
+push 27
+push linshikongbai_dizhi
+call prompt
+push 100
+push 0
+push linshikongbai_dizhi
+call msvcrt.memset
+add esp,0c
+jmp zubao_zidonghuanjuesebagen
+zubao_zidonghuanjuesebagen1:
+xor edi,edi
+zubao_zidonghuanjuesebagen:
+push 4
+call buffer
+push edi
+push 2
+call jiamibaoCALL
+call sendpacket
+push 4
+push edi
+mov eax,[juesejizhi]
+add eax,qvjueseweizhi
+push eax
+call memcryint
+mov eax,edi
+mov ecx,esi
+pop edi
+pop esi
+ret
+
+zuibao_xuantu:
+push #15
+call buffer
+push 0
+push 4
+call jiamibaoCALL
+call sendpacket
+ret
+
+zuibao_jintu:
+push #16
+call buffer
+push [esp+4]
+push 4
+call jiamibaoCALL
+push [esp+8]
+push 1
+call jiamibaoCALL
+push 4
+push 2
+call jiamibaoCALL
+push 0//0普通1深渊
+push 1
+call jiamibaoCALL
+push 0//0正常1练习
+push 1
+call jiamibaoCALL
+push #65535
+push 2
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 1
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 1
+call jiamibaoCALL
+push -1
+push 4
+call jiamibaoCALL
+call sendpacket
+ret 8
+
+zuibao_juqing:
+push ebp
+mov ebp,esp
+push #16
+call buffer
+push [ebp+8]
+push 4
+call jiamibaoCALL
+push [ebp+0c]
+push 1
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0//0普通1深渊
+push 1
+call jiamibaoCALL
+push 0//0正常1练习
+push 1
+call jiamibaoCALL
+push #65535
+push 2
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 1
+call jiamibaoCALL
+push 0
+push 1
+call jiamibaoCALL
+push [ebp+10]
+push 4
+call jiamibaoCALL
+push -1
+push 4
+call jiamibaoCALL
+call sendpacket
+pop ebp
+ret 0c
+
+zubao_chutu:
+push #42
+call buffer
+call sendpacket
+ret
+
+zubao_chutuchuli:
+call chulizhuangbei
+zubao_chutuchuliend:
+call zubao_chutu
+ret
+
+zubao_chulizhuangbei:
+cmp [diuqizhuangbei_panduan],1
+je zubao_diuqizhuangbei
+cmp [esp+8],2
+je zubao_chushouzhuangbei
+zubao_fenjiezhuangbei:
+push #9999
+push [esp+8]
+push #8235
+push [hwnd]
+call SendMessageA
+ret 8
+
+zubao_chushouzhuangbei:
+cmp [zisezhuangbei_panduan],1
+je zubao_fenjiezhuangbei
+push #8888
+push [esp+8]
+push #8234
+push [hwnd]
+call SendMessageA
+push #1000
+push #300
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+ret 8
+
+zubao_diuqizhuangbei:
+push #7777
+push [esp+8]
+push #8233
+push [hwnd]
+call SendMessageA
+push #200
+push #50
+call qvsuijishu
+push eax
+call KERNELBASE.Sleep
+ret  8
+
+chulizhuangbei:
+cmp [fenjiezhuangbei_panduan],1
+jne chulizhuangbeiend
+push chulizhuangbeibagen
+call _CreateThread
+ret
+
+chulizhuangbeibagen:
+push #500
+call KERNELBASE.Sleep
+mov edx,9
+chulizhuangbeibegin:
+cmp edx,41
+jge chulizhuangbeiend
+mov eax,[BACKPACK]
+mov eax,[eax+58]
+mov eax,[edx*4+eax]
+cmp eax,0
+je chulizhuangbeinext
+mov ecx,[eax+1A4]
+cmp ecx,0
+jl chulizhuangbeinext
+cmp ecx,5
+jne chulizhuangbeibegin2
+chulizhuangbeibegin2:
+cmp ecx,2
+jg chulizhuangbeinext
+cmp ecx,2
+jne chulizhuangbeibege
+mov ecx,[eax+24]
+mov ecx,[ecx]
+cmp ecx,52365BC6
+jne chulizhuangbeinext
+chulizhuangbeibege:
+pushad
+push [eax+178]
+push edx
+call zubao_chulizhuangbei
+popad
+chulizhuangbeinext:
+inc edx
+jmp chulizhuangbeibegin
+chulizhuangbeiend:
+cmp [fenjiezhuangbei_panduan],1
+je zubao_zhengli
+ret
+
+zubao_zhengli:
+push #10000
+push 0
+push #8236
+push [hwnd]
+call SendMessageA
+ret
+
+buffer:
+push [esp+4]
+mov ecx,[PACKET_BASE]
+call BUFFER_CALL
+ret 4
+
+miyaoCALL:
+push ebp
+mov ebp,esp
+mov ecx,dword ptr [PACKET_BASE]
+cmp byte ptr [ecx+08],00
+jnz keyjne_1
+mov eax,80000054
+mov esp,ebp
+pop ebp
+retn 8
+keyjne_1:
+mov eax,dword ptr [ebp+08]
+add dword ptr [ecx+00400C2C],eax
+push eax
+lea eax,dword ptr [ebp+0c]
+push eax
+call KeyCALL
+mov esp,ebp
+pop ebp
+retn 8
+
+jiamibaoCALL:
+push ebp
+mov ebp,esp
+push ecx
+mov eax,[ebp+08]
+mov [ebp-04],ENCRYPT_CALL
+cmp eax,02
+jne encrypt7509_4
+add [ebp-04],30
+jmp encryptEB1A
+encrypt7509_4:
+cmp eax,04
+jne encrypt7509_8
+add [ebp-04],60
+jmp encryptEB1A
+encrypt7509_8:
+cmp eax,08
+jne encryptEB1A
+add [ebp-04],90
+encryptEB1A:
+push [ebp+0C]
+mov ecx,[PACKET_BASE]
+call dword ptr [ebp-04]
+mov esp,ebp
+pop ebp
+ret 8
+
+sendpacket:
+mov ecx,[PACKET_BASE]
+call SEND_CALL
+ret
+
+shifouyikaimen:
+mov eax,[CHAR]
+mov eax,[eax+menxingpianyi]
+lea eax,[eax+shifoukaimen]
+push eax
+call Decryption
+ret
+
+shifouligzhufang:
+push ebp
+mov ebp,esp
+sub esp,20
+mov eax,[SD-8]
+mov eax,[eax+SJ]
+mov eax,[eax+menxingpianyi]
+mov eax,[eax+dangqianfangjianX]
+mov [ebp-4],eax
+mov eax,[SD-8]
+mov eax,[eax+SJ]
+mov eax,[eax+menxingpianyi]
+mov eax,[eax+dangqianfangjianY]
+mov [ebp-8],eax
+mov eax,[SD-8]
+mov eax,[eax+SJ]
+mov eax,[eax+menxingpianyi]
+lea eax,[eax+BOSSfangjianX]
+push eax
+call Decryption
+mov [ebp-c],eax
+mov eax,[SD-8]
+mov eax,[eax+SJ]
+mov eax,[eax+menxingpianyi]
+lea eax,[eax+BOSSfangjianY]
+push eax
+call Decryption
+mov [ebp-10],eax
+mov eax,0
+mov edx,[ebp-4]
+cmp [ebp-c],edx
+jne shifouligzhufangend
+mov edx,[ebp-8]
+cmp [ebp-10],edx
+jne shifouligzhufangend
+mov eax,1
+shifouligzhufangend:
+mov esp,ebp
+pop ebp
+ret
+
+zubaoshuntu:
+push ebp
+mov ebp,esp
+cmp [ebp+8],2
+jne zubaoshuntu_2_end
+sub [dangqianzuobiao_zongzhouzuobiao],1
+zubaoshuntu_2_end:
+cmp [ebp+8],3
+jne zubaoshuntu_3_end
+add [dangqianzuobiao_zongzhouzuobiao],1
+zubaoshuntu_3_end:
+cmp [ebp+8],0
+jne zubaoshuntu_0_end
+sub [dangqianzuobiao_hengzhouzuobiao],1
+zubaoshuntu_0_end:
+cmp [ebp+8],1
+jne zubaoshuntu_1_end
+add [dangqianzuobiao_hengzhouzuobiao],1
+zubaoshuntu_1_end:
+call zubaoqiangshun
+pop ebp
+ret 4
+
+suntuS:
+push 2
+call zuobiaoshuntu//2
+ret
+
+suntuX:
+push 3
+call zuobiaoshuntu//3
+ret
+
+suntuZ:
+push 0
+call zuobiaoshuntu//0
+ret
+
+suntuY:
+push 1
+call zuobiaoshuntu//1
+ret
+
+zuobiaoCALL:
+push ebp
+mov ebp,esp
+push Dword ptr SS:[ebp+14]
+push Dword ptr SS:[ebp+10]
+push Dword ptr SS:[ebp+0C]
+mov ecx,Dword ptr SS:[ebp+08]
+mov eax,Dword ptr DS:[ecx]
+call Dword ptr DS:[eax+zuobiaoCALLpianyi]
+mov esp,ebp
+pop ebp
+ret 10
+
+piaoyiCALL:
+push ebp
+mov ebp, esp
+cmp [shuntufangshi],0
+jne piaoyibagen
+push 0
+push [ebp+14]
+push [ebp+10]
+push [ebp+08]
+call zuobiaoCALL
+pop ebp
+ret 10
+
+piaoyibagen:
+sub esp,8
+mov ecx,dword ptr [ebp+08]
+mov eax,dword ptr [ecx]
+mov eax,dword ptr [eax+yidongpianyi1]
+lea edx,dword ptr [ebp-08]
+push edx
+call eax
+push dword ptr [ebp+14]
+push dword ptr [ebp+10]
+push dword ptr [ebp+0C]
+push 00
+sub esp,08
+lea edx,dword ptr [ebp-08]
+mov ecx,esp
+push edx
+call ruzhuaiCALL
+mov ecx,dword ptr [ebp+08]
+mov eax,dword ptr [ecx]
+mov eax,dword ptr [eax+yidongpianyi2]
+lea edx,dword ptr [ebp-08]
+push edx
+call eax
+sub esp,08
+lea eax,dword ptr [ebp-08]
+mov ecx,esp
+push eax
+call ruzhuaiCALL
+push dword ptr [ebp+08]
+mov ecx,dword ptr [ebp+08]
+call yidongCALL
+mov esp,ebp
+pop ebp
+ret 10
+
+duzhengshu:
+push ebp
+mov ebp,esp
+push 4
+push [ebp+8]
+call IsBadReadPtr
+mov ecx,eax
+xor eax,eax
+cmp ecx,0
+jne duzhengshuend
+mov eax,[ebp+8]
+mov eax,[eax]
+duzhengshuend:
+pop ebp
+ret 4
+
+zuobiaoshuntu:
+push ebp
+mov ebp,esp
+sub esp,24
+mov [ebp-08],0
+mov [ebp-04],0
+mov [ebp-18],0
+mov [ebp-20],0
+mov [ebp-14],0
+mov [ebp-10],0
+call zhisuijishuzhongzi
+push CHAR
+call duzhengshu
+cmp eax,0
+je zuobiaoshuntu_End
+add eax,ditupianyi
+push eax
+call duzhengshu
+cmp eax,0
+je zuobiaoshuntu_End
+mov eax,SD
+sub eax,8
+push eax
+call duzhengshu
+add eax,SJ
+push eax
+call duzhengshu
+add eax,8C//过图偏移
+push eax
+call duzhengshu
+imul ecx,[ebp+08],34
+add eax,ecx
+add eax,zuobiaoshuntupianyi
+mov [ebp-1C],eax
+push eax
+call duzhengshu
+mov [ebp-08],eax
+mov ecx,[ebp-1C]
+add ecx,04
+push ecx
+call duzhengshu
+mov [ebp-04],eax
+mov edx,[ebp-1C]
+add edx,08
+push edx
+call duzhengshu
+mov [ebp-18],eax
+mov eax,[ebp-1C]
+add eax,0C
+push eax
+call duzhengshu
+mov [ebp-20],eax
+mov eax,[ebp-18]
+cdq
+sub eax,edx
+sar eax,1
+add eax,[ebp-08]
+mov [ebp-24],eax
+cmp dword ptr [ebp+08],0
+jne zuobiaoshuntu_0_End
+mov ecx,[ebp-18]
+mov edx,[ebp-08]
+add ecx,edx
+add ecx,14
+mov [ebp-14],ecx
+mov eax,[ebp-20]
+cdq
+sub eax,edx
+sar eax,1
+add eax,[ebp-04]
+mov [ebp-10],eax
+cmp [shuntufangshi],1
+jne zuobiaoshuntu_0_End
+add [ebp-14],20
+mov eax,[ebp-04]
+add eax,[ebp-20]
+sub eax,9
+mov [ebp-10],eax
+add [ebp-04],9
+push 2
+push 0
+call qvsuijishu
+test eax,eax
+je zuobiaoshuntu_0_End
+mov eax,[ebp-04]
+mov [ebp-10],eax
+mov eax,[ebp-04]
+add eax,[ebp-20]
+sub eax,12
+mov [ebp-04],eax
+zuobiaoshuntu_0_End:
+cmp dword ptr [ebp+08],01
+jne zuobiaoshuntu_1_End
+mov ecx,[ebp-08]
+sub ecx,14
+mov [ebp-14],ecx
+mov eax,[ebp-20]
+cdq
+sub eax,edx
+sar eax,1
+add eax,[ebp-04]
+mov [ebp-10],eax
+cmp [shuntufangshi],1
+jne zuobiaoshuntu_1_End
+sub [ebp-14],20
+mov eax,[ebp-04]
+add eax,[ebp-20]
+sub eax,9
+mov [ebp-10],eax
+add [ebp-04],9
+push 2
+push 0
+call qvsuijishu
+test eax,eax
+je zuobiaoshuntu_1_End
+mov eax,[ebp-04]
+mov [ebp-10],eax
+mov eax,[ebp-04]
+add eax,[ebp-20]
+sub eax,12
+mov [ebp-04],eax
+zuobiaoshuntu_1_End:
+cmp dword ptr [ebp+08],02
+jne zuobiaoshuntu_2_End
+mov eax,[ebp-18]
+cdq
+sub eax,edx
+sar eax,1
+add eax,[ebp-08]
+mov [ebp-14],eax
+mov edx,[ebp-20]
+mov eax,[ebp-04]
+add eax,edx
+add eax,14
+mov [ebp-10],eax
+cmp [shuntufangshi],1
+jne zuobiaoshuntu_2_End
+add [ebp-10],20
+sub [ebp-04],11
+mov eax,[ebp-08]
+add eax,[ebp-18]
+sub eax,9
+mov [ebp-14],eax
+mov eax,[ebp-08]
+add eax,9
+mov [ebp-24],eax
+push 2
+push 0
+call qvsuijishu
+test eax,eax
+je zuobiaoshuntu_2_End
+mov eax,[ebp-08]
+add eax,[ebp-18]
+sub eax,9
+mov [ebp-24],eax
+mov eax,[ebp-08]
+add eax,9
+mov [ebp-14],eax
+zuobiaoshuntu_2_End:
+cmp dword ptr [ebp+08],03
+jne zuobiaoshuntu_3_End
+mov eax,[ebp-18]
+cdq
+sub eax,edx
+sar eax,1
+add eax,[ebp-08]
+mov [ebp-14],eax
+mov edx,[ebp-04]
+sub edx,14
+mov [ebp-10],edx
+cmp [shuntufangshi],1
+jne zuobiaoshuntu_3_End
+sub [ebp-10],20
+add [ebp-04],11
+mov eax,[ebp-08]
+add eax,[ebp-18]
+sub eax,9
+mov [ebp-14],eax
+mov eax,[ebp-08]
+add eax,9
+mov [ebp-24],eax
+push 2
+push 0
+call qvsuijishu
+test eax,eax
+je zuobiaoshuntu_3_End
+mov eax,[ebp-08]
+add eax,[ebp-18]
+sub eax,9
+mov [ebp-24],eax
+mov eax,[ebp-08]
+add eax,9
+mov [ebp-14],eax
+zuobiaoshuntu_3_End:
+mov edx,[CHAR]
+mov [piaoyicanshu],edx
+push #300
+push #150
+call qvsuijishu
+push eax
+mov [piaoyicanshu+4],eax
+mov edx,[ebp-14]
+mov [piaoyicanshu+8],edx
+mov edx,[ebp-10]
+mov [piaoyicanshu+0c],edx
+push #11000
+push 0
+push #8237
+push [hwnd]
+call SendMessageA
+pop eax
+cmp [shuntufangshi],1
+jne zuobiaoshuntu_4_End
+add eax,20
+push eax
+call KERNELBASE.Sleep
+zuobiaoshuntu_4_End:
+push [ebp-04]
+push [ebp-24]
+push #8238
+push [hwnd]
+call SendMessageA
+zuobiaoshuntu_End:
+push #500
+call KERNELBASE.Sleep
+mov [guotuio],0
+mov esp,ebp
+pop ebp
+ret 4
+
+zubaoqiangshun:
+push #45
+call buffer
+push [dangqianzuobiao_hengzhouzuobiao]
+push 1
+call jiamibaoCALL
+push [dangqianzuobiao_zongzhouzuobiao]
+push 1
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 8
+call jiamibaoCALL
+push 0
+push 4
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+call sendpacket
+ret
+
+Pickingthings:
+push #43
+call buffer
+push [esp+4]
+push 4
+call jiamibaoCALL
+push 0
+push 1
+call jiamibaoCALL
+push 1
+push 1
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+push 0
+push 2
+call jiamibaoCALL
+call sendpacket
+retn 4
+
+decrypt:
+mov eax,[esp+4]
+mov eax,[eax]
+mov esi,[DECRYPT_BASE]
+mov edx,eax
+shr edx,10
+mov edx,[esi+edx*4+24]
+and eax,FFFF
+mov eax,[edx+eax*4+2114]
+mov edx,eax
+and edx,FFFF
+mov esi,edx
+shl esi,10
+or esi,edx
+mov edx,[esp+4]
+add edx,4
+mov edx,[edx]
+xor esi,edx
+mov eax,esi
+ret 4
+
+jmp_addr:
+mov eax,[esp+08]
+push esi
+mov esi,[esp+08]
+push 04
+lea ecx,[esp+10]
+sub eax,esi
+push ecx
+sub eax,05
+mov ecx,jmpaddrv
+add ecx,1
+push ecx
+mov [esp+18],eax
+call memcpyStub
+push 05
+push jmpaddrv
+push esi
+call memcpyStub
+pop esi
+ret 8
+
+qvdangqianhengzhou:
+mov eax,[SD-8]
+mov eax,[eax+SJ]
+mov eax,[eax+menxingpianyi]
+mov eax,[eax+dangqianfangjianX]
+ret
+
+qvdangqianzongzhou:
+mov eax,[SD-8]
+mov eax,[eax+SJ]
+mov eax,[eax+menxingpianyi]
+mov eax,[eax+dangqianfangjianY]
+ret
+
+qvlingzhuhengzhou:
+mov eax,[SD-8]
+mov eax,[eax+SJ]
+mov eax,[eax+menxingpianyi]
+add eax,BOSSfangjianX
+push eax
+call Decryption
+ret
+
+qvlingzhuzongzhou:
+mov eax,[SD-8]
+mov eax,[eax+SJ]
+mov eax,[eax+menxingpianyi]
+add eax,BOSSfangjianY
+push eax
+call Decryption
+ret
+
+panduan_zuobiaoxiangdeng:
+push ebp
+mov ebp,esp
+mov eax,0
+mov edx,[ebp+8]
+cmp [ebp+10],edx
+jne panduan_zuobiaoxiangdengend
+mov edx,[ebp+0c]
+cmp [ebp+14],edx
+jne panduan_zuobiaoxiangdengend
+mov eax,1
+panduan_zuobiaoxiangdengend:
+mov esp,ebp
+pop ebp
+ret 10
+
+shuntuchuli:
+push ebp
+mov ebp,esp
+mov eax,shujuduanend
+sub eax,shujuduanbagen
+push eax
+push 0
+push shujuduanbagen
+call msvcrt.memset
+add esp,0c
+call qvlingzhuzongzhou
+push eax
+call qvlingzhuhengzhou
+push eax
+call qvdangqianzongzhou
+push eax
+call qvdangqianhengzhou
+push eax
+call ditushuju
+mov esp,ebp
+pop ebp
+ret
+
+shengchengditu:
+push ebp
+mov ebp,esp
+sub esp,20
+mov [ebp-8],0
+mov [ebp-18],1
+mov [ebp-10],0
+mov [ebp-1c],0
+mov [ebp-20],0
+shengchengditugaoxunhuanbagen:
+mov edx,[ebp-8]
+cmp [ditugaodu],edx
+je shengchengditugaoxunhuanend
+mov [ebp-4],0
+mov [ebp-14],1
+shengchengditukuanxunhuanbagen:
+mov edx,[ebp-4]
+cmp [ditukuandu],edx
+je shengchengditukuanxunhuanend
+mov eax,[ebp-10]
+add eax,ditutongdao
+mov eax,[eax]
+mov [ebp-c],eax
+imul eax,[ebp-14],3
+mov [ebp-1c],eax
+imul eax,[ebp-18],3
+mov [ebp-20],eax
+mov ecx,[ebp-1c]
+sub ecx,1
+mov edx,[ebp-20]
+sub edx,1
+mov eax,[ditukuanduEx]
+imul eax,edx
+add eax,ecx
+imul eax,eax,4
+add eax,[ditubiaoqian_eijingyanse]
+mov [eax],#16777215
+push 0
+push [ebp-c]
+call panduanfangxiang
+mov ecx,[ebp-1c]
+sub ecx,2
+mov edx,[ebp-20]
+sub edx,1
+imul edx,[ditukuanduEx]
+add ecx,edx
+imul ecx,ecx,4
+add ecx,[ditubiaoqian_eijingyanse]
+mov [ecx],eax
+push 1
+push [ebp-c]
+call panduanfangxiang
+mov ecx,[ebp-1c]
+mov edx,[ebp-20]
+sub edx,1
+imul edx,[ditukuanduEx]
+add ecx,edx
+imul ecx,ecx,4
+add ecx,[ditubiaoqian_eijingyanse]
+mov [ecx],eax
+push 2
+push [ebp-c]
+call panduanfangxiang
+mov ecx,[ebp-1c]
+sub ecx,1
+mov edx,[ebp-20]
+sub edx,2
+imul edx,[ditukuanduEx]
+add ecx,edx
+imul ecx,ecx,4
+add ecx,[ditubiaoqian_eijingyanse]
+mov [ecx],eax
+push 3
+push [ebp-c]
+call panduanfangxiang
+mov ecx,[ebp-1c]
+sub ecx,1
+mov edx,[ebp-20]
+imul edx,[ditukuanduEx]
+add ecx,edx
+imul ecx,ecx,4
+add ecx,[ditubiaoqian_eijingyanse]
+mov [ecx],eax
+add [ebp-10],4
+inc [ebp-4]
+inc [ebp-14]
+jmp shengchengditukuanxunhuanbagen
+shengchengditukuanxunhuanend:
+inc [ebp-8]
+inc [ebp-18]
+jmp shengchengditugaoxunhuanbagen
+shengchengditugaoxunhuanend:
+mov esp,ebp
+pop ebp
+ret
+
+panduanfangxiang:
+push ebp
+mov ebp,esp
+sub esp,4
+mov eax,0
+cmp [ebp+8],0
+jge panduanfangxiang_1
+jmp panduanfangxiangend
+panduanfangxiang_1:
+cmp [ebp+8],#15
+jle panduanfangxiang_2
+jmp panduanfangxiangend
+panduanfangxiang_2:
+imul edx,[ebp+8],4
+mov eax,fangxiangjihe
+add eax,edx
+add eax,[ebp+0c]
+mov [ebp-4],0
+lea edx,[ebp-4]
+push 1
+push eax
+push edx
+call memcpyStub
+mov eax,[ebp-4]
+cmp eax,0
+je panduanfangxiangend
+mov eax,#16777215
+panduanfangxiangend:
+mov esp,ebp
+pop ebp
+ret 8
+
+lujinsuanfa:
+push ebp
+mov ebp,esp
+sub esp,20
+mov eax,[dituqidian_hengzhouzuobiao]
+mov [linshijiedian_dangqianzuobiao_hengzhouzuobiao],eax
+mov eax,[dituqidian_zongzhouzuobiao]
+mov [linshijiedian_dangqianzuobiao_zongzhouzuobiao],eax
+mov ecx,[dituqidian_zongzhouzuobiao]
+imul ecx,[ditukuanduEx]
+add ecx,[dituqidian_hengzhouzuobiao]
+imul ecx,ecx,4
+add ecx,[ditubiaoqian_eijingyanse]
+mov [ecx],#65280//绿色
+mov ecx,[dituzhongdian_zongzhouzuobiao]
+imul ecx,[ditukuanduEx]
+add ecx,[dituzhongdian_hengzhouzuobiao]
+imul ecx,ecx,4
+add ecx,[ditubiaoqian_eijingyanse]
+mov [ecx],#255//红色
+push 1c
+push kaifangliebiaogeshu
+push linshijiedian
+push 1
+push [kaifangliebiao]
+call charuchengyuan
+lujinsuanfa_kaifangliebiaoxunhuanbagen:
+mov [ebp-4],0
+mov [ebp-8],0
+mov [ebp-0c],0
+lujinsuanfa_kaifangliebiaoxiaoxunhuanbagen:
+mov eax,[ebp-8]
+cmp [kaifangliebiaogeshu],eax
+je lujinsuanfa_kaifangliebiaoxiaoxunhuanend
+cmp [ebp-4],0
+jne lujinsuanfa_dituFdianbijiao
+mov eax,[kaifangliebiao]
+mov eax,[eax]
+mov [ebp-4],eax
+mov eax,[ebp-8]
+mov [ebp-0c],eax
+lujinsuanfa_dituFdianbijiao:
+imul eax,[ebp-8],1c
+add eax,[kaifangliebiao]
+mov edx,eax
+mov eax,[ebp-4]
+cmp [edx],eax
+jge lujinsuanfa_kaifangliebiaoxiaoxunhuannext
+mov eax,[edx]
+mov [ebp-4],eax
+mov eax,[ebp-8]
+mov [ebp-0c],eax
+lujinsuanfa_kaifangliebiaoxiaoxunhuannext:
+inc [ebp-8]
+jmp lujinsuanfa_kaifangliebiaoxiaoxunhuanbagen
+lujinsuanfa_kaifangliebiaoxiaoxunhuanend:
+push 1c
+imul eax,[ebp-0c],1c
+add eax,[kaifangliebiao]
+push eax
+push linshijiedian
+call msvcrt.memcpy
+add esp,0c
+push 1c
+push kaifangliebiaogeshu
+push 1
+push [ebp-0c]
+push [kaifangliebiao]
+call shanchuchenyuan
+push 1c
+push guanbiliebiaogeshu
+push linshijiedian
+push 1
+push [guanbiliebiao]
+call charuchengyuan
+mov eax,[dituqidian_hengzhouzuobiao]
+cmp [linshijiedian_dangqianzuobiao_hengzhouzuobiao],eax
+jne lujinsuanfa_beijingyanse_chenghuang1
+mov eax,[dituqidian_zongzhouzuobiao]
+cmp [linshijiedian_dangqianzuobiao_zongzhouzuobiao],eax
+je lujinsuanfa_guanbiliebiao1
+lujinsuanfa_beijingyanse_chenghuang1:
+mov eax,[dituzhongdian_hengzhouzuobiao]
+cmp [linshijiedian_dangqianzuobiao_hengzhouzuobiao],eax
+jne lujinsuanfa_beijingyanse_chenghuang2
+mov eax,[dituzhongdian_zongzhouzuobiao]
+cmp [linshijiedian_dangqianzuobiao_zongzhouzuobiao],eax
+je lujinsuanfa_guanbiliebiao1
+lujinsuanfa_beijingyanse_chenghuang2:
+mov eax,[ditukuanduEx]
+imul eax,[linshijiedian_dangqianzuobiao_zongzhouzuobiao]
+add eax,[linshijiedian_dangqianzuobiao_hengzhouzuobiao]
+imul eax,eax,4
+add eax,[ditubiaoqian_eijingyanse]
+mov [eax],#33023//橙黄
+lujinsuanfa_guanbiliebiao1:
+mov [ebp-8],0
+lujinsuanfa_guanbiliebiaoxunhuanbagen:
+mov eax,[ebp-8]
+cmp [guanbiliebiaogeshu],eax
+je lujinsuanfa_guanbiliebiaoxunhuanend
+imul eax,[ebp-8],1c
+add eax,[guanbiliebiao]
+mov edx,eax
+add eax,0c
+mov eax,[eax]
+cmp [dituzhongdian_hengzhouzuobiao],eax
+jnz lujinsuanfa_guanbiliebiaoxunhuannext
+mov eax,edx
+add eax,10
+mov eax,[eax]
+cmp [dituzhongdian_zongzhouzuobiao],eax
+jnz lujinsuanfa_guanbiliebiaoxunhuannext
+push 1c
+push edx
+push daijiancejiedian_dituFdian
+call msvcrt.memcpy
+add esp,0c
+lujingsuanfa_guanbiliebiaozhongxunhuanbagen:
+mov [ebp-10],0
+lujinsuanfa_guanbiliebiaoxiaoxunhuanbagen:
+mov eax,[ebp-10]
+cmp [guanbiliebiaogeshu],eax
+je lujinsuanfa_guanbiliebiaoxiaoxunhuanend
+mov eax,[ebp-10]
+imul eax,eax,1c
+add eax,[guanbiliebiao]
+mov edx,eax
+add eax,0c
+mov eax,[eax]
+cmp [daijiancejiedian_zuizhongzuobiao_hengzhouzuobiao],eax
+jne lujinsuanfa_guanbiliebiaoxiaoxunhuannext
+mov eax,edx
+add eax,10
+mov eax,[eax]
+cmp [daijiancejiedian_zuizhongzuobiao_zongzhouzuobiao],eax
+jne lujinsuanfa_guanbiliebiaoxiaoxunhuannext
+push 1c
+push edx
+push daijiancejiedian_dituFdian
+call msvcrt.memcpy
+add esp,0c
+jmp lujinsuanfa_guanbiliebiaoxiaoxunhuanend
+lujinsuanfa_guanbiliebiaoxiaoxunhuannext:
+inc [ebp-10]
+jmp lujinsuanfa_guanbiliebiaoxiaoxunhuanbagen
+lujinsuanfa_guanbiliebiaoxiaoxunhuanend:
+mov eax,[daijiancejiedian_dangqianzuobiao_hengzhouzuobiao]
+cmp [dituqidian_hengzhouzuobiao],eax
+jne lujinsuanfa_zoufashuzu_charuchengyuan
+mov eax,[daijiancejiedian_dangqianzuobiao_zongzhouzuobiao]
+cmp [dituqidian_zongzhouzuobiao],eax
+je lujinsuanfa_guanbiliebiaozhongxunhuannext
+lujinsuanfa_zoufashuzu_charuchengyuan:
+mov eax,[ditukuanduEx]
+imul eax,[daijiancejiedian_dangqianzuobiao_zongzhouzuobiao]
+add eax,[daijiancejiedian_dangqianzuobiao_hengzhouzuobiao]
+imul eax,eax,4
+add eax,[ditubiaoqian_eijingyanse]
+mov [eax],#55512//嫩黄
+push 8
+push zoufashuju_geshu
+push daijiancejiedian_dangqianzuobiao_hengzhouzuobiao
+push 1
+push [zoufashuzu]
+call charuchengyuan
+lujinsuanfa_guanbiliebiaozhongxunhuannext:
+mov eax,[dituqidian_hengzhouzuobiao]
+cmp [daijiancejiedian_dangqianzuobiao_hengzhouzuobiao],eax
+jne lujingsuanfa_guanbiliebiaozhongxunhuanbagen
+mov eax,[dituqidian_zongzhouzuobiao]
+cmp [daijiancejiedian_dangqianzuobiao_zongzhouzuobiao],eax
+jne lujingsuanfa_guanbiliebiaozhongxunhuanbagen
+push 8
+push zoufashuju_geshu
+push dituqidian_hengzhouzuobiao
+push 1
+push [zoufashuzu]
+call charuchengyuan
+push 8
+push zoufashuju_geshu
+push dituzhongdian_hengzhouzuobiao
+mov eax,[zoufashuju_geshu]
+inc eax
+push eax
+push [zoufashuzu]
+call charuchengyuan
+mov eax,[zoufashuju_geshu]
+jmp lujinsuanfaend
+lujinsuanfa_guanbiliebiaoxunhuannext:
+inc [ebp-8]
+jmp lujinsuanfa_guanbiliebiaoxunhuanbagen
+lujinsuanfa_guanbiliebiaoxunhuanend:
+mov [ebp-8],0
+lujinsuanfa_wunaoxunhuan4cibagen:
+cmp [ebp-8],4
+je lujingsuanfa_wunaixunhuan4ciend
+cmp [ebp-8],0
+jne lujinsuanfa_wunaoxunhuandi1ciend
+mov eax,[linshijiedian_dangqianzuobiao_hengzhouzuobiao]
+mov [daijiancezuobiao_hengzhouzuobiao],eax
+mov eax,[linshijiedian_dangqianzuobiao_zongzhouzuobiao]
+dec eax
+mov [daijiancezuobiao_zongzhouzuobiao],eax
+lujinsuanfa_wunaoxunhuandi1ciend:
+cmp [ebp-8],1
+jne lujinsuanfa_wunaoxunhuandi2ciend
+mov eax,[linshijiedian_dangqianzuobiao_hengzhouzuobiao]
+dec eax
+mov [daijiancezuobiao_hengzhouzuobiao],eax
+mov eax,[linshijiedian_dangqianzuobiao_zongzhouzuobiao]
+mov [daijiancezuobiao_zongzhouzuobiao],eax
+lujinsuanfa_wunaoxunhuandi2ciend:
+cmp [ebp-8],2
+jne lujinsuanfa_wunaoxunhuandi3ciend
+mov eax,[linshijiedian_dangqianzuobiao_hengzhouzuobiao]
+inc eax
+mov [daijiancezuobiao_hengzhouzuobiao],eax
+mov eax,[linshijiedian_dangqianzuobiao_zongzhouzuobiao]
+mov [daijiancezuobiao_zongzhouzuobiao],eax
+lujinsuanfa_wunaoxunhuandi3ciend:
+cmp [ebp-8],3
+jne lujinsuanfa_wunaoxunhuandi4ciend
+mov eax,[linshijiedian_dangqianzuobiao_hengzhouzuobiao]
+mov [daijiancezuobiao_hengzhouzuobiao],eax
+mov eax,[linshijiedian_dangqianzuobiao_zongzhouzuobiao]
+inc eax
+mov [daijiancezuobiao_zongzhouzuobiao],eax
+lujinsuanfa_wunaoxunhuandi4ciend:
+cmp [daijiancezuobiao_hengzhouzuobiao],0
+jl lujingsuanfa_wunaixunhuan4cinext
+mov eax,[ditukuanduEx]
+cmp [daijiancezuobiao_hengzhouzuobiao],eax
+jge lujingsuanfa_wunaixunhuan4cinext
+cmp [daijiancezuobiao_zongzhouzuobiao],0
+jl lujingsuanfa_wunaixunhuan4cinext
+mov eax,[ditugaoduEx]
+cmp [daijiancezuobiao_zongzhouzuobiao],eax
+jge lujingsuanfa_wunaixunhuan4cinext
+mov eax,[ditukuanduEx]
+imul eax,[daijiancezuobiao_zongzhouzuobiao]
+add eax,[daijiancezuobiao_hengzhouzuobiao]
+imul eax,eax,4
+add eax,[ditubiaoqian_eijingyanse]
+mov ecx,[eax]
+cmp [eax],0
+je lujingsuanfa_wunaixunhuan4cinext
+mov ecx,0
+lujinsuanfa_panduanyicunzaiguanbiliebiaosunhuanendbagen:
+cmp ecx,[guanbiliebiaogeshu]
+je lujinsuanfa_panduanyicunzaiguanbiliebiaosunhuanendend
+mov eax,ecx
+imul eax,eax,1c
+add eax,[guanbiliebiao]
+mov edx,eax
+add eax,0c
+mov eax,[eax]
+cmp [daijiancezuobiao_hengzhouzuobiao],eax
+jne lujinsuanfa_panduanyicunzaiguanbiliebiaosunhuanendnext
+add edx,10
+mov eax,[edx]
+cmp [daijiancezuobiao_zongzhouzuobiao],eax
+je lujingsuanfa_wunaixunhuan4cinext
+lujinsuanfa_panduanyicunzaiguanbiliebiaosunhuanendnext:
+inc ecx
+jmp lujinsuanfa_panduanyicunzaiguanbiliebiaosunhuanendbagen
+lujinsuanfa_panduanyicunzaiguanbiliebiaosunhuanendend:
+lujinsuanfa_panduanyicunzaikaifangliebiaoxunhuankaishi:
+mov [ebp-10],0
+lujinsuanfa_panduanyicunzaikaifangliebiaoxunhuanbagen:
+mov eax,[ebp-10]
+cmp [kaifangliebiaogeshu],eax
+je lujinsuanfa_panduanyicunzaikaifangliebiaoxunhuanend
+mov eax,ecx
+imul eax,eax,1c
+add eax,[kaifangliebiao]
+mov edx,eax
+add eax,0c
+mov eax,[eax]
+cmp [daijiancezuobiao_hengzhouzuobiao],eax
+jne lujinsuanfa_panduanyicunzaikaifangliebiaoxunhuannext
+mov eax,edx
+add eax,10
+mov eax,[eax]
+cmp [daijiancezuobiao_zongzhouzuobiao],eax
+jne lujinsuanfa_panduanyicunzaikaifangliebiaoxunhuannext
+mov [ebp-14],0
+mov eax,[linshijiedian_dangqianzuobiao_hengzhouzuobiao]
+cmp [daijiancezuobiao_hengzhouzuobiao],eax
+jne lujinsuanfa_ju_yujiGzhi_14
+mov eax,[linshijiedian_dangqianzuobiao_zongzhouzuobiao]
+cmp [daijiancezuobiao_zongzhouzuobiao],eax
+jne lujinsuanfa_ju_yujiGzhi_14
+mov [ebp-14],#10
+jmp lujinsuanfa_dituGdianpanduan
+lujinsuanfa_ju_yujiGzhi_14:
+mov [ebp-14],#14
+lujinsuanfa_dituGdianpanduan:
+mov eax,[linshijiedian_dituGdian]
+add eax,[ebp-14]
+mov ecx,edx
+add ecx,4
+cmp eax,[ecx]
+jg lujingsuanfa_wunaixunhuan4cinext
+mov ecx,edx
+add ecx,14
+mov eax,[linshijiedian_dangqianzuobiao_hengzhouzuobiao]
+mov [ecx],eax
+mov eax,[linshijiedian_dangqianzuobiao_zongzhouzuobiao]
+mov [ecx+4],eax
+jmp lujingsuanfa_wunaixunhuan4cinext
+lujinsuanfa_panduanyicunzaikaifangliebiaoxunhuannext:
+inc [ebp-10]
+jmp lujinsuanfa_panduanyicunzaikaifangliebiaoxunhuanbagen
+lujinsuanfa_panduanyicunzaikaifangliebiaoxunhuanend:
+mov [ebp-14],0
+mov eax,[linshijiedian_dangqianzuobiao_hengzhouzuobiao]
+cmp [daijiancezuobiao_hengzhouzuobiao],eax
+je lujinsuanfa_ju_yujiGzhi_10fuzhi
+mov eax,[linshijiedian_dangqianzuobiao_zongzhouzuobiao]
+cmp [daijiancezuobiao_zongzhouzuobiao],eax
+je lujinsuanfa_ju_yujiGzhi_10fuzhi
+mov [ebp-14],#14
+jmp lujingsuanfa_dituGdianfuzhi
+lujinsuanfa_ju_yujiGzhi_10fuzhi:
+mov [ebp-14],#10
+lujingsuanfa_dituGdianfuzhi:
+mov eax,[linshijiedian_dituGdian]
+add eax,[ebp-14]
+mov [daijiancejiedian_dituGdian],eax
+mov eax,[dituzhongdian_hengzhouzuobiao]
+mov edx,[daijiancezuobiao_hengzhouzuobiao]
+sub eax,edx
+push eax
+call msvcrt.abs
+imul ecx,eax,#10
+mov eax,[dituzhongdian_zongzhouzuobiao]
+mov edx,[daijiancezuobiao_zongzhouzuobiao]
+sub eax,edx
+push eax
+call msvcrt.abs
+imul eax,eax,#10
+add esp,8
+add eax,ecx
+mov [daijiancejiedian_dituHdian],eax
+mov edx,[daijiancejiedian_dituGdian]
+add edx,eax
+mov [daijiancejiedian_dituFdian],edx
+mov eax,[daijiancezuobiao_hengzhouzuobiao]
+mov [daijiancejiedian_dangqianzuobiao_hengzhouzuobiao],eax
+mov eax,[daijiancezuobiao_zongzhouzuobiao]
+mov [daijiancejiedian_dangqianzuobiao_zongzhouzuobiao],eax
+mov eax,[linshijiedian_dangqianzuobiao_hengzhouzuobiao]
+mov [daijiancejiedian_zuizhongzuobiao_hengzhouzuobiao],eax
+mov eax,[linshijiedian_dangqianzuobiao_zongzhouzuobiao]
+mov [daijiancejiedian_zuizhongzuobiao_zongzhouzuobiao],eax
+push 1c
+push kaifangliebiaogeshu
+push daijiancejiedian_dituFdian
+push 1
+push [kaifangliebiao]
+call charuchengyuan
+lujingsuanfa_wunaixunhuan4cinext:
+inc [ebp-8]
+jmp lujinsuanfa_wunaoxunhuan4cibagen
+lujingsuanfa_wunaixunhuan4ciend:
+cmp [kaifangliebiaogeshu],0
+je lujinsuanfaend
+jmp lujinsuanfa_kaifangliebiaoxunhuanbagen
+lujinsuanfaend:
+mov esp,ebp
+pop ebp
+ret
+
+ditushuju:
+push ebp
+mov ebp,esp
+sub esp,20
+mov eax,[SD-8]
+mov eax,[eax+SJ]
+mov eax,[eax+menxingpianyi]
+mov edx,BOSSfangjianX
+sub edx,#24
+add eax,edx
+push eax
+call Decryption
+add eax,1
+mov [ebp-0c],eax
+mov eax,[SD-8]
+mov eax,[eax+SJ]
+mov eax,[eax+menxingpianyi]
+mov edx,[eax+Axingpianyi_1]
+imul eax,[ebp-0c],8
+add eax,edx
+sub eax,8
+cmp eax,0
+je ditushujuend
+mov eax,[eax]
+mov [ditukuandu],eax
+imul eax,eax,3
+mov [ditukuanduEx],eax
+mov eax,[SD-8]
+mov eax,[eax+SJ]
+mov eax,[eax+menxingpianyi]
+mov edx,[eax+Axingpianyi_1]
+imul eax,[ebp-0c],8
+add eax,edx
+sub eax,4
+cmp eax,0
+je ditushujuend
+mov eax,[eax]
+mov [ditugaodu],eax
+imul eax,eax,3
+mov [ditugaoduEx],eax
+mov ecx, [ditukuandu]
+imul eax,ecx
+mov [ebp-4],eax
+mov [fangjianshuliang],eax
+mov eax,[SD-8]
+mov eax,[eax+SJ]
+mov eax,[eax+menxingpianyi]
+mov edx,[eax+Axingpianyi_2]
+imul eax,[ebp-0c],#20
+add eax,edx
+sub eax,#16
+cmp eax,0
+je ditushujuend
+mov eax,[eax]
+mov [ebp-c],eax
+mov [ebp-8],0
+ditutongdaoxunhuanbagen:
+mov edx,[ebp-8]
+cmp [ebp-4],edx
+je ditutongdaoxunhuanend
+imul eax,[ebp-8],4
+add eax,[ebp-c]
+mov edx,[eax]
+imul eax,[ebp-8],4
+mov ecx,ditutongdao
+add ecx,eax
+mov [ecx],edx
+inc [ebp-8]
+jmp ditutongdaoxunhuanbagen
+ditutongdaoxunhuanend:
+add [ebp+08],1
+add [ebp+0c],1
+add [ebp+10],1
+add [ebp+14],1
+push [ebp+14]
+push [ebp+10]
+push [ebp+0c]
+push [ebp+08]
+call panduan_zuobiaoxiangdeng
+cmp eax,1
+je ditushujuend
+push 1c
+push #600
+call msvcrt.calloc
+mov [kaifangliebiao],eax
+push 1c
+push #600
+call msvcrt.calloc
+mov [guanbiliebiao],eax
+push 8
+push #300
+call msvcrt.calloc
+mov [zoufashuzu],eax
+push 4
+push #400
+call msvcrt.calloc
+add esp,24
+mov [ditubiaoqian_eijingyanse],eax
+imul eax,[ebp+08],3
+sub eax,1
+mov [dituqidian_hengzhouzuobiao],eax
+imul eax,[ebp+0c],3
+sub eax,1
+mov [dituqidian_zongzhouzuobiao],eax
+imul eax,[ebp+10],3
+sub eax,1
+mov [dituzhongdian_hengzhouzuobiao],eax
+imul eax,[ebp+14],3
+sub eax,1
+mov [dituzhongdian_zongzhouzuobiao],eax
+call shengchengditu
+call lujinsuanfa
+call zhenglizuobiao
+push [ditubiaoqian_eijingyanse]
+call msvcrt.free
+push [kaifangliebiao]
+call msvcrt.free
+push [guanbiliebiao]
+call msvcrt.free
+push [zoufashuzu]
+call msvcrt.free
+add esp,10
+call jisuanfangxiang
+cmp eax,4
+je ditushujuend
+push eax
+cmp [guotuio],1
+je ditushujushuntufangshi
+call zubaoshuntu
+jmp ditushujuend
+ditushujushuntufangshi:
+call zuobiaoshuntu
+ditushujuend:
+mov esp,ebp
+pop ebp
+ret 10
+
+zhenglizuobiao:
+push ebp
+mov ebp,esp
+sub esp,10
+mov [ebp-08],0
+mov [ebp-04],0
+zhenglizuobiao_zoufashuzuxunhuanbagen:
+mov ecx,[ebp-04]
+cmp ecx,[zoufashuju_geshu]
+jnl zhenglizuobiaoend
+mov edx,[ebp-04]
+mov eax,[zoufashuzu]
+mov eax,[edx*8+eax]
+add eax,1
+cdq
+mov ecx,3
+div ecx
+mov [ebp-0C],edx
+mov edx,[ebp-04]
+mov eax,[zoufashuzu]
+mov eax,[edx*8+eax+4]
+add eax,01
+cdq
+mov ecx,3
+div ecx
+mov [ebp-10],edx
+cmp dword ptr [ebp-0C],0
+jne zhenglizuobiao_zoufashuzuxunhuannext
+cmp dword ptr [ebp-10],0
+jne zhenglizuobiao_zoufashuzuxunhuannext
+mov edx,[ebp-04]
+mov eax,[zoufashuzu]
+mov eax,[edx*8+eax]
+add eax,1
+cdq
+mov ecx,3
+div ecx
+sub eax,1
+mov edx,[ebp-08]
+mov [edx*8+dangqianfangjian],eax
+mov eax,[ebp-04]
+mov ecx,[zoufashuzu]
+mov eax,[eax*8+ecx+4]
+add eax,1
+cdq
+mov ecx,3
+div ecx
+sub eax,1
+mov edx,[ebp-08]
+mov [edx*8+dangqianfangjian+4],eax
+inc [ebp-08]
+cmp [ebp-08],2
+je zhenglizuobiaoend
+zhenglizuobiao_zoufashuzuxunhuannext:
+inc [ebp-4]
+jmp zhenglizuobiao_zoufashuzuxunhuanbagen
+zhenglizuobiaoend:
+mov eax,[ebp-08]
+mov esp,ebp
+pop ebp
+ret
+
+ReadMemory:
+push ebp
+mov ebp, esp
+push ecx
+push 0
+push 4
+lea eax,Dword ptr SS:[ebp-04]
+mov Dword ptr SS:[ebp-4],0
+push eax
+push Dword ptr SS:[ebp+8]
+push -1
+call _ReadProcessMemory
+mov eax,Dword ptr SS:[ebp-4]
+mov esp, ebp
+pop ebp
+ret 4
+
+Decryption:
+push ebp
+mov ebp, esp
+sub esp,10
+push ebx
+mov ebx,_ReadProcessMemory
+lea eax,Dword ptr SS:[ebp-04]
+push esi
+push edi
+push 0
+push 4
+push eax
+push DECRYPT_BASE
+push -1
+mov Dword ptr SS:[ebp-04],0
+call ebx
+mov edi,Dword ptr SS:[ebp+08]
+lea eax,Dword ptr SS:[ebp-08]
+mov esi,Dword ptr SS:[ebp-04]
+push 0
+push 4
+push eax
+push edi
+push -1
+mov Dword ptr SS:[ebp-08],0
+call ebx
+push 0
+push 4
+lea eax,Dword ptr SS:[ebp+08]
+mov Dword ptr SS:[ebp+08],0
+push eax
+mov eax,Dword ptr SS:[ebp-08]
+add esi,24
+sar eax,10
+lea eax,Dword ptr DS:[eax*4+esi]
+push eax
+push -1
+call ebx
+mov esi,Dword ptr SS:[ebp+08]
+lea eax,Dword ptr SS:[ebp-0C]
+push 0
+push 4
+push eax
+push edi
+push -1
+mov Dword ptr SS:[ebp-0C],0
+call ebx
+push 0
+push 4
+lea eax,Dword ptr SS:[ebp-10]
+mov Dword ptr SS:[ebp-10],0
+push eax
+movzx eax,Word ptr SS:[ebp-0C]
+add esi,2114
+lea eax,Dword ptr DS:[eax*4+esi]
+push eax
+push -1
+call ebx
+movzx esi,Word ptr SS:[ebp-10]
+lea eax,Dword ptr SS:[ebp+08]
+push 0
+push 4
+push eax
+lea eax,Dword ptr DS:[edi+04]
+mov Dword ptr SS:[ebp+08],0
+push eax
+push -1
+call ebx
+mov eax, esi
+shl eax,10
+pop edi
+or eax, esi
+xor eax,Dword ptr SS:[ebp+08]
+pop esi
+pop ebx
+mov esp, ebp
+pop ebp
+ret 4
+
+jisuanfangxiang:
+push ebp
+mov ebp,esp
+sub esp,8
+mov eax,8
+imul ecx,eax,00
+mov edx,8
+shl edx,0
+mov eax,[ecx+dangqianfangjian]
+sub eax,[edx+dangqianfangjian]
+mov [ebp-08],eax
+mov ecx,8
+imul edx,ecx,0
+mov eax,8
+shl eax,0
+mov ecx,[edx+dangqianfangjian+4]
+sub ecx,[eax+dangqianfangjian+4]
+mov [ebp-04],ecx
+cmp dword ptr [ebp-08],0
+jne jisuanfangxiangpanduan1
+cmp dword ptr [ebp-04],0
+jne jisuanfangxiangpanduan1
+mov eax,4
+jmp jisuanfangxiangend
+jisuanfangxiangpanduan1:
+cmp dword ptr [ebp-08],0
+jne jisuanfangxiangpanduan3
+cmp dword ptr [ebp-04],1
+jne jisuanfangxiangpanduan2
+mov eax,2
+jmp jisuanfangxiangend
+jisuanfangxiangpanduan2:
+mov eax,3
+jmp jisuanfangxiangend
+jisuanfangxiangpanduan3:
+cmp dword ptr [ebp-04],0
+jne jisuanfangxiangend
+cmp dword ptr [ebp-08],1
+jne jisuanfangxiangpanduan4
+mov eax,0
+jmp jisuanfangxiangend
+jisuanfangxiangpanduan4:
+mov eax,1
+jisuanfangxiangend:
+mov esp,ebp
+pop ebp
+ret
+
+shanchuchenyuan:
+push ebp
+mov ebp,esp
+sub esp,8
+mov eax,[ebp+18]
+imul eax,[ebp+10]
+mov [ebp-8],eax
+push eax
+push 0
+mov eax,[ebp+18]
+imul eax,[ebp+0c]
+add eax,[ebp+08]
+mov [ebp-4],eax
+push eax
+call msvcrt.memset
+add esp,0c
+cmp [ebp+0c],1
+jl shanchuchenyuanbagen
+mov eax,[ebp+14]
+cmp [eax],1
+jle shanchuchenyuanend
+shanchuchenyuanbagen:
+mov eax,[ebp+18]
+mov edx,[ebp+14]
+imul eax,[edx]
+add eax,[ebp+08]
+mov edx,[ebp-4]
+sub eax,edx
+push eax
+mov eax,[ebp-4]
+add eax,[ebp-8]
+push eax
+push [ebp-4]
+call msvcrt.memcpy
+add esp,0c
+push [ebp-8]
+push 0
+mov edx,[ebp+14]
+mov eax,[ebp+18]
+imul eax,[edx]
+add eax,[ebp+8]
+push eax
+call msvcrt.memset
+add esp,0c
+shanchuchenyuanend:
+mov eax,[ebp+14]
+sub [eax],1
+mov esp,ebp
+pop ebp
+ret 14
+
+charuchengyuan:
+push ebp
+mov ebp,esp
+sub esp,0c
+cmp [ebp+0c],0
+je charuchengyuanend
+cmp [ebp+18],0
+je charuchengyuanend
+push [ebp+18]
+mov eax,[ebp+14]
+mov eax,[eax]
+inc eax
+push eax
+call msvcrt.calloc
+add esp,8
+cmp eax,0
+je charuchengyuanfree_end
+mov [ebp-0c],eax
+mov edx,[ebp+14]
+mov eax,[ebp+18]
+imul eax,[edx]
+mov [ebp-8],eax
+push eax
+push [ebp+8]
+push [ebp-0c]
+call msvcrt.memcpy
+add esp,0c
+push [ebp+18]
+push [ebp+10]
+mov eax,[ebp+0c]
+dec eax
+imul eax,[ebp+18]
+add eax,[ebp+08]
+push eax
+call msvcrt.memcpy
+add esp,0c
+mov eax,[ebp+14]
+mov eax,[eax]
+inc eax
+cmp [ebp+0c],eax
+jg charuchengyuanend
+cmp [ebp+0c],eax
+jne charuchengyuanbagen
+mov eax,[ebp+14]
+inc [eax]
+jmp charuchengyuanend
+charuchengyuanbagen:
+mov eax,[ebp+0c]
+imul eax,[ebp+18]
+mov [ebp-4],eax
+cmp [ebp+0c],1
+jne charuchengyuanweizhi
+mov edx,[ebp+14]
+mov eax,[ebp+18]
+imul eax,[edx]
+push eax
+push [ebp-0c]
+mov eax,[ebp+08]
+add eax,[ebp+18]
+push eax
+call msvcrt.memcpy
+add esp,0c
+mov eax,[ebp+14]
+inc [eax]
+jmp charuchengyuanend
+charuchengyuanweizhi:
+push [ebp-4]
+push [ebp-0c]
+push [ebp+08]
+call msvcrt.memcpy
+add esp,0c
+mov eax,[ebp-8]
+mov edx,[ebp-4]
+sub ax,dx
+push eax
+mov edx,[ebp-4]
+add edx,[ebp-0c]
+push edx
+mov edx,[ebp-4]
+add edx,[ebp+18]
+add edx,[ebp+08]
+push edx
+call msvcrt.memcpy
+add esp,0c
+mov eax,[ebp+14]
+inc [eax]
+charuchengyuanfree_end:
+push [ebp-0c]
+call msvcrt.free
+add esp,4
+charuchengyuanend:
+mov eax,[ebp+14]
+mov eax,[eax]
+mov esp,ebp
+pop ebp
+ret 14
+
+shujuduanbagen:
+
+dangqianfangjian:
+dd 0 0
+
+xiagefangjian:
+dd 0 0
+
+kaifangliebiao:
+dd 0
+
+guanbiliebiao:
+dd 0
+
+zoufashuzu:
+dd 0
+
+ditukuandu:
+dd 0
+
+ditugaodu:
+dd 0
+
+ditukuanduEx:
+dd 0
+
+ditugaoduEx:
+dd 0
+
+fangjianshuliang:
+dd 0
+
+ditutongdao:
+dd 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+dituqidian_hengzhouzuobiao:
+dd 0
+
+dituqidian_zongzhouzuobiao:
+dd 0
+
+dituzhongdian_hengzhouzuobiao:
+dd 0
+
+dituzhongdian_zongzhouzuobiao:
+dd 0
+
+kaifangliebiaogeshu:
+dd 0
+
+kaifangliebiao_dituFdian://+0
+dd 0
+
+kaifangliebiao_dituGdian://+4
+dd 0
+
+kaifangliebiao_dituHdian://+8
+dd 0
+
+kaifangliebiao_dangqianzuobiao_hengzhouzuobiao://+c
+dd 0
+
+kaifangliebiao_dangqianzuobiao_zongzhouzuobiao://+10
+dd 0
+
+kaifangliebiao_zuizhongzuobiao_hengzhouzuobiao://+14
+dd 0
+
+kaifangliebiao_zuizhongzuobiao_zongzhouzuobiao://+18
+dd 0
+
+guanbiliebiaogeshu:
+dd 0
+
+zoufashuju_geshu:
+dd 0
+
+linshijiedian:
+
+linshijiedian_dituFdian://+0
+dd 0
+
+linshijiedian_dituGdian://+4
+dd 0
+
+linshijiedian_dituHdian://+8
+dd 0
+
+linshijiedian_dangqianzuobiao_hengzhouzuobiao://+c
+dd 0
+
+linshijiedian_dangqianzuobiao_zongzhouzuobiao://+10
+dd 0
+
+linshijiedian_zuizhongzuobiao_hengzhouzuobiao://+14
+dd 0
+
+linshijiedian_zuizhongzuobiao_zongzhouzuobiao://+18
+dd 0
+
+daijiancezuobiao_hengzhouzuobiao:
+dd 0
+
+daijiancezuobiao_zongzhouzuobiao:
+dd 0
+
+daijiancejiedian_dituFdian://+0
+dd 0
+
+daijiancejiedian_dituGdian://+4
+dd 0
+
+daijiancejiedian_dituHdian://+8
+dd 0
+
+daijiancejiedian_dangqianzuobiao_hengzhouzuobiao://+c
+dd 0
+
+daijiancejiedian_dangqianzuobiao_zongzhouzuobiao://+10
+dd 0
+
+daijiancejiedian_zuizhongzuobiao_hengzhouzuobiao://+14
+dd 0
+
+daijiancejiedian_zuizhongzuobiao_zongzhouzuobiao://+18
+dd 0
+
+ditubiaoqian_eijingyanse:
+dd 0
+
+shujuduanend:
+
+fangxiangjihe:
+db 00 00 00 00
+db 00 01 00 00
+db 00 00 01 00
+db 00 01 01 00
+db 01 00 00 00
+db 01 01 00 00
+db 01 00 01 00
+db 01 01 01 00
+db 00 00 00 01
+db 00 01 00 01
+db 00 00 01 01
+db 00 01 01 01
+db 01 00 00 01
+db 01 01 00 01
+db 01 00 01 01
+db 01 01 01 01
+
+juqingjintushuju:
+dd #0 5 0
+dd #1 5 0
+dd #2 5 0
+dd #3 5 0
+dd #4 3 0
+dd #5 6 0
+dd #6 6 0
+dd #7 6 0
+dd #8 9 0
+dd #9 9 0
+dd #10 9 0
+dd #11 7 0
+dd #12 7 0
+dd #13 8 0
+dd #14 #1000 0
+dd #15 #1000 0
+dd #16 #1000 0
+dd #17 #10 1
+dd #18 #10 1
+dd #19 #12 1
+dd #20 #13 1
+dd #21 #14 1
+dd #22 #17 1
+dd #23 #15 1
+dd #24 #21 1
+dd #25 #22 1
+dd #26 #23 1
+dd #27 #24 1
+dd #28 #25 1
+dd #29 #26 1
+dd #30 #31 2
+dd #31 #32 2
+dd #32 #150 2
+dd #33 #151 2
+dd #34 #35 2
+dd #35 #36 2
+dd #36 #152 2
+dd #37 #153 2
+dd #38 #154 2
+dd #39 #154 2
+dd #40 #40 2
+dd #41 #41 2
+dd #42 #42 2
+dd #43 #42 2
+dd #44 #141 2
+dd #45 #141 2
+dd #46 #61 2
+dd #47 #50 2
+dd #48 #52 2
+dd #49 #53 2
+dd #50 #144 3
+dd #51 #145 3
+dd #52 #146 3
+dd #53 #148 3
+dd #54 #156 3
+dd #55 #157 3
+dd #56 #158 3
+dd #57 #159 3
+dd #58 #161 3
+dd #59 #162 3
+dd #60 #163 3
+dd #61 #164 3
+dd #62 #164 3
+dd #63 #80 3
+dd #64 #81 3
+dd #65 #82 3
+dd #66 #82 3
+dd #67 #89 3
+dd #68 #83 3
+dd #69 #84 3
+dd #70 #85 3
+dd #71 #86 3
+dd #72 #87 3
+dd #73 #92 3
+dd #74 #93 3
+dd #75 #70 4
+dd #76 #71 4
+dd #77 #72 4
+dd #78 #74 4
+dd #79 #75 4
+dd #80 #76 4
+dd #81 #101 4
+dd #82 #103 4
+dd #83 #103 4
+dd #84 #103 4
+dd #85 #192 4
+dd #86 #193 4
+dd #87 #310 4
+dd #88 #312 4
+dd #89 #314 4
+dd #90 #291100268 4
+dd #91 #291100268 4
+dd #92 #7322 0
+dd #93 #7322 0
+dd #94 #7322 0
+dd #95 #291100293 4
+dd #96 #100000003 4
+dd #97 #100000003 4
+dd #98 #100000003 4
+dd #99 #100000003 4
+dd #100 #100000003 4
+
+niwudehujiao:
+db 5B 00 45 00 58 00 50 00 5D 00 3C 5C EB 5D 84 76 7C 54 EB 53 00 00
+
+jishapixiupaichengyuan:
+db FB 51 40 67 67 4F EE 4F 3E 6D 10 62 58 54 00 00
+
+hunt_enemy:
+db 5B 00 68 00 75 00 6E 00 74 00 20 00 65 00 6E 00 65 00 6D 00 79 00 5D 00 00 00
+db 5B 00 6D 00 65 00 65 00 74 00 20 00 6E 00 70 00 63 00 5D 00 00 00
+db 5B 00 68 00 75 00 6E 00 74 00 20 00 6D 00 6F 00 6E 00 73 00 74 00 65 00 72 00 5D 00 00 00
+db 5B 00 73 00 65 00 65 00 6B 00 20 00 6E 00 20 00 6D 00 65 00 65 00 74 00 20 00 6E 00 70 00 63 00 5D 00 00 00
+db 5B 00 71 00 75 00 65 00 73 00 74 00 20 00 63 00 6C 00 65 00 61 00 72 00 5D 00 00 00
+db 5B 00 72 00 65 00 61 00 63 00 68 00 20 00 74 00 68 00 65 00 20 00 72 00 61 00 6E 00 67 00 65 00 5D 00 00 00
+db 5B 00 6C 00 6F 00 6F 00 6B 00 20 00 63 00 69 00 6E 00 65 00 6D 00 61 00 74 00 69 00 63 00 5D 00 00 00
+db 5B 00 71 00 75 00 65 00 73 00 74 00 69 00 6F 00 6E 00 5D 00 00 00
+db 5B 00 63 00 6F 00 6E 00 64 00 69 00 74 00 69 00 6F 00 6E 00 20 00 75 00 6E 00 64 00 65 00 72 00 20 00 63 00 6C 00 65 00 61 00 72 00 5D 00 00 00
+
+clear_map:
+db 5B 00 63 00 6C 00 65 00 61 00 72 00 20 00 6D 00 61 00 70 00 5D 00 00 00
+
+seeking:
+db 5B 00 73 00 65 00 65 00 6B 00 69 00 6E 00 67 00 5D 00 00 00
+
+zhuxianshuju_renwubianhao:
+dd 0
+
+zhuxianshuju_renwucishu:
+dd 0
+
+zhuxianshuju_renwufuben:
+dd 0
+
+zhuxianshuju_renwucailiao:
+dd 0
+
+zhuxianshuju_renwuyaoqiu:
+dq 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+zhuxianshuju_shifoutiaoguo:
+dd 0
+
+yincangzhuxianshuju_renwubianhao:
+dd 0
+
+yincangzhuxianshuju_renwucishu:
+dd 0
+
+yincangzhuxianshuju_renwufuben:
+dd 0
+
+yincangzhuxianshuju_renwucailiao:
+dd 0
+
+yincangzhuxianshuju_renwuyaoqiu:
+dq 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+yincangzhuxianshuju_shifoutiaoguo:
+dd 0 0
+
+chengzhengyidongshuju:
+dd 0 0 0 0
+
+dituID:
+dd 0
+
+chengzhengshunhuancishu:
+dd 0
+
+quanshishichang:
+dd #54 #2 #500 #300 #2911001
+
+kongbudeqixidi:
+dd #31 #2 #500 #300 #312
+
+lukedejuguangjing:
+dd #22 #2 #800 #300 #194
+
+telunsifadianzhan:
+dd #14 #2 #800 #300 #103
+
+wangmingshazhen:
+dd #54 #2 #500 #300 #2911002
+
+yijie:
+dd #17 #2 #500 #300 #7167
+
+yijiecishu:
+dd 0
+
+zidongyijiekaiguan:
+dd 0
+
+yijierenwukaiguan:
+dd 0
+
+ditubianhao:
+dd 0
+
+ditudengji:
+dd 0
+
+BOSSzuobiao_hengzhouzuobiao:
+dd 0
+
+BOSSzuobiao_zongzhouzuobiao:
+dd 0
+
+dangqianzuobiao_hengzhouzuobiao:
+dd 0
+
+dangqianzuobiao_zongzhouzuobiao:
+dd 0
+
+Monsternumber://怪物数量
+dd 0
+
+Thenumberofdeaths://死亡数量
+dd 0
+
+yidaodajuese:
+dd 0
+
+dajianzhuwu_panduan:
+dd 0
+
+fenjiezhuangbei_panduan:
+dd 1
+
+shengyupilao_panduan:
+dd 1
+
+guotuio:
+dd 0
+
+zidongguotu_panduan:
+dd 0
+
+zidongkaiguan_pasnduan:
+dd 0
+
+zidongzhixing_panduan:
+dd 0
+
+juqingkaiguan_panduan:
+dd 0
+
+juqingzhixing_panduan:
+dd 0
+
+toumingwudi_panduan:
+dd 0
+
+zengjiashanghai_panduan:
+dd 0
+
+diuqizhuangbei_panduan:
+dd 0
+
+zisezhuangbei_panduan:
+dd 1
+
+shuntufangshi:
+dd 0
+
+gongnengzhixing_panduan:
+dd 0 0 0
+
+xunhuanditu_panduan:
+dd 0
+
+lingzhufangjian_panduan:
+dd 0 0 0 0 0 0
+
+keyishuntu_panduan:
+dd 0
+
+xuyaoguotu_panduan:
+dd 0
+
+Receivingpointer:
+dd 1
+
+lpPrevWndFunc:
+dd 0
+
+hwnd:
+dd 0
+
+jintushijian_panduan:
+dd 0 0
+
+quanpingjishu_panduan:
+dd 0 0 0 0
+
+shuatujishu_panduan:
+dd 0
+
+yizhixingjueseshuliang:
+dd 0
+
+piaoyicanshu:
+dd 0 0 0 0
+
+jmpaddrv:
+db E9 00 00 00 00
+
+qianwangshenzhezhiminghao:
+db 4D 52 80 5F 23 57 05 80 4B 4E 23 9E F7 53 00 00
+
+DNF:
+db B5 D8 CF C2 B3 C7 D3 EB D3 C2 CA BF 00
+
+juesedengji_gonggao: //IS2154：角色： [ %d ] 级 未满足搬砖要求
+db 4D2 89 72 82 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 A7 7E 20 00 2A 67 E1 6E B3 8D 2C 64 16 78 81 89 42 6C 00 00
+
+juesepilao_gonggao: //IS2154：角色疲劳已刷完
+db D2 89 72 82 B2 75 B3 52 F2 5D 37 52 8C 5B 00 00
+
+jueseshuliang_gonggao://IS2154：已切换至第[ %d ] 个角色 总数： [ %d ] 个角色
+db F2 5D 07 52 62 63 F3 81 2C 7B 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 2A 4E D2 89 72 82 20 00 3B 60 70 65 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 2A 4E D2 89 72 82 00 00
+
+baotouchangdu_gonggao://包头%d  \t  长度%d
+db 05 53 34 59 25 00 64 00 20 00 20 00 09 00 20 00 20 00 7F 95 A6 5E 25 00 64 00 00 00
+
+juqingshuatu_gonggao://IS2154：剧情[%ws]通关[ %d ]次
+db 67 52 C5 60 5B 00 25 00 77 00 73 00 5D 00 1A 90 73 51 5B 00 20 00 25 00 64 00 20 00 5D 00 21 6B 00 00
+zidongshuatu_gonggao://IS2154：搬砖[%ws]通关[ %d ]次
+db 2C 64 16 78 5B 00 25 00 77 00 73 00 5D 00 1A 90 73 51 5B 00 20 00 25 00 64 00 20 00 5D 00 21 6B 00 00
+renwushuju_gonggao:
+db FB 4E A1 52 81 89 42 6C 1A FF 5B 00 20 00 25 00 77 00 73 00 20 00 5D 00 0D 00 0A 00 FB 4E A1 52 16 7F F7 53 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 FB 4E A1 52 21 6B 70 65 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 FB 4E A1 52 6F 52 2C 67 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 00 00
+
+zhuxianshuju_gonggao:
+db 90 96 CF 85 5F 00 FB 4E A1 52 81 89 42 6C 1A FF 5B 00 20 00 25 00 77 00 73 00 20 00 5D 00 0D 00 0A 00 FB 4E A1 52 16 7F F7 53 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 FB 4E A1 52 21 6B 70 65 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 FB 4E A1 52 6F 52 2C 67 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 00 00
+
+guaiwushuliang_gonggao://IS2154：房间怪物数量： [ %d ] 个
+db 3F 62 F4 95 2A 60 69 72 70 65 CF 91 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 2A 4E 00 00
+
+kaishijihuo_gonggao:
+db C0 6F 3B 6D 10 62 9F 52 9F 52 FD 80 82 59 0B 4E 1A FF 0D 00 0A 00 7A 66 FD 80 7A 98 FE 56 00 5F 2F 54 0D 00 0A 00 45 00 6E 00 64 00 20 00 40 62 09 67 9F 52 FD 80 00 5F 73 51 20 00 0D 00 0A 00 E2 6C 6A 6D 2E 95 20 00 8C 5B 10 62 F2 5D A5 63 FB 4E A1 52 0D 00 0A 00 46 00 31 00 20 00 50 60 16 60 84 76 16 68 6F 60 30 57 00 5F 73 51 0D 00 0A 00 46 00 32 00 20 00 EA 81 A8 52 A1 4E 7D 54 0D 00 0A 00 46 00 33 00 20 00 53 62 FA 5E 51 7B 69 72 00 5F 73 51 0D 00 0A 00 46 00 34 00 20 00 04 59 06 74 C5 88 07 59 00 5F 73 51 0D 00 0A 00 46 00 35 00 20 00 49 51 4B 4E 1E 82 1A 4F 00 5F 73 51 0D 00 0A 00 46 00 36 00 20 00 A1 4E 7D 54 40 67 47 95 00 5F 73 51 0D 00 0A 00 46 00 38 00 20 00 EA 81 A8 52 02 5F 4C 75 00 5F 73 51 0D 00 0A 00 46 00 39 00 20 00 AA 5F AF 73 37 52 FE 56 00 5F 73 51 0D 00 0A 00 46 00 31 00 31 00 20 00 7A 66 FD 80 7A 98 FE 56 00 5F 73 51 0D 00 0A 00 46 00 31 00 32 00 20 00 7A 66 FD 80 67 52 C5 60 00 5F 73 51 0D 00 0A 00 41 00 6C 00 74 00 2B 00 B9 65 11 54 2E 95 20 00 5B 00 7A 98 FE 56 5D 00 0D 00 0A 00 41 00 6C 00 74 00 2B 00 31 00 20 00 3A 5F A0 52 24 4F B3 5B 00 5F 73 51 0D 00 0A 00 41 00 6C 00 74 00 2B 00 32 00 20 00 0F 90 0E 66 E0 65 4C 65 00 5F 73 51 0D 00 0A 00 41 00 6C 00 74 00 2B 00 33 00 20 00 22 4E 03 5F C5 88 07 59 00 5F 73 51 20 00 5B 00 89 5B 68 51 21 6A 0F 5F 32 96 62 6B CC 80 05 53 C5 88 E1 6E 5D 00 0D 00 0A 00 41 00 6C 00 74 00 2B 00 34 00 20 00 47 50 2B 7D C5 88 07 59 00 5F 73 51 20 00 5B 00 06 52 E3 89 16 62 FA 51 2E 55 5D 00 0D 00 0A 00 41 00 6C 00 74 00 2B 00 35 00 20 00 7A 98 FE 56 B9 65 0F 5F 00 5F 73 51 20 00 5B 00 50 57 07 68 7A 98 20 00 3A 5F 36 52 7A 98 20 00 54 59 D1 8D 7A 98 5D 00 00 00
+
+wanchengrenwu_gonggao://IS2154：完成已接任务
+db 8C 5B 10 62 F2 5D A5 63 FB 4E A1 52 00 00
+
+tingzhifuzhu_gonggao://IS2154：功能已关闭
+db 9F 52 FD 80 F2 5D 73 51 ED 95 00 00
+
+huifufuzhu_gonggao://IS2154：功能已开启
+db 9F 52 FD 80 F2 5D 00 5F 2F 54 00 00
+
+kaiqiwudi_gonggao://IS2154：透明无敌开启
+db 0F 90 0E 66 E0 65 4C 65 00 5F 2F 54 00 00
+
+guanbiwudi_gonggao://IS2154：透明无敌关闭
+db 0F 90 0E 66 E0 65 4C 65 73 51 ED 95 00 00
+
+kaiqidiuqi_gonggao://IS2154：丢弃装备开启
+db 22 4E 03 5F C5 88 07 59 00 5F 2F 54 00 00
+
+guanbidiuqi_gonggao://IS2154：丢弃装备关闭
+db 22 4E 03 5F C5 88 07 59 73 51 ED 95 00 00
+
+fenjiejiazi_gonggao://IS2154：紫色装备处理方式 [ 分解 ]
+db 2B 7D 72 82 C5 88 07 59 04 59 06 74 B9 65 0F 5F 20 00 5B 00 20 00 06 52 E3 89 20 00 5D 00 00 00
+
+chushoujiazi_gonggao://IS2154：紫色装备处理方式 [ 出售 ]
+db 2B 7D 72 82 C5 88 07 59 04 59 06 74 B9 65 0F 5F 20 00 5B 00 20 00 FA 51 2E 55 20 00 5D 00 00 00
+
+zuobiaoguotu_gonggao://IS2154：过图方式 [ 坐标顺 ]
+db C7 8F FE 56 B9 65 0F 5F 20 00 5B 00 20 00 50 57 07 68 7A 98 20 00 5D 00 00 00
+
+qiangzhiguotu_gonggao://IS2154：过图方式 [ 强制顺 ]
+db C7 8F FE 56 B9 65 0F 5F 20 00 5B 00 20 00 3A 5F 36 52 7A 98 20 00 5D 00 00 00
+
+bengpaoguotu_gonggao://IS2154：过图方式 [ 奔跑顺 ]
+db C7 8F FE 56 B9 65 0F 5F 20 00 5B 00 20 00 54 59 D1 8D 7A 98 20 00 5D 00 00 00
+
+kongzhongrubao_gonggao://IS2154：捡物方式 [ 秒捡 ]
+db 61 63 69 72 B9 65 0F 5F 20 00 5B 00 20 00 D2 79 61 63 20 00 5D 00 00 00
+
+tiqvrubao_gonggao://IS2154：捡物方式 [ 秒捡+提取 ]
+db 61 63 69 72 B9 65 0F 5F 20 00 5B 00 20 00 D2 79 61 63 2B 00 D0 63 D6 53 20 00 5D 00 00 00
+
+juwurubao_gonggao://IS2154：捡物方式 [ 聚物捡 ]
+db 61 63 69 72 B9 65 0F 5F 20 00 5B 00 20 00 5A 80 69 72 61 63 20 00 5D 00 00 00
+
+kaiqifenjie_gonggao://IS2154：自动分解开启
+db EA 81 A8 52 06 52 E3 89 00 5F 2F 54 00 00
+
+guanbifenjie_gonggao://IS2154：自动分解开启
+db EA 81 A8 52 06 52 E3 89 73 51 ED 95 00 00
+
+guanbixunhuan_gonggap://IS2154：循环刷图关闭
+db AA 5F AF 73 37 52 FE 56 73 51 ED 95 00 00
+
+kaiqixunhuan_gonggap://IS2154：循环刷图开启
+db AA 5F AF 73 37 52 FE 56 00 5F 2F 54 00 00
+
+kaiqishuntu_gonggao://IS2154：自动顺图开启
+db EA 81 A8 52 7A 98 FE 56 00 5F 2F 54 00 00
+
+guanbishuntu_gonggao://IS2154：自动顺图关闭
+db EA 81 A8 52 7A 98 FE 56 73 51 ED 95 00 00
+
+kaiqijuqing_gonggao://IS2154：智能剧情开启
+db 7A 66 FD 80 67 52 C5 60 00 5F 2F 54 00 00
+
+guanbijuqing_gonggao://IS2154：智能剧情关闭
+db 7A 66 FD 80 67 52 C5 60 73 51 ED 95 00 00
+
+kaiqidegonggao://IS2154：智能自动开启
+db 7A 66 FD 80 EA 81 A8 52 00 5F 2F 54 00 00
+
+guanbizidong_gonggao://IS2154：智能自动关闭
+db 7A 66 FD 80 EA 81 A8 52 73 51 ED 95 00 00
+
+zidongpilao_gonggao: //IS2154：全自动搬砖已停止！已搬完[ %d ]个角色-总数[ %d ]个角色
+db 68 51 EA 81 A8 52 2C 64 16 78 F2 5D 5C 50 62 6B 01 FF F2 5D 2C 64 8C 5B 5B 00 20 00 25 00 64 00 20 00 5D 00 2A 4E D2 89 72 82 2D 00 3B 60 70 65 5B 00 20 00 25 00 64 00 20 00 5D 00 2A 4E D2 89 72 82 00 00
+
+juqingpilao_gonggao: //IS2154：全自动剧情已停止！已升级[ %d ]个角色-总数[ %d ]个角色
+db 68 51 EA 81 A8 52 67 52 C5 60 F2 5D 5C 50 62 6B 01 FF F2 5D 47 53 A7 7E 5B 00 20 00 25 00 64 00 20 00 5D 00 2A 4E D2 89 72 82 2D 00 3B 60 70 65 5B 00 20 00 25 00 64 00 20 00 5D 00 2A 4E D2 89 72 82 00 00
+
+dengjibuzu_gonggao://IS2154：角色等级不足关闭自动已刷完：[ %d ]个角色
+db D2 89 72 82 49 7B A7 7E 0D 4E B3 8D 73 51 ED 95 EA 81 A8 52 F2 5D 37 52 8C 5B 1A FF 5B 00 20 00 25 00 64 00 20 00 5D 00 2A 4E D2 89 72 82 00 00
+
+kaiqishanghai_gonggao://IS2154：增加伤害开启
+db 9E 58 A0 52 24 4F B3 5B 00 5F 2F 54 00 00
+
+guanbishanghai_gonggao://IS2154：增加伤害关闭
+db 9E 58 A0 52 24 4F B3 5B 73 51 ED 95 00 00
+
+kaiqijianzhu_gonggao://IS2154：打建筑物开启
+db 53 62 FA 5E 51 7B 69 72 00 5F 2F 54 00 00
+
+guanbijianzhu_gonggao://IS2154：打建筑物关闭
+db 53 62 FA 5E 51 7B 69 72 73 51 ED 95 00 00
+
+tiqvcailiao_gonggao://IS2154：提取材料：[ %d ] 个
+db D0 63 D6 53 50 67 99 65 1A FF 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 2A 4E 00 00
+
+linshikongbai_dizhi:
+db 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+LdrInitializeThunk:
+mov edi,edi
+push ebp
+mov ebp,esp
+
+ReadProcessMemory://保存这个API的地址
+
+_ReadProcessMemory:
+
+[ENABLE]
+
+createthread(Yun_Qi)
+
+[DISABLE]
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Activate</Action>
+          <Keys>
+            <Key>36</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>1120075226</ID>
+          <Description>"109005952 62129"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>400430</Address>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Set Value</Action>
+              <Keys>
+                <Key>112</Key>
+              </Keys>
+              <Value>62129</Value>
+              <ID>0</ID>
+            </Hotkey>
+          </Hotkeys>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1120075225</ID>
+          <Description>"伤害AIT＋1"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>400434</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>4</ID>
+          <Description>"搬砖地图设置"</Description>
+          <Color>008080</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>400438</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2</ID>
+          <Description>"角色数量设置"</Description>
+          <Color>404080</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>40042C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>5</ID>
+          <Description>"预留疲劳设置"</Description>
+          <Color>404000</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>400440</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>Q群18779361</Name>
+      <Address>1E6C00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>FENGQI_ST</Name>
+      <Address>54B2F175</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>TIANCHENshuxing</Name>
+      <Address>5047A0E0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_PlasmaKnife_poTIANCHEN_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_PlasmaKnife_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_HULK+13A4_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_HULK+3438_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_HULK+3448_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_HULK_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_NanoKnife_poTIANCHEN_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_NanoKnife_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>LinkBigshot_longxiao-24B4_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_longxiao_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>LinkBigshot_longxiao_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+13A4+13A4_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+13A4+13A4</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+13A4+3438_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+13A4+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+13A4+3448_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+13A4+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+13A4_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+13A4</Name>
+      <Address>2B5EEC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+18D0+13A4_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+18D0+13A4</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+18D0+3438_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+18D0+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+18D0+3448_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+18D0+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+18D0_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+18D0</Name>
+      <Address>2B5EEC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+1F20+13A4_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+1F20+13A4</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+1F20+3438_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+1F20+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+1F20+3448_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+1F20+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+1F20_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+1F20</Name>
+      <Address>2B5EEC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2450+13A4_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2450+13A4</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2450+3438_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2450+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2450+3448_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2450+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2450_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2450</Name>
+      <Address>2B5EEC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2900+13A4_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2900+13A4</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2900+3438_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2900+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2900+3448_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2900+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2900_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2900</Name>
+      <Address>2B5EEC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+3918+13A4_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+3918+13A4</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+3918+3438_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+3918+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+3918+3448_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+3918+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+3918_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+3918</Name>
+      <Address>2B5EEC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2F1C+13A4_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2F1C+13A4</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2F1C+3438_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2F1C+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2F1C+3448_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2F1C+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2F1C_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+2F1C</Name>
+      <Address>2B5EEC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+3438_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+3448_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_Knife_poTIANCHEN_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_Knife_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN_poTIANCHEN</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_poTIANCHEN</Name>
+      <Address>2EC5AC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Mark_jzhq</Name>
+      <Address>52551255</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>FENGQI</Name>
+      <Address>154391A0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>按f1QQ姿势操作</Name>
+      <Address>1E6C00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>林寒叶</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>星梦娱乐QQ群：786919967</Name>
+      <Address>1E6C00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>阿海QQ：2726965386</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Q群免费钢炮：786919967</Name>
+      <Address>1E6C00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Q群786919967</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ2726965386</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>CE汇编QQ群:563615793</Name>
+      <Address>7ffffffff</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>LIUGUANG</Name>
+      <Address>153891A0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Dawn</Name>
+      <Address>54B4C06E</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Dawn_ST</Name>
+      <Address>54B4C4FE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>TIAN</Name>
+      <Address>122EC06E</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>TIAN_ST</Name>
+      <Address>122EC4FE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Soul</Name>
+      <Address>577F91A0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>pickup</Name>
+      <Address>125CA066</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Cheat Engine :LEN_CT.</Name>
+      <Address>695975713</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Cheat Engine :Mark.</Name>
+      <Address>1723050522</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Cheat Engine for China QQ群:563615793</Name>
+      <Address>7ffffffff</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>【CE汇编】：563615793</Name>
+      <Address>100000000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ1054831524</Name>
+      <Address>241CA10</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>biao</Name>
+      <Address>73C0018E</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>light_jmxr</Name>
+      <Address>00400A47</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>stsj_light</Name>
+      <Address>08040396</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>light</Name>
+      <Address>31560BC0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>mpn_light</Name>
+      <Address>400500</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Cheat Engine :Dark Byte.</Name>
+      <Address>7fffffff</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>TIANshuxing</Name>
+      <Address>5047A0E0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>冷风qq:695975713</Name>
+      <Address>10000000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>冷风qq：695975713</Name>
+      <Address>100100</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>CE汇编：563615793</Name>
+      <Address>100100</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>MRTIANshuxing</Name>
+      <Address>5047A0E0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>冷风QQ695975713</Name>
+      <Address>100100</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>CE汇编群：563615793</Name>
+      <Address>100100</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>shuntujisuan</Name>
+      <Address>0F18A5E8</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>hyB9C</Name>
+      <Address>0F18A1BF</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>ma_ge</Name>
+      <Address>0DBF0A06</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>CE汇编教学群:563615793</Name>
+      <Address>7ffffffff</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>kaiguan</Name>
+      <Address>20580151</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>ditu_kg</Name>
+      <Address>85BF004D</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>kill_count</Name>
+      <Address>0AF9038C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QU_ID</Name>
+      <Address>0AFA0524</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>RW_ID</Name>
+      <Address>0AFA0528</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>shang</Name>
+      <Address>0929003E</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>冰雨CE交流群：677206030</Name>
+      <Address>1E6C00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Mark_cs_sj</Name>
+      <Address>126E83FF</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Mark_pd_sj</Name>
+      <Address>126E8407</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_PlasmaKnife</Name>
+      <Address>35C74238</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_PlasmaKnife2</Name>
+      <Address>5A58B6D0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_MI_Machete</Name>
+      <Address>693EC05C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>00000000</Name>
+      <Address>0BF20000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>reg</Name>
+      <Address>238B0000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>cheat</Name>
+      <Address>238B0010</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_Knife</Name>
+      <Address>601D1308</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Knife</Name>
+      <Address>1C150000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Get_KnifeAttack</Name>
+      <Address>1C110004</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_PlasmaKnife_potian_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_PlasmaKnife_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_PlasmaKnife_Knife</Name>
+      <Address>534CECF4</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>KnifeAttack</Name>
+      <Address>0CD80000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_HULK+13A4_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_HULK+13A4</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_HULK+3438_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_HULK+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_HULK+3448_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_HULK+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_HULK_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_NanoKnife_potian_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_NanoKnife_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_NanoKnife_Knife</Name>
+      <Address>534CECF4</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_HULK</Name>
+      <Address>60A74C54</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_NanoKnife</Name>
+      <Address>58BE59E4</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_Terminator</Name>
+      <Address>6417F944</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>LinkBigshot_longxiao-24B4_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>LinkBigshot_longxiao-24B4</Name>
+      <Address>38407FF8</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_longxiao_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_longxiao</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>LinkBigshot_longxiao_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+13A4+13A4_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+13A4+13A4</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+13A4+3438_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+13A4+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+13A4+3448_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+13A4+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+13A4_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+13A4</Name>
+      <Address>2B5EEC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+18D0+13A4_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+18D0+13A4</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+18D0+3438_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+18D0+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+18D0+3448_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+18D0+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+18D0_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+18D0</Name>
+      <Address>2B5EEC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+1F20+13A4_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+1F20+13A4</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+1F20+3438_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+1F20+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+1F20+3448_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+1F20+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+1F20_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+1F20</Name>
+      <Address>2B5EEC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2450+13A4_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2450+13A4</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2450+3438_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2450+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2450+3448_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2450+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2450_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2450</Name>
+      <Address>2B5EEC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2900+13A4_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2900+13A4</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2900+3438_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2900+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2900+3448_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2900+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2900_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2900</Name>
+      <Address>2B5EEC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+3918+13A4_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+3918+13A4</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+3918+3438_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+3918+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+3918+3448_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+3918+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+3918_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+3918</Name>
+      <Address>2B5EEC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2F1C+13A4_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2F1C+13A4</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2F1C+3438_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2F1C+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2F1C+3448_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2F1C+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2F1C_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+2F1C</Name>
+      <Address>2B5EEC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+3438_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+3438</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+3448_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian+3448</Name>
+      <Address>2B4C7C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_Knife_potian_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_Knife_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_Knife_Knife</Name>
+      <Address>534CECF4</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian_potian</Name>
+      <Address>2EEE5C4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot</Name>
+      <Address>61B619B0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>LinkBigshot_longxiao</Name>
+      <Address>26F98FF8</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_SPANNER</Name>
+      <Address>5F3662CC</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_ScytheCrabClaws</Name>
+      <Address>5D4EA704</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>bigshot_potian</Name>
+      <Address>2EC5AC4C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>我</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Mage_mpn2913_sj</Name>
+      <Address>12F691C0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>control</Name>
+      <Address>5BF4B488</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>typedata</Name>
+      <Address>5047A706</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Reduction_of_B9C</Name>
+      <Address>5047A1D3</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Fengqishuxing</Name>
+      <Address>5047A0E0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>mark121</Name>
+      <Address>08F5028F</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ321704933</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>按f1就有姿势，瞎子就不用玩了</Name>
+      <Address>1E6C00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name/>
+      <Address>1E6C00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Q群810321813</Name>
+      <Address>1E6C00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ979530645</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>我爱锦心狗群主</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>氤氲17625367957</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Q群不良人免费CE群：免费辅助群：159802620</Name>
+      <Address>1E6C00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ1</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Q群奶狗免费CE群：免费辅助群：159602922</Name>
+      <Address>1E6C00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ732513127</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Q群159602922</Name>
+      <Address>1E6C00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ1149669791</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ2568588744</Name>
+      <Address>6E2100AA</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>newww1</Name>
+      <Address>70910000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ275994769</Name>
+      <Address>60EA00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ1341407214</Name>
+      <Address>654B00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ1903007676</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Createadoll</Name>
+      <Address>7536002F</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>memcpyStub</Name>
+      <Address>75360282</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>memcryint</Name>
+      <Address>75360263</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>prompt</Name>
+      <Address>753602CA</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>something</Name>
+      <Address>1A770491</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Reduction_of_hook</Name>
+      <Address>1A770433</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>_2DC</Name>
+      <Address>1A770353</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>gonggao</Name>
+      <Address>1A77039B</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Open_function</Name>
+      <Address>1A77000D</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>facilitate</Name>
+      <Address>1A7701EC</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>xiugaishuxing</Name>
+      <Address>1A7700D6</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>daidai</Name>
+      <Address>07B60000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Ssell</Name>
+      <Address>70340144</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>zujintu</Name>
+      <Address>703401AF</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>huichen</Name>
+      <Address>70340137</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Q群312559124</Name>
+      <Address>1E6C00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ743417241</Name>
+      <Address>654B00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>hai</Name>
+      <Address>02250671</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>xt</Name>
+      <Address>0B7C00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ995704206</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>guai_wu_dai_ma</Name>
+      <Address>02DF146C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>guai_wu_deng_ji</Name>
+      <Address>02DF146D</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>lw_test</Name>
+      <Address>069E0000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>newwww</Name>
+      <Address>069E0400</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>lw_aaa</Name>
+      <Address>069E0800</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>lw_abcd</Name>
+      <Address>069E0C00</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>gonGaoAddr</Name>
+      <Address>08580000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>gongao</Name>
+      <Address>08580010</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ1787670887</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>C0begiA</Name>
+      <Address>753600C6</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>gjntcode</Name>
+      <Address>753600C5</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>QQ993228585</Name>
+      <Address>63CC00AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>HH</Name>
+      <Address>515A1C8</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>K1</Name>
+      <Address>060B2694</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>K2</Name>
+      <Address>055CD289</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>K3</Name>
+      <Address>058EB54B</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>k4</Name>
+      <Address>0609435E</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>kongbai</Name>
+      <Address>00400A00</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>mage_jmxr</Name>
+      <Address>00400A47</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>zhuangtai</Name>
+      <Address>0504D7CC</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>na</Name>
+      <Address>08680053</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>ChEh_BEnd</Name>
+      <Address>75CA027A</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>nw</Name>
+      <Address>1C1B0000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>suntuS</Name>
+      <Address>7FFD09BA</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>suntuX</Name>
+      <Address>7FFD09D7</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>suntuZ</Name>
+      <Address>7FFD09F4</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>suntuY</Name>
+      <Address>7FFD0A11</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Pack_up_the_knapsack</Name>
+      <Address>7FFD0D44</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>zbst_canshu</Name>
+      <Address>1AF4013C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>21tq_pd</Name>
+      <Address>1259AB76</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>pd_1</Name>
+      <Address>0FAB063D</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Reduction_of_B7C</Name>
+      <Address>6BDC045E</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>zhixing</Name>
+      <Address>07E60000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>decrypt</Name>
+      <Address>07E60800</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>shunZZ</Name>
+      <Address>07E64000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>sell1</Name>
+      <Address>0AD30100</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>decrypt1</Name>
+      <Address>0AD30200</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>new2</Name>
+      <Address>0AD30400</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>shunZ</Name>
+      <Address>0AB70000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>zhixingZ</Name>
+      <Address>0AB70100</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>decryptZ</Name>
+      <Address>0AB70200</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>shunY</Name>
+      <Address>0AB70300</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>zhixingY</Name>
+      <Address>0AB70400</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>decryptY</Name>
+      <Address>0AB70500</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>shunS</Name>
+      <Address>0AB70600</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>zhixingS</Name>
+      <Address>0AB70700</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>decryptS</Name>
+      <Address>0AB70800</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>shunX</Name>
+      <Address>0AB70900</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>zhixingX</Name>
+      <Address>0AB70A00</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>decryptX</Name>
+      <Address>0AB70B00</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>new1</Name>
+      <Address>0AE70000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>newss</Name>
+      <Address>0C6F0000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>gg_pd</Name>
+      <Address>0319B449</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>zbstcall_mage</Name>
+      <Address>0A5400AE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>kexie_kb</Name>
+      <Address>00722000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>stsj_mage</Name>
+      <Address>08040396</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Coordinatethemap_2</Name>
+      <Address>71FA010E</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Coordinatethemap_3</Name>
+      <Address>10BE010E</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>panduan</Name>
+      <Address>00400D26</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>qnqy_pd</Name>
+      <Address>12B9B0A3</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>type_1</Name>
+      <Address>4B4600C3</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>by_xy</Name>
+      <Address>4CAF0041</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>new</Name>
+      <Address>00400700</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Coordinatethemap_0</Name>
+      <Address>6F24010E</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Coordinatethemap_1</Name>
+      <Address>6F25010E</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>st_pd_zhi</Name>
+      <Address>09EE02CC</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>renoukg</Name>
+      <Address>09270194</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>st_pd</Name>
+      <Address>087F01EE</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>mpn_pd</Name>
+      <Address>0871006B</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>menghuan_</Name>
+      <Address>0421B050</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>xiyang</Name>
+      <Address>400600</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>stpd</Name>
+      <Address>639E02C4</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>new_</Name>
+      <Address>036552B6</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>countEnemy</Name>
+      <Address>1E920800</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>skillcodeadd</Name>
+      <Address>1E920000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>skillcode</Name>
+      <Address>0AF70000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>oridamege</Name>
+      <Address>246E0000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>damege</Name>
+      <Address>41D50800</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>fuckallatk</Name>
+      <Address>241B0800</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>fuckall1</Name>
+      <Address>06B11800</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>fuckall4</Name>
+      <Address>37421000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>haveEnemy</Name>
+      <Address>0AF10800</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>handleBoss</Name>
+      <Address>077A2000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>fuckallman</Name>
+      <Address>23791000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>fuckall</Name>
+      <Address>0E6D0000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>enemy</Name>
+      <Address>07FA1000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>run</Name>
+      <Address>3D1E0000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>fuckboss</Name>
+      <Address>077A2000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>miao398</Name>
+      <Address>3D1E1000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>get33</Name>
+      <Address>34980000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>fuckallboss</Name>
+      <Address>41EB2000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>newmem</Name>
+      <Address>09810000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>newmem2</Name>
+      <Address>47DA0800</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>newmem21</Name>
+      <Address>36FD1000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>nonono</Name>
+      <Address>05070800</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>fuckallb</Name>
+      <Address>0A010800</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>fuckallme</Name>
+      <Address>556E1000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>mpn</Name>
+      <Address>07020000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>mage</Name>
+      <Address>31560BC0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>mark</Name>
+      <Address>07EE0000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>addr</Name>
+      <Address>379FA870</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>base_mag</Name>
+      <Address>013CF4D0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>code_flag</Name>
+      <Address>0D7B1008</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>level_flag</Name>
+      <Address>0D7B100C</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>INJECT</Name>
+      <Address>01BF0C90</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>base_phy</Name>
+      <Address>013E66D0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>data</Name>
+      <Address>0BBE0039</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>ecx_val</Name>
+      <Address>0A1F0404</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>val</Name>
+      <Address>0A840012</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>ConfigName</Name>
+      <Address>C714410</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>vehdebug-i386.dll!ConfigName</Name>
+      <Address>C714410</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>vehdebug-i386.dll.ConfigName</Name>
+      <Address>C714410</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>InitializeVEH</Name>
+      <Address>C6ECCD0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>vehdebug-i386.dll!InitializeVEH</Name>
+      <Address>C6ECCD0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>vehdebug-i386.dll.InitializeVEH</Name>
+      <Address>C6ECCD0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>UnloadVEH</Name>
+      <Address>C6ED330</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>vehdebug-i386.dll!UnloadVEH</Name>
+      <Address>C6ED330</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>vehdebug-i386.dll.UnloadVEH</Name>
+      <Address>C6ED330</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>luainit</Name>
+      <Address>1B7D0000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>LuaFunctionCall</Name>
+      <Address>1B7D0080</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>luaserverinitialized</Name>
+      <Address>1B7D0100</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>luaservername</Name>
+      <Address>1B7D0110</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>mpn_Mage</Name>
+      <Address>400500</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>PINGFENG</Name>
+      <Address>7F4E0272</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>3sCall</Name>
+      <Address>7F4E00A5</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>X__X_1</Name>
+      <Address>7F4E003D</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>X__X_2</Name>
+      <Address>7F4E00C5</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>X__X_3</Name>
+      <Address>7F4E0185</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>X__X_4</Name>
+      <Address>7F4E0230</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>00FB1330</Address>
+      <Comment>018CF162
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
+</CheatTable>

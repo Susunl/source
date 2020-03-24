@@ -6,8 +6,8 @@
       <Description>"自动汇编脚本"</Description>
       <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
-      <AssemblerScript>define(bianguaidizhi,2C7F3C3)//8B 55 08 52 B9 ** ** ** **【【3结尾
-define(guaiwumulu,73A4618)//怪物目录
+      <AssemblerScript>define(bianguaidizhi,2E54280)//8B 55 08 52 B9 ** ** ** **【【3结尾
+define(guaiwumulu,7680D58)//怪物目录
 
 [ENABLE]
 //code from here to '[DISABLE]' will be used to enable the cheat

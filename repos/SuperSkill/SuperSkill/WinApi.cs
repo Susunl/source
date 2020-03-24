@@ -103,6 +103,24 @@ namespace ReadWrite
             else
                 return BitConverter.ToInt32(temp, 0);
         }
+        public static uint ReadMemInt2(int ProcessID, uint Address)
+        {
+            //声明变量
+            int a = 0;
+            byte[] temp = new byte[4];
+            IntPtr handle = new IntPtr();
+
+            if (ProcessID == -1)    //-1读取自进程
+                handle = ProcessAPI.GetCurrentProcess();
+            else
+                handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS, false, ProcessID); //获取句柄
+            a = ReadWriteAPI.ReadProcessMemory(handle, Address, temp, 4, 0);
+            ProcessAPI.CloseHandle(handle); //关闭对象
+            if (a == 0)
+                return 0;  //读取失败返回-1
+            else
+                return BitConverter.ToUInt32(temp, 0);
+        }
         public static int ReadMemInt(uint Address)
         {
             //声明变量
@@ -394,6 +412,27 @@ namespace ReadWrite
             else
                 return true;
         }
+
+        public static int 读偏移型(uint 基址,uint[] 偏移)
+        {
+            int 地址 = (int)基址;
+            int i = 0;
+            while (i<偏移.Length)
+            {
+                地址 = ReadMemInt((uint)地址);
+                地址 = (int)(地址 + 偏移[i]);
+                i++;
+            }
+            return 地址;
+        }
+
+
+
+
+
+
+
+
     }
 }
 
@@ -575,21 +614,20 @@ namespace EncryptionDecrypt
         /// <param name="Address">地址</param>
         /// <param name="DecryptionAdd">解密基址</param>
         /// <returns>返回解密值，失败返回0</returns>
-        public static int Decrypt(int ProcessID, uint Address, uint DecryptionAdd)
+        public static uint Decrypt(int ProcessID, uint Address, uint DecryptionAdd)
         {
             //声明变量
-            int eax, edx, esi = 0;
-
-            eax = ReadWriteCtr.ReadMemInt(ProcessID, Address);
-            esi = ReadWriteCtr.ReadMemInt(ProcessID, DecryptionAdd);
+            uint eax, edx,esi = 0;
+            eax = ReadWriteCtr.ReadMemInt2(ProcessID, Address);
+            esi = ReadWriteCtr.ReadMemInt2(ProcessID, DecryptionAdd);
             edx = eax >> 16;
-            edx = ReadWriteCtr.ReadMemInt(ProcessID, (uint)(esi + edx * 4 + 36));
+            edx = ReadWriteCtr.ReadMemInt2(ProcessID, (uint)(esi + edx * 4 + 36));
             eax = eax & 65535;
-            eax = ReadWriteCtr.ReadMemInt(ProcessID, (uint)(edx + eax * 4 + 8468));
+            eax = ReadWriteCtr.ReadMemInt2(ProcessID, (uint)(edx + eax * 4 + 8468));
             edx = eax & 65535;
             esi = edx << 16;
             esi = esi | edx;
-            esi = esi ^ ReadWriteCtr.ReadMemInt(ProcessID, Address + 4);
+            esi = esi ^ ReadWriteCtr.ReadMemInt2(ProcessID, Address + 4);
             return (esi);
         }
         public static int Decrypt(uint Address, uint DecryptionAdd)
@@ -632,7 +670,8 @@ namespace Transform
         /// <returns></returns>
         [DllImport("kernel32.dll")]
         public static extern int WideCharToMultiByte(uint CodePage, int Flags, byte[] WideCharStr, int WideChar, byte[] MultiByteStr, int MultiByte, int DefaultChar, bool UsedDefaultChar);
-
+        [DllImport("kernel32.dll")]
+        public static extern int MultiByteToWideChar(uint CodePage, int Flags, string lpMultiByteStr, int cchMultiByte, byte[] lpWideCharStr, int cchWideChar);
         /// <summary>
         /// Unicode字节集转Ansi，照搬E语言     考虑新方法
         /// </summary>
@@ -676,7 +715,27 @@ namespace Transform
                     return Convert.ToString(c);
             }
         }
+        public static string FloatToInt(uint Value)
+        {
+            uint c = Value;
+            byte[] buff = new byte[4];
 
+            unsafe
+            {
+                uint* p = &c;
+                if (c > 10000)
+                {
+                    buff = ReadWriteCtr.ReadMemByteArray(-1, (uint)p, 4);
+                    if (BitConverter.ToInt32(buff, 0) == 0)
+                        return "-1";
+                    else
+                        return Convert.ToString(BitConverter.ToSingle(buff, 0));
+
+                }
+                else
+                    return Convert.ToString(c);
+            }
+        }
         /// <summary>
         /// 整数到浮点，照搬E语言
         /// </summary>
@@ -688,6 +747,13 @@ namespace Transform
             byte[] b = BitConverter.GetBytes(a);
             return BitConverter.ToInt32(b, 0);
         }
+        public static byte[] AnsiToUnicode(string str)
+        {
+            byte[] b = Encoding.Default.GetBytes(str);
+            byte[] unicodeBytes = Encoding.Convert(Encoding.Default, Encoding.Unicode, b);
+            return unicodeBytes;
+        }
+
     }
 }
 

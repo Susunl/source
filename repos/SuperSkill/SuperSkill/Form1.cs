@@ -45,7 +45,7 @@ namespace SuperSkill
             {
                 MessageBox.Show("未获取到游戏ID\n请进入游戏到仓库重试", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            检测.处理检测();
+            //检测.处理检测();
         }
         //读取职业技能被单击
         private void button3_Click(object sender, EventArgs e)
@@ -55,10 +55,10 @@ namespace SuperSkill
             int 技能等级;
             string 总技能="";
             ListView_Skill.Items.Clear();
-            while (i <= 0x5000)
+            while (i <= 0x6000)
             {
                 技能地址 = (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID,(uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID,基址.人物基址)+i);
-                技能等级 = EncDec.Decrypt(全局变量.进程ID,技能地址+基址.技能等级,基址.解密基址);
+                技能等级 = (int)EncDec.Decrypt(全局变量.进程ID,技能地址+基址.技能等级,基址.解密基址);
                 if (技能等级 >= 0 && 技能等级 < 100)
                 {
                     技能名称 = TransCtr.UnicodeToAnsi(ReadWriteCtr.ReadMemByteArray(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能名称), 50));
@@ -78,23 +78,27 @@ namespace SuperSkill
         //listview_skill事件被双击
         private void ListView_Skill_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            int 技能地址1,技能等级,技能CD,技能数据;
-            uint i1, i2, i3, i4, i5,技能地址2;
+            int 技能地址1,技能等级,技能CD, 技能地址2;
+            uint i1, i2, i3, i4, i5, 技能数据;
             string 总技能公式 = "",技能数据2 ="";
             //int 技能等级代码;
             全局变量.技能名 = this.ListView_Skill.SelectedItems[0].SubItems[1].Text;
             技能地址1 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, 基址.人物基址) + Convert.ToUInt32(this.ListView_Skill.SelectedItems[0].Text));
-            技能等级 = EncDec.Decrypt(全局变量.进程ID, (uint)技能地址1 + 基址.技能等级, 基址.解密基址);
+            技能等级 = (int)EncDec.Decrypt(全局变量.进程ID, (uint)技能地址1 + 基址.技能等级, 基址.解密基址);
             this.ListView_SkillProperties.Items.Clear(); //清空ListView_SkillProperties内容
-            技能CD = EncDec.Decrypt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.技能冷却1) + 8*(uint)(技能等级-1), 基址.解密基址) / 1000;
+            技能CD = (int)EncDec.Decrypt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.技能冷却7) + 8*(uint)(技能等级-1), 基址.解密基址) / 1000;
             label1.Text = "当前技能cd为:" + 技能CD + "秒";
             //第一层遍历
             i1 = 0;
             while (i1 < 13)
             {
-                技能地址2 = (uint)Math.Abs(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能)) + i1)) + 20));
-
-                if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1 && 技能地址2 > 1000000000)
+                技能地址2 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能)) + i1)) + 20);
+                if (技能地址2 == -1 || 技能地址2 == 0 || Math.Abs(技能地址2) < 0x400000)
+                {
+                    i1 += 4;
+                    continue;
+                }
+                if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1)
                 {
                     技能数据 = EncDec.Decrypt(全局变量.进程ID, (uint)(技能地址2 + 8 * (技能等级 - 1)), 基址.解密基址);
                     if (技能数据 > 1)
@@ -119,9 +123,13 @@ namespace SuperSkill
                 i2 = 0;
                 while (i2 < 13)
                 {
-                    技能地址2 = (uint)Math.Abs(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能)) + i1)) + i2)) + 20));
-
-                    if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1 && 技能地址2 > 10000000)
+                    技能地址2 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能)) + i1)) + i2)) + 20);
+                    if (技能地址2 == -1 || 技能地址2 == 0 || Math.Abs(技能地址2) < 0x400000)
+                    {
+                        i2 += 4;
+                        continue;
+                    }
+                    if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1 )
                     {
                         技能数据 = EncDec.Decrypt(全局变量.进程ID, (uint)(技能地址2 + 8 * (技能等级 - 1)), 基址.解密基址);
                         if (技能数据 > 1)
@@ -149,9 +157,13 @@ namespace SuperSkill
                     i3 = 0;
                     while (i3 < 13)
                     {
-                        技能地址2 = (uint)Math.Abs(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能)) + i1)) + i2)) + i3)) + 20));
-
-                        if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1 && 技能地址2 > 10000000)
+                        技能地址2 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能)) + i1)) + i2)) + i3)) + 20);
+                        if (技能地址2 == -1 || 技能地址2 == 0 || Math.Abs(技能地址2) < 0x400000)
+                        {
+                            i3 += 4;
+                            continue;
+                        }
+                        if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1)
                         {
                             技能数据 = EncDec.Decrypt(全局变量.进程ID, (uint)(技能地址2 + 8 * (技能等级 - 1)), 基址.解密基址);
                             if (技能数据 > 1)
@@ -184,9 +196,13 @@ namespace SuperSkill
                         i4 = 0;
                         while (i4 < 13)
                         {
-                            技能地址2 = (uint)Math.Abs(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能)) + i1)) + i2)) + i3)) + i4)) + 20));
-
-                            if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1 && 技能地址2 > 10000000)
+                            技能地址2 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能)) + i1)) + i2)) + i3)) + i4)) + 20);
+                            if (技能地址2 == -1 || 技能地址2 == 0 || Math.Abs(技能地址2) < 0x400000)
+                            {
+                                i4 += 4;
+                                continue;
+                            }
+                            if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1)
                             {
                                 技能数据 = EncDec.Decrypt(全局变量.进程ID, (uint)(技能地址2 + 8 * (技能等级 - 1)), 基址.解密基址);
                                 if (技能数据 > 1)
@@ -224,9 +240,13 @@ namespace SuperSkill
                             i5 = 0;
                             while (i5 < 13)
                             {
-                                技能地址2 = (uint)Math.Abs(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能)) + i1)) + i2)) + i3)) + i4)) + i5)) + 20));
-
-                                if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1 && 技能地址2 > 10000000)
+                                技能地址2 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.超级技能)) + i1)) + i2)) + i3)) + i4)) + i5)) + 20);
+                                if (技能地址2 == -1 || 技能地址2 == 0 || Math.Abs(技能地址2) < 0x400000)
+                                {
+                                    i5 += 4;
+                                    continue;
+                                }
+                                if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1)
                                 {
                                     技能数据 = EncDec.Decrypt(全局变量.进程ID, (uint)(技能地址2 + 8 * (技能等级 - 1)), 基址.解密基址);
                                     if (技能数据 > 1)
@@ -265,8 +285,8 @@ namespace SuperSkill
             this.ListView_SkillProperties_Edit.Update();
             ListViewItem lvi = this.ListView_SkillProperties_Edit.Items.Add(this.ListView_SkillProperties.SelectedItems[0].SubItems[1].Text);
             lvi.SubItems.Add(this.ListView_SkillProperties.SelectedItems[0].SubItems[0].Text);
-            lvi.SubItems.Add(全局变量.技能名);                                                                                          
-            lvi.SubItems.Add(ListView_SkillProperties.SelectedItems[0].SubItems[2].Text);                                                                                                             
+            lvi.SubItems.Add(全局变量.技能名);
+            lvi.SubItems.Add(ListView_SkillProperties.SelectedItems[0].SubItems[0].Text);
             this.ListView_SkillProperties_Edit.EndUpdate();
         }
         // ListView_SkillProperties_Edit双击事件 修改属性或备注
@@ -302,17 +322,18 @@ namespace SuperSkill
                     index2 = this.ListView_SkillProperties_Edit.Items[i].SubItems[0].Text.IndexOf("+", index + 1);   //公式第一个+号位置
                     t_pet = Convert.ToUInt32(this.ListView_SkillProperties_Edit.Items[i].SubItems[0].Text.Substring(index + 1, index2 - index - 1));  //技能偏移
                     t_skilladd = (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, 基址.人物基址) + t_pet);   //技能地址
-                    t_level = EncDec.Decrypt(全局变量.进程ID, (uint)t_skilladd + 基址.技能等级, 基址.解密基址);   //技能等级
+                    t_level = (int)EncDec.Decrypt(全局变量.进程ID, (uint)t_skilladd + 基址.技能等级, 基址.解密基址);   //技能等级
                     Thread.Sleep(30);   //延迟30毫秒
                     t_add = (uint)ReadWriteCtr.ReadMemCode(全局变量.进程ID, Convert.ToString(基址.人物基址) + "+" + this.ListView_SkillProperties_Edit.Items[i].SubItems[0].Text);
                     //加密
                     EncDec.Encryption(全局变量.进程ID, (uint)(t_add + 8 * (t_level - 1)), TransCtr.IntToFloat(this.ListView_SkillProperties_Edit.Items[i].SubItems[1].Text), 基址.解密基址);
                     Thread.Sleep(30);   //延迟30毫秒进入下一循环
                 }
+                功能.公告("数据修改成功");
             }
             else
             {
-                MessageBox.Show("List中没有数据", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                功能.公告("没有数据在list中");
             }
         }
         //搜索技能 然后焦点于指定技能
@@ -425,7 +446,16 @@ namespace SuperSkill
                         case 102:    //按下的是Alt+D
                                      //call.物品CALL(1111);         //此处填写快捷键响应代码
                                      // call.物品CALL(2600027);
-                            功能.全屏遍历秒杀();
+                            
+                            int.TryParse(textBox1.Text, out int c);
+                            if(c == 0)
+                                ReadWriteCtr.WriteMemInt(0x400604, 900);
+                            else
+                                ReadWriteCtr.WriteMemInt(0x400604, c);
+                            //MessageBox.Show(Convert.ToString(c), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            call.物品CALL(2600656);
+                            call.物品CALL(2600027);
+                            //功能.miss设计图附伤();
                             //call.技能CALL(基址.人物基址,800,255,0,70059,0,200);
                             break;
                     }
@@ -449,7 +479,9 @@ namespace SuperSkill
             //string str = System.Text.Encoding.Default.GetString(转换.数组加法(i1, i2, i3, i4, i5));
             //byte[] i = { 0xF0, 05, 00, 00, 0xE8, 03, 00, 00, 00, 00, 00, 00, 01, 00, 00, 00 };
             //SearchMemory(全局变量.进程ID, i, i.Length);
-            //MessageBox.Show(Convert.ToString(SearchMemory(全局变量.进程ID, i, i.Length)), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //int c = -1;
+            //int.TryParse(textBox1.Text, out c);
+            //MessageBox.Show(Convert.ToString(c), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //功能.独家变怪();
             //call.物品CALL(1111);
             //uint tmp = 功能.内存药剂();
@@ -460,20 +492,30 @@ namespace SuperSkill
             //int j = Algorithm.Sunday(i, k);
             //MessageBox.Show(Convert.ToString(j), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //检测.处理检测();
-            功能.全屏遍历秒杀();
+            //功能.全屏遍历秒杀();
+            //功能.公告("1123");
+            //EncDec.Decrypt(2220812064,基址.解密基址);
+           // MessageBox.Show(TransCtr.FloatToInt(1140981760), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //int old = 0;
             //IntPtr handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS, false, 全局变量.进程ID); //获取句柄
             //ReadWriteCtr.VirtualProtectEx(handle, 0x55556E4, 1000, 64, &old);
             //MessageBox.Show(Convert.ToString(ReadWriteCtr.VirtualProtectEx(handle, 0x55556E4, 1000, 64, &old)), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //if (ReadWriteCtr.VirtualProtectEx(handle, 0x55556E4, 1000, 64, old) == false)
             //{
-                
-                //MessageBox.Show(Convert.ToString(GetLastError()), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //MessageBox.Show(Convert.ToString(GetLastError()), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             //}
             //Asm asm = new Asm();
             //asm.CreateThread(全局变量.进程ID);
             //call.无敌call();
+            //功能.miss设计图附伤();
+            //call.卡经验();
+            //功能.miss设计图附伤();
+            //uint[] i = { 基址.物品栏, 基址.物品栏偏移, 基址.物品栏6, 0x28,0};
+            //ReadWriteCtr.读偏移型(基址.人物基址,i);
+            //MessageBox.Show(Convert.ToString(ReadWriteCtr.读偏移型(基址.人物基址, i)), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //EncDec.Encryption(全局变量.进程ID, (uint)(ReadWriteCtr.读偏移型(基址.人物基址, i) + 8),1,基址.解密基址);
         }
 
         private void 独家变怪_CheckedChanged(object sender, EventArgs e)
@@ -486,23 +528,44 @@ namespace SuperSkill
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            功能.内存药剂();
+            功能.内存药剂斗神();
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox3.Checked == true)
+           
+            功能.技能无CD();
+            //功能.超级三速();
+            //全局变量.评分开关 = true;
+            
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+
+            //只允许输入数字
+            if (e.KeyChar == 0x20)
+                e.KeyChar = (char)0;  //禁止空格键
+            if ((e.KeyChar == 0x2D) && (((TextBox)sender).Text.Length == 0))
+                return;   //处理负数
+            if (e.KeyChar > 0x20)
             {
-                功能.技能无CD();
-                //功能.超级三速();
-                //全局变量.评分开关 = true;
+                try
+                {
+                    double.Parse(((TextBox)sender).Text + e.KeyChar.ToString());
+                }
+                catch
+                {
+                    e.KeyChar = (char)0;   //处理非法字符
+                }
             }
-            else
-            {
-                功能.技能无CDDisAble();
-                //功能.超级三速DisAble();
-                //全局变量.评分开关 = false;
-            }
+            
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
         }
     }
 }

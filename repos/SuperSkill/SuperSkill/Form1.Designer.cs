@@ -62,6 +62,7 @@
             this.独家变怪 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -189,7 +190,7 @@
             this.ListView_SkillProperties_Edit.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ListView_SkillProperties_Edit.Location = new System.Drawing.Point(263, 237);
             this.ListView_SkillProperties_Edit.Name = "ListView_SkillProperties_Edit";
-            this.ListView_SkillProperties_Edit.Size = new System.Drawing.Size(273, 170);
+            this.ListView_SkillProperties_Edit.Size = new System.Drawing.Size(275, 170);
             this.ListView_SkillProperties_Edit.TabIndex = 13;
             this.ListView_SkillProperties_Edit.TabStop = false;
             this.ListView_SkillProperties_Edit.UseCompatibleStateImageBehavior = false;
@@ -209,12 +210,12 @@
             // columnHeader9
             // 
             this.columnHeader9.Text = "备注";
-            this.columnHeader9.Width = 138;
+            this.columnHeader9.Width = 110;
             // 
             // columnHeader10
             // 
-            this.columnHeader10.Text = "浮点";
-            this.columnHeader10.Width = 0;
+            this.columnHeader10.Text = "原值";
+            this.columnHeader10.Width = 58;
             // 
             // contextMenuStrip1
             // 
@@ -333,7 +334,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(544, 123);
+            this.checkBox2.Location = new System.Drawing.Point(544, 145);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(72, 16);
             this.checkBox2.TabIndex = 26;
@@ -344,7 +345,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(544, 145);
+            this.checkBox3.Location = new System.Drawing.Point(544, 123);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(72, 16);
             this.checkBox3.TabIndex = 27;
@@ -352,11 +353,23 @@
             this.checkBox3.UseVisualStyleBackColor = true;
             this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(544, 167);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(75, 21);
+            this.textBox1.TabIndex = 28;
+            this.textBox1.TabStop = false;
+            this.textBox1.Text = "伤害修改";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 410);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.独家变怪);
@@ -408,7 +421,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TextBox_SearchSkill;
         private System.Windows.Forms.Button Button_SearchSkill;
@@ -423,6 +435,8 @@
         private System.Windows.Forms.CheckBox 独家变怪;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
     }
 }
 
