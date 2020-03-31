@@ -22,4 +22,5 @@ C:\Users\Susunl\Desktop\SuperSkills\svchost.exe.manifest
 C:\Users\Susunl\Desktop\SuperSkills\svchost.application
 C:\Users\Susunl\Desktop\SuperSkills\svchost.exe
 C:\Users\Susunl\Desktop\SuperSkills\svchost.pdb
+C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Release\SuperSkill.群验证.resources
 C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Release\SuperSkill.csprojAssemblyReference.cache

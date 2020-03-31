@@ -248,10 +248,10 @@ namespace SuperSkill
             ReadWriteCtr.WriteMemInt((uint)(j - 0x70 + 0x790 + 0x10), 1200000);
             ReadWriteCtr.WriteMemInt((uint)(j - 0x70 + 0x790 + 0x10 + 4), 1);
             ReadWriteCtr.WriteMemInt(0x400600, 106);
-            ReadWriteCtr.WriteMemInt(0x400604, 900);
+            ReadWriteCtr.WriteMemInt(0x400604, 0);
             ReadWriteCtr.WriteMemInt(0x400608, 1);
-            ReadWriteCtr.WriteMemInt(0x400610, 66);
-            ReadWriteCtr.WriteMemInt(0x400614, -90);
+            ReadWriteCtr.WriteMemInt(0x400610, 73);
+            ReadWriteCtr.WriteMemInt(0x400614, 200);
             ReadWriteCtr.WriteMemInt(0x400618, 1);
             //SearchMemory2(全局变量.进程ID,j,4);
             MessageBox.Show("成功 开始奔放 + " + Convert.ToString(j) + "   提示 进图波浪开始奔放", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);

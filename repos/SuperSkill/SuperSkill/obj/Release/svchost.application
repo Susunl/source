@@ -7,14 +7,14 @@
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="svchost.exe.manifest" size="5234">
+    <dependentAssembly dependencyType="install" codebase="svchost.exe.manifest" size="5708">
       <assemblyIdentity name="svchost.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FgujwPQups46v1x2seS1pzrwK+jKBBWIj5VRqGVg+e4=</dsig:DigestValue>
+        <dsig:DigestValue>TW8J+MoboMOJ41upL3TjKpidkna5D4yUx8049Ky/RvQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

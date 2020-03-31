@@ -45,7 +45,7 @@ namespace SuperSkill
             {
                 MessageBox.Show("未获取到游戏ID\n请进入游戏到仓库重试", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            //检测.处理检测();
+            检测.处理检测();
         }
         //读取职业技能被单击
         private void button3_Click(object sender, EventArgs e)
@@ -449,7 +449,7 @@ namespace SuperSkill
                             
                             int.TryParse(textBox1.Text, out int c);
                             if(c == 0)
-                                ReadWriteCtr.WriteMemInt(0x400604, 900);
+                                ReadWriteCtr.WriteMemInt(0x400604, 0);
                             else
                                 ReadWriteCtr.WriteMemInt(0x400604, c);
                             //MessageBox.Show(Convert.ToString(c), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -494,8 +494,9 @@ namespace SuperSkill
             //检测.处理检测();
             //功能.全屏遍历秒杀();
             //功能.公告("1123");
+            //start();
             //EncDec.Decrypt(2220812064,基址.解密基址);
-           // MessageBox.Show(TransCtr.FloatToInt(1140981760), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // MessageBox.Show(TransCtr.FloatToInt(1140981760), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //int old = 0;
             //IntPtr handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS, false, 全局变量.进程ID); //获取句柄
             //ReadWriteCtr.VirtualProtectEx(handle, 0x55556E4, 1000, 64, &old);
@@ -516,6 +517,22 @@ namespace SuperSkill
             //ReadWriteCtr.读偏移型(基址.人物基址,i);
             //MessageBox.Show(Convert.ToString(ReadWriteCtr.读偏移型(基址.人物基址, i)), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //EncDec.Encryption(全局变量.进程ID, (uint)(ReadWriteCtr.读偏移型(基址.人物基址, i) + 8),1,基址.解密基址);
+            CheckQQQun QQ = new CheckQQQun("835290838");
+            QQ.CheckResult += new CheckQQQun.CheckQun(QQ_CheckResult);
+            void QQ_CheckResult(bool Result)
+            {
+                if (Result)
+                {
+                    //已授权
+                    MessageBox.Show("ok", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+
+                    //未授权
+                    MessageBox.Show("error", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
         private void 独家变怪_CheckedChanged(object sender, EventArgs e)
@@ -566,6 +583,16 @@ namespace SuperSkill
         private void textBox1_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
