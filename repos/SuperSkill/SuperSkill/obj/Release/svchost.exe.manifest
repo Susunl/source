@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="svchost.exe" size="679400">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="svchost.exe" size="680424">
       <assemblyIdentity name="svchost" version="1.0.0.0" publicKeyToken="44BA7E7C7FD9F01C" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nXcbnPvgSAcR5H86+Tyol/1w0B9lb1RJUhL9OD9gBc0=</dsig:DigestValue>
+        <dsig:DigestValue>45i5ZHFaUr0G+iLYW2Svd+xUFeK/yJLG9RH5p9bdtgA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

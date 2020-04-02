@@ -320,29 +320,32 @@ namespace ReadWrite
             else
                 return true;
         }
-        public static bool WriteMemInt(uint Address, float Data)
+        public static unsafe bool WriteMemInt(uint Address, float Data)
         {
             //声明变量
             int a = 0;
+            int old = 0;
             IntPtr handle = new IntPtr();
             byte[] temp = new byte[4];
             temp = BitConverter.GetBytes(Data);
-
+            //VirtualProtectEx(handle, (int)Address, 4, 64, &old);
             if (全局变量.进程ID == -1)    //-1为自进程
                 handle = ProcessAPI.GetCurrentProcess();
             else
                 handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS, false, 全局变量.进程ID); //获取句柄
+            VirtualProtectEx(handle, (int)Address, 4, 64, &old);
             a = ReadWriteAPI.WriteProcessMemory(handle, Address, temp, 4, 0);
+            VirtualProtectEx(handle, (int)Address, 4, old, &old);
             ProcessAPI.CloseHandle(handle); //关闭对象
             if (a == 0)         //返回bool型
                 return false;
             else
                 return true;
         }
-        public static bool WriteMemInt(uint Address, int Data)
+        public static unsafe bool WriteMemInt(uint Address, int Data)
         {
             //声明变量
-            int a = 0;
+            int a = 0,old = 0;
             IntPtr handle = new IntPtr();
             byte[] temp = new byte[4];
             temp = BitConverter.GetBytes(Data);
@@ -351,7 +354,9 @@ namespace ReadWrite
                 handle = ProcessAPI.GetCurrentProcess();
             else
                 handle = ProcessAPI.OpenProcess(ReadWriteAPI.PROCESS_ALL_ACCESS, false, 全局变量.进程ID); //获取句柄
+            VirtualProtectEx(handle, (int)Address, 4, 64, &old);
             a = ReadWriteAPI.WriteProcessMemory(handle, Address, temp, 4, 0);
+            VirtualProtectEx(handle, (int)Address, 4, old, &old);
             ProcessAPI.CloseHandle(handle); //关闭对象
             if (a == 0)         //返回bool型
                 return false;

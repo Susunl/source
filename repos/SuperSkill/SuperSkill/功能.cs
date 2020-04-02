@@ -30,6 +30,21 @@ namespace SuperSkill
             EncDec.超级加密(i + (int)基址.移动速度, 3000);
             //MessageBox.Show(Convert.ToString(i), "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+        public static void 超音速加速()
+        {
+            byte[] i1 = { 216, 5, 0, 11, 64, 0 };
+            byte[] i2 = { 0, 0, 48, 65, 209, 158, 30, 109, 208, 99, 58, 121, 26, 255, 204, 81, 226, 108, 174, 95, 101, 107, 0, 95, 47, 84, 16, 98, 159, 82, 26, 34, 13, 0, 10, 0, 200, 143, 64, 119, 96, 79, 109, 81, 178, 78, 13, 78, 164, 139, 132, 118, 101, 107, 16, 79, 119, 141, 222, 152, 39, 84, 26, 34, 0, 0, 204, 204, 204, 204 };
+            ReadWriteCtr.WriteMemByteArray(基址.超音速加速A, i1);
+            ReadWriteCtr.WriteMemByteArray(0x400b00, i2);
+        }
+        public static void 超音速加速DisAble()
+        {
+            byte[] i1 = { 216, 5, 44, 71, 45, 5 };
+            byte[] i2 = { 0, 0, 48, 65, 209, 158, 30, 109, 208, 99, 58, 121, 26, 255, 204, 81, 226, 108, 174, 95, 101, 107, 0, 95, 47, 84, 16, 98, 159, 82, 26, 34, 13, 0, 10, 0, 200, 143, 64, 119, 96, 79, 109, 81, 178, 78, 13, 78, 164, 139, 132, 118, 101, 107, 16, 79, 119, 141, 222, 152, 39, 84, 26, 34, 0, 0, 204, 204, 204, 204 };
+            byte[] RAsm = new byte[i2.Length];
+            ReadWriteCtr.WriteMemByteArray(基址.超音速加速A, i1);
+            ReadWriteCtr.WriteMemByteArray(0x400b00, RAsm);
+        }
         public static void 超级三速DisAble()
         {
             int i;

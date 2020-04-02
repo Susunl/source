@@ -517,22 +517,9 @@ namespace SuperSkill
             //ReadWriteCtr.读偏移型(基址.人物基址,i);
             //MessageBox.Show(Convert.ToString(ReadWriteCtr.读偏移型(基址.人物基址, i)), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //EncDec.Encryption(全局变量.进程ID, (uint)(ReadWriteCtr.读偏移型(基址.人物基址, i) + 8),1,基址.解密基址);
-            CheckQQQun QQ = new CheckQQQun("835290838");
-            QQ.CheckResult += new CheckQQQun.CheckQun(QQ_CheckResult);
-            void QQ_CheckResult(bool Result)
-            {
-                if (Result)
-                {
-                    //已授权
-                    MessageBox.Show("ok", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-
-                    //未授权
-                    MessageBox.Show("error", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
+            //功能.遍历城镇();
+            //功能.超音速加速();
+            
         }
 
         private void 独家变怪_CheckedChanged(object sender, EventArgs e)
@@ -593,6 +580,14 @@ namespace SuperSkill
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked == true)
+                功能.超音速加速();
+            else
+                功能.超音速加速DisAble();
         }
     }
 }

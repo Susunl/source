@@ -63,6 +63,7 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -364,11 +365,23 @@
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(544, 194);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(72, 16);
+            this.checkBox5.TabIndex = 29;
+            this.checkBox5.Text = "城镇加速";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 410);
+            this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
@@ -439,6 +452,7 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.CheckBox checkBox5;
     }
 }
 

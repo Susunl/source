@@ -49,7 +49,7 @@
             this.Controls.Add(this.webBrowser1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "群验证";
-            this.Text = "\"请加指定交流群:835290838\"";
+            this.Text = "\"请加指定交流群:1072040879\"";
             this.Load += new System.EventHandler(this.群验证_Load);
             this.ResumeLayout(false);
 
