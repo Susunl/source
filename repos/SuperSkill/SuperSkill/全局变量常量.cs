@@ -11,6 +11,8 @@ namespace SuperSkill
         public static int 进程ID;
         public static string 技能名;
         public static string 要修改的数据;
+        public static string 配置文件路径;
+        public static string 保存配置文件路径;
         public static int 要修改的列;
         public static bool 评分开关 = false;
     }

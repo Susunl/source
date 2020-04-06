@@ -28,6 +28,10 @@ namespace SuperSkill
             EncDec.超级加密(i + (int)基址.攻击速度, 1500);
             EncDec.超级加密(i + (int)基址.释放速度, 1500);
             EncDec.超级加密(i + (int)基址.移动速度, 3000);
+            内存按键(319);
+            call.Delay(50);
+            内存按键(319);
+            公告("超级三速和评分开启成功");
             //MessageBox.Show(Convert.ToString(i), "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         public static void 超音速加速()
@@ -36,6 +40,7 @@ namespace SuperSkill
             byte[] i2 = { 0, 0, 48, 65, 209, 158, 30, 109, 208, 99, 58, 121, 26, 255, 204, 81, 226, 108, 174, 95, 101, 107, 0, 95, 47, 84, 16, 98, 159, 82, 26, 34, 13, 0, 10, 0, 200, 143, 64, 119, 96, 79, 109, 81, 178, 78, 13, 78, 164, 139, 132, 118, 101, 107, 16, 79, 119, 141, 222, 152, 39, 84, 26, 34, 0, 0, 204, 204, 204, 204 };
             ReadWriteCtr.WriteMemByteArray(基址.超音速加速A, i1);
             ReadWriteCtr.WriteMemByteArray(0x400b00, i2);
+            公告("城镇加速开启成功");
         }
         public static void 超音速加速DisAble()
         {
@@ -44,6 +49,7 @@ namespace SuperSkill
             byte[] RAsm = new byte[i2.Length];
             ReadWriteCtr.WriteMemByteArray(基址.超音速加速A, i1);
             ReadWriteCtr.WriteMemByteArray(0x400b00, RAsm);
+            公告("城镇加速关闭成功");
         }
         public static void 超级三速DisAble()
         {
@@ -52,6 +58,10 @@ namespace SuperSkill
             EncDec.超级加密(i + (int)基址.攻击速度, 0);
             EncDec.超级加密(i + (int)基址.释放速度, 0);
             EncDec.超级加密(i + (int)基址.移动速度, 0);
+            内存按键(319);
+            call.Delay(50);
+            内存按键(319);
+            公告("超级三速和评分关闭成功");
             //MessageBox.Show(Convert.ToString(i), "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         public static void 技能无CD()
@@ -211,13 +221,14 @@ namespace SuperSkill
         {
             Asm asm = new Asm();
             byte[] 附加字节 = { 0x90, 0x90, 0x90, 0x90 };
-            byte[] array = asm.JMP(0x400D00, 基址.独家变怪,附加字节);
+            byte[] array = asm.JMP(0x400d00, 基址.独家变怪,附加字节);
             ReadWriteCtr.WriteMemByteArray(基址.独家变怪, array);
             asm.Mov_EAX(怪物代码);
             asm.Push_EAX();
             asm.Mov_ECX((int)基址.怪物目录);
-            ReadWriteCtr.WriteMemByteArray(0x400800, 转换.数组加法(asm.取汇编代码(), asm.JMP(基址.独家变怪 + 9, 0x40080B)));
+            ReadWriteCtr.WriteMemByteArray(0x400d00, 转换.数组加法(asm.取汇编代码(), asm.JMP(基址.独家变怪 + 9, 0x400d0B)));
             asm.清空汇编代码();
+            公告("真.独家变怪开启成功");
         }
         public static void 独家变怪DisAble()
         {
@@ -228,7 +239,8 @@ namespace SuperSkill
             ReadWriteCtr.WriteMemByteArray(基址.独家变怪, asm.取汇编代码());
             asm.清空汇编代码();
             byte[] i = new byte[50];
-            ReadWriteCtr.WriteMemByteArray(0x400800,i);
+            ReadWriteCtr.WriteMemByteArray(0x400D00,i);
+            公告("真.独家变怪关闭成功");
         }
         public static void 内存药剂()
         {
@@ -270,6 +282,7 @@ namespace SuperSkill
             ReadWriteCtr.WriteMemInt(0x400618, 1);
             //SearchMemory2(全局变量.进程ID,j,4);
             MessageBox.Show("成功 开始奔放 + " + Convert.ToString(j) + "   提示 进图波浪开始奔放", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            公告("本功能在开启前 需要在物品栏6放置一个斗神药剂");
         }
         public static void 全屏遍历秒杀()
         {
@@ -408,7 +421,16 @@ namespace SuperSkill
             asm.Call_EBX();
             asm.RunAsm(全局变量.进程ID);
             byte[] RAsm = new byte[公告字节集.Length];
-            ReadWriteCtr.WriteMemByteArray(0x400500, RAsm);
+            ReadWriteCtr.WriteMemByteArray(0x400400, RAsm);
+
+        }
+        public static void 内存按键(int 按键参数)
+       {
+            byte[] i1 = { 1 };
+            byte[] i2 = { 0 };
+            ReadWriteCtr.WriteMemByteArray((uint)(ReadWriteCtr.ReadMemInt(基址.按键基址) + 按键参数), i1);
+            call.Delay(50);
+            ReadWriteCtr.WriteMemByteArray((uint)(ReadWriteCtr.ReadMemInt(基址.按键基址) + 按键参数), i2);
 
         }
 

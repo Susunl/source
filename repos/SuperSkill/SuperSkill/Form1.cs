@@ -8,6 +8,7 @@ using Transform;
 using KoalaStudio.BookshopManager;
 using System.Runtime.InteropServices;
 using SslnEngine;
+using System.IO;
 
 namespace SuperSkill
 {
@@ -469,6 +470,15 @@ namespace SuperSkill
         public static extern uint GetLastError();
         private unsafe void 测试_Click(object sender, EventArgs e)
         {
+            //配置.打开配置();
+            MessageBox.Show(this.ListView_SkillProperties_Edit.Items[0].SubItems[0].Text);
+
+
+
+
+
+
+
             //call.释放call(基址.人物基址, 800, 255, 0, 54106, 0);
             //byte[] i1 = { 233 };
             //byte[] i2 = { 233 };
@@ -519,7 +529,7 @@ namespace SuperSkill
             //EncDec.Encryption(全局变量.进程ID, (uint)(ReadWriteCtr.读偏移型(基址.人物基址, i) + 8),1,基址.解密基址);
             //功能.遍历城镇();
             //功能.超音速加速();
-            
+
         }
 
         private void 独家变怪_CheckedChanged(object sender, EventArgs e)
@@ -588,6 +598,75 @@ namespace SuperSkill
                 功能.超音速加速();
             else
                 功能.超音速加速DisAble();
+        }
+
+        private void 打开配置_Click(object sender, EventArgs e)
+        {
+            
+            //Form1 form1 = new Form1();
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Multiselect = true;
+            fileDialog.InitialDirectory = "./";//注意这里写路径时要用c:\\而不是c:\
+            fileDialog.Title = "请选择文件";
+            fileDialog.Filter = "配置文件(*.ini)|*.ini";
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string file = fileDialog.FileName;
+                全局变量.配置文件路径 = file;
+            }
+            //MessageBox.Show(form1.ListView_SkillProperties_Edit.Items[0].SubItems[0].Text);
+            ListView_SkillProperties_Edit.Items.Clear();
+            IniFile ini = new IniFile(全局变量.配置文件路径);
+            for (int i = 0; i < 100; i++)
+            {
+                string i1 = "operatorinformation" + i.ToString();
+                if (ini.IniReadValue(i1, "技能公式") == "")
+                    break;
+                ListView_SkillProperties_Edit.Update();
+                ListViewItem lvi = this.ListView_SkillProperties_Edit.Items.Add(ini.IniReadValue(i1, "技能公式"));
+                lvi.SubItems.Add(ini.IniReadValue(i1, "技能数值"));
+                lvi.SubItems.Add(ini.IniReadValue(i1, "技能描述"));
+                lvi.SubItems.Add(ini.IniReadValue(i1, "原值"));
+                ListView_SkillProperties_Edit.EndUpdate();
+            }
+        }
+        public void 保存配置文件()
+        {
+            int i = 0;
+
+            SaveFileDialog saveDlg = new SaveFileDialog();
+            saveDlg.Filter = "配置文件(*.ini)|*.ini";
+            if (saveDlg.ShowDialog() == DialogResult.OK)
+            {
+                FileStream fs1 = new FileStream(saveDlg.FileName, FileMode.Create, FileAccess.Write);
+                fs1.Close();
+            }
+            全局变量.保存配置文件路径 = saveDlg.FileName;
+            //ListView_SkillProperties_Edit中有项目才进行修改
+            if (ListView_SkillProperties_Edit.Items.Count > 0)
+            {
+                //循环项目数次
+                for (i = 0; i < ListView_SkillProperties_Edit.Items.Count; i++)
+                {
+                    IniFile ini = new IniFile(全局变量.保存配置文件路径);
+                    string i1 = "operatorinformation" + i.ToString();
+                    ini.IniWriteValue(i1, "技能公式", ListView_SkillProperties_Edit.Items[i].SubItems[0].Text);
+                    ini.IniWriteValue(i1, "技能数值", ListView_SkillProperties_Edit.Items[i].SubItems[1].Text);
+                    ini.IniWriteValue(i1, "技能描述", ListView_SkillProperties_Edit.Items[i].SubItems[2].Text);
+                    ini.IniWriteValue(i1, "原值", ListView_SkillProperties_Edit.Items[i].SubItems[3].Text);
+
+                }
+                功能.公告("文件保存成功");
+            }
+            else
+            {
+                功能.公告("没有数据在list中");
+            }
+        }
+
+        private void 保存配置_Click(object sender, EventArgs e)
+        {
+            保存配置文件();
         }
     }
 }

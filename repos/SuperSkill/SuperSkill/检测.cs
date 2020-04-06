@@ -18,6 +18,7 @@ namespace SuperSkill
             ReadWriteCtr.WriteMemByteArray(0x4ACDB82, i1);
             //MessageBox.Show(Convert.ToString(i), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ReadWriteCtr.WriteMemByteArray(0x4ACDB86, i2);
+
             //ReadWriteCtr.WriteMemByteArray(0x4ACDB86, i2);
             //ReadWriteCtr.WriteMemByteArray(0x5E420FD, i2);
             //ReadWriteCtr.WriteMemByteArray(0x5E3B5CB, i1);
@@ -47,7 +48,7 @@ namespace SuperSkill
             //ReadWriteCtr.WriteMemByteArray(0x55D5EA6, i3);
             //ReadWriteCtr.WriteMemByteArray(0x55D5EBE, i3);
 
-
+            //MessageBox.Show(Convert.ToString(ReadWriteCtr.ReadMemInt(0x400400)), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             //ReadWriteCtr.WriteMemByteArray(0x55D5ED6, i3);
             //ReadWriteCtr.WriteMemByteArray(0x55D5EEE, i3);

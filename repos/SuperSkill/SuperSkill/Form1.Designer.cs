@@ -64,6 +64,8 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.保存配置 = new System.Windows.Forms.Button();
+            this.打开配置 = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -376,11 +378,33 @@
             this.checkBox5.UseVisualStyleBackColor = true;
             this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
+            // 保存配置
+            // 
+            this.保存配置.Location = new System.Drawing.Point(544, 384);
+            this.保存配置.Name = "保存配置";
+            this.保存配置.Size = new System.Drawing.Size(75, 23);
+            this.保存配置.TabIndex = 30;
+            this.保存配置.Text = "保存配置";
+            this.保存配置.UseVisualStyleBackColor = true;
+            this.保存配置.Click += new System.EventHandler(this.保存配置_Click);
+            // 
+            // 打开配置
+            // 
+            this.打开配置.Location = new System.Drawing.Point(544, 355);
+            this.打开配置.Name = "打开配置";
+            this.打开配置.Size = new System.Drawing.Size(75, 23);
+            this.打开配置.TabIndex = 31;
+            this.打开配置.Text = "打开配置";
+            this.打开配置.UseVisualStyleBackColor = true;
+            this.打开配置.Click += new System.EventHandler(this.打开配置_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 410);
+            this.Controls.Add(this.打开配置);
+            this.Controls.Add(this.保存配置);
             this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.checkBox3);
@@ -432,7 +456,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ListView ListView_SkillProperties_Edit;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
@@ -450,9 +473,12 @@
         private System.Windows.Forms.CheckBox 独家变怪;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.CheckBox checkBox5;
+        public  System.Windows.Forms.ListView ListView_SkillProperties_Edit;
+        public System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button 保存配置;
+        private System.Windows.Forms.Button 打开配置;
     }
 }
 
