@@ -58,7 +58,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.测试 = new System.Windows.Forms.Button();
             this.独家变怪 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -66,6 +65,12 @@
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.保存配置 = new System.Windows.Forms.Button();
             this.打开配置 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -294,7 +299,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(544, 57);
+            this.checkBox1.Location = new System.Drawing.Point(542, 35);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(72, 16);
             this.checkBox1.TabIndex = 20;
@@ -305,7 +310,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(544, 79);
+            this.checkBox4.Location = new System.Drawing.Point(542, 84);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(66, 16);
             this.checkBox4.TabIndex = 23;
@@ -313,31 +318,21 @@
             this.checkBox4.UseVisualStyleBackColor = true;
             this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
-            // 测试
-            // 
-            this.测试.Location = new System.Drawing.Point(544, 12);
-            this.测试.Name = "测试";
-            this.测试.Size = new System.Drawing.Size(75, 23);
-            this.测试.TabIndex = 24;
-            this.测试.Text = "测试";
-            this.测试.UseVisualStyleBackColor = true;
-            this.测试.Click += new System.EventHandler(this.测试_Click);
-            // 
             // 独家变怪
             // 
             this.独家变怪.AutoSize = true;
-            this.独家变怪.Location = new System.Drawing.Point(544, 101);
+            this.独家变怪.Location = new System.Drawing.Point(542, 106);
             this.独家变怪.Name = "独家变怪";
-            this.独家变怪.Size = new System.Drawing.Size(72, 16);
+            this.独家变怪.Size = new System.Drawing.Size(90, 16);
             this.独家变怪.TabIndex = 25;
-            this.独家变怪.Text = "独家变怪";
+            this.独家变怪.Text = "真.独家变怪";
             this.独家变怪.UseVisualStyleBackColor = true;
             this.独家变怪.CheckedChanged += new System.EventHandler(this.独家变怪_CheckedChanged);
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(544, 145);
+            this.checkBox2.Location = new System.Drawing.Point(542, 172);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(72, 16);
             this.checkBox2.TabIndex = 26;
@@ -348,7 +343,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(544, 123);
+            this.checkBox3.Location = new System.Drawing.Point(542, 150);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(72, 16);
             this.checkBox3.TabIndex = 27;
@@ -358,7 +353,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(544, 167);
+            this.textBox1.Location = new System.Drawing.Point(542, 194);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(75, 21);
             this.textBox1.TabIndex = 28;
@@ -370,7 +365,7 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(544, 194);
+            this.checkBox5.Location = new System.Drawing.Point(542, 221);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(72, 16);
             this.checkBox5.TabIndex = 29;
@@ -380,7 +375,7 @@
             // 
             // 保存配置
             // 
-            this.保存配置.Location = new System.Drawing.Point(544, 384);
+            this.保存配置.Location = new System.Drawing.Point(542, 384);
             this.保存配置.Name = "保存配置";
             this.保存配置.Size = new System.Drawing.Size(75, 23);
             this.保存配置.TabIndex = 30;
@@ -390,7 +385,7 @@
             // 
             // 打开配置
             // 
-            this.打开配置.Location = new System.Drawing.Point(544, 355);
+            this.打开配置.Location = new System.Drawing.Point(542, 355);
             this.打开配置.Name = "打开配置";
             this.打开配置.Size = new System.Drawing.Size(75, 23);
             this.打开配置.TabIndex = 31;
@@ -398,11 +393,81 @@
             this.打开配置.UseVisualStyleBackColor = true;
             this.打开配置.Click += new System.EventHandler(this.打开配置_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "远程卖物",
+            "远程修理"});
+            this.comboBox1.Location = new System.Drawing.Point(542, 243);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(77, 20);
+            this.comboBox1.TabIndex = 32;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(542, 57);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(85, 21);
+            this.textBox2.TabIndex = 33;
+            this.textBox2.TabStop = false;
+            this.textBox2.Text = "移速修改.默认";
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label5.Location = new System.Drawing.Point(542, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 25);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "以下为赞助8.88功能";
+            // 
+            // label4
+            // 
+            this.label4.Image = global::SuperSkill.Properties.Resources.安排也;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label4.Location = new System.Drawing.Point(540, 266);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 86);
+            this.label4.TabIndex = 34;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(542, 128);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(90, 16);
+            this.checkBox6.TabIndex = 36;
+            this.checkBox6.Text = "真.独家弱怪";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(628, 35);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(72, 16);
+            this.checkBox7.TabIndex = 37;
+            this.checkBox7.Text = "一键吸怪";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 410);
+            this.ClientSize = new System.Drawing.Size(705, 410);
+            this.Controls.Add(this.checkBox7);
+            this.Controls.Add(this.checkBox6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.打开配置);
             this.Controls.Add(this.保存配置);
             this.Controls.Add(this.checkBox5);
@@ -410,7 +475,6 @@
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.独家变怪);
-            this.Controls.Add(this.测试);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label3);
@@ -429,7 +493,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Su超级技能";
+            this.Text = "Su超级技能大佬赞助版本";
             this.Activated += new System.EventHandler(this.Form1_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
@@ -469,7 +533,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.Button 测试;
         private System.Windows.Forms.CheckBox 独家变怪;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
@@ -479,6 +542,12 @@
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button 保存配置;
         private System.Windows.Forms.Button 打开配置;
+        private System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox7;
     }
 }
 

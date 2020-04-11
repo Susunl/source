@@ -10,4 +10,5 @@
 //#pragma comment(linker,"/EXPORT:SearchMemory=_SearchMemory@12")
 extern "C" int __declspec(dllexport) SearchMemory(DWORD dwProcessId, PVOID pSearchBuffer, DWORD dwSearchBufferSize);
 extern "C" int __declspec(dllexport) SearchMemory2(DWORD dwProcessId, PVOID pSearchBuffer, DWORD dwSearchBufferSize);
+extern "C" int __declspec(dllexport) ListProcessModules(DWORD dwPID, char* name);
 #endif

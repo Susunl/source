@@ -21,13 +21,16 @@ namespace SuperSkill
             //if (b1.Length != b2.Length) return false;
             return string.Compare(Convert.ToBase64String(b1), Convert.ToBase64String(b2), false) == 0 ? true : false;
         }
-        public static void 超级三速()
+        public static void 超级三速(int 移动速度)
         {
             int i;
             i = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, 基址.人物基址) + 基址.上衣偏移);
             EncDec.超级加密(i + (int)基址.攻击速度, 1500);
             EncDec.超级加密(i + (int)基址.释放速度, 1500);
-            EncDec.超级加密(i + (int)基址.移动速度, 3000);
+            if(移动速度 == 0)
+                EncDec.超级加密(i + (int)基址.移动速度, 3000);
+            else
+                EncDec.超级加密(i + (int)基址.移动速度, 移动速度);
             内存按键(319);
             call.Delay(50);
             内存按键(319);
@@ -163,7 +166,7 @@ namespace SuperSkill
                     OBJ数据 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID,(uint)(地图地址 + 基址.首地址)) + (uint)Time);
                     Time = Time + 4;
                     OBJ类型 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(OBJ数据 + 基址.类型偏移));
-                    if (OBJ类型 == 289)
+                    if (OBJ类型 == 289)// || OBJ类型 == 529 || OBJ类型 == 545 || OBJ类型 == 273
                     {
                         x = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(人物地址 + 基址.X坐标)) + 0);
                         y = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(人物地址 + 基址.X坐标)) + 4);
@@ -175,6 +178,41 @@ namespace SuperSkill
             }
             else
                 return ;
+            //ReadWriteCtr.WriteMemInt(全局变量.进程ID, 基址.自动捡物, 1300959860);
+
+        }
+        public static void 全局吸怪()
+        {
+            int 人物地址;
+            int 地图地址;
+            int 对象数量;
+            int Time = 0;
+            int OBJ数据;
+            int OBJ类型;
+            int x;
+            int y;
+            if (判断_游戏状态() == 3)
+            {
+                人物地址 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, 基址.人物基址);
+                地图地址 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(人物地址) + 基址.地图偏移);
+                对象数量 = (ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.尾地址)) - ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.首地址))) / 4;
+                for (int i = 1; i <= 对象数量; i++)
+                {
+                    OBJ数据 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.首地址)) + (uint)Time);
+                    Time = Time + 4;
+                    OBJ类型 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(OBJ数据 + 基址.类型偏移));
+                    if (OBJ类型 == 529 || OBJ类型 == 545 || OBJ类型 == 273)// || OBJ类型 == 529 || OBJ类型 == 545 || OBJ类型 == 273
+                    {
+                        x = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(人物地址 + 基址.X坐标)) + 0);
+                        y = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(人物地址 + 基址.X坐标)) + 4);
+                        ReadWriteCtr.WriteMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(OBJ数据 + 基址.对象坐标)) + 16, x);
+                        ReadWriteCtr.WriteMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(OBJ数据 + 基址.对象坐标)) + 20, y);
+                    }
+                }
+
+            }
+            else
+                return;
             //ReadWriteCtr.WriteMemInt(全局变量.进程ID, 基址.自动捡物, 1300959860);
 
         }
@@ -434,6 +472,31 @@ namespace SuperSkill
 
         }
 
+        public static void 独家弱怪()
+        {
+            Asm asm = new Asm();
+            byte[] array1 = { 0xC7, 0x45, 0x0C, 01, 00, 00, 00, 0x53, 0x56, 0x57 };
+            asm.Mov_EAX_DWORD_Ptr((int)基址.变怪基址_B);
+            byte[] array2 = asm.JMP(基址.变怪基址_A + 8, 0x400D5F);
+            ReadWriteCtr.WriteMemByteArray(0x400d50,转换.数组加法(array1,asm.取汇编代码(), array2));
+            asm.清空汇编代码();
+            byte[] array = asm.JMP(0x400d50, 基址.变怪基址_A);
+            ReadWriteCtr.WriteMemByteArray(基址.变怪基址_A, array);
+            功能.公告("真.独家弱怪开启成功");
+        }
+        public static void 独家弱怪DisAble()
+        {
+            Asm asm = new Asm();
+            asm.Push_EBX();
+            asm.Push_ESI();
+            asm.Push_EDI();
+            asm.Mov_EAX_DWORD_Ptr((int)基址.变怪基址_B);
+            ReadWriteCtr.WriteMemByteArray(基址.变怪基址_A,asm.取汇编代码());
+            asm.清空汇编代码();
+            byte[] array = new byte[0x20];
+            ReadWriteCtr.WriteMemByteArray(0x400d50, array) ;
+            功能.公告("真.独家弱怪关闭成功");
+        }
     }
 
 }

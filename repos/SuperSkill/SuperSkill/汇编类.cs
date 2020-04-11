@@ -151,9 +151,25 @@ namespace SslnEngine
         {
             this.Asmcode = this.Asmcode + "60";
         }
+        public void Pushfd()
+        {
+            this.Asmcode = this.Asmcode + "9C";
+        }
+        public void Cld()
+        {
+            this.Asmcode = this.Asmcode + "FC";
+        }
+        public void Rep_Movsb()
+        {
+            this.Asmcode = this.Asmcode + "F3A4";
+        }
         public void Popad()
         {
             this.Asmcode = this.Asmcode + "61";
+        }
+        public void Popfd()
+        {
+            this.Asmcode = this.Asmcode + "9D";
         }
         public void Ret()
         {
@@ -1525,7 +1541,7 @@ namespace SslnEngine
             }
 
         }
-        private byte[] AsmChangebytes(string asmPram)
+        public byte[] AsmChangebytes(string asmPram)
         {
             byte[] reAsmCode = new byte[asmPram.Length / 2];
             for (int i = 0; i < reAsmCode.Length; i++)

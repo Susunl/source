@@ -1,6 +1,9 @@
 #include "pch.h"
 #include "MemorySearch.h"
 #include <cstddef>
+#include <windows.h> 
+#include <tlhelp32.h> 
+#include <stdio.h> 
 using namespace std;
 #define EX_PORT __declspec(dllexport) 
 
@@ -14,6 +17,15 @@ int bytesto_int4(BYTE* bytes)
 	num |= ((bytes[2] << 16) & 0xFF0000);
 	num |= ((bytes[3] << 24) & 0xFF000000);
 	return num;
+}
+char* wchar2char(const wchar_t* wchar)
+{
+	char* m_char;
+	int len = WideCharToMultiByte(CP_ACP, 0, wchar, wcslen(wchar), NULL, 0, NULL, NULL);
+	m_char = new char[len + 1];
+	WideCharToMultiByte(CP_ACP, 0, wchar, wcslen(wchar), m_char, len, NULL, NULL);
+	m_char[len] = '\0';
+	return m_char;
 }
 
 extern "C" int __declspec(dllexport) SearchMemory(DWORD dwProcessId, PVOID pSearchBuffer, DWORD dwSearchBufferSize)
@@ -172,4 +184,44 @@ extern "C" int __declspec(dllexport) SearchMemory2(DWORD dwProcessId, PVOID pSea
 	::CloseHandle(hProcess);
 
 	return ret;
+}
+
+extern "C" int __declspec(dllexport) ListProcessModules(DWORD dwPID ,char* name)
+{
+	HANDLE hModuleSnap = INVALID_HANDLE_VALUE;
+	MODULEENTRY32 me32;
+
+	//  Take a snapshot of all modules in the specified process. 
+	hModuleSnap = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE, dwPID);
+	if (hModuleSnap == INVALID_HANDLE_VALUE)
+	{
+		//printError("CreateToolhelp32Snapshot (of modules)");
+		return(FALSE);
+	}
+
+	//  Set the size of the structure before using it. 
+	me32.dwSize = sizeof(MODULEENTRY32);
+
+	//  Retrieve information about the first module, 
+	//  and exit if unsuccessful 
+	if (!Module32First(hModuleSnap, &me32))
+	{
+		//printError("Module32First");  // Show cause of failure 
+		CloseHandle(hModuleSnap);     // Must clean up the snapshot object! 
+		return(FALSE);
+	}
+	//  Now walk the module list of the process, 
+	//  and display information about each module 
+	do
+	{
+		if (strcmp(wchar2char(me32.szModule), name) == 0)
+		{
+			return (UINT32)me32.modBaseAddr;
+		}
+
+	} while (Module32Next(hModuleSnap, &me32));
+
+	//  Do not forget to clean up the snapshot object. 
+	CloseHandle(hModuleSnap);
+	return(TRUE);
 }

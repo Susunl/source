@@ -1,160 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CheatTable CheatEngineTableVersion="29">
+<CheatTable CheatEngineTableVersion="26">
   <CheatEntries>
     <CheatEntry>
-      <ID>1120075224</ID>
-      <Description>"-- Home键启动 --"</Description>
+      <ID>1120085229</ID>
+      <Description>"赛利亚房间按HOME激活辅助  开启全部功能  按END关闭全部功能"</Description>
+      <LastState Value="" RealAddress="00000000"/>
+      <Color>408000</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1120085230</ID>
+      <Description>"按HOME后等待20左右 切换角色请按End还原数值"</Description>
+      <LastState Value="" RealAddress="00000000"/>
+      <Color>008000</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>""</Description>
       <LastState Activated="1"/>
-      <Color>808000</Color>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>define(yuliupilao,400440)
-define(dengjishezhi,#83)
+define(dengjishezhi,#86)
 
 alloc(Yun_Qi,28360)
 label(new)
-label(shifoudaodajuese)//
+label(shifoudaodajuese)
 label(Yun_Qi_end)
-label(yidaodajuese)//
+label(yidaodajuese)
 label(TenRpcs_hook)
 label(TenRpcs_hookend)
-label(huoqvjueseshuliang)//
-label(huoqvjueseweizhi)//
-label(OBJgaishanghai)//
+label(huoqvjueseshuliang)
+label(huoqvjueseweizhi)
+label(OBJgaishanghai)
 label(obj)
-label(qiantaianjian)//
-label(qiantaizhixingEscanjian)//
-label(qiantaizhixingF10anjian)//
-label(panduanshifouzhixingqiangshun)//
-label(panduanshifouzhixingqiangshunend)//
-label(chulishijian)//
-label(gongnengwanbi_End)//
-label(gongnengwanbi_104_End)//
-label(gongnengwanbi_291100293_End)//
-label(xuantruqueren_End)//
+label(qiantaianjian)
+label(qiantaizhixingEscanjian)
+label(qiantaizhixingF10anjian)
+label(panduanshifouzhixingqiangshun)
+label(panduanshifouzhixingqiangshunend)
+label(chulishijian)
+label(gongnengwanbi_End)
+label(gongnengwanbi_104_End)
+label(gongnengwanbi_291100293_End)
+label(xuantruqueren_End)
 label(whileaddr_1)
 label(whileaddr_2)
 label(whileaddr_End)
-label(chuangjianshuju_End)//
-label(guotuqueren_End)//
-label(tongguanjiesuan_End)//
-label(fanpaijiesuan_bagen)//
-label(fanpaijiesuan_bagen_1)//
-label(fanpaijiesuan_bagen_2)/
-label(fanpaijiesuan_End)//
-label(guaiwusiwang_bagen)//
-label(guaiwusiwang_End)//
-label(chulishijian_End)//
-label(ditubianhao)//
-label(ditudengji)//
-label(BOSSzuobiao_hengzhouzuobiao)//
-label(BOSSzuobiao_zongzhouzuobiao)//
-label(dangqianzuobiao_hengzhouzuobiao)//
-label(dangqianzuobiao_zongzhouzuobiao)//
+label(chuangjianshuju_End)
+label(guotuqueren_End)
+label(tongguanjiesuan_End)
+label(fanpaijiesuan_bagen)
+label(fanpaijiesuan_bagen_1)
+label(fanpaijiesuan_bagen_2)
+label(fanpaijiesuan_End)
+label(guaiwusiwang_bagen)
+label(guaiwusiwang_End)
+label(chulishijian_End)
+label(ditubianhao)
+label(ditudengji)
+label(BOSSzuobiao_hengzhouzuobiao)
+label(BOSSzuobiao_zongzhouzuobiao)
+label(dangqianzuobiao_hengzhouzuobiao)
+label(dangqianzuobiao_zongzhouzuobiao)
 label(Monsternumber)
 label(Thenumberofdeaths)
-label(guaiwushuliang_gonggao)//
-label(tiqvcailiao_gonggao)//
+label(guaiwushuliang_gonggao)
+label(tiqvcailiao_gonggao)
 label(GM_hook)
 label(GM_xor)
 label(GM_mov)
-label(zhisuijishuzhongzi)//
-label(qvsuijishu)//
-label(diaoyonchuangkou)//
-label(zhi_400448wei0)//
-label(diaoyonchuangkou_End)//
-label(diaoyonchuangkou_257)//
-label(diaoyonchuangkou_jintu)//
-label(diaoyonchuangkou_huicheng)//
-label(zengjiashanghai_panduan_1)//
-label(diaoyonchuangkou_1)//
-label(toumingwudi_panduan_1)//
-label(diaoyonchuangkou_2)//
-label(diuqizhuangbei_panduan_1)//
-label(diaoyonchuangkou_3)//
-label(zisezhuangbei_panduan_1)//
-label(diaoyonchuangkou_4)//
-label(shuntufangshi_1_end)//
-label(shuntufangshi_2_end)//
-label(shuntufangshi_3_end)//
-label(diaoyonchuangkou_5)//
-label(diaoyonchuangkou_260)//
-label(diaoyonchuangkou_F1)//
-label(diaoyonchuangkou_F2)//
-label(diaoyonchuangkou_F3)//
-label(diaoyonchuangkou_F4)//
-label(diaoyonchuangkou_F5)//
-label(diaoyonchuangkou_F6)//
-label(diaoyonchuangkou_F7)//
-label(diaoyonchuangkou_F8)//
-label(diaoyonchuangkou_F9)//
-label(diaoyonchuangkou_F11)//
-label(juqingkaiguan_panduan_1)//
-label(diaoyonchuangkou_F12)//
-label(guanbishuntu_gonggao)//
-label(kaiqijuqing_gonggao)//
-label(guanbijuqing_gonggao)//
-label(kaiqishuntu_gonggao)//
-label(F2kaiguan_panduan_1)//
-label(F5kaiguan_panduan_1)//
-label(F6kaiguan_panduan_1)//
+label(zhisuijishuzhongzi)
+label(qvsuijishu)
+label(diaoyonchuangkou)
+label(zhi_400448wei0)
+label(diaoyonchuangkou_End)
+label(diaoyonchuangkou_257)
+label(diaoyonchuangkou_jintu)
+label(diaoyonchuangkou_huicheng)
+label(zengjiashanghai_panduan_1)
+label(diaoyonchuangkou_1)
+label(toumingwudi_panduan_1)
+label(diaoyonchuangkou_2)
+label(diuqizhuangbei_panduan_1)
+label(diaoyonchuangkou_3)
+label(zisezhuangbei_panduan_1)
+label(diaoyonchuangkou_4)
+label(shuntufangshi_1_end)
+label(shuntufangshi_2_end)
+label(shuntufangshi_3_end)
+label(diaoyonchuangkou_5)
+label(diaoyonchuangkou_260)
+label(diaoyonchuangkou_F1)
+label(diaoyonchuangkou_F2)
+label(diaoyonchuangkou_F3)
+label(diaoyonchuangkou_F4)
+label(diaoyonchuangkou_F5)
+label(diaoyonchuangkou_F6)
+label(diaoyonchuangkou_F7)
+label(diaoyonchuangkou_F8)
+label(diaoyonchuangkou_F9)
+label(diaoyonchuangkou_F11)
+label(juqingkaiguan_panduan_1)
+label(diaoyonchuangkou_F12)
+label(guanbishuntu_gonggao)
+label(kaiqijuqing_gonggao)
+label(guanbijuqing_gonggao)
+label(kaiqishuntu_gonggao)
+label(F2kaiguan_panduan_1)
+label(F5kaiguan_panduan_1)
+label(F6kaiguan_panduan_1)
 label(F8kaiguan_panduan_1)//
-label(zidongguotu_panduan_1)//
-label(zidongguotu_panduan)//
-label(zidongquanpingjineng)//
-label(zidongshuntu_panduan)//
-label(zhixingqiangshun_bagen)//
-label(guanbixunhuan_gonggap)//
-label(kaiqixunhuan_gonggap)//
-label(xunhuanditu_duanzhi_1)//
-label(xunhuanditu_panduan)//
-label(lingzhufangjian_panduan)//
-label(keyishuntu_panduan)//
-label(xuyaoguotu_panduan)//
-label(dajianzhuwu_panduan)//
-label(dajianzhuwu_panduan_0)//
-label(fenjiezhuangbei_panduan)//
-label(shengyupilao_panduan)//
-label(fenjiezhuangbei_panduan_0)//
-label(huoqvshengyu_pilao)//
-label(chengzhengyidongpanduan)//
-label(chengzhengyidongshuju)//
-label(dituID)//
-label(chengzhengshunhuancishu)//
-label(quanshishichang)//
-label(kongbudeqixidi)//
-label(lukedejuguangjing)//
-label(telunsifadianzhan)//
-label(wangmingshazhen)//
-label(yijie)//
-label(yijiecishu)//
-label(zidongyijiekaiguan)//
-label(yijierenwukaiguan)//
-label(chengzhengyidongpanduanbagen)//
-label(chengzhengyidongpanduankaishizhixing)//
-label(chengzhengyidongpanduanxunhuan)//
-label(zubao_chengzhenyidong)//
-label(quanzidongjieshu)//
-label(dengjibuzu_gonggao)//
-label(kaiqishanghai_gonggao)//
-label(guanbishanghai_gonggao)//
-label(zidongkaiguan_pasnduan)//
-label(gongnengzhixing_panduan)//
-label(juqingkaiguan_panduan)//
-label(juqingzhixing_panduan)//
-label(toumingwudi_panduan)//
-label(zengjiashanghai_panduan)//
-label(diuqizhuangbei_panduan)//
-label(zisezhuangbei_panduan)//
-label(shuntufangshi)//
-label(zidongzhixing_panduan)//
-label(guanbizidong_gonggao)//
-label(zidongpilao_gonggao)//
-label(juqingpilao_gonggao)//
-label(F1kaiguan_panduan_1)//
-label(diaoyonchuangkou_weizhi_0)//
-label(diaoyonchuangkou_weizhi_genghuanjuese)//
-label(diaoyonchuangkou_weizhi_genghuanjuese_end)//
-label(diaoyonchuangkou_weizhi_GO)//
+label(zidongguotu_panduan_1)
+label(zidongguotu_panduan)
+label(zidongquanpingjineng)
+label(zidongshuntu_panduan)
+label(zhixingqiangshun_bagen)
+label(guanbixunhuan_gonggap)
+label(kaiqixunhuan_gonggap)
+label(xunhuanditu_duanzhi_1)
+label(xunhuanditu_panduan)
+label(lingzhufangjian_panduan)
+label(keyishuntu_panduan)
+label(xuyaoguotu_panduan)
+label(dajianzhuwu_panduan)
+label(dajianzhuwu_panduan_0)
+label(fenjiezhuangbei_panduan)
+label(shengyupilao_panduan)
+label(fenjiezhuangbei_panduan_0)
+label(huoqvshengyu_pilao)
+label(chengzhengyidongpanduan)
+label(chengzhengyidongshuju)
+label(dituID)
+label(chengzhengshunhuancishu)
+label(quanshishichang)
+label(kongbudeqixidi)
+label(lukedejuguangjing)
+label(telunsifadianzhan)
+label(wangmingshazhen)
+label(yijie)
+label(yijiecishu)
+label(zidongyijiekaiguan)
+label(yijierenwukaiguan)
+label(chengzhengyidongpanduanbagen)
+label(chengzhengyidongpanduankaishizhixing)
+label(chengzhengyidongpanduanxunhuan)
+label(zubao_chengzhenyidong)
+label(quanzidongjieshu)
+label(dengjibuzu_gonggao)
+label(kaiqishanghai_gonggao)
+label(guanbishanghai_gonggao)
+label(zidongkaiguan_pasnduan)
+label(gongnengzhixing_panduan)
+label(juqingkaiguan_panduan)
+label(juqingzhixing_panduan)
+label(toumingwudi_panduan)
+label(zengjiashanghai_panduan)
+label(diuqizhuangbei_panduan)
+label(zisezhuangbei_panduan)
+label(shuntufangshi)
+label(zidongzhixing_panduan)
+label(guanbizidong_gonggao)
+label(zidongpilao_gonggao)
+label(juqingpilao_gonggao)
+label(F1kaiguan_panduan_1)
+label(diaoyonchuangkou_weizhi_0)
+label(diaoyonchuangkou_weizhi_genghuanjuese)
+label(diaoyonchuangkou_weizhi_genghuanjuese_end)
+label(diaoyonchuangkou_weizhi_GO)
 label(qianwangshenzhezhiminghao)
 label(diaoyonchuangkou_xuantu_yijie)
 label(diaoyonchuangkou_xuantu_kaishi)
@@ -515,76 +528,75 @@ label(Decryption)
 label(linshikongbai_dizhi)
 label(_ReadProcessMemory)
 
-define(CHAR,67053E0)//人物基址
-define(score,65AF41C)//评分基址
-define(BACKPACK,65B0894)//背包基址
-define(fatigue1,67054AC)//当前疲劳
-define(fatigue2,67054B4)//最大疲劳
+define(CHAR,6705400)//人物基址
+define(score,65AF43C)//评分基址
+define(BACKPACK,65B08B4)//背包基址
+define(fatigue1,67054CC)//当前疲劳
+define(fatigue2,67054D4)//最大疲劳
 
-define(SD,65B0890)//商店基址
-define(LB,2FFA860)//喇叭公告
-define(GGECX,4141ED0)//公告ECX
-define(GGCALL,2FFA670)//公告CALL
-define(SJ,020A030)//时间基址
+define(SD,65B08B0)//商店基址
+define(LB,2FF9610)//喇叭公告
+define(GGECX,2F68AD0)//公告_ECX
+define(GGCALL,2FF9420)//安图公告
+define(SJ,20A030)//时间基址
 
-define(DECRYPT_BASE,6742FB0)//解密基址
-define(PACKET_BASE,6738724)//发包基址
-define(BUFFER_CALL,3D88C70)//缓冲CALL
-define(ENCRYPT_CALL,3D88D80)//加密包CALL
-define(KeyCALL,3F1B3E0)//密钥CALL
-define(SEND_CALL,3D8A5D0)//发包CALL
-define(shoubaoCALL,2A9C600)//收包CALL
+define(DECRYPT_BASE,6742FD8)//解密基址
+define(PACKET_BASE,673874C)//发包基址
+define(BUFFER_CALL,3D8A150)//缓冲CALL
+define(ENCRYPT_CALL,3D8A260)//加密包CALL
+define(KeyCALL,3F1ABE0)//密钥CALL
+define(SEND_CALL,3D8BAB0)//发包CALL
+define(shoubaoCALL,2A96480)//收包CALL
 
+define(shifangCALL,2906E70)//释放CALL
+define(nanqiangCALL,2906470)//男枪CALL
+define(wudiCALL,3DA2D00)//无敌CALL
+define(OBJshanghai_1,2DFA1B1)//OBJ伤害_1
+define(GMquanxianmoshi,3E44650)//GM权限模式
+define(zidongjianwu,2E6F8E2)//自动捡物
+define(renwujizhi,65B08F0)//任务基址
+define(wanchengCALL,24453E0)//完成CALL
+define(jieshouCALL,24454E0)//接受CALL
+define(tijiaoCALL,2445460)//提交CALL
 
-define(shifangCALL,290D770)//释放CALL
-define(nanqiangCALL, 290CD40)//男枪CALL
-define(wudiCALL,3DA20E0)//无敌CALL
-define(OBJshanghai_1,2DFC1D1)//OBJ伤害_1
-define(GMquanxianmoshi,20A6F60)//GM权限模式
-define(zidongjianwu,2E70E32)//自动捡物
-define(renwujizhi,65B08D0)//任务基址
-define(wanchengCALL,2447620)//完成CALL
-define(jieshouCALL,2447720)//接受CALL
-define(tijiaoCALL,24476A0)//提交CALL
+define(fubenmingchen,65DA698)//副本名称
+define(fubenbianhao,65987BC)//副本编号
+define(juqingcanshu1,24EF560)//剧情参数1
+define(juqingcanshu2,24EF120)//剧情参数2
+define(xuantuCALL,3D41120)//选图CALL
+define(jintuCALL,3D66AF0)//剧情参数3
+define(huichengCALL,27F91C0)//回城CALL
 
-define(fubenmingchen,65DA678)//副本名称
-define(fubenbianhao,659879C)//副本编号
-define(juqingcanshu1,24F2570)//剧情参数1
-define(juqingcanshu2,24F20F0)//剧情参数2
-define(xuantuCALL,3D3FA80)//选图CALL
-define(jintuCALL,3D65400)//剧情参数3
-define(huichengCALL,27FF0F0)//回城CALL
+define(ruzhuaiCALL,3E2E4E0)//入栈CALL
+define(yidongCALL,238AF80)//移动CALL
+define(yidongpianyi1,0750)//移动偏移_1
+define(yidongpianyi2,0764)//移动偏移_2
 
-define(ruzhuaiCALL,2818EB0)//入栈CALL
-define(yidongCALL,238D850)//移动CALL
-define(yidongpianyi1,764)//移动偏移_1
-define(yidongpianyi2,76C)//移动偏移_2
-
-define(shifoukaimen,118)//是否开门
-define(menxingpianyi,CC)//门型偏移
-define(dangqianfangjianX,E6C)//当前房间X
-define(dangqianfangjianY,E70)//当前房间Y
-define(BOSSfangjianX,F24)//BOSS房间X
-define(BOSSfangjianY,F2C)//BOSS房间Y
-define(Axingpianyi_0,CC)//A星偏移_0
+define(shifoukaimen,0118)//是否开门
+define(menxingpianyi,0Cc)//门型偏移
+define(dangqianfangjianX,0E6C)//当前房间X
+define(dangqianfangjianY,0E70)//当前房间Y
+define(BOSSfangjianX,0F24)//BOSS房间X
+define(BOSSfangjianY,0F2C)//BOSS房间Y
+define(Axingpianyi_0,0CC)//A星偏移_0
 define(Axingpianyi_1,33C)//A星偏移_1
 define(Axingpianyi_2,350)//A星偏移_2
-define(Axingpianyi_3,D0)//A星偏移_3
-define(Axingpianyi_4,D4)//A星偏移_4
-define(Axingpianyi_5,21C)//A星偏移_5
-define(zuobiaoshuntupianyi,1B48)//坐标顺图
-define(zhenyingpianyi,95C)//阵营偏移
-define(ditupianyi,DC)//地图偏移
-define(leixingpianyi,B8)//类型偏移
-define(qvzuobiaopianyi,D8)//取坐标call
-define(zuobiaoCALLpianyi,0CC)//坐标CALL偏移==
+define(Axingpianyi_3,0D0)//A星偏移_3
+define(Axingpianyi_4,0D4)//A星偏移_4
+define(Axingpianyi_5,021C)//A星偏移_5
+define(zuobiaoshuntupianyi,01B48)//坐标顺图
+define(zhenyingpianyi,095C)//阵营偏移
+define(ditupianyi,0DC)//地图偏移
+define(leixingpianyi,0B8)//类型偏移
+define(qvzuobiaopianyi,0D8)//取坐标偏移
+define(zuobiaoCALLpianyi,0C0)//坐标CALL偏移
 define(guaiwuxieliang,3FD0)//当前血量偏移
 
-define(weizhijizhi,64C8DC4)//位置基址
-define(juesejizhi,65AF72C)//角色基址
-define(juesednegji,65987EC)//角色等级
-define(juesepianyi,0B4)//角色偏移
-define(jueseshuliangpianyi,BB6)//角色数量偏移
+define(weizhijizhi,64C8DE4)//位置基址
+define(juesejizhi,65AF74C)//角色基址
+define(juesednegji,659880C)//角色等级
+define(juesepianyi,B4)//角色偏移
+define(jueseshuliangpianyi,308)//角色数量偏移
 define(qvjueseweizhi,180)//取角色位置
 
 define(shoubao_jiemianqiehuan,#24)//收包_界面切换
@@ -596,24 +608,24 @@ define(shoubao_lingzhusiwang,#31)//收包_领主死亡
 define(shoubao_tongguanjiesuan,#34)//收包_通关结算
 define(shoubao_guaiwusiwang,#38)//收包_怪物死亡
 define(shoubao_fanpaijiesuan,#261)//收包_翻牌结算
-define(shoubao_dutiaowanbi,#1103)//收包_读条完毕4248
-define(shoubao_gongnengwanbi,#1117)//收包_功能完毕4373
+define(shoubao_dutiaowanbi,#109A)//收包_读条完毕
+define(shoubao_gongnengwanbi,#1117)//收包_功能完毕
 
-define(chengzhenID,6597418)//剧情副本ID64683E8
-define(qvyufuzhi,6737800)//区域参数
-define(qvyupianyi,E3C4)//区域偏移
-define(qvyuCALL,3D027C0)//区域CALL
-define(tiaoguoCALL,21C45B0)//跳过CALL
-define(renwushuju,65923E0)//任务数据
-define(renwuzhizhen,2447600)//任务指针
-define(renwuleixing,184)//任务类型
+define(chengzhenID,6597438)//城镇ID
+define(qvyufuzhi,6737828)//区域参数
+define(qvyupianyi,0E3c4)//区域偏移
+define(qvyuCALL,3D04200)//区域CALL
+define(tiaoguoCALL,21C11E0)//跳过CALL
+define(renwushuju,6592400)//任务数据
+define(renwuzhizhen,24453C0)//任务指针
+define(renwuleixing,0184)//任务类型
 
-define(renwutiaoguopianyi,24C)//任务完成等级
-define(renwutiaojianpianyi,358)//任务条件
-define(renwufuben,32C)//任务副本A
-define(pingbiduihua,3ADC2E3)//屏蔽对话
-define(zhicaijizhi,65AF6C8)//制裁基址
-define(diuqiCALL,2B83490)//丢弃CALL
+define(renwutiaoguopianyi,024C)//任务完成等级
+define(renwutiaojianpianyi,0358)//任务条件
+define(renwufuben,032C)//任务副本A
+define(pingbiduihua,3ADAF53)//屏蔽对话
+define(zhicaijizhi,65AF6E8)//制裁基址
+define(diuqiCALL,2B7EFC0)//丢弃CALL
 
 Yun_Qi:
 push ebp
@@ -798,7 +810,7 @@ cmp [ditubianhao],#15
 je panduanshifouzhixingqiangshunend
 cmp [ditubianhao],#88
 je panduanshifouzhixingqiangshunend
-cmp [ditubianhao],#2911003
+cmp [ditubianhao],#291100318
 je panduanshifouzhixingqiangshunend
 cmp [ditubianhao],#235
 je panduanshifouzhixingqiangshunend
@@ -874,7 +886,7 @@ call zuobiaoCALL
 jmp gongnengwanbi_291100293_End
 
 gongnengwanbi_104_End:
-cmp [ditubianhao],#2911002
+cmp [ditubianhao],#291100293
 jne gongnengwanbi_291100293_End
 push 0
 push #369
@@ -1043,7 +1055,7 @@ push eax
 push 1
 call jiamibaoCALL
 call sendpacket
-push #1465//1465
+push #1434//1465
 call buffer
 call sendpacket
 
@@ -2282,7 +2294,7 @@ cmp eax,1
 jne diaoyonchuangkou_pingfen
 mov [lingzhufangjian_panduan+10],1
 mov eax,[score]
-push #999999
+push #9999999
 add eax,110
 push eax
 call Encryption
@@ -3645,7 +3657,7 @@ push [esi-18]
 push 10
 push -2
 push 0
-push [400430]
+push [400434]
 push eax
 push [esi-4]
 call nanqiangCALL
@@ -3659,8 +3671,6 @@ mov ecx,[esi-18]
 mov esp,esi
 pop esi
 ret
-
-
 
 _CreateThread:
 push esi
@@ -3927,7 +3937,7 @@ cmp ecx,52365BC6
 jne chulizhuangbeinext
 chulizhuangbeibege:
 pushad
-push [eax+178]
+push [eax+1a4]
 push edx
 call zubao_chulizhuangbei
 popad
@@ -5905,11 +5915,11 @@ dd #92 #7322 0
 dd #93 #7322 0
 dd #94 #7322 0
 dd #95 #291100293 4
-dd #96 #100000003 4
-dd #97 #100000003 4
-dd #98 #100000003 4
-dd #99 #100000003 4
-dd #100 #100000003 4
+dd #96 #291100268 4
+dd #97 #291100268 4
+dd #98 #291100268 4
+dd #99 #291100268 4
+dd #100 #291100268 4
 
 niwudehujiao:
 db 5B 00 45 00 58 00 50 00 5D 00 3C 5C EB 5D 84 76 7C 54 EB 53 00 00
@@ -5980,7 +5990,7 @@ chengzhengshunhuancishu:
 dd 0
 
 quanshishichang:
-dd #54 #2 #500 #300 #2911001
+dd #54 #2 #500 #300 #291100293
 
 kongbudeqixidi:
 dd #31 #2 #500 #300 #312
@@ -5992,7 +6002,7 @@ telunsifadianzhan:
 dd #14 #2 #800 #300 #103
 
 wangmingshazhen:
-dd #54 #2 #500 #300 #2911002
+dd #54 #2 #500 #300 #291100268
 
 yijie:
 dd #17 #2 #500 #300 #7167
@@ -6123,131 +6133,133 @@ db 4D 52 80 5F 23 57 05 80 4B 4E 23 9E F7 53 00 00
 DNF:
 db B5 D8 CF C2 B3 C7 D3 EB D3 C2 CA BF 00
 
-juesedengji_gonggao: //IS2154：角色： [ %d ] 级 未满足搬砖要求
-db 4D2 89 72 82 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 A7 7E 20 00 2A 67 E1 6E B3 8D 2C 64 16 78 81 89 42 6C 00 00
+juesedengji_gonggao: //角色： [ %d ] 级 未满足搬砖要求
+db D2 89 72 82 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 A7 7E 20 00 2A 67 E1 6E B3 8D 2C 64 16 78 81 89 42 6C 00 00
 
-juesepilao_gonggao: //IS2154：角色疲劳已刷完
+juesepilao_gonggao: //角色疲劳已刷完
 db D2 89 72 82 B2 75 B3 52 F2 5D 37 52 8C 5B 00 00
 
-jueseshuliang_gonggao://IS2154：已切换至第[ %d ] 个角色 总数： [ %d ] 个角色
+jueseshuliang_gonggao://已切换至第[ %d ] 个角色 总数： [ %d ] 个角
 db F2 5D 07 52 62 63 F3 81 2C 7B 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 2A 4E D2 89 72 82 20 00 3B 60 70 65 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 2A 4E D2 89 72 82 00 00
 
 baotouchangdu_gonggao://包头%d  \t  长度%d
 db 05 53 34 59 25 00 64 00 20 00 20 00 09 00 20 00 20 00 7F 95 A6 5E 25 00 64 00 00 00
 
-juqingshuatu_gonggao://IS2154：剧情[%ws]通关[ %d ]次
+juqingshuatu_gonggao://剧情[%ws]通关[ %d ]次
 db 67 52 C5 60 5B 00 25 00 77 00 73 00 5D 00 1A 90 73 51 5B 00 20 00 25 00 64 00 20 00 5D 00 21 6B 00 00
-zidongshuatu_gonggao://IS2154：搬砖[%ws]通关[ %d ]次
+
+zidongshuatu_gonggao://搬砖[%ws]通关[ %d ]次
 db 2C 64 16 78 5B 00 25 00 77 00 73 00 5D 00 1A 90 73 51 5B 00 20 00 25 00 64 00 20 00 5D 00 21 6B 00 00
+
 renwushuju_gonggao:
 db FB 4E A1 52 81 89 42 6C 1A FF 5B 00 20 00 25 00 77 00 73 00 20 00 5D 00 0D 00 0A 00 FB 4E A1 52 16 7F F7 53 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 FB 4E A1 52 21 6B 70 65 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 FB 4E A1 52 6F 52 2C 67 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 00 00
 
 zhuxianshuju_gonggao:
 db 90 96 CF 85 5F 00 FB 4E A1 52 81 89 42 6C 1A FF 5B 00 20 00 25 00 77 00 73 00 20 00 5D 00 0D 00 0A 00 FB 4E A1 52 16 7F F7 53 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 FB 4E A1 52 21 6B 70 65 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 FB 4E A1 52 6F 52 2C 67 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 00 00
 
-guaiwushuliang_gonggao://IS2154：房间怪物数量： [ %d ] 个
+guaiwushuliang_gonggao://房间怪物数量： [ %d ] 个
 db 3F 62 F4 95 2A 60 69 72 70 65 CF 91 1A FF 20 00 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 2A 4E 00 00
 
 kaishijihuo_gonggao:
-db C0 6F 3B 6D 10 62 9F 52 9F 52 FD 80 82 59 0B 4E 1A FF 0D 00 0A 00 7A 66 FD 80 7A 98 FE 56 00 5F 2F 54 0D 00 0A 00 45 00 6E 00 64 00 20 00 40 62 09 67 9F 52 FD 80 00 5F 73 51 20 00 0D 00 0A 00 E2 6C 6A 6D 2E 95 20 00 8C 5B 10 62 F2 5D A5 63 FB 4E A1 52 0D 00 0A 00 46 00 31 00 20 00 50 60 16 60 84 76 16 68 6F 60 30 57 00 5F 73 51 0D 00 0A 00 46 00 32 00 20 00 EA 81 A8 52 A1 4E 7D 54 0D 00 0A 00 46 00 33 00 20 00 53 62 FA 5E 51 7B 69 72 00 5F 73 51 0D 00 0A 00 46 00 34 00 20 00 04 59 06 74 C5 88 07 59 00 5F 73 51 0D 00 0A 00 46 00 35 00 20 00 49 51 4B 4E 1E 82 1A 4F 00 5F 73 51 0D 00 0A 00 46 00 36 00 20 00 A1 4E 7D 54 40 67 47 95 00 5F 73 51 0D 00 0A 00 46 00 38 00 20 00 EA 81 A8 52 02 5F 4C 75 00 5F 73 51 0D 00 0A 00 46 00 39 00 20 00 AA 5F AF 73 37 52 FE 56 00 5F 73 51 0D 00 0A 00 46 00 31 00 31 00 20 00 7A 66 FD 80 7A 98 FE 56 00 5F 73 51 0D 00 0A 00 46 00 31 00 32 00 20 00 7A 66 FD 80 67 52 C5 60 00 5F 73 51 0D 00 0A 00 41 00 6C 00 74 00 2B 00 B9 65 11 54 2E 95 20 00 5B 00 7A 98 FE 56 5D 00 0D 00 0A 00 41 00 6C 00 74 00 2B 00 31 00 20 00 3A 5F A0 52 24 4F B3 5B 00 5F 73 51 0D 00 0A 00 41 00 6C 00 74 00 2B 00 32 00 20 00 0F 90 0E 66 E0 65 4C 65 00 5F 73 51 0D 00 0A 00 41 00 6C 00 74 00 2B 00 33 00 20 00 22 4E 03 5F C5 88 07 59 00 5F 73 51 20 00 5B 00 89 5B 68 51 21 6A 0F 5F 32 96 62 6B CC 80 05 53 C5 88 E1 6E 5D 00 0D 00 0A 00 41 00 6C 00 74 00 2B 00 34 00 20 00 47 50 2B 7D C5 88 07 59 00 5F 73 51 20 00 5B 00 06 52 E3 89 16 62 FA 51 2E 55 5D 00 0D 00 0A 00 41 00 6C 00 74 00 2B 00 35 00 20 00 7A 98 FE 56 B9 65 0F 5F 00 5F 73 51 20 00 5B 00 50 57 07 68 7A 98 20 00 3A 5F 36 52 7A 98 20 00 54 59 D1 8D 7A 98 5D 00 00 00
+db C0 6F 3B 6D 10 62 9F 52 0D 00 0A 00 CE 57 47 95 A0 52 1F 90 00 5F 2F 54 1A FF 0D 00 0A 00 7A 66 FD 80 7A 98 FE 56 00 5F 2F 54 0D 00 0A 00 45 00 6E 00 64 00 20 00 40 62 09 67 9F 52 FD 80 00 5F 73 51 20 00 0D 00 0A 00 E2 6C 6A 6D 2E 95 20 00 8C 5B 10 62 F2 5D A5 63 FB 4E A1 52 0D 00 0A 00 46 00 31 00 20 00 50 60 16 60 84 76 16 68 6F 60 30 57 00 5F 73 51 0D 00 0A 00 46 00 32 00 20 00 68 51 80 86 02 5E 3A 57 00 5F 73 51 0D 00 0A 00 46 00 33 00 20 00 53 62 FA 5E 51 7B 69 72 00 5F 73 51 0D 00 0A 00 46 00 34 00 20 00 04 59 06 74 C5 88 07 59 00 5F 73 51 0D 00 0A 00 46 00 35 00 20 00 49 51 4B 4E 1E 82 1A 4F 00 5F 73 51 0D 00 0A 00 46 00 36 00 20 00 A1 4E 7D 54 40 67 47 95 00 5F 73 51 0D 00 0A 00 46 00 38 00 20 00 EA 81 A8 52 02 5F 4C 75 00 5F 73 51 0D 00 0A 00 46 00 39 00 20 00 AA 5F AF 73 37 52 FE 56 00 5F 73 51 0D 00 0A 00 46 00 31 00 31 00 20 00 7A 66 FD 80 7A 98 FE 56 00 5F 73 51 0D 00 0A 00 46 00 31 00 32 00 20 00 7A 66 FD 80 67 52 C5 60 00 5F 73 51 0D 00 0A 00 41 00 6C 00 74 00 2B 00 B9 65 11 54 2E 95 20 00 5B 00 7A 98 FE 56 5D 00 0D 00 0A 00 41 00 6C 00 74 00 2B 00 31 00 20 00 3A 5F A0 52 24 4F B3 5B 00 5F 73 51 0D 00 0A 00 41 00 6C 00 74 00 2B 00 32 00 20 00 0F 90 0E 66 E0 65 4C 65 00 5F 73 51 0D 00 0A 00 41 00 6C 00 74 00 2B 00 33 00 20 00 22 4E 03 5F C5 88 07 59 00 5F 73 51 20 00 5B 00 89 5B 68 51 21 6A 0F 5F 32 96 62 6B CC 80 05 53 C5 88 E1 6E 5D 00 0D 00 0A 00 41 00 6C 00 74 00 2B 00 34 00 20 00 47 50 2B 7D C5 88 07 59 00 5F 73 51 20 00 5B 00 06 52 E3 89 16 62 FA 51 2E 55 5D 00 0D 00 0A 00 41 00 6C 00 74 00 2B 00 35 00 20 00 7A 98 FE 56 B9 65 0F 5F 00 5F 73 51 20 00 5B 00 50 57 07 68 7A 98 20 00 3A 5F 36 52 7A 98 20 00 54 59 D1 8D 7A 98 5D 00 00 00
 
-wanchengrenwu_gonggao://IS2154：完成已接任务
+wanchengrenwu_gonggao://完成已接任务
 db 8C 5B 10 62 F2 5D A5 63 FB 4E A1 52 00 00
 
-tingzhifuzhu_gonggao://IS2154：功能已关闭
+tingzhifuzhu_gonggao://功能已关闭
 db 9F 52 FD 80 F2 5D 73 51 ED 95 00 00
 
-huifufuzhu_gonggao://IS2154：功能已开启
+huifufuzhu_gonggao://功能已开启
 db 9F 52 FD 80 F2 5D 00 5F 2F 54 00 00
 
-kaiqiwudi_gonggao://IS2154：透明无敌开启
+kaiqiwudi_gonggao://透明无敌开启
 db 0F 90 0E 66 E0 65 4C 65 00 5F 2F 54 00 00
 
-guanbiwudi_gonggao://IS2154：透明无敌关闭
+guanbiwudi_gonggao://透明无敌关闭
 db 0F 90 0E 66 E0 65 4C 65 73 51 ED 95 00 00
 
-kaiqidiuqi_gonggao://IS2154：丢弃装备开启
+kaiqidiuqi_gonggao://丢弃装备开启
 db 22 4E 03 5F C5 88 07 59 00 5F 2F 54 00 00
 
-guanbidiuqi_gonggao://IS2154：丢弃装备关闭
+guanbidiuqi_gonggao://丢弃装备关闭
 db 22 4E 03 5F C5 88 07 59 73 51 ED 95 00 00
 
-fenjiejiazi_gonggao://IS2154：紫色装备处理方式 [ 分解 ]
+fenjiejiazi_gonggao://紫色装备处理方式 [ 分解 ]
 db 2B 7D 72 82 C5 88 07 59 04 59 06 74 B9 65 0F 5F 20 00 5B 00 20 00 06 52 E3 89 20 00 5D 00 00 00
 
-chushoujiazi_gonggao://IS2154：紫色装备处理方式 [ 出售 ]
+chushoujiazi_gonggao://紫色装备处理方式 [ 出售 ]
 db 2B 7D 72 82 C5 88 07 59 04 59 06 74 B9 65 0F 5F 20 00 5B 00 20 00 FA 51 2E 55 20 00 5D 00 00 00
 
-zuobiaoguotu_gonggao://IS2154：过图方式 [ 坐标顺 ]
+zuobiaoguotu_gonggao://过图方式 [ 坐标顺 ]
 db C7 8F FE 56 B9 65 0F 5F 20 00 5B 00 20 00 50 57 07 68 7A 98 20 00 5D 00 00 00
 
-qiangzhiguotu_gonggao://IS2154：过图方式 [ 强制顺 ]
+qiangzhiguotu_gonggao://过图方式 [ 强制顺 ]
 db C7 8F FE 56 B9 65 0F 5F 20 00 5B 00 20 00 3A 5F 36 52 7A 98 20 00 5D 00 00 00
 
-bengpaoguotu_gonggao://IS2154：过图方式 [ 奔跑顺 ]
+bengpaoguotu_gonggao://过图方式 [ 奔跑顺 ]
 db C7 8F FE 56 B9 65 0F 5F 20 00 5B 00 20 00 54 59 D1 8D 7A 98 20 00 5D 00 00 00
 
-kongzhongrubao_gonggao://IS2154：捡物方式 [ 秒捡 ]
+kongzhongrubao_gonggao://捡物方式 [ 秒捡 ]
 db 61 63 69 72 B9 65 0F 5F 20 00 5B 00 20 00 D2 79 61 63 20 00 5D 00 00 00
 
-tiqvrubao_gonggao://IS2154：捡物方式 [ 秒捡+提取 ]
+tiqvrubao_gonggao://捡物方式 [ 秒捡+提取 ]
 db 61 63 69 72 B9 65 0F 5F 20 00 5B 00 20 00 D2 79 61 63 2B 00 D0 63 D6 53 20 00 5D 00 00 00
 
-juwurubao_gonggao://IS2154：捡物方式 [ 聚物捡 ]
+juwurubao_gonggao://捡物方式 [ 聚物捡 ]
 db 61 63 69 72 B9 65 0F 5F 20 00 5B 00 20 00 5A 80 69 72 61 63 20 00 5D 00 00 00
 
-kaiqifenjie_gonggao://IS2154：自动分解开启
+kaiqifenjie_gonggao://自动分解开启
 db EA 81 A8 52 06 52 E3 89 00 5F 2F 54 00 00
 
-guanbifenjie_gonggao://IS2154：自动分解开启
+guanbifenjie_gonggao://自动分解开启
 db EA 81 A8 52 06 52 E3 89 73 51 ED 95 00 00
 
-guanbixunhuan_gonggap://IS2154：循环刷图关闭
+guanbixunhuan_gonggap://循环刷图关闭
 db AA 5F AF 73 37 52 FE 56 73 51 ED 95 00 00
 
-kaiqixunhuan_gonggap://IS2154：循环刷图开启
+kaiqixunhuan_gonggap://循环刷图开启
 db AA 5F AF 73 37 52 FE 56 00 5F 2F 54 00 00
 
-kaiqishuntu_gonggao://IS2154：自动顺图开启
+kaiqishuntu_gonggao://自动顺图开启
 db EA 81 A8 52 7A 98 FE 56 00 5F 2F 54 00 00
 
-guanbishuntu_gonggao://IS2154：自动顺图关闭
+guanbishuntu_gonggao://自动顺图关闭
 db EA 81 A8 52 7A 98 FE 56 73 51 ED 95 00 00
 
-kaiqijuqing_gonggao://IS2154：智能剧情开启
+kaiqijuqing_gonggao://智能剧情开启
 db 7A 66 FD 80 67 52 C5 60 00 5F 2F 54 00 00
 
-guanbijuqing_gonggao://IS2154：智能剧情关闭
+guanbijuqing_gonggao://智能剧情关闭
 db 7A 66 FD 80 67 52 C5 60 73 51 ED 95 00 00
 
-kaiqidegonggao://IS2154：智能自动开启
+kaiqidegonggao://智能自动开启
 db 7A 66 FD 80 EA 81 A8 52 00 5F 2F 54 00 00
 
-guanbizidong_gonggao://IS2154：智能自动关闭
+guanbizidong_gonggao://智能自动关闭
 db 7A 66 FD 80 EA 81 A8 52 73 51 ED 95 00 00
 
-zidongpilao_gonggao: //IS2154：全自动搬砖已停止！已搬完[ %d ]个角色-总数[ %d ]个角色
+zidongpilao_gonggao: //全自动搬砖已停止！已搬完[ %d ]个角色-总数[ %d ]个角色
 db 68 51 EA 81 A8 52 2C 64 16 78 F2 5D 5C 50 62 6B 01 FF F2 5D 2C 64 8C 5B 5B 00 20 00 25 00 64 00 20 00 5D 00 2A 4E D2 89 72 82 2D 00 3B 60 70 65 5B 00 20 00 25 00 64 00 20 00 5D 00 2A 4E D2 89 72 82 00 00
 
-juqingpilao_gonggao: //IS2154：全自动剧情已停止！已升级[ %d ]个角色-总数[ %d ]个角色
+juqingpilao_gonggao: //全自动剧情已停止！已升级[ %d ]个角色-总数[ %d ]个角色
 db 68 51 EA 81 A8 52 67 52 C5 60 F2 5D 5C 50 62 6B 01 FF F2 5D 47 53 A7 7E 5B 00 20 00 25 00 64 00 20 00 5D 00 2A 4E D2 89 72 82 2D 00 3B 60 70 65 5B 00 20 00 25 00 64 00 20 00 5D 00 2A 4E D2 89 72 82 00 00
 
-dengjibuzu_gonggao://IS2154：角色等级不足关闭自动已刷完：[ %d ]个角色
+dengjibuzu_gonggao://角色等级不足关闭自动已刷完：[ %d ]个角色
 db D2 89 72 82 49 7B A7 7E 0D 4E B3 8D 73 51 ED 95 EA 81 A8 52 F2 5D 37 52 8C 5B 1A FF 5B 00 20 00 25 00 64 00 20 00 5D 00 2A 4E D2 89 72 82 00 00
 
-kaiqishanghai_gonggao://IS2154：增加伤害开启
+kaiqishanghai_gonggao://增加伤害开启
 db 9E 58 A0 52 24 4F B3 5B 00 5F 2F 54 00 00
 
-guanbishanghai_gonggao://IS2154：增加伤害关闭
+guanbishanghai_gonggao://增加伤害关闭
 db 9E 58 A0 52 24 4F B3 5B 73 51 ED 95 00 00
 
-kaiqijianzhu_gonggao://IS2154：打建筑物开启
+kaiqijianzhu_gonggao://打建筑物开启
 db 53 62 FA 5E 51 7B 69 72 00 5F 2F 54 00 00
 
-guanbijianzhu_gonggao://IS2154：打建筑物关闭
+guanbijianzhu_gonggao://打建筑物关闭
 db 53 62 FA 5E 51 7B 69 72 73 51 ED 95 00 00
 
-tiqvcailiao_gonggao://IS2154：提取材料：[ %d ] 个
+tiqvcailiao_gonggao://提取材料：[ %d ] 个
 db D0 63 D6 53 50 67 99 65 1A FF 5B 00 20 00 25 00 64 00 20 00 5D 00 20 00 2A 4E 00 00
 
 linshikongbai_dizhi:
@@ -6258,7 +6270,7 @@ mov edi,edi
 push ebp
 mov ebp,esp
 
-ReadProcessMemory://保存这个API的地址
+ReadProcessMemory://保存这个API的地址           
 
 _ReadProcessMemory:
 
@@ -6275,1667 +6287,74 @@ createthread(Yun_Qi)
           <Keys>
             <Key>36</Key>
           </Keys>
+          <Description>更新群   897287829</Description>
           <ID>0</ID>
         </Hotkey>
       </Hotkeys>
-      <CheatEntries>
-        <CheatEntry>
-          <ID>1120075226</ID>
-          <Description>"109005952 62129"</Description>
-          <VariableType>4 Bytes</VariableType>
-          <Address>400430</Address>
-          <Hotkeys>
-            <Hotkey>
-              <Action>Set Value</Action>
-              <Keys>
-                <Key>112</Key>
-              </Keys>
-              <Value>62129</Value>
-              <ID>0</ID>
-            </Hotkey>
-          </Hotkeys>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>1120075225</ID>
-          <Description>"伤害AIT＋1"</Description>
-          <VariableType>4 Bytes</VariableType>
-          <Address>400434</Address>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>4</ID>
-          <Description>"搬砖地图设置"</Description>
-          <Color>008080</Color>
-          <VariableType>4 Bytes</VariableType>
-          <Address>400438</Address>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>2</ID>
-          <Description>"角色数量设置"</Description>
-          <Color>404080</Color>
-          <VariableType>4 Bytes</VariableType>
-          <Address>40042C</Address>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>5</ID>
-          <Description>"预留疲劳设置"</Description>
-          <Color>404000</Color>
-          <VariableType>4 Bytes</VariableType>
-          <Address>400440</Address>
-        </CheatEntry>
-      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>6</ID>
+      <Description>"代码这里改→"</Description>
+      <Color>FF00FF</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>400430</Address>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>36</Key>
+          </Keys>
+          <Value>109006032</Value>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>7</ID>
+      <Description>"技能代码伤害"</Description>
+      <Color>FF00FF</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>400434</Address>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Increase Value</Action>
+          <Keys>
+            <Key>107</Key>
+          </Keys>
+          <Value>5000</Value>
+          <ID>0</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Decrease Value</Action>
+          <Keys>
+            <Key>109</Key>
+          </Keys>
+          <Value>5000</Value>
+          <ID>1</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>5</ID>
+      <Description>"预留疲劳设置"</Description>
+      <Color>FF00FF</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>400440</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4</ID>
+      <Description>"搬砖地图设置"</Description>
+      <Color>FF00FF</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>400438</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"角色数量设置"</Description>
+      <Color>FF00FF</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>40042C</Address>
     </CheatEntry>
   </CheatEntries>
-  <UserdefinedSymbols>
-    <SymbolEntry>
-      <Name>Q群18779361</Name>
-      <Address>1E6C00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>FENGQI_ST</Name>
-      <Address>54B2F175</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>TIANCHENshuxing</Name>
-      <Address>5047A0E0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_PlasmaKnife_poTIANCHEN_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_PlasmaKnife_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_HULK+13A4_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_HULK+3438_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_HULK+3448_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_HULK_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_NanoKnife_poTIANCHEN_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_NanoKnife_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>LinkBigshot_longxiao-24B4_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_longxiao_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>LinkBigshot_longxiao_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+13A4+13A4_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+13A4+13A4</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+13A4+3438_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+13A4+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+13A4+3448_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+13A4+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+13A4_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+13A4</Name>
-      <Address>2B5EEC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+18D0+13A4_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+18D0+13A4</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+18D0+3438_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+18D0+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+18D0+3448_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+18D0+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+18D0_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+18D0</Name>
-      <Address>2B5EEC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+1F20+13A4_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+1F20+13A4</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+1F20+3438_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+1F20+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+1F20+3448_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+1F20+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+1F20_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+1F20</Name>
-      <Address>2B5EEC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2450+13A4_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2450+13A4</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2450+3438_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2450+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2450+3448_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2450+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2450_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2450</Name>
-      <Address>2B5EEC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2900+13A4_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2900+13A4</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2900+3438_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2900+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2900+3448_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2900+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2900_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2900</Name>
-      <Address>2B5EEC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+3918+13A4_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+3918+13A4</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+3918+3438_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+3918+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+3918+3448_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+3918+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+3918_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+3918</Name>
-      <Address>2B5EEC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2F1C+13A4_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2F1C+13A4</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2F1C+3438_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2F1C+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2F1C+3448_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2F1C+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2F1C_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+2F1C</Name>
-      <Address>2B5EEC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+3438_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+3448_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_Knife_poTIANCHEN_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_Knife_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN_poTIANCHEN</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_poTIANCHEN</Name>
-      <Address>2EC5AC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Mark_jzhq</Name>
-      <Address>52551255</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>FENGQI</Name>
-      <Address>154391A0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>按f1QQ姿势操作</Name>
-      <Address>1E6C00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>林寒叶</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>星梦娱乐QQ群：786919967</Name>
-      <Address>1E6C00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>阿海QQ：2726965386</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Q群免费钢炮：786919967</Name>
-      <Address>1E6C00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Q群786919967</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ2726965386</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>CE汇编QQ群:563615793</Name>
-      <Address>7ffffffff</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>LIUGUANG</Name>
-      <Address>153891A0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Dawn</Name>
-      <Address>54B4C06E</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Dawn_ST</Name>
-      <Address>54B4C4FE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>TIAN</Name>
-      <Address>122EC06E</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>TIAN_ST</Name>
-      <Address>122EC4FE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Soul</Name>
-      <Address>577F91A0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>pickup</Name>
-      <Address>125CA066</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Cheat Engine :LEN_CT.</Name>
-      <Address>695975713</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Cheat Engine :Mark.</Name>
-      <Address>1723050522</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Cheat Engine for China QQ群:563615793</Name>
-      <Address>7ffffffff</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>【CE汇编】：563615793</Name>
-      <Address>100000000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ1054831524</Name>
-      <Address>241CA10</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>biao</Name>
-      <Address>73C0018E</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>light_jmxr</Name>
-      <Address>00400A47</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>stsj_light</Name>
-      <Address>08040396</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>light</Name>
-      <Address>31560BC0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>mpn_light</Name>
-      <Address>400500</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Cheat Engine :Dark Byte.</Name>
-      <Address>7fffffff</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>TIANshuxing</Name>
-      <Address>5047A0E0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>冷风qq:695975713</Name>
-      <Address>10000000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>冷风qq：695975713</Name>
-      <Address>100100</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>CE汇编：563615793</Name>
-      <Address>100100</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>MRTIANshuxing</Name>
-      <Address>5047A0E0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>冷风QQ695975713</Name>
-      <Address>100100</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>CE汇编群：563615793</Name>
-      <Address>100100</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>shuntujisuan</Name>
-      <Address>0F18A5E8</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>hyB9C</Name>
-      <Address>0F18A1BF</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>ma_ge</Name>
-      <Address>0DBF0A06</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>CE汇编教学群:563615793</Name>
-      <Address>7ffffffff</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>kaiguan</Name>
-      <Address>20580151</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>ditu_kg</Name>
-      <Address>85BF004D</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>kill_count</Name>
-      <Address>0AF9038C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QU_ID</Name>
-      <Address>0AFA0524</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>RW_ID</Name>
-      <Address>0AFA0528</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>shang</Name>
-      <Address>0929003E</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>冰雨CE交流群：677206030</Name>
-      <Address>1E6C00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Mark_cs_sj</Name>
-      <Address>126E83FF</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Mark_pd_sj</Name>
-      <Address>126E8407</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_PlasmaKnife</Name>
-      <Address>35C74238</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_PlasmaKnife2</Name>
-      <Address>5A58B6D0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_MI_Machete</Name>
-      <Address>693EC05C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>00000000</Name>
-      <Address>0BF20000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>reg</Name>
-      <Address>238B0000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>cheat</Name>
-      <Address>238B0010</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_Knife</Name>
-      <Address>601D1308</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Knife</Name>
-      <Address>1C150000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Get_KnifeAttack</Name>
-      <Address>1C110004</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_PlasmaKnife_potian_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_PlasmaKnife_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_PlasmaKnife_Knife</Name>
-      <Address>534CECF4</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>KnifeAttack</Name>
-      <Address>0CD80000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_HULK+13A4_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_HULK+13A4</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_HULK+3438_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_HULK+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_HULK+3448_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_HULK+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_HULK_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_NanoKnife_potian_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_NanoKnife_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_NanoKnife_Knife</Name>
-      <Address>534CECF4</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_HULK</Name>
-      <Address>60A74C54</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_NanoKnife</Name>
-      <Address>58BE59E4</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_Terminator</Name>
-      <Address>6417F944</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>LinkBigshot_longxiao-24B4_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>LinkBigshot_longxiao-24B4</Name>
-      <Address>38407FF8</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_longxiao_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_longxiao</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>LinkBigshot_longxiao_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+13A4+13A4_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+13A4+13A4</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+13A4+3438_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+13A4+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+13A4+3448_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+13A4+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+13A4_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+13A4</Name>
-      <Address>2B5EEC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+18D0+13A4_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+18D0+13A4</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+18D0+3438_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+18D0+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+18D0+3448_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+18D0+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+18D0_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+18D0</Name>
-      <Address>2B5EEC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+1F20+13A4_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+1F20+13A4</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+1F20+3438_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+1F20+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+1F20+3448_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+1F20+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+1F20_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+1F20</Name>
-      <Address>2B5EEC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2450+13A4_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2450+13A4</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2450+3438_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2450+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2450+3448_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2450+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2450_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2450</Name>
-      <Address>2B5EEC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2900+13A4_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2900+13A4</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2900+3438_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2900+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2900+3448_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2900+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2900_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2900</Name>
-      <Address>2B5EEC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+3918+13A4_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+3918+13A4</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+3918+3438_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+3918+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+3918+3448_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+3918+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+3918_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+3918</Name>
-      <Address>2B5EEC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2F1C+13A4_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2F1C+13A4</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2F1C+3438_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2F1C+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2F1C+3448_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2F1C+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2F1C_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+2F1C</Name>
-      <Address>2B5EEC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+3438_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+3438</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+3448_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian+3448</Name>
-      <Address>2B4C7C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_Knife_potian_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_Knife_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_Knife_Knife</Name>
-      <Address>534CECF4</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian_potian</Name>
-      <Address>2EEE5C4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot</Name>
-      <Address>61B619B0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>LinkBigshot_longxiao</Name>
-      <Address>26F98FF8</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_SPANNER</Name>
-      <Address>5F3662CC</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_ScytheCrabClaws</Name>
-      <Address>5D4EA704</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>bigshot_potian</Name>
-      <Address>2EC5AC4C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>我</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Mage_mpn2913_sj</Name>
-      <Address>12F691C0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>control</Name>
-      <Address>5BF4B488</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>typedata</Name>
-      <Address>5047A706</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Reduction_of_B9C</Name>
-      <Address>5047A1D3</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Fengqishuxing</Name>
-      <Address>5047A0E0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>mark121</Name>
-      <Address>08F5028F</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ321704933</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>按f1就有姿势，瞎子就不用玩了</Name>
-      <Address>1E6C00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name/>
-      <Address>1E6C00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Q群810321813</Name>
-      <Address>1E6C00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ979530645</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>我爱锦心狗群主</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>氤氲17625367957</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Q群不良人免费CE群：免费辅助群：159802620</Name>
-      <Address>1E6C00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ1</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Q群奶狗免费CE群：免费辅助群：159602922</Name>
-      <Address>1E6C00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ732513127</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Q群159602922</Name>
-      <Address>1E6C00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ1149669791</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ2568588744</Name>
-      <Address>6E2100AA</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>newww1</Name>
-      <Address>70910000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ275994769</Name>
-      <Address>60EA00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ1341407214</Name>
-      <Address>654B00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ1903007676</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Createadoll</Name>
-      <Address>7536002F</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>memcpyStub</Name>
-      <Address>75360282</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>memcryint</Name>
-      <Address>75360263</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>prompt</Name>
-      <Address>753602CA</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>something</Name>
-      <Address>1A770491</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Reduction_of_hook</Name>
-      <Address>1A770433</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>_2DC</Name>
-      <Address>1A770353</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>gonggao</Name>
-      <Address>1A77039B</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Open_function</Name>
-      <Address>1A77000D</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>facilitate</Name>
-      <Address>1A7701EC</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>xiugaishuxing</Name>
-      <Address>1A7700D6</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>daidai</Name>
-      <Address>07B60000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Ssell</Name>
-      <Address>70340144</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>zujintu</Name>
-      <Address>703401AF</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>huichen</Name>
-      <Address>70340137</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Q群312559124</Name>
-      <Address>1E6C00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ743417241</Name>
-      <Address>654B00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>hai</Name>
-      <Address>02250671</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>xt</Name>
-      <Address>0B7C00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ995704206</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>guai_wu_dai_ma</Name>
-      <Address>02DF146C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>guai_wu_deng_ji</Name>
-      <Address>02DF146D</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>lw_test</Name>
-      <Address>069E0000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>newwww</Name>
-      <Address>069E0400</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>lw_aaa</Name>
-      <Address>069E0800</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>lw_abcd</Name>
-      <Address>069E0C00</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>gonGaoAddr</Name>
-      <Address>08580000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>gongao</Name>
-      <Address>08580010</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ1787670887</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>C0begiA</Name>
-      <Address>753600C6</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>gjntcode</Name>
-      <Address>753600C5</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>QQ993228585</Name>
-      <Address>63CC00AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>HH</Name>
-      <Address>515A1C8</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>K1</Name>
-      <Address>060B2694</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>K2</Name>
-      <Address>055CD289</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>K3</Name>
-      <Address>058EB54B</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>k4</Name>
-      <Address>0609435E</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>kongbai</Name>
-      <Address>00400A00</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>mage_jmxr</Name>
-      <Address>00400A47</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>zhuangtai</Name>
-      <Address>0504D7CC</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>na</Name>
-      <Address>08680053</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>ChEh_BEnd</Name>
-      <Address>75CA027A</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>nw</Name>
-      <Address>1C1B0000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>suntuS</Name>
-      <Address>7FFD09BA</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>suntuX</Name>
-      <Address>7FFD09D7</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>suntuZ</Name>
-      <Address>7FFD09F4</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>suntuY</Name>
-      <Address>7FFD0A11</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Pack_up_the_knapsack</Name>
-      <Address>7FFD0D44</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>zbst_canshu</Name>
-      <Address>1AF4013C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>21tq_pd</Name>
-      <Address>1259AB76</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>pd_1</Name>
-      <Address>0FAB063D</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Reduction_of_B7C</Name>
-      <Address>6BDC045E</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>zhixing</Name>
-      <Address>07E60000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>decrypt</Name>
-      <Address>07E60800</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>shunZZ</Name>
-      <Address>07E64000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>sell1</Name>
-      <Address>0AD30100</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>decrypt1</Name>
-      <Address>0AD30200</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>new2</Name>
-      <Address>0AD30400</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>shunZ</Name>
-      <Address>0AB70000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>zhixingZ</Name>
-      <Address>0AB70100</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>decryptZ</Name>
-      <Address>0AB70200</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>shunY</Name>
-      <Address>0AB70300</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>zhixingY</Name>
-      <Address>0AB70400</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>decryptY</Name>
-      <Address>0AB70500</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>shunS</Name>
-      <Address>0AB70600</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>zhixingS</Name>
-      <Address>0AB70700</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>decryptS</Name>
-      <Address>0AB70800</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>shunX</Name>
-      <Address>0AB70900</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>zhixingX</Name>
-      <Address>0AB70A00</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>decryptX</Name>
-      <Address>0AB70B00</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>new1</Name>
-      <Address>0AE70000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>newss</Name>
-      <Address>0C6F0000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>gg_pd</Name>
-      <Address>0319B449</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>zbstcall_mage</Name>
-      <Address>0A5400AE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>kexie_kb</Name>
-      <Address>00722000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>stsj_mage</Name>
-      <Address>08040396</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Coordinatethemap_2</Name>
-      <Address>71FA010E</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Coordinatethemap_3</Name>
-      <Address>10BE010E</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>panduan</Name>
-      <Address>00400D26</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>qnqy_pd</Name>
-      <Address>12B9B0A3</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>type_1</Name>
-      <Address>4B4600C3</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>by_xy</Name>
-      <Address>4CAF0041</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>new</Name>
-      <Address>00400700</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Coordinatethemap_0</Name>
-      <Address>6F24010E</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>Coordinatethemap_1</Name>
-      <Address>6F25010E</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>st_pd_zhi</Name>
-      <Address>09EE02CC</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>renoukg</Name>
-      <Address>09270194</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>st_pd</Name>
-      <Address>087F01EE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>mpn_pd</Name>
-      <Address>0871006B</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>menghuan_</Name>
-      <Address>0421B050</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>xiyang</Name>
-      <Address>400600</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>stpd</Name>
-      <Address>639E02C4</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>new_</Name>
-      <Address>036552B6</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>countEnemy</Name>
-      <Address>1E920800</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>skillcodeadd</Name>
-      <Address>1E920000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>skillcode</Name>
-      <Address>0AF70000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>oridamege</Name>
-      <Address>246E0000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>damege</Name>
-      <Address>41D50800</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>fuckallatk</Name>
-      <Address>241B0800</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>fuckall1</Name>
-      <Address>06B11800</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>fuckall4</Name>
-      <Address>37421000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>haveEnemy</Name>
-      <Address>0AF10800</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>handleBoss</Name>
-      <Address>077A2000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>fuckallman</Name>
-      <Address>23791000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>fuckall</Name>
-      <Address>0E6D0000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>enemy</Name>
-      <Address>07FA1000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>run</Name>
-      <Address>3D1E0000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>fuckboss</Name>
-      <Address>077A2000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>miao398</Name>
-      <Address>3D1E1000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>get33</Name>
-      <Address>34980000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>fuckallboss</Name>
-      <Address>41EB2000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>newmem</Name>
-      <Address>09810000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>newmem2</Name>
-      <Address>47DA0800</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>newmem21</Name>
-      <Address>36FD1000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>nonono</Name>
-      <Address>05070800</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>fuckallb</Name>
-      <Address>0A010800</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>fuckallme</Name>
-      <Address>556E1000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>mpn</Name>
-      <Address>07020000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>mage</Name>
-      <Address>31560BC0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>mark</Name>
-      <Address>07EE0000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>addr</Name>
-      <Address>379FA870</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>base_mag</Name>
-      <Address>013CF4D0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>code_flag</Name>
-      <Address>0D7B1008</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>level_flag</Name>
-      <Address>0D7B100C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>INJECT</Name>
-      <Address>01BF0C90</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>base_phy</Name>
-      <Address>013E66D0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>data</Name>
-      <Address>0BBE0039</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>ecx_val</Name>
-      <Address>0A1F0404</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>val</Name>
-      <Address>0A840012</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>ConfigName</Name>
-      <Address>C714410</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>vehdebug-i386.dll!ConfigName</Name>
-      <Address>C714410</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>vehdebug-i386.dll.ConfigName</Name>
-      <Address>C714410</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>InitializeVEH</Name>
-      <Address>C6ECCD0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>vehdebug-i386.dll!InitializeVEH</Name>
-      <Address>C6ECCD0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>vehdebug-i386.dll.InitializeVEH</Name>
-      <Address>C6ECCD0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>UnloadVEH</Name>
-      <Address>C6ED330</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>vehdebug-i386.dll!UnloadVEH</Name>
-      <Address>C6ED330</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>vehdebug-i386.dll.UnloadVEH</Name>
-      <Address>C6ED330</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>luainit</Name>
-      <Address>1B7D0000</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>LuaFunctionCall</Name>
-      <Address>1B7D0080</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>luaserverinitialized</Name>
-      <Address>1B7D0100</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>luaservername</Name>
-      <Address>1B7D0110</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>mpn_Mage</Name>
-      <Address>400500</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>PINGFENG</Name>
-      <Address>7F4E0272</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>3sCall</Name>
-      <Address>7F4E00A5</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>X__X_1</Name>
-      <Address>7F4E003D</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>X__X_2</Name>
-      <Address>7F4E00C5</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>X__X_3</Name>
-      <Address>7F4E0185</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>X__X_4</Name>
-      <Address>7F4E0230</Address>
-    </SymbolEntry>
-  </UserdefinedSymbols>
-  <DisassemblerComments>
-    <DisassemblerComment>
-      <Address>00FB1330</Address>
-      <Comment>018CF162
-</Comment>
-    </DisassemblerComment>
-  </DisassemblerComments>
+  <UserdefinedSymbols/>
 </CheatTable>

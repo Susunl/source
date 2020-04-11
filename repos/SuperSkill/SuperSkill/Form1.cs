@@ -16,8 +16,23 @@ namespace SuperSkill
     {
         public Form1()                                                                          //固定不用修改
         {                                                                                       //固定不用修改
-            InitializeComponent();                                                              //固定不用修改
-        }                                                                                       //固定不用修改
+            //AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(CurrentDomain_AssemblyResolve);
+            InitializeComponent();                                                          //固定不用修改
+        }
+        //System.Reflection.Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
+        //{
+        //    string dllName = args.Name.Contains(",") ? args.Name.Substring(0, args.Name.IndexOf(',')) : args.Name.Replace(".dll", "");
+        //    dllName = dllName.Replace(".", "_");
+        //    if (dllName.EndsWith("_resources"))
+        //    {
+        //        return null;
+        //    }
+
+        //    System.Resources.ResourceManager rm = new System.Resources.ResourceManager(GetType().Namespace + ".Properties.Resources", System.Reflection.Assembly.GetExecutingAssembly());
+        //    byte[] bytes = (byte[])rm.GetObject(dllName);
+        //    return System.Reflection.Assembly.Load(bytes);
+        //}
+        //固定不用修改
         /// 时钟时间
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -27,11 +42,16 @@ namespace SuperSkill
             {
                 功能.一键评分();
             }
+            if (全局变量.全局吸怪 == true)
+            {
+                功能.全局吸怪();
+            }
         }
         /// 窗口1创建完毕过后干的事情
         private void Form1_Load(object sender, EventArgs e)
         {
-               SysTimeTimer.Start();       ///启动时钟时间
+            SysTimeTimer.Start();       ///启动时钟时间
+            //comboBox1.Text = "远程卖修";
             //全局变量.进程ID = ProCtr.GetProcessID("DNF");
             //string message = string.Format("进程id是：{0}", 全局变量.进程ID);
             //MessageBox.Show(message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -41,6 +61,10 @@ namespace SuperSkill
         {
             //string i;
             //int j;
+            //var strToBytes1 = System.Text.Encoding.UTF8.GetBytes(str1);
+            //if (验证.取机器码() != "2EF598542E177FF2C77126D579AAA129")
+            //    Environment.Exit(0);
+
             全局变量.进程ID = ProCtr.GetProcessID("DNF");
             if (全局变量.进程ID == -1)
             {
@@ -276,7 +300,7 @@ namespace SuperSkill
     private void 鸣谢_Click(object sender, EventArgs e)
         {
 
-            功能.超级三速();
+            //功能.超级三速();
             //功能call.释放call((int)基址.人物基址, 800, 255, 0, 54106, 999999);
             //MessageBox.Show("释放成功", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -398,7 +422,8 @@ namespace SuperSkill
             if (checkBox1.Checked == true)
             {
                 //功能.技能无CD();
-                功能.超级三速();
+                int.TryParse(textBox1.Text, out int c);
+                功能.超级三速(c);
                 全局变量.评分开关 = true;
             }
             else
@@ -442,6 +467,7 @@ namespace SuperSkill
                             修改属性();        //此处填写快捷键响应代码         
                             break;
                         case 101:    //按下的是Ctrl+B
+                            if(checkBox4.Enabled == true)
                             功能.全屏吸物();                 //此处填写快捷键响应代码
                             break;
                         case 102:    //按下的是Alt+D
@@ -458,6 +484,8 @@ namespace SuperSkill
                             call.物品CALL(2600027);
                             //功能.miss设计图附伤();
                             //call.技能CALL(基址.人物基址,800,255,0,70059,0,200);
+                            //int.TryParse(textBox1.Text, out int a);
+                            //功能.超级三速(a);
                             break;
                     }
                     break;
@@ -471,7 +499,7 @@ namespace SuperSkill
         private unsafe void 测试_Click(object sender, EventArgs e)
         {
             //配置.打开配置();
-            MessageBox.Show(this.ListView_SkillProperties_Edit.Items[0].SubItems[0].Text);
+            //MessageBox.Show(this.ListView_SkillProperties_Edit.Items[0].SubItems[0].Text);
 
 
 
@@ -579,6 +607,8 @@ namespace SuperSkill
 
         private void textBox1_Click(object sender, EventArgs e)
         {
+            int.TryParse(textBox1.Text, out int c);
+            if(c == 0)
             textBox1.Text = "";
         }
 
@@ -656,7 +686,6 @@ namespace SuperSkill
                     ini.IniWriteValue(i1, "原值", ListView_SkillProperties_Edit.Items[i].SubItems[3].Text);
 
                 }
-                功能.公告("文件保存成功");
             }
             else
             {
@@ -667,6 +696,70 @@ namespace SuperSkill
         private void 保存配置_Click(object sender, EventArgs e)
         {
             保存配置文件();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == -1)
+            {
+                功能.公告("Combobox没有选中任何项。");
+            }
+
+            if (string.IsNullOrEmpty(comboBox1.Text))
+            {
+                功能.公告("Combobox输入的文本为空。");
+            }
+            
+            if (comboBox1.SelectedItem != null)
+            {
+                if (comboBox1.SelectedItem.ToString() == "远程卖物")
+                    ReadWriteCtr.WriteMemInt(基址.卖修基址, 5);
+                if (comboBox1.SelectedItem.ToString() == "远程修理")
+                    ReadWriteCtr.WriteMemInt(基址.卖修基址, 6);
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //只允许输入数字
+            if (e.KeyChar == 0x20)
+                e.KeyChar = (char)0;  //禁止空格键
+            if ((e.KeyChar == 0x2D) && (((TextBox)sender).Text.Length == 0))
+                return;   //处理负数
+            if (e.KeyChar > 0x20)
+            {
+                try
+                {
+                    double.Parse(((TextBox)sender).Text + e.KeyChar.ToString());
+                }
+                catch
+                {
+                    e.KeyChar = (char)0;   //处理非法字符
+                }
+            }
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            int.TryParse(textBox2.Text, out int c);
+            if (c == 0)
+                textBox2.Text = "";
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox6.Checked == true)
+                功能.独家弱怪();
+            else
+                功能.独家弱怪DisAble();
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox7.Checked == true)
+                全局变量.全局吸怪 = true;
+            else
+                全局变量.全局吸怪 = false;
         }
     }
 }

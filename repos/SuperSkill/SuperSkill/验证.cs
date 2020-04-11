@@ -1,82 +1,91 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System.Management;
+using System.Security.Cryptography;
 
-#region 调用例子
-//CheckQQQun QQ = new CheckQQQun("306473605");
-//QQ.CheckResult += new CheckQQQun.CheckQun(QQ_CheckResult);
-//void QQ_CheckResult(bool Result)
-//{
-//    if (Result)
-//    {
-//        //已授权
-//    }
-//    else
-//    {
-
-//        //未授权
-//    }
-//}
-#endregion
-/// <summary>
-/// QQ群验证
-/// </summary>
-public partial class CheckQQQun
+namespace SuperSkill
 {
-
-    // 创建一个委托，返回类型为void，两个参数
-    public delegate void CheckQun(bool Result);
-    // 将创建的委托和特定事件关联,在这里特定的事件为KeyDown
-    public event CheckQun CheckResult;
-    WebBrowser webBrowser1 = new WebBrowser();
-    public bool GetQunList;
-    string CurrQun = string.Empty;
-    public CheckQQQun(string Number)
+    public class 验证
     {
-        CurrQun = Number;
-        webBrowser1.Navigate("http://xui.ptlogin2.qq.com/div/qlogin_div.html?flag2=3&u1=http%253A%252F%252Fqun.qzone.qq.com%252Fgroup");
-        webBrowser1.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(webBrowser1_DocumentCompleted);
-    }
-
-    void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-    {
-        var loginbtn = webBrowser1.Document.GetElementById("loginbtn");
-        if (loginbtn != null)
+        public static string 取机器码()
         {
-            webBrowser1.Document.GetElementById("loginbtn").InvokeMember("Click");
+            return UserMd5(GetCpuID()+ GetHardDiskID());
         }
-        else
-        {
-            if (webBrowser1.Url.ToString().IndexOf("http://qun.qzone.qq.com/cgi-bin/get_group_list") == -1)
-            {
-                HtmlElement qqscript = webBrowser1.Document.CreateElement("script");
-                qqscript.SetAttribute("type", "text/javascript");
-                qqscript.SetAttribute("text", "function GetQQ(){return g_iUin;}");
-                webBrowser1.Document.Body.AppendChild(qqscript);
 
-                HtmlElement script = webBrowser1.Document.CreateElement("script");
-                script.SetAttribute("type", "text/javascript");
-                script.SetAttribute("text", "function GetToken(){return QWT.getACSRFToken()}");
-                webBrowser1.Document.Body.AppendChild(script);
-                webBrowser1.Navigate("http://qun.qzone.qq.com/cgi-bin/get_group_list?uin=" + webBrowser1.Document.InvokeScript("GetQQ").ToString() + "&g_tk=" + Convert.ToInt32(webBrowser1.Document.InvokeScript("GetToken").ToString()));
-            }
-            else
+        public static string GetCpuID()
+        {
+            try
             {
-                if (webBrowser1.DocumentText.IndexOf(CurrQun) != -1)
+                ManagementClass mc = new ManagementClass("Win32_Processor");
+                ManagementObjectCollection moc = mc.GetInstances();
+                String strCpuID = null;
+                foreach (ManagementObject mo in moc)
                 {
-                    if (CheckResult != null)
-                    {
-                        CheckResult(true);
-                    }
+                    strCpuID = mo.Properties["ProcessorId"].Value.ToString();
+                    break;
                 }
-                else
-                {
-                    if (CheckResult != null)
-                    {
-                        CheckResult(false);
-                    }
-                }
+                return strCpuID;
+            }
+            catch
+            {
+                return "";
             }
         }
+        public static string GetHardDiskID()
+        {
+            try
+            {
+                ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_PhysicalMedia");
+                String strHardDiskID = null;
+                foreach (ManagementObject mo in searcher.Get())
+                {
+                    strHardDiskID = mo["SerialNumber"].ToString().Trim();
+                    break;
+                }
+                return strHardDiskID;
+            }
+            catch
+            {
+                return "";
+            }
+        }
+        /// <summary>
+                /// MD5　32位加密
+                /// </summary>
+                /// <param name="str"></param>
+                /// <returns></returns>
+        public static string UserMd5(string str)
+        {
+            string cl = str;
+            string pwd = "";
+            MD5 md5 = MD5.Create();//实例化一个md5对像
+            // 加密后是一个字节类型的数组，这里要注意编码UTF8/Unicode等的选择　
+            byte[] s = md5.ComputeHash(Encoding.UTF8.GetBytes(cl));
+            // 通过使用循环，将字节类型的数组转换为字符串，此字符串是常规字符格式化所得
+            for (int i = 0; i < s.Length; i++)
+            {
+                // 将得到的字符串使用十六进制类型格式。格式后的字符是小写的字母，如果使用大写（X）则格式后的字符是大写字符 
+
+                pwd = pwd + s[i].ToString("X");
+
+            }
+            return pwd;
+        }
+
     }
+
+
+
+
+
+
+
 }
