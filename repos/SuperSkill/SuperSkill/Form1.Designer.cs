@@ -71,6 +71,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,6 +98,7 @@
             // 
             // SysTimeTimer
             // 
+            this.SysTimeTimer.Interval = 500;
             this.SysTimeTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // SysTime
@@ -310,7 +313,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(542, 84);
+            this.checkBox4.Location = new System.Drawing.Point(542, 79);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(66, 16);
             this.checkBox4.TabIndex = 23;
@@ -321,7 +324,7 @@
             // 独家变怪
             // 
             this.独家变怪.AutoSize = true;
-            this.独家变怪.Location = new System.Drawing.Point(542, 106);
+            this.独家变怪.Location = new System.Drawing.Point(633, 62);
             this.独家变怪.Name = "独家变怪";
             this.独家变怪.Size = new System.Drawing.Size(90, 16);
             this.独家变怪.TabIndex = 25;
@@ -332,7 +335,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(542, 172);
+            this.checkBox2.Location = new System.Drawing.Point(542, 123);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(72, 16);
             this.checkBox2.TabIndex = 26;
@@ -343,7 +346,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(542, 150);
+            this.checkBox3.Location = new System.Drawing.Point(542, 101);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(72, 16);
             this.checkBox3.TabIndex = 27;
@@ -353,7 +356,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(542, 194);
+            this.textBox1.Location = new System.Drawing.Point(542, 145);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(75, 21);
             this.textBox1.TabIndex = 28;
@@ -365,7 +368,7 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(542, 221);
+            this.checkBox5.Location = new System.Drawing.Point(542, 172);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(72, 16);
             this.checkBox5.TabIndex = 29;
@@ -400,7 +403,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "远程卖物",
             "远程修理"});
-            this.comboBox1.Location = new System.Drawing.Point(542, 243);
+            this.comboBox1.Location = new System.Drawing.Point(542, 194);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(77, 20);
             this.comboBox1.TabIndex = 32;
@@ -408,7 +411,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(542, 57);
+            this.textBox2.Location = new System.Drawing.Point(633, 35);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(85, 21);
             this.textBox2.TabIndex = 33;
@@ -424,7 +427,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 25);
             this.label5.TabIndex = 35;
-            this.label5.Text = "以下为赞助8.88功能";
+            this.label5.Text = "以下为赞助12功能";
             // 
             // label4
             // 
@@ -438,7 +441,7 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(542, 128);
+            this.checkBox6.Location = new System.Drawing.Point(633, 84);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(90, 16);
             this.checkBox6.TabIndex = 36;
@@ -449,7 +452,7 @@
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(628, 35);
+            this.checkBox7.Location = new System.Drawing.Point(542, 57);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(72, 16);
             this.checkBox7.TabIndex = 37;
@@ -457,11 +460,34 @@
             this.checkBox7.UseVisualStyleBackColor = true;
             this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(542, 220);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 38;
+            this.button3.Text = "真.团本功能";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // button4
+            // 
+            this.button4.Enabled = false;
+            this.button4.Location = new System.Drawing.Point(633, 106);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 39;
+            this.button4.Text = "测试";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 410);
+            this.ClientSize = new System.Drawing.Size(728, 410);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.checkBox7);
             this.Controls.Add(this.checkBox6);
             this.Controls.Add(this.label5);
@@ -548,6 +574,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 

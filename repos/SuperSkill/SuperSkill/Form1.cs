@@ -9,6 +9,7 @@ using KoalaStudio.BookshopManager;
 using System.Runtime.InteropServices;
 using SslnEngine;
 using System.IO;
+using System.Collections.Generic;
 
 namespace SuperSkill
 {
@@ -46,6 +47,8 @@ namespace SuperSkill
             {
                 功能.全局吸怪();
             }
+            if(功能.判断_游戏状态() == 3 && 全局变量.源泉开关 == true)
+                自动变怪();
         }
         /// 窗口1创建完毕过后干的事情
         private void Form1_Load(object sender, EventArgs e)
@@ -56,15 +59,52 @@ namespace SuperSkill
             //string message = string.Format("进程id是：{0}", 全局变量.进程ID);
             //MessageBox.Show(message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
         //初始化被单击
         private void button1_Click(object sender, EventArgs e)                                  //初始化被单击
         {
-            //string i;
-            //int j;
-            //var strToBytes1 = System.Text.Encoding.UTF8.GetBytes(str1);
-            //if (验证.取机器码() != "2EF598542E177FF2C77126D579AAA129")
-            //    Environment.Exit(0);
-
+            List<string> list = new List<string>();
+            list.Add("601BEC5CCAE628A08BDBD843C6AA773");
+            list.Add("234B2EADC190A1586BDDA11C4C2ADDC9");
+            list.Add("D3E811E8A750E493C9F5596DC6ED7B27");
+            list.Add("F050D6BAD11D67B13E5F47DD31BA1B90");
+            list.Add("3F9B849C4839AE7DDAD9E981C69958AD");
+            list.Add("A425F17D578DDB8CE5D267B0C6D4D4");
+            list.Add("6B40392783FF1D6A9EC18A7F57D8191");
+            list.Add("7335F7D5AD1ADB9FA550F35653282C30");
+            list.Add("EC18BD233ECA7CE46A877B1212F0BB55");
+            list.Add("7054CAF0A74E350624998189E32D4");
+            list.Add("CA8C568338BE50CD2F6783CCAE4D936C");
+            //list.Add("D43398CBD240682734B0619601EF3A");
+            //list.Add("52B71C9EBE463F510E333D21E7B3F55");
+            //list.Add("BE7AC1F8CF1DB76229D738151DAD13");
+            //list.Add("D342A48571F961FA9CCA4D25EB6D358");
+            //list.Add("D5F6D3BF56A617E9D2388C4DF6FB9FB4");
+            //list.Add("FB6F991DE2250F66B65EAB54802E3");
+            //list.Add("CA8C568338BE50CD2F6783CCAE4D936C");
+            //list.Add("F050D6BAD11D67B13E5F47DD31BA1B90");
+            //list.Add("FA4988CAC3513B87375F6FEE5A5B3EC8");
+            //list.Add("5181228AA01E811212E7A2EAE1CF3FBE");
+            //list.Add("7335F7D5AD1ADB9FA550F35653282C30");
+            //list.Add("D3E811E8A750E493C9F5596DC6ED7B27");
+            //list.Add("6E9226ED16B0BEB90B1BC3DA28C2AB");
+            //list.Add("B3A8F278D36EEC9CF1138548F597564");
+            //list.Add("C8E973367447D1333B78425C321D59A"); 
+            //list.Add("787546B18FD5EAFB84E86BCCF635BF");
+            //list.Add("1ABAFF9A571434535C5857312C8562B");
+            //list.Add("4EF79C26467325DA625EC22B86E6267");
+            //list.Add("A425F17D578DDB8CE5D267B0C6D4D4");
+            //list.Add("2D285285D830AA6C21BD1524C59496C9");
+            //list.Add("A0ED16806EBEDE50D3CBAC54E7D6A7D");
+            //list.Add("18BE1865F8E92664DB21FF97D3CBE3D9");
+            //list.Add("6B40392783FF1D6A9EC18A7F57D8191");
+            list.Add("B7E7FB5172A5366AC9ACB3E0FBF9455");// 刘小勇
+            //list.Add("3F9B849C4839AE7DDAD9E981C69958AD");
+            //list.Add("EC18BD233ECA7CE46A877B1212F0BB55");
+            //list.Add("7054CAF0A74E350624998189E32D4");
+            string str1 = 验证.取机器码();
+            if (list.IndexOf(str1) < 0)
+                Environment.Exit(0);
             全局变量.进程ID = ProCtr.GetProcessID("DNF");
             if (全局变量.进程ID == -1)
             {
@@ -82,7 +122,7 @@ namespace SuperSkill
             ListView_Skill.Items.Clear();
             while (i <= 0x6000)
             {
-                技能地址 = (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID,(uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID,基址.人物基址)+i);
+                技能地址 = (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID,(uint)ReadWriteCtr.ReadMemInt(基址.人物基址)+i);
                 技能等级 = (int)EncDec.Decrypt(全局变量.进程ID,技能地址+基址.技能等级,基址.解密基址);
                 if (技能等级 >= 0 && 技能等级 < 100)
                 {
@@ -108,7 +148,7 @@ namespace SuperSkill
             string 总技能公式 = "",技能数据2 ="";
             //int 技能等级代码;
             全局变量.技能名 = this.ListView_Skill.SelectedItems[0].SubItems[1].Text;
-            技能地址1 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, 基址.人物基址) + Convert.ToUInt32(this.ListView_Skill.SelectedItems[0].Text));
+            技能地址1 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(基址.人物基址) + Convert.ToUInt32(this.ListView_Skill.SelectedItems[0].Text));
             技能等级 = (int)EncDec.Decrypt(全局变量.进程ID, (uint)技能地址1 + 基址.技能等级, 基址.解密基址);
             this.ListView_SkillProperties.Items.Clear(); //清空ListView_SkillProperties内容
             技能CD = (int)EncDec.Decrypt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.技能冷却7) + 8*(uint)(技能等级-1), 基址.解密基址) / 1000;
@@ -346,7 +386,7 @@ namespace SuperSkill
                     index2 = 0;
                     index2 = this.ListView_SkillProperties_Edit.Items[i].SubItems[0].Text.IndexOf("+", index + 1);   //公式第一个+号位置
                     t_pet = Convert.ToUInt32(this.ListView_SkillProperties_Edit.Items[i].SubItems[0].Text.Substring(index + 1, index2 - index - 1));  //技能偏移
-                    t_skilladd = (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, 基址.人物基址) + t_pet);   //技能地址
+                    t_skilladd = (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(基址.人物基址) + t_pet);   //技能地址
                     t_level = (int)EncDec.Decrypt(全局变量.进程ID, (uint)t_skilladd + 基址.技能等级, 基址.解密基址);   //技能等级
                     Thread.Sleep(30);   //延迟30毫秒
                     t_add = (uint)ReadWriteCtr.ReadMemCode(全局变量.进程ID, Convert.ToString(基址.人物基址) + "+" + this.ListView_SkillProperties_Edit.Items[i].SubItems[0].Text);
@@ -422,7 +462,7 @@ namespace SuperSkill
             if (checkBox1.Checked == true)
             {
                 //功能.技能无CD();
-                int.TryParse(textBox1.Text, out int c);
+                int.TryParse(textBox2.Text, out int c);
                 功能.超级三速(c);
                 全局变量.评分开关 = true;
             }
@@ -482,6 +522,8 @@ namespace SuperSkill
                             //MessageBox.Show(Convert.ToString(c), "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             call.物品CALL(2600656);
                             call.物品CALL(2600027);
+                            call.物品CALL(1111);
+                            call.物品CALL(1110);
                             //功能.miss设计图附伤();
                             //call.技能CALL(基址.人物基址,800,255,0,70059,0,200);
                             //int.TryParse(textBox1.Text, out int a);
@@ -566,6 +608,13 @@ namespace SuperSkill
                 功能.独家变怪();
             else
                 功能.独家变怪DisAble();
+        }
+        public void 自动变怪()
+        {
+            if (ReadWriteCtr.ReadMemInt(基址.副本编号) == 100000177)
+                独家变怪.CheckState = CheckState.Unchecked;
+            else
+                独家变怪.CheckState = CheckState.Checked;
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -760,6 +809,20 @@ namespace SuperSkill
                 全局变量.全局吸怪 = true;
             else
                 全局变量.全局吸怪 = false;
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            功能.内存药剂();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //call.释放call(800, 255, 0, 54106, 0);
+            //全局变量.源泉开关 = true;
+            //call.源泉call(62129);
+            //自动变怪();
+            全局变量.源泉开关 = true;
         }
     }
 }

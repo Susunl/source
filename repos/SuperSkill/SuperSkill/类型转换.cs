@@ -13,6 +13,11 @@ namespace SuperSkill
             byte[] shi = BitConverter.GetBytes(整数);
             return shi;
         }
+        public static byte[] 到字节集(int 整数)
+        {
+            byte[] shi = BitConverter.GetBytes(整数);
+            return shi;
+        }
         public static byte[] 数组加法(byte[] array1, byte[] array2 , byte[] array3 , byte[] array4 , byte[] array5 )
         {
             byte[] arrayC;

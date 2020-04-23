@@ -1,0 +1,103 @@
+加群 :835290838 群名称: SuperSkills 进群过后用群文件的获取机器码软件 记得管理员运行
+然后把机器码发给群主 即可使用
+
+
+GameRpcs.dll+198210 - 55                    - push ebp
+GameRpcs.dll+199E70 - 55                    - push ebp
+GameRpcs.dll+199590
+GameRpcs.dll+197930
+/****************************************************/
+GameRpcs.dll+198286 - 51                    - push ecx
+GameRpcs.dll+198287 - 8B 55 F4              - mov edx,[ebp-0C]
+GameRpcs.dll+19828A - 52                    - push edx
+GameRpcs.dll+19828B - E8 5089FFFF           - call GameRpcs.dll+190BE0
+GameRpcs.dll+198290 - 83 C4 08              - add esp,08 { 8 }
+GameRpcs.dll+198293 - 8B 45 F8              - mov eax,[ebp-08]
+GameRpcs.dll+198296 - 3B 45 F4              - cmp eax,[ebp-0C]
+GameRpcs.dll+198299 - 75 18                 - jne GameRpcs.dll+1982B3
+GameRpcs.dll+19829B - 0FB6 0D 9341E115      - movzx ecx,byte ptr [GameRpcs.dll+3B4193] { [0] }
+GameRpcs.dll+1982A2 - 51                    - push ecx
+GameRpcs.dll+1982A3 - 8B 55 F0              - mov edx,[ebp-10]
+GameRpcs.dll+1982A6 - 52                    - push edx
+GameRpcs.dll+1982A7 - 8B 45 FC              - mov eax,[ebp-04]
+GameRpcs.dll+1982AA - 50                    - push eax
+GameRpcs.dll+1982AB - E8 2088FFFF           - call GameRpcs.dll+190AD0
+GameRpcs.dll+1982B0 - 83 C4 0C              - add esp,0C { 12 }
+GameRpcs.dll+1982B3 - 8B E5                 - mov esp,ebp
+GameRpcs.dll+1982B5 - 5D                    - pop ebp
+GameRpcs.dll+1982B6 - C3                    - ret 
+
+GameRpcs.dll+198210 - 55                    - push ebp
+51 ?? ?? ?? 52 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 51 ?? ?? ?? 52 ?? ?? ?? 50 ?? ?? ?? ?? ?? ?? ?? ?? 8B E5 5D C3
+// 这个直接取头部push ebp
+/****************************************************/
+GameRpcs.dll+199E70 - 55                    - push ebp
+GameRpcs.dll+199E71 - 8B EC                 - mov ebp,esp
+GameRpcs.dll+199E73 - 83 EC 08              - sub esp,08 { 8 }
+GameRpcs.dll+199E76 - 8B 45 18              - mov eax,[ebp+18]
+GameRpcs.dll+199E79 - 89 45 FC              - mov [ebp-04],eax
+GameRpcs.dll+199E7C - 68 8C020000           - push 0000028C { 652 }
+GameRpcs.dll+199E81 - E8 2A56FFFF           - call GameRpcs.dll+18F4B0
+GameRpcs.dll+199E86 - 83 C4 04              - add esp,04 { 4 }
+GameRpcs.dll+199E89 - 8B 4D FC              - mov ecx,[ebp-04]
+GameRpcs.dll+199E8C - 8B 14 01              - mov edx,[ecx+eax]
+GameRpcs.dll+199E8F - 89 55 F8              - mov [ebp-08],edx
+GameRpcs.dll+199E92 - B8 22000000           - mov eax,00000022 { 34 }
+GameRpcs.dll+199E97 - 83 F8 67              - cmp eax,67 { 103 }
+GameRpcs.dll+199E9A - 7D 11                 - jnl GameRpcs.dll+199EAD
+GameRpcs.dll+199E9C - B9 22000000           - mov ecx,00000022 { 34 }
+GameRpcs.dll+199EA1 - C1 E1 02              - shl ecx,02 { 2 }
+GameRpcs.dll+199EA4 - 8B 55 F8              - mov edx,[ebp-08]
+GameRpcs.dll+199EA7 - 89 91 1097E015        - mov [ecx+GameRpcs.dll+3A9710],edx
+GameRpcs.dll+199EAD - 8B E5                 - mov esp,ebp
+GameRpcs.dll+199EAF - 5D                    - pop ebp
+GameRpcs.dll+199EB0 - C3                    - ret 
+
+
+GameRpcs.dll+199E70 - 55                    - push ebp
+55 8B EC ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 8B 14 01 89 55 F8// 后面三位数可能会变
+这个扫描出来就能用
+/****************************************************/
+GameRpcs.dll+199590 - 55                    - push ebp
+GameRpcs.dll+199591 - 8B EC                 - mov ebp,esp
+GameRpcs.dll+199593 - 81 EC 60010000        - sub esp,00000160 { 352 }
+GameRpcs.dll+199599 - A1 50A2DF15           - mov eax,[GameRpcs.dll+39A250] { [9A75E91D] }
+GameRpcs.dll+19959E - 33 C5                 - xor eax,ebp
+GameRpcs.dll+1995A0 - 89 45 C4              - mov [ebp-3C],eax
+GameRpcs.dll+1995A3 - 53                    - push ebx
+GameRpcs.dll+1995A4 - 56                    - push esi
+GameRpcs.dll+1995A5 - B8 0A000000           - mov eax,0000000A { 10 }
+GameRpcs.dll+1995AA - C1 E0 02              - shl eax,02 { 2 }
+
+GameRpcs.dll+199590
+55 8B EC ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 33 C5 ?? ?? ?? 53 56 B8 0A 00 00 00 C1 E0 02
+这个扫描出来就能用
+/****************************************************/
+GameRpcs.dll+197930 - 60                    - pushad 
+GameRpcs.dll+197931 - 9C                    - pushfd 
+GameRpcs.dll+197932 - 8B 1D ?? ?? ?? ??        - mov ebx,[GameRpcs.dll+3B6548] { [00000050] }
+GameRpcs.dll+197938 - FF 34 1C              - push [esp+ebx]
+GameRpcs.dll+19793B - FF 34 1C              - push [esp+ebx]
+GameRpcs.dll+19793E - FF 34 1C              - push [esp+ebx]
+GameRpcs.dll+197941 - FF 34 1C              - push [esp+ebx]
+GameRpcs.dll+197944 - FF 34 1C              - push [esp+ebx]
+GameRpcs.dll+197947 - FF 34 1C              - push [esp+ebx]
+GameRpcs.dll+19794A - FF 34 1C              - push [esp+ebx]
+GameRpcs.dll+19794D - FF 34 1C              - push [esp+ebx]
+GameRpcs.dll+197950 - FF 34 1C              - push [esp+ebx]
+GameRpcs.dll+197953 - FF 34 1C              - push [esp+ebx]
+GameRpcs.dll+197956 - FF 34 1C              - push [esp+ebx]
+GameRpcs.dll+197959 - E8 ?? ?? ?? ??           - call GameRpcs.dll+197720
+GameRpcs.dll+19795E - ?? ?? ??             - add esp,2C { 44 }
+GameRpcs.dll+197961 - 85 C0                 - test eax,eax
+GameRpcs.dll+197963 - ?? ??                - je GameRpcs.dll+197991
+GameRpcs.dll+197965 - 9D                    - popfd 
+GameRpcs.dll+197966 - 61                    - popad 
+
+GameRpcs.dll+197930
+60 9C 8B 1D ?? ?? ?? ?? FF 34 1C FF 34 1C FF 34 1C FF 34 1C FF 34 1C FF 34 1C FF 34 1C FF 34 1C FF 34 1C FF 34 1C FF 34 1C E8 ?? ?? ?? ?? ?? ?? ?? 85 C0 ?? ?? 9D 61
+这个取第一个
+
+
+/****************************************************/
+50 段检测

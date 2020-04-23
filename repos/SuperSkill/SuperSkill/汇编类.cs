@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using ReadWrite;
@@ -1000,7 +1001,7 @@ namespace SslnEngine
         }
         public void Call_ESI()
         {
-            this.Asmcode = this.Asmcode + "FFD2";
+            this.Asmcode = this.Asmcode + "FFD6";
         }
         public void Call_ESP()
         {
@@ -1471,7 +1472,7 @@ namespace SslnEngine
             this.Asmcode = "";
         }
 
-        public void RunAsm(int pid)
+        public void RunAsm1(int pid)
         {
             int hwnd, addre, threadhwnd;
             Ret();
@@ -1495,7 +1496,62 @@ namespace SslnEngine
             }
             this.Asmcode = "";
         }
-        public void RunAsm1(int pid)
+        public void RunAsm(int pid)
+        {
+            byte[] 汇编代码 = this.AsmChangebytes(this.Asmcode);
+            int a = 汇编代码.Length;
+            int 汇编call = (int)基址.内存汇编;
+            int 判断地址 = 0x400E00;
+            int 内存地址 = 判断地址 + 16;
+            int 跳转地址 = 内存地址 - 汇编call - 5;
+            int 跳回地址 = 汇编call + 5;
+            List<byte> list = new List<byte>();
+            byte[] code1 = { 96, 156, 131, 61 };
+            byte[] code2 = 转换.到字节集(判断地址);
+            list.AddRange(code1);
+            list.AddRange(code2);
+            if (a >= 128)
+            {
+                byte[] code3 = { 0, 15, 132 };
+                byte[] code4 = 转换.到字节集((uint)a);
+                list.AddRange(code3);
+                list.AddRange(code4);
+                list.AddRange(汇编代码);
+            }
+            else
+            {
+                byte[] code3 = { 0, 116 };
+                byte code4 = Convert.ToByte(a);
+                list.AddRange(code3);
+                list.Add(code4);
+                list.AddRange(汇编代码);
+            }
+            byte[] code5 = { 157, 97, 199, 5 };
+            byte[] code6 = 转换.到字节集(判断地址);
+            list.AddRange(code5);
+            list.AddRange(code6);
+            byte[] code7 = { 0, 0, 0, 0, 243, 15, 17, 4, 36, 104 };
+            list.AddRange(code7);
+            byte[] code8 = 转换.到字节集(跳回地址);
+            byte[] code9 = { 195 };
+            list.AddRange(code8);
+            list.AddRange(code9);
+            ReadWriteCtr.WriteMemInt((uint)判断地址,1);
+            byte[] byteData = list.ToArray();
+            ReadWriteCtr.WriteMemByteArray((uint)内存地址, byteData);
+            byte[] i1 = { 233 };
+            byte[] i2 = 转换.到字节集(跳转地址);
+            byte[] i3 = 转换.数组加法(i1, i2);
+            ReadWriteCtr.WriteMemByteArray((uint)汇编call, i3);
+            while (ReadWriteCtr.ReadMemInt((uint)判断地址) == 1)
+                call.Delay(1);
+            byte[] i4 = { 243, 15, 17, 4, 36 };
+            ReadWriteCtr.WriteMemByteArray((uint)汇编call, i4);
+            byte[] i5 = new byte[汇编代码.Length + 64];
+            ReadWriteCtr.WriteMemByteArray((uint)判断地址, i5);
+            this.Asmcode = "";
+        }
+        public void RunAsm2(int pid)
         {
             int hwnd, addre, threadhwnd;
             Ret();

@@ -109,38 +109,60 @@ namespace SuperSkill
             str = str.Replace(" ", null);
             return str;
         }
+
+        private Boolean check( WebBrowser webBrowser)
+        {
+            HtmlElementCollection i = webBrowser.Document.GetElementsByTagName("LI");
+            String output="";
+            foreach ( HtmlElement item in i )
+            {
+                //output = output + " \n\r" +"title:" + item.GetAttribute("title") + "data-id:"+item.GetAttribute("data-id");
+                output = output + item.OuterHtml;
+            }
+            if(output.IndexOf("624核心骨干交流群") > 0)
+                Write(output);
+            return false;
+        }
+
         private void WebBrowser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
         {
-           
-
+            
             if (webBrowser1.Url.ToString().StartsWith("https://qun.qq.com/member.html"))
             {
-                HtmlElement groupList = webBrowser1.Document.GetElementById("changeGroup");
-                if (groupList == null)
+
+                HtmlElementCollection i = webBrowser1.Document.GetElementsByTagName("LI");
+                if (i == null)
                 {
                     return;
                 }
-                HtmlElementCollection hec = webBrowser1.Document.GetElementsByTagName("div");//< div class="my-all-group">
-                string str = PrintDom(hec, new System.Text.StringBuilder(), 0);
-                Write(str);
-                foreach (HtmlElement he in hec)
+                String output = "";
+                foreach (HtmlElement item in i)
                 {
-                    string cat_name = he.GetAttribute("className");
-                    MessageBox.Show(cat_name);
+                    //output = output + " \n\r" +"title:" + item.GetAttribute("title") + "data-id:"+item.GetAttribute("data-id");
+                    output = output + item.OuterHtml;
                 }
-                MessageBox.Show("判断成功");
-                Thread.Sleep(2000);
+                if (output.IndexOf("SuperSkills") < 0)
+                {
+                    return;
+                }
+                //HtmlElementCollection hec = webBrowser1.Document.GetElementsByTagName("div");//< div class="my-all-group">
+                //string str = PrintDom(hec, new System.Text.StringBuilder(), 0);
+                //Write(str);
+                //foreach (HtmlElement he in hec)
+                //{
+                //    string cat_name = he.GetAttribute("className");
+                //    MessageBox.Show(cat_name);
+                //}
+                //MessageBox.Show("判断成功");
+                //Thread.Sleep(2000);
                 webBrowser1.ProgressChanged -= WebBrowser1_ProgressChanged;
-                int groupListText = webBrowser1.DocumentText.IndexOf("1072040879");
-                //string groupid = "1072040879";
-                if ( groupListText > 0)
+                if (output.IndexOf("SuperSkills") > 0 && output.IndexOf("835290838") > 0)
                 {
                     MessageBox.Show("验证成功");
                     CloseChrome();
                     Form1 form2 = new Form1();
                     form2.Show();
                     this.Dispose(false);
-
                 }
                 else
                 {
@@ -148,13 +170,7 @@ namespace SuperSkill
                     CloseChrome();
                     Application.Exit();
                 }
-            }
-            else 
-            {
-
-                //MessageBox.Show("1");
-                return;
-
+                //string groupid = "1072040879";
             }
 
         }
