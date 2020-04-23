@@ -23,3 +23,4 @@ C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Release\svchost.exe.manif
 C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Release\svchost.application
 C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Release\svchost.exe
 C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Release\svchost.pdb
+C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Release\SuperSkill.csprojAssemblyReference.cache

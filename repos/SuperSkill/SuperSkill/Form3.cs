@@ -129,7 +129,12 @@ namespace SuperSkill
             
             if (webBrowser1.Url.ToString().StartsWith("https://qun.qq.com/member.html"))
             {
-
+                object[] o = new object[1];
+                o[0] = "$.post('https://qun.qq.com/cgi-bin/qun_mgr/get_group_list','bkn='+$.getCSRFToken(),function(data,status){if ( data != '' ) {var json = '';if ( data instanceof Object ) {json = JSON.stringify(data);}else{json = datg;}$('body').append('<div id=\'susunl_grouplist\'>'+json+'</div>');}});";
+                webBrowser1.Document.InvokeScript("message",o);
+                HtmlElement htmlElement = webBrowser1.Document.GetElementById("susunl_grouplist");
+                htmlElement.
+                return;
                 HtmlElementCollection i = webBrowser1.Document.GetElementsByTagName("LI");
                 if (i == null)
                 {
