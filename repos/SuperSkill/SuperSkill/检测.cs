@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using ReadWrite;
+﻿using ReadWrite;
 using SslnEngine;
+using System.Runtime.InteropServices;
 
 namespace SuperSkill
 {
@@ -15,9 +9,9 @@ namespace SuperSkill
         [DllImport("kernel32.dll")]
         public static extern int GetModuleHandleA(string lpModuleName);
         [DllImport("kernel32.dll")]
-        public static extern int GetModuleHandleExA(long dwFlags , string lpModuleName,int phModule);
+        public static extern int GetModuleHandleExA(long dwFlags, string lpModuleName, int phModule);
         [DllImport("kernel32.dll")]
-        public static extern bool IsBadReadPtr(int 参_内存地址,int 参_内存长度);
+        public static extern bool IsBadReadPtr(int 参_内存地址, int 参_内存长度);
         [DllImport("kernel32.dll")]
         public static unsafe extern bool VirtualProtectEx(int handle, int address, int size, int flNewProtect, [Out] int* lpflOldProtect);
         [DllImport("Dll1.dll")]
@@ -33,7 +27,7 @@ namespace SuperSkill
             if (IsBadReadPtr(参_内存地址, 1))
                 return;
             ReadWriteCtr.WriteMemByteArray(0x400900, 参_写入数据);
-            ASM_置可读写( -1, 参_内存地址, 参_写入数据.Length);
+            ASM_置可读写(-1, 参_内存地址, 参_写入数据.Length);
             ASM_字符传输(参_内存地址, 0x400900, 参_写入数据.Length);
         }
         public static unsafe void ASM_字符传输(int 内存地址, int 数值地址, int 写入长度)

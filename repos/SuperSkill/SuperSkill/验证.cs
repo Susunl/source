@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
 using System.Management;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace SuperSkill
 {
@@ -17,7 +9,7 @@ namespace SuperSkill
     {
         public static string 取机器码()
         {
-            return UserMd5(GetCpuID()+ GetHardDiskID());
+            return UserMd5(GetCpuID() + GetHardDiskID());
         }
 
         public static string GetCpuID()
@@ -26,7 +18,7 @@ namespace SuperSkill
             {
                 ManagementClass mc = new ManagementClass("Win32_Processor");
                 ManagementObjectCollection moc = mc.GetInstances();
-                String strCpuID = null;
+                string strCpuID = null;
                 foreach (ManagementObject mo in moc)
                 {
                     strCpuID = mo.Properties["ProcessorId"].Value.ToString();

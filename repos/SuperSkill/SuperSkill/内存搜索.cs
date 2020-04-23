@@ -41,7 +41,7 @@ namespace SuperSkill
         public struct SYSTEM_INFO
         {
             public ushort processorArchitecture;
-            ushort reserved;
+            readonly ushort reserved;
             public uint pageSize;
             public IntPtr minimumApplicationAddress;
             public IntPtr maximumApplicationAddress;

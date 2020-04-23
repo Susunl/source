@@ -1,15 +1,14 @@
 ﻿using EncryptionDecrypt;
+using KoalaStudio.BookshopManager;
 using ProcessCtr;
 using ReadWrite;
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 using Transform;
-using KoalaStudio.BookshopManager;
-using System.Runtime.InteropServices;
-using SslnEngine;
-using System.IO;
-using System.Collections.Generic;
 
 namespace SuperSkill
 {
@@ -47,7 +46,7 @@ namespace SuperSkill
             {
                 功能.全局吸怪();
             }
-            if(功能.判断_游戏状态() == 3 && 全局变量.源泉开关 == true)
+            if (功能.判断_游戏状态() == 3 && 全局变量.源泉开关 == true)
                 自动变怪();
         }
         /// 窗口1创建完毕过后干的事情
@@ -74,6 +73,7 @@ namespace SuperSkill
             list.Add("7335F7D5AD1ADB9FA550F35653282C30");
             list.Add("EC18BD233ECA7CE46A877B1212F0BB55");
             list.Add("7054CAF0A74E350624998189E32D4");
+            list.Add("CA8C568338BE50CD2F6783CCAE4D936C");
             list.Add("CA8C568338BE50CD2F6783CCAE4D936C");
             //list.Add("D43398CBD240682734B0619601EF3A");
             //list.Add("52B71C9EBE463F510E333D21E7B3F55");
@@ -115,43 +115,43 @@ namespace SuperSkill
         //读取职业技能被单击
         private void button3_Click(object sender, EventArgs e)
         {
-            uint i = 0x4300,技能地址;
+            uint i = 0x4300, 技能地址;
             string 技能名称 = "";
             int 技能等级;
-            string 总技能="";
+            string 总技能 = "";
             ListView_Skill.Items.Clear();
             while (i <= 0x6000)
             {
-                技能地址 = (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID,(uint)ReadWriteCtr.ReadMemInt(基址.人物基址)+i);
-                技能等级 = (int)EncDec.Decrypt(全局变量.进程ID,技能地址+基址.技能等级,基址.解密基址);
+                技能地址 = (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(基址.人物基址) + i);
+                技能等级 = (int)EncDec.Decrypt(全局变量.进程ID, 技能地址 + 基址.技能等级, 基址.解密基址);
                 if (技能等级 >= 0 && 技能等级 < 100)
                 {
                     技能名称 = TransCtr.UnicodeToAnsi(ReadWriteCtr.ReadMemByteArray(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能名称), 50));
-                    if (技能名称.Length > 1 && 技能名称.IndexOf("?") == -1&&技能名称.IndexOf("不使用") == -1&&总技能.IndexOf(技能名称)==-1&&技能等级>0)
+                    if (技能名称.Length > 1 && 技能名称.IndexOf("?") == -1 && 技能名称.IndexOf("不使用") == -1 && 总技能.IndexOf(技能名称) == -1 && 技能等级 > 0)
                     {
-                        this.ListView_Skill.Update();
-                        ListViewItem lvi = this.ListView_Skill.Items.Add(Convert.ToString(i));
+                        ListView_Skill.Update();
+                        ListViewItem lvi = ListView_Skill.Items.Add(Convert.ToString(i));
                         lvi.SubItems.Add(技能名称);
                         lvi.SubItems.Add(Convert.ToString(技能等级));
-                        this.ListView_Skill.EndUpdate();
+                        ListView_Skill.EndUpdate();
                         总技能 += 技能名称;
                     }
                 }
-                i +=4;
+                i += 4;
             }
         }
         //listview_skill事件被双击
         private void ListView_Skill_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            int 技能地址1,技能等级,技能CD, 技能地址2;
+            int 技能地址1, 技能等级, 技能CD, 技能地址2;
             uint i1, i2, i3, i4, i5, 技能数据;
-            string 总技能公式 = "",技能数据2 ="";
+            string 总技能公式 = "", 技能数据2 = "";
             //int 技能等级代码;
-            全局变量.技能名 = this.ListView_Skill.SelectedItems[0].SubItems[1].Text;
-            技能地址1 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(基址.人物基址) + Convert.ToUInt32(this.ListView_Skill.SelectedItems[0].Text));
+            全局变量.技能名 = ListView_Skill.SelectedItems[0].SubItems[1].Text;
+            技能地址1 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(基址.人物基址) + Convert.ToUInt32(ListView_Skill.SelectedItems[0].Text));
             技能等级 = (int)EncDec.Decrypt(全局变量.进程ID, (uint)技能地址1 + 基址.技能等级, 基址.解密基址);
-            this.ListView_SkillProperties.Items.Clear(); //清空ListView_SkillProperties内容
-            技能CD = (int)EncDec.Decrypt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.技能冷却7) + 8*(uint)(技能等级-1), 基址.解密基址) / 1000;
+            ListView_SkillProperties.Items.Clear(); //清空ListView_SkillProperties内容
+            技能CD = (int)EncDec.Decrypt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址1 + 基址.技能冷却7) + 8 * (uint)(技能等级 - 1), 基址.解密基址) / 1000;
             label1.Text = "当前技能cd为:" + 技能CD + "秒";
             //第一层遍历
             i1 = 0;
@@ -169,15 +169,15 @@ namespace SuperSkill
                     if (技能数据 > 1)
                     {
                         技能数据2 = TransCtr.FloatToInt(技能数据);
-                        this.ListView_SkillProperties.Update();
-                        ListViewItem lvi = this.ListView_SkillProperties.Items.Add(技能数据2);       //liseview添加项
-                        lvi.SubItems.Add(this.ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能) + "+" + Convert.ToString(i1) + "+20");      //添加次级项
+                        ListView_SkillProperties.Update();
+                        ListViewItem lvi = ListView_SkillProperties.Items.Add(技能数据2);       //liseview添加项
+                        lvi.SubItems.Add(ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能) + "+" + Convert.ToString(i1) + "+20");      //添加次级项
                         lvi.SubItems.Add(Convert.ToString(技能地址2));
-                        this.ListView_SkillProperties.EndUpdate();
+                        ListView_SkillProperties.EndUpdate();
                         总技能公式 = 总技能公式 + " " + Convert.ToString(技能地址2);
 
                     }
-                } 
+                }
 
                 i1 += 4;
             }
@@ -194,17 +194,17 @@ namespace SuperSkill
                         i2 += 4;
                         continue;
                     }
-                    if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1 )
+                    if (总技能公式.IndexOf(Convert.ToString(技能地址2)) == -1)
                     {
                         技能数据 = EncDec.Decrypt(全局变量.进程ID, (uint)(技能地址2 + 8 * (技能等级 - 1)), 基址.解密基址);
                         if (技能数据 > 1)
                         {
                             技能数据2 = TransCtr.FloatToInt(技能数据);
-                            this.ListView_SkillProperties.Update();
-                            ListViewItem lvi = this.ListView_SkillProperties.Items.Add(技能数据2);       //liseview添加项
-                            lvi.SubItems.Add(this.ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+20");      //添加次级项
+                            ListView_SkillProperties.Update();
+                            ListViewItem lvi = ListView_SkillProperties.Items.Add(技能数据2);       //liseview添加项
+                            lvi.SubItems.Add(ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+20");      //添加次级项
                             lvi.SubItems.Add(Convert.ToString(技能地址2));
-                            this.ListView_SkillProperties.EndUpdate();
+                            ListView_SkillProperties.EndUpdate();
                             总技能公式 = 总技能公式 + " " + Convert.ToString(技能地址2);
                         }
                     }
@@ -234,11 +234,11 @@ namespace SuperSkill
                             if (技能数据 > 1)
                             {
                                 技能数据2 = TransCtr.FloatToInt(技能数据);
-                                this.ListView_SkillProperties.Update();
-                                ListViewItem lvi = this.ListView_SkillProperties.Items.Add(技能数据2);       //liseview添加项
-                                lvi.SubItems.Add(this.ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+" + Convert.ToString(i3) + "+20");      //添加次级项
+                                ListView_SkillProperties.Update();
+                                ListViewItem lvi = ListView_SkillProperties.Items.Add(技能数据2);       //liseview添加项
+                                lvi.SubItems.Add(ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+" + Convert.ToString(i3) + "+20");      //添加次级项
                                 lvi.SubItems.Add(Convert.ToString(技能地址2));
-                                this.ListView_SkillProperties.EndUpdate();
+                                ListView_SkillProperties.EndUpdate();
                                 总技能公式 = 总技能公式 + " " + Convert.ToString(技能地址2);
                             }
                         }
@@ -273,11 +273,11 @@ namespace SuperSkill
                                 if (技能数据 > 1)
                                 {
                                     技能数据2 = TransCtr.FloatToInt(技能数据);
-                                    this.ListView_SkillProperties.Update();
-                                    ListViewItem lvi = this.ListView_SkillProperties.Items.Add(技能数据2);       //liseview添加项
-                                    lvi.SubItems.Add(this.ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+" + Convert.ToString(i3) + "+" + Convert.ToString(i4) + "+20");      //添加次级项
+                                    ListView_SkillProperties.Update();
+                                    ListViewItem lvi = ListView_SkillProperties.Items.Add(技能数据2);       //liseview添加项
+                                    lvi.SubItems.Add(ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+" + Convert.ToString(i3) + "+" + Convert.ToString(i4) + "+20");      //添加次级项
                                     lvi.SubItems.Add(Convert.ToString(技能地址2));
-                                    this.ListView_SkillProperties.EndUpdate();
+                                    ListView_SkillProperties.EndUpdate();
                                     总技能公式 = 总技能公式 + " " + Convert.ToString(技能地址2);
                                 }
                             }
@@ -317,11 +317,11 @@ namespace SuperSkill
                                     if (技能数据 > 1)
                                     {
                                         技能数据2 = TransCtr.FloatToInt(技能数据);
-                                        this.ListView_SkillProperties.Update();
-                                        ListViewItem lvi = this.ListView_SkillProperties.Items.Add(技能数据2);       //liseview添加项
-                                        lvi.SubItems.Add(this.ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+" + Convert.ToString(i3) + "+" + Convert.ToString(i4) + "+" + Convert.ToString(i5) + "+20");      //添加次级项
+                                        ListView_SkillProperties.Update();
+                                        ListViewItem lvi = ListView_SkillProperties.Items.Add(技能数据2);       //liseview添加项
+                                        lvi.SubItems.Add(ListView_Skill.SelectedItems[0].SubItems[0].Text + "+" + Convert.ToString(基址.超级技能) + "+" + Convert.ToString(i1) + "+" + Convert.ToString(i2) + "+" + Convert.ToString(i3) + "+" + Convert.ToString(i4) + "+" + Convert.ToString(i5) + "+20");      //添加次级项
                                         lvi.SubItems.Add(Convert.ToString(技能地址2));
-                                        this.ListView_SkillProperties.EndUpdate();
+                                        ListView_SkillProperties.EndUpdate();
                                         总技能公式 = 总技能公式 + " " + Convert.ToString(技能地址2);
                                     }
                                 }
@@ -336,8 +336,8 @@ namespace SuperSkill
                 i1 += 4;
             }
         }
-    
-    private void 鸣谢_Click(object sender, EventArgs e)
+
+        private void 鸣谢_Click(object sender, EventArgs e)
         {
 
             //功能.超级三速();
@@ -347,25 +347,25 @@ namespace SuperSkill
         //ListView_SkillProperties双击事件 添加属性到ListView_SkillProperties_Edit
         private void ListView_SkillProperties_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            this.ListView_SkillProperties_Edit.Update();
-            ListViewItem lvi = this.ListView_SkillProperties_Edit.Items.Add(this.ListView_SkillProperties.SelectedItems[0].SubItems[1].Text);
-            lvi.SubItems.Add(this.ListView_SkillProperties.SelectedItems[0].SubItems[0].Text);
+            ListView_SkillProperties_Edit.Update();
+            ListViewItem lvi = ListView_SkillProperties_Edit.Items.Add(ListView_SkillProperties.SelectedItems[0].SubItems[1].Text);
+            lvi.SubItems.Add(ListView_SkillProperties.SelectedItems[0].SubItems[0].Text);
             lvi.SubItems.Add(全局变量.技能名);
             lvi.SubItems.Add(ListView_SkillProperties.SelectedItems[0].SubItems[0].Text);
-            this.ListView_SkillProperties_Edit.EndUpdate();
+            ListView_SkillProperties_Edit.EndUpdate();
         }
         // ListView_SkillProperties_Edit双击事件 修改属性或备注
         private void ListView_SkillProperties_Edit_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            ListViewItem item = this.ListView_SkillProperties_Edit.GetItemAt(e.X, e.Y);
+            ListViewItem item = ListView_SkillProperties_Edit.GetItemAt(e.X, e.Y);
             int 列 = item.SubItems.IndexOf(item.GetSubItemAt(e.X, e.Y));   //列索引
             if (列 == 1 || 列 == 2)
             {
                 Form2 form2 = new Form2(this);
-                全局变量.要修改的数据 = this.ListView_SkillProperties_Edit.SelectedItems[0].SubItems[列].Text;
-                全局变量.要修改的列 = 列 ;
+                全局变量.要修改的数据 = ListView_SkillProperties_Edit.SelectedItems[0].SubItems[列].Text;
+                全局变量.要修改的列 = 列;
                 form2.ShowDialog();
-                this.ListView_SkillProperties_Edit.SelectedItems[0].SubItems[全局变量.要修改的列].Text = 全局变量.要修改的数据;
+                ListView_SkillProperties_Edit.SelectedItems[0].SubItems[全局变量.要修改的列].Text = 全局变量.要修改的数据;
             }
 
 
@@ -377,21 +377,21 @@ namespace SuperSkill
             uint t_add, t_pet, t_skilladd = 0;
 
             //ListView_SkillProperties_Edit中有项目才进行修改
-            if (this.ListView_SkillProperties_Edit.Items.Count > 0)
+            if (ListView_SkillProperties_Edit.Items.Count > 0)
             {
                 //循环项目数次
-                for (i = 0; i < this.ListView_SkillProperties_Edit.Items.Count; i++)
+                for (i = 0; i < ListView_SkillProperties_Edit.Items.Count; i++)
                 {
                     index = -1;
                     index2 = 0;
-                    index2 = this.ListView_SkillProperties_Edit.Items[i].SubItems[0].Text.IndexOf("+", index + 1);   //公式第一个+号位置
-                    t_pet = Convert.ToUInt32(this.ListView_SkillProperties_Edit.Items[i].SubItems[0].Text.Substring(index + 1, index2 - index - 1));  //技能偏移
+                    index2 = ListView_SkillProperties_Edit.Items[i].SubItems[0].Text.IndexOf("+", index + 1);   //公式第一个+号位置
+                    t_pet = Convert.ToUInt32(ListView_SkillProperties_Edit.Items[i].SubItems[0].Text.Substring(index + 1, index2 - index - 1));  //技能偏移
                     t_skilladd = (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(基址.人物基址) + t_pet);   //技能地址
-                    t_level = (int)EncDec.Decrypt(全局变量.进程ID, (uint)t_skilladd + 基址.技能等级, 基址.解密基址);   //技能等级
+                    t_level = (int)EncDec.Decrypt(全局变量.进程ID, t_skilladd + 基址.技能等级, 基址.解密基址);   //技能等级
                     Thread.Sleep(30);   //延迟30毫秒
-                    t_add = (uint)ReadWriteCtr.ReadMemCode(全局变量.进程ID, Convert.ToString(基址.人物基址) + "+" + this.ListView_SkillProperties_Edit.Items[i].SubItems[0].Text);
+                    t_add = (uint)ReadWriteCtr.ReadMemCode(全局变量.进程ID, Convert.ToString(基址.人物基址) + "+" + ListView_SkillProperties_Edit.Items[i].SubItems[0].Text);
                     //加密
-                    EncDec.Encryption(全局变量.进程ID, (uint)(t_add + 8 * (t_level - 1)), TransCtr.IntToFloat(this.ListView_SkillProperties_Edit.Items[i].SubItems[1].Text), 基址.解密基址);
+                    EncDec.Encryption(全局变量.进程ID, (uint)(t_add + 8 * (t_level - 1)), TransCtr.IntToFloat(ListView_SkillProperties_Edit.Items[i].SubItems[1].Text), 基址.解密基址);
                     Thread.Sleep(30);   //延迟30毫秒进入下一循环
                 }
                 功能.公告("数据修改成功");
@@ -422,25 +422,25 @@ namespace SuperSkill
         private void SearchSkill()
         {
             int t_index = 0;
-            if (this.ListView_Skill.SelectedItems.Count > 0)
-                t_index = this.ListView_Skill.SelectedItems[0].Index + 1;
-            for (int i = t_index; i < this.ListView_Skill.Items.Count; i++) //第一次循环，从选中位置开始
+            if (ListView_Skill.SelectedItems.Count > 0)
+                t_index = ListView_Skill.SelectedItems[0].Index + 1;
+            for (int i = t_index; i < ListView_Skill.Items.Count; i++) //第一次循环，从选中位置开始
             {
-                if (this.ListView_Skill.Items[i].SubItems[1].Text.IndexOf(this.TextBox_SearchSkill.Text) != -1)
+                if (ListView_Skill.Items[i].SubItems[1].Text.IndexOf(TextBox_SearchSkill.Text) != -1)
                 {
-                    this.ListView_Skill.Items[i].Selected = true;       //选中行
-                    this.ListView_Skill.EnsureVisible(i);               //滚动到指定的行位置
-                    this.ListView_Skill.Focus();                        //ListView_Skill获得焦点
+                    ListView_Skill.Items[i].Selected = true;       //选中行
+                    ListView_Skill.EnsureVisible(i);               //滚动到指定的行位置
+                    ListView_Skill.Focus();                        //ListView_Skill获得焦点
                     return;
                 }
             }
-            for (int j = 0; j < this.ListView_Skill.Items.Count; j++)   //第二次循环，从头开始，以搜索选中项之前的内容
+            for (int j = 0; j < ListView_Skill.Items.Count; j++)   //第二次循环，从头开始，以搜索选中项之前的内容
             {
-                if (this.ListView_Skill.Items[j].SubItems[1].Text.IndexOf(this.TextBox_SearchSkill.Text) != -1)
+                if (ListView_Skill.Items[j].SubItems[1].Text.IndexOf(TextBox_SearchSkill.Text) != -1)
                 {
-                    this.ListView_Skill.Items[j].Selected = true;   //选中行
-                    this.ListView_Skill.EnsureVisible(j);           //滚动到指定的行位置
-                    this.ListView_Skill.Focus();                    //ListView_Skill获得焦点
+                    ListView_Skill.Items[j].Selected = true;   //选中行
+                    ListView_Skill.EnsureVisible(j);           //滚动到指定的行位置
+                    ListView_Skill.Focus();                    //ListView_Skill获得焦点
                     return;
                 }
             }
@@ -448,13 +448,13 @@ namespace SuperSkill
 
         private void 删除选中项toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (this.ListView_SkillProperties_Edit.SelectedItems.Count > 0)
-                this.ListView_SkillProperties_Edit.SelectedItems[0].Remove();
+            if (ListView_SkillProperties_Edit.SelectedItems.Count > 0)
+                ListView_SkillProperties_Edit.SelectedItems[0].Remove();
         }
 
         private void 清空所有项toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            this.ListView_SkillProperties_Edit.Items.Clear();
+            ListView_SkillProperties_Edit.Items.Clear();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -507,15 +507,15 @@ namespace SuperSkill
                             修改属性();        //此处填写快捷键响应代码         
                             break;
                         case 101:    //按下的是Ctrl+B
-                            if(checkBox4.Enabled == true)
-                            功能.全屏吸物();                 //此处填写快捷键响应代码
+                            if (checkBox4.Enabled == true)
+                                功能.全屏吸物();                 //此处填写快捷键响应代码
                             break;
                         case 102:    //按下的是Alt+D
                                      //call.物品CALL(1111);         //此处填写快捷键响应代码
                                      // call.物品CALL(2600027);
-                            
+
                             int.TryParse(textBox1.Text, out int c);
-                            if(c == 0)
+                            if (c == 0)
                                 ReadWriteCtr.WriteMemInt(0x400604, 0);
                             else
                                 ReadWriteCtr.WriteMemInt(0x400604, c);
@@ -523,7 +523,7 @@ namespace SuperSkill
                             call.物品CALL(2600656);
                             call.物品CALL(2600027);
                             call.物品CALL(1111);
-                            call.物品CALL(1110);
+                            //call.物品CALL(1110);
                             //功能.miss设计图附伤();
                             //call.技能CALL(基址.人物基址,800,255,0,70059,0,200);
                             //int.TryParse(textBox1.Text, out int a);
@@ -535,7 +535,7 @@ namespace SuperSkill
             base.WndProc(ref m);
         }
         [DllImport("Dll1.dll")]
-        public static extern int SearchMemory(int 进程ID,byte[] buffer,int buffer_size);
+        public static extern int SearchMemory(int 进程ID, byte[] buffer, int buffer_size);
         [DllImport("kernel32.dll")]
         public static extern uint GetLastError();
         private unsafe void 测试_Click(object sender, EventArgs e)
@@ -624,11 +624,11 @@ namespace SuperSkill
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-           
+
             功能.技能无CD();
             //功能.超级三速();
             //全局变量.评分开关 = true;
-            
+
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -651,14 +651,14 @@ namespace SuperSkill
                     e.KeyChar = (char)0;   //处理非法字符
                 }
             }
-            
+
         }
 
         private void textBox1_Click(object sender, EventArgs e)
         {
             int.TryParse(textBox1.Text, out int c);
-            if(c == 0)
-            textBox1.Text = "";
+            if (c == 0)
+                textBox1.Text = "";
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -681,7 +681,7 @@ namespace SuperSkill
 
         private void 打开配置_Click(object sender, EventArgs e)
         {
-            
+
             //Form1 form1 = new Form1();
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.Multiselect = true;
@@ -702,7 +702,7 @@ namespace SuperSkill
                 if (ini.IniReadValue(i1, "技能公式") == "")
                     break;
                 ListView_SkillProperties_Edit.Update();
-                ListViewItem lvi = this.ListView_SkillProperties_Edit.Items.Add(ini.IniReadValue(i1, "技能公式"));
+                ListViewItem lvi = ListView_SkillProperties_Edit.Items.Add(ini.IniReadValue(i1, "技能公式"));
                 lvi.SubItems.Add(ini.IniReadValue(i1, "技能数值"));
                 lvi.SubItems.Add(ini.IniReadValue(i1, "技能描述"));
                 lvi.SubItems.Add(ini.IniReadValue(i1, "原值"));
@@ -758,7 +758,7 @@ namespace SuperSkill
             {
                 功能.公告("Combobox输入的文本为空。");
             }
-            
+
             if (comboBox1.SelectedItem != null)
             {
                 if (comboBox1.SelectedItem.ToString() == "远程卖物")

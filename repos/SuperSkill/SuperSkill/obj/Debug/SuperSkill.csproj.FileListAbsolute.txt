@@ -10,3 +10,11 @@ C:\Users\Susunl\Desktop\svchost.exe
 C:\Users\Susunl\Desktop\svchost.pdb
 C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Debug\svchost.exe
 C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Debug\svchost.pdb
+C:\Users\Susunl\Desktop\svchost.exe.manifest
+C:\Users\Susunl\Desktop\svchost.application
+C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Debug\SuperSkill.群验证.resources
+C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Debug\SuperSkill.csproj.CoreCompileInputs.cache
+C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Debug\svchost.TrustInfo.xml
+C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Debug\svchost.exe.manifest
+C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Debug\svchost.application
+C:\Users\Susunl\source\repos\SuperSkill\SuperSkill\obj\Debug\SuperSkill.csproj.CopyComplete

@@ -1,12 +1,11 @@
 ﻿using EncryptionDecrypt;
 using ReadWrite;
-using System;
-using System.Windows.Forms;
-using Transform;
 using SslnEngine;
-using Org.BouncyCastle.Utilities;
+using System;
 using System.Runtime.InteropServices;
 using System.Threading;
+using System.Windows.Forms;
+using Transform;
 
 namespace SuperSkill
 {
@@ -28,7 +27,7 @@ namespace SuperSkill
             i = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, 基址.人物基址) + 基址.上衣偏移);
             EncDec.超级加密(i + (int)基址.攻击速度, 1500);
             EncDec.超级加密(i + (int)基址.释放速度, 1500);
-            if(移动速度 == 0)
+            if (移动速度 == 0)
                 EncDec.超级加密(i + (int)基址.移动速度, 1500);
             else
                 EncDec.超级加密(i + (int)基址.移动速度, 移动速度);
@@ -84,18 +83,18 @@ namespace SuperSkill
                     技能名称 = TransCtr.UnicodeToAnsi(ReadWriteCtr.ReadMemByteArray(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能名称), 50));
                     if (技能名称.Length > 1 && 技能名称.IndexOf("?") == -1 && 技能名称.IndexOf("不使用") == -1 && 总技能.IndexOf(技能名称) == -1 && 技能等级 > 0 && 技能CD > 2000)
                     {
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却1) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却2) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却3) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却4) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却5) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却6) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却7) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却8) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却9) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却10) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却11) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却12) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却1) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却2) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却3) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却4) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却5) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却6) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却7) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却8) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却9) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却10) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却11) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却12) + 8 * (uint)(技能等级 - 1)), 技能CD / 10);
                         //EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却13) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
                         //EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却14) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
                     }
@@ -120,18 +119,18 @@ namespace SuperSkill
                     技能名称 = TransCtr.UnicodeToAnsi(ReadWriteCtr.ReadMemByteArray(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能名称), 50));
                     if (技能名称.Length > 1 && 技能名称.IndexOf("?") == -1 && 技能名称.IndexOf("不使用") == -1 && 总技能.IndexOf(技能名称) == -1 && 技能等级 > 0)
                     {
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却1) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却2) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却3) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却4) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却5) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却6) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却7) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却8) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却9) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却10) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却11) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
-                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却12) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却1) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却2) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却3) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却4) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却5) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却6) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却7) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却8) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却9) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却10) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却11) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
+                        EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, 技能地址 + 基址.技能冷却12) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
                         //EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却13) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
                         //EncDec.超级加密((int)(ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)技能地址 + 基址.技能冷却14) + 8 * (uint)(技能等级 - 1)), 技能CD * 10);
                     }
@@ -143,7 +142,7 @@ namespace SuperSkill
         {
             int 地址;
             地址 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, 基址.评分基址);
-            ReadWriteCtr.WriteMemInt(全局变量.进程ID,(uint)(地址 + 基址.C_E_评分),123456);
+            ReadWriteCtr.WriteMemInt(全局变量.进程ID, (uint)(地址 + 基址.C_E_评分), 123456);
         }
         public static void 全屏吸物()
         {
@@ -160,10 +159,10 @@ namespace SuperSkill
                 ReadWriteCtr.WriteMemInt(全局变量.进程ID, 基址.自动捡物, 1300955444);
                 人物地址 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, 基址.人物基址);
                 地图地址 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(人物地址) + 基址.地图偏移);
-                对象数量 = (ReadWriteCtr.ReadMemInt(全局变量.进程ID,(uint)(地图地址 + 基址.尾地址)) - ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.首地址))) / 4;
+                对象数量 = (ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.尾地址)) - ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.首地址))) / 4;
                 for (int i = 1; i <= 对象数量; i++)
                 {
-                    OBJ数据 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID,(uint)(地图地址 + 基址.首地址)) + (uint)Time);
+                    OBJ数据 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.首地址)) + (uint)Time);
                     Time = Time + 4;
                     OBJ类型 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(OBJ数据 + 基址.类型偏移));
                     if (OBJ类型 == 289)// || OBJ类型 == 529 || OBJ类型 == 545 || OBJ类型 == 273
@@ -174,10 +173,10 @@ namespace SuperSkill
                         ReadWriteCtr.WriteMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(OBJ数据 + 基址.对象坐标)) + 20, y);
                     }
                 }
-                
+
             }
             else
-                return ;
+                return;
             //ReadWriteCtr.WriteMemInt(全局变量.进程ID, 基址.自动捡物, 1300959860);
 
         }
@@ -232,8 +231,8 @@ namespace SuperSkill
                     if (OBJ类型 == 529 || OBJ类型 == 545 || OBJ类型 == 273)
                     {
                         //ReadWriteCtr.WriteMemInt((uint)(OBJ数据 + 基址.不死偏移),12);
-                        EncDec.Encryption(全局变量.进程ID, (uint)(OBJ数据 + 基址.不死偏移),12,基址.解密基址);
-                    
+                        EncDec.Encryption(全局变量.进程ID, (uint)(OBJ数据 + 基址.不死偏移), 12, 基址.解密基址);
+
                     }
 
 
@@ -259,7 +258,7 @@ namespace SuperSkill
         {
             Asm asm = new Asm();
             byte[] 附加字节 = { 0x90, 0x90, 0x90, 0x90 };
-            byte[] array = asm.JMP(0x400d00, 基址.独家变怪,附加字节);
+            byte[] array = asm.JMP(0x400d00, 基址.独家变怪, 附加字节);
             ReadWriteCtr.WriteMemByteArray(基址.独家变怪, array);
             asm.Mov_EAX(怪物代码);
             asm.Push_EAX();
@@ -277,7 +276,7 @@ namespace SuperSkill
             ReadWriteCtr.WriteMemByteArray(基址.独家变怪, asm.取汇编代码());
             asm.清空汇编代码();
             byte[] i = new byte[50];
-            ReadWriteCtr.WriteMemByteArray(0x400D00,i);
+            ReadWriteCtr.WriteMemByteArray(0x400D00, i);
             公告("真.独家变怪关闭成功");
         }
         public static void 内存药剂()
@@ -297,7 +296,7 @@ namespace SuperSkill
                 公告("成功开始奔放进图波浪完事 " + j.ToString());
                 //MessageBox.Show("成功 开始奔放 + " + Convert.ToString(j) + "   提示 进图波浪开始奔放", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else 
+            else
             {
                 //MessageBox.Show("失败 请重试", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //公告("成功 开始奔放 进图波浪完事  " + j.ToString() );
@@ -334,6 +333,7 @@ namespace SuperSkill
             j = SearchMemory2(全局变量.进程ID, &j, 4);
             ReadWriteCtr.WriteMemInt((uint)(j - 0x70), 10000);
             byte[] i1 = { 0, 6, 64, 0, 32, 6, 64, 0, 32, 6, 64, 126 };
+            公告(j.ToString());
             ReadWriteCtr.WriteMemByteArray((uint)(j - 0x70 + 0x790), i1);
             ReadWriteCtr.WriteMemInt((uint)(j - 0x70 + 0x790 + 0x10), 1200000);
             ReadWriteCtr.WriteMemInt((uint)(j - 0x70 + 0x790 + 0x10 + 4), 1);
@@ -354,8 +354,6 @@ namespace SuperSkill
             int 对象数量;
             int OBJ数据;
             int OBJ类型;
-            bool 判断 = false;
-            int OBJ阵营;
             if (判断_游戏状态() == 3)
             {
                 call.物品CALL(7955);
@@ -366,33 +364,33 @@ namespace SuperSkill
                 对象数量 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.尾地址)) - ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.首地址));
                 //while(true)
                 //{ 
-                    for (int i = 0; i < 对象数量; i = i+ 4)
+                for (int i = 0; i < 对象数量; i = i + 4)
+                {
+                    OBJ数据 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.首地址)) + (uint)i);
+
+                    OBJ类型 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(OBJ数据 + 基址.类型偏移));
+                    //OBJ阵营 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(OBJ数据 + 基址.阵营偏移));
+                    if (OBJ类型 == 273)
                     {
-                        OBJ数据 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(地图地址 + 基址.首地址)) + (uint)i);
-                    
-                        OBJ类型 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(OBJ数据 + 基址.类型偏移));
-                        //OBJ阵营 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, (uint)(OBJ数据 + 基址.阵营偏移));
-                        if (OBJ类型 == 273)
+
+                        if (EncDec.Decrypt((uint)(OBJ数据 + 基址.人物等级), 基址.解密基址) == 60)
                         {
-                        
-                            if (EncDec.Decrypt((uint)(OBJ数据 + 基址.人物等级), 基址.解密基址) == 60)
-                            {
-                                //公告(OBJ数据.ToString());
-                                ReadWriteCtr.WriteMemInt(0x400500, OBJ数据);
-                                uint[] i1 = { 19736, 3220, 4, 8, 20, 0 };
-                                int j = ReadWriteCtr.读偏移型(0x400500, i1);
-                                EncDec.超级加密(j, TransCtr.IntToFloat(200000.ToString()));
-                                ReadWriteCtr.WriteMemInt(0x400500, 0);
-                                //判断 = true;
-                                break;
-                            
-                            }
+                            //公告(OBJ数据.ToString());
+                            ReadWriteCtr.WriteMemInt(0x400500, OBJ数据);
+                            uint[] i1 = { 19736, 3220, 4, 8, 20, 0 };
+                            int j = ReadWriteCtr.读偏移型(0x400500, i1);
+                            EncDec.超级加密(j, TransCtr.IntToFloat(200000.ToString()));
+                            ReadWriteCtr.WriteMemInt(0x400500, 0);
+                            //判断 = true;
+                            break;
+
                         }
                     }
-                    //Thread.Sleep(30);
-                    //if (判断)
-                        //break;
-               // }
+                }
+                //Thread.Sleep(30);
+                //if (判断)
+                //break;
+                // }
 
             }
             else
@@ -406,10 +404,10 @@ namespace SuperSkill
             uint[] j = { 基址.物品栏, 基址.物品栏偏移, 基址.物品栏1, 0 };
             设计图地址 = ReadWriteCtr.读偏移型(基址.人物基址, j);
             人物地址 = ReadWriteCtr.ReadMemInt(基址.人物基址);
-            uint[] i = {基址.物品栏,基址.物品栏偏移,基址.物品栏1, 1564 };
+            uint[] i = { 基址.物品栏, 基址.物品栏偏移, 基址.物品栏1, 1564 };
             uint[] i2 = { 基址.物品栏, 基址.物品栏偏移, 基址.物品栏1, 1564, 4 };
             uint[] i3 = { 基址.物品栏, 基址.物品栏偏移, 基址.物品栏1, 1564, 8 };
-            uint[] i4 = { 基址.物品栏, 基址.物品栏偏移, 基址.物品栏1, 1564, 14};
+            uint[] i4 = { 基址.物品栏, 基址.物品栏偏移, 基址.物品栏1, 1564, 14 };
             uint[] i5 = { 基址.物品栏, 基址.物品栏偏移, 基址.物品栏1, 1564, 18 };
             ReadWriteCtr.WriteMemInt((uint)ReadWriteCtr.读偏移型(基址.人物基址, i), 0x400700);
             ReadWriteCtr.WriteMemInt((uint)ReadWriteCtr.读偏移型(基址.人物基址, i2), 0x400800);
@@ -477,7 +475,7 @@ namespace SuperSkill
         public static void 公告(string 内容)
         {
 
-            byte[] 公告字节集 = TransCtr.AnsiToUnicode("Su超级技能: "+内容); //{ 0x85, 0x8D, 0xA7, 0x7E, 0x80, 0x62, 0xFD, 0x80, 0x31, 00, 0x31, 00, 0x34, 00, 0x39, 00, 0x32, 00, 0x30, 0x00, 0x36, 00, 0x35, 00, 0x32, 00, 0x38 };
+            byte[] 公告字节集 = TransCtr.AnsiToUnicode("Su超级技能: " + 内容); //{ 0x85, 0x8D, 0xA7, 0x7E, 0x80, 0x62, 0xFD, 0x80, 0x31, 00, 0x31, 00, 0x34, 00, 0x39, 00, 0x32, 00, 0x30, 0x00, 0x36, 00, 0x35, 00, 0x32, 00, 0x38 };
             ReadWriteCtr.WriteMemByteArray(0x400400, 公告字节集);
             Asm asm = new Asm();
             asm.Mov_ECX_DWORD_Ptr((int)基址.商店基址);
@@ -498,7 +496,7 @@ namespace SuperSkill
 
         }
         public static void 内存按键(int 按键参数)
-       {
+        {
             byte[] i1 = { 1 };
             byte[] i2 = { 0 };
             ReadWriteCtr.WriteMemByteArray((uint)(ReadWriteCtr.ReadMemInt(基址.按键基址) + 按键参数), i1);
@@ -513,7 +511,7 @@ namespace SuperSkill
             byte[] array1 = { 0xC7, 0x45, 0x0C, 01, 00, 00, 00, 0x53, 0x56, 0x57 };
             asm.Mov_EAX_DWORD_Ptr((int)基址.变怪基址_B);
             byte[] array2 = asm.JMP(基址.变怪基址_A + 8, 0x400D5F);
-            ReadWriteCtr.WriteMemByteArray(0x400d50,转换.数组加法(array1,asm.取汇编代码(), array2));
+            ReadWriteCtr.WriteMemByteArray(0x400d50, 转换.数组加法(array1, asm.取汇编代码(), array2));
             asm.清空汇编代码();
             byte[] array = asm.JMP(0x400d50, 基址.变怪基址_A);
             ReadWriteCtr.WriteMemByteArray(基址.变怪基址_A, array);
@@ -526,13 +524,13 @@ namespace SuperSkill
             asm.Push_ESI();
             asm.Push_EDI();
             asm.Mov_EAX_DWORD_Ptr((int)基址.变怪基址_B);
-            ReadWriteCtr.WriteMemByteArray(基址.变怪基址_A,asm.取汇编代码());
+            ReadWriteCtr.WriteMemByteArray(基址.变怪基址_A, asm.取汇编代码());
             asm.清空汇编代码();
             byte[] array = new byte[0x20];
-            ReadWriteCtr.WriteMemByteArray(0x400d50, array) ;
+            ReadWriteCtr.WriteMemByteArray(0x400d50, array);
             功能.公告("真.独家弱怪关闭成功");
         }
-        
+
     }
 
 }

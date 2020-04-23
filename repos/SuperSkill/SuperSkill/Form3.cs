@@ -1,8 +1,7 @@
-﻿using System;
-using System.Drawing;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.IO;
-using System.Text.RegularExpressions;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace SuperSkill
@@ -28,67 +27,6 @@ namespace SuperSkill
                 this.Hide();
             }
         }
-        private string PrintDom(HtmlElementCollection elemColl, System.Text.StringBuilder returnStr, Int32 depth)
-        {
-            System.Text.StringBuilder str = new System.Text.StringBuilder();
-
-            foreach (HtmlElement elem in elemColl)
-            {
-                string elemName;
-
-                elemName = elem.GetAttribute("ID");
-                if (elemName == null || elemName.Length == 0)
-                {
-                    elemName = elem.GetAttribute("name");
-                    if (elemName == null || elemName.Length == 0)
-                    {
-                        elemName = "<no name>";
-                    }
-                }
-
-                str.Append(' ', depth * 4);
-                str.Append(elemName + ": " + elem.TagName + "(Level " + depth + ")");
-                returnStr.AppendLine(str.ToString());
-
-                if (elem.CanHaveChildren)
-                {
-                    PrintDom(elem.Children, returnStr, depth + 1);
-                }
-
-                str.Remove(0, str.Length);
-            }
-
-            return (returnStr.ToString());
-        }
-        private bool checkUrlRedirect( String url = "" )
-        {
-            
-            int result = url.IndexOf("qun.qq.com/member.html");
-            if ( result > 0 )
-            {
-                MessageBox.Show(url);
-                return true;
-
-            }
-            //MessageBox.Show(result.ToString());
-            //Thread.Sleep(5000);
-            return false;
-        }
-        public void FindKeyWord( WebBrowser wb , string keyWord)
-        {
-            foreach (HtmlElement item in wb.Document.All)
-            {
-                if (item.InnerText != null)
-                {
-                    if (ClearChar(item.InnerText) == keyWord)
-                    {
-                        MessageBox.Show("123");
-                        break;
-                    }
-                }
-            }
-
-        }
         public void Write(string i)
         {
             FileStream fs = new FileStream("E:\\ak.txt", FileMode.Create);
@@ -100,81 +38,192 @@ namespace SuperSkill
             fs.Flush();
             fs.Close();
         }
-
-        public string ClearChar(string str)
+        private bool check(HtmlElement htmlElement)
         {
-            str = str.Replace("\n", null);
-            str = str.Replace("\r", null);
-            str = str.Replace("&nbsp;", null);
-            str = str.Replace(" ", null);
-            return str;
+            try
+            {
+                string i = htmlElement.OuterText;
+                Write(i);
+                //MessageBox.Show(i);
+                if (i == "{\"ec\":0,\"errcode\":0,\"em\":\"\"}")
+                {
+                    MessageBox.Show("你并没有加入任何群丑弟弟");
+                    return false;
+                }
+                RootObject r = JsonConvert.DeserializeObject<RootObject>(i);
+                foreach (Join ep in r.join)
+                {
+                    if (ep.gc == "835290838" && ep.gn == "SuperSkills" && ep.owner == "1253013130")
+                    {
+                        //MessageBox.Show("yes");
+                        return true;
+                    }
+                }
+                foreach (Create ep in r.create)
+                {
+                    if (ep.gc == "835290838" && ep.gn == "SuperSkills" && ep.owner == "1253013130")
+                    {
+                        //MessageBox.Show("yes");
+                        return true;
+                    }
+                }
+                foreach (Manage ep in r.manage)
+                {
+                    if (ep.gc == "835290838" && ep.gn == "SuperSkills" && ep.owner == "1253013130")
+                    {
+                        //MessageBox.Show("yes");
+                        return true;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
+            return false;
+        }
+        public class Join
+        {
+            public string gc { get; set; }
+            public string gn { get; set; }
+            public string owner { get; set; }
         }
 
-        private Boolean check( WebBrowser webBrowser)
+        public class Manage
         {
-            HtmlElementCollection i = webBrowser.Document.GetElementsByTagName("LI");
-            String output="";
-            foreach ( HtmlElement item in i )
+            public string gc { get; set; }
+            public string gn { get; set; }
+            public string owner { get; set; }
+        }
+
+        public class Create
+        {
+            public string gc { get; set; }
+            public string gn { get; set; }
+            public string owner { get; set; }
+        }
+
+        public class RootObject
+        {
+            public string ec { get; set; }
+            public string errcode { get; set; }
+            public string em { get; set; }
+            public List<Join> join { get; set; }
+            public List<Manage> manage { get; set; }
+            public List<Create> create { get; set; }
+        }
+
+        private void doFunctionInPage()
+        {
+            webBrowser1.Document.InvokeScript("CreateSusunl");
+        }
+
+        static bool check_AddFunctionStatus = false;
+        public void addFunctionToPage()
+        {
+            if (!check_AddFunctionStatus)
             {
-                //output = output + " \n\r" +"title:" + item.GetAttribute("title") + "data-id:"+item.GetAttribute("data-id");
-                output = output + item.OuterHtml;
+                //
+                HtmlElement script = webBrowser1.Document.CreateElement("script");
+                script.SetAttribute("type", "text/javascript");
+                script.SetAttribute("text", "function CreateSusunl(){ $.post('https://qun.qq.com/cgi-bin/qun_mgr/get_group_list','bkn='+$.getCSRFToken(),function(data,status){CreateDom(data,status);} );}");
+                HtmlElement head = webBrowser1.Document.Body.AppendChild(script);
+
+                //
+                HtmlElement script2 = webBrowser1.Document.CreateElement("script");
+                script2.SetAttribute("type", "text/javascript");
+                script2.SetAttribute("text", "function CreateDom(data,status){ if ( data != '' ) {var json = '';if ( data instanceof Object ) {json = JSON.stringify(data);}else{json = data;}$('body').append('<div id=\"susunl_grouplist\">'+json+'</div>' ); }else{ CreateSusunl(); } } ");
+                HtmlElement head1 = webBrowser1.Document.Body.AppendChild(script2);
+                //MessageBox.Show(head1.OuterText);
+
+                //
+                //webBrowser1.Document.InvokeScript("CreateSusunl");
+
+                //webBrowser1.Document.InvokeScript("CreateDom");
+                check_AddFunctionStatus = true;
+                doFunctionInPage();
             }
-            if(output.IndexOf("624核心骨干交流群") > 0)
-                Write(output);
-            return false;
         }
 
         private void WebBrowser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
         {
-            
+
             if (webBrowser1.Url.ToString().StartsWith("https://qun.qq.com/member.html"))
             {
-                object[] o = new object[1];
-                o[0] = "$.post('https://qun.qq.com/cgi-bin/qun_mgr/get_group_list','bkn='+$.getCSRFToken(),function(data,status){if ( data != '' ) {var json = '';if ( data instanceof Object ) {json = JSON.stringify(data);}else{json = datg;}$('body').append('<div id=\'susunl_grouplist\'>'+json+'</div>');}});";
-                webBrowser1.Document.InvokeScript("message",o);
+
+                addFunctionToPage();
                 HtmlElement htmlElement = webBrowser1.Document.GetElementById("susunl_grouplist");
-                htmlElement.
-                return;
-                HtmlElementCollection i = webBrowser1.Document.GetElementsByTagName("LI");
-                if (i == null)
-                {
+                if (htmlElement == null)
                     return;
-                }
-                String output = "";
-                foreach (HtmlElement item in i)
+                if (check(htmlElement))
                 {
-                    //output = output + " \n\r" +"title:" + item.GetAttribute("title") + "data-id:"+item.GetAttribute("data-id");
-                    output = output + item.OuterHtml;
-                }
-                if (output.IndexOf("SuperSkills") < 0)
-                {
-                    return;
-                }
-                //HtmlElementCollection hec = webBrowser1.Document.GetElementsByTagName("div");//< div class="my-all-group">
-                //string str = PrintDom(hec, new System.Text.StringBuilder(), 0);
-                //Write(str);
-                //foreach (HtmlElement he in hec)
-                //{
-                //    string cat_name = he.GetAttribute("className");
-                //    MessageBox.Show(cat_name);
-                //}
-                //MessageBox.Show("判断成功");
-                //Thread.Sleep(2000);
-                webBrowser1.ProgressChanged -= WebBrowser1_ProgressChanged;
-                if (output.IndexOf("SuperSkills") > 0 && output.IndexOf("835290838") > 0)
-                {
-                    MessageBox.Show("验证成功");
                     CloseChrome();
                     Form1 form2 = new Form1();
                     form2.Show();
-                    this.Dispose(false);
+                    Dispose(false);
                 }
                 else
                 {
-                    MessageBox.Show("请加指定交流群:835290838");
                     CloseChrome();
-                    Application.Exit();
+                    Environment.Exit(0);
                 }
+                //string groupListText = webBrowser1.DocumentText;
+                //string groupid = "835290838";
+                //if (Regex.IsMatch(groupListText, $"data-groupid=\"{groupid}\""))
+                //{
+                //    //MessageBox.Show("验证成功");
+                //    CloseChrome();
+                //    Form1 form2 = new Form1();
+                //    form2.Show();
+                //    Dispose(false);
+
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("请加指定交流群:835290838");
+                //    CloseChrome();
+                //    Application.Exit();
+                //}
+                //HtmlElementCollection i = webBrowser1.Document.GetElementsByTagName("LI");
+                //if (i == null)
+                //{
+                //    return;
+                //}
+                //String output = "";
+                //foreach (HtmlElement item in i)
+                //{
+                //    //output = output + " \n\r" +"title:" + item.GetAttribute("title") + "data-id:"+item.GetAttribute("data-id");
+                //    output = output + item.OuterHtml;
+                //}
+                //if (output.IndexOf("SuperSkills") < 0)
+                //{
+                //    return;
+                //}
+                ////HtmlElementCollection hec = webBrowser1.Document.GetElementsByTagName("div");//< div class="my-all-group">
+                ////string str = PrintDom(hec, new System.Text.StringBuilder(), 0);
+                ////Write(str);
+                ////foreach (HtmlElement he in hec)
+                ////{
+                ////    string cat_name = he.GetAttribute("className");
+                ////    MessageBox.Show(cat_name);
+                ////}
+                ////MessageBox.Show("判断成功");
+                ////Thread.Sleep(2000);
+                //webBrowser1.ProgressChanged -= WebBrowser1_ProgressChanged;
+                //if (output.IndexOf("SuperSkills") > 0 && output.IndexOf("835290838") > 0)
+                //{
+                //    MessageBox.Show("验证成功");
+                //    CloseChrome();
+                //    Form1 form2 = new Form1();
+                //    form2.Show();
+                //    Dispose(false);
+                //}
+                //else
+                //{
+                //    MessageBox.Show("请加指定交流群:835290838");
+                //    CloseChrome();
+                //    Application.Exit();
+                //}
                 //string groupid = "1072040879";
             }
 

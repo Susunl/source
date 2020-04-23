@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ReadWrite;
+﻿using ReadWrite;
 using SslnEngine;
+using System;
 
 namespace SuperSkill
 {
@@ -17,7 +13,7 @@ namespace SuperSkill
             {
             }
         }
-        public static void 释放call(int X坐标,int Y坐标,int Z坐标,int 代码,int 伤害)
+        public static void 释放call(int X坐标, int Y坐标, int Z坐标, int 代码, int 伤害)
         {
             int 释放地址 = (int)基址.释放CALL;
             int 人物数据 = ReadWriteCtr.ReadMemInt(全局变量.进程ID, 基址.人物基址);
@@ -82,7 +78,7 @@ namespace SuperSkill
             asm.Call_EDX();
             asm.RunAsm(全局变量.进程ID);
         }
-        public static void miss扣血call(int 扣血指针,int 控制血量 = 0)
+        public static void miss扣血call(int 扣血指针, int 控制血量 = 0)
         {
             Asm asm = new Asm();
             asm.Mov_ESI(扣血指针);
@@ -118,7 +114,7 @@ namespace SuperSkill
             asm.Call_EAX();
             asm.RunAsm(全局变量.进程ID);
         }
-        public static void 提交CALL(int 任务ID) 
+        public static void 提交CALL(int 任务ID)
         {
             Asm asm = new Asm();
             asm.Push(1);
@@ -137,7 +133,7 @@ namespace SuperSkill
             接受CALL(12188);
             接受CALL(12189);
             接受CALL(12190);
-            Delay(50 );
+            Delay(50);
             for (int i = 0; i < 5; i++)
             {
                 完成CALL(12186);
@@ -169,7 +165,7 @@ namespace SuperSkill
             asm.Mov_DWORD_Ptr_EAX(0x400700);
             asm.Add_EAX(0xFC);
             asm.Mov_EAX_DWORD_Ptr_EAX();
-            asm.Mov_DWORD_Ptr_EAX_ADD(-4,2000);
+            asm.Mov_DWORD_Ptr_EAX_ADD(-4, 2000);
             asm.Mov_DWORD_Ptr_EAX_ADD(0x4, 代码);
             asm.Mov_DWORD_Ptr_EAX_ADD(0x14, 500);
             asm.Push(0);

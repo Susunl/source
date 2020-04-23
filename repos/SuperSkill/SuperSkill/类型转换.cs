@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SuperSkill
 {
@@ -18,7 +15,7 @@ namespace SuperSkill
             byte[] shi = BitConverter.GetBytes(整数);
             return shi;
         }
-        public static byte[] 数组加法(byte[] array1, byte[] array2 , byte[] array3 , byte[] array4 , byte[] array5 )
+        public static byte[] 数组加法(byte[] array1, byte[] array2, byte[] array3, byte[] array4, byte[] array5)
         {
             byte[] arrayC;
             List<byte> tempList = new List<byte>();
@@ -30,7 +27,7 @@ namespace SuperSkill
             arrayC = tempList.ToArray();
             return arrayC;
         }
-        public static byte[] 数组加法(byte[] array1 , byte[] array2 , byte[] array3 , byte[] array4)
+        public static byte[] 数组加法(byte[] array1, byte[] array2, byte[] array3, byte[] array4)
         {
             byte[] arrayC;
             List<byte> tempList = new List<byte>();
@@ -41,7 +38,7 @@ namespace SuperSkill
             arrayC = tempList.ToArray();
             return arrayC;
         }
-        public static byte[] 数组加法(byte[] array1 , byte[] array2 , byte[] array3)
+        public static byte[] 数组加法(byte[] array1, byte[] array2, byte[] array3)
         {
             byte[] arrayC;
             List<byte> tempList = new List<byte>();
@@ -51,7 +48,7 @@ namespace SuperSkill
             arrayC = tempList.ToArray();
             return arrayC;
         }
-        public static byte[] 数组加法(byte[] array1 , byte[] array2)
+        public static byte[] 数组加法(byte[] array1, byte[] array2)
         {
             byte[] arrayC;
             List<byte> tempList = new List<byte>();
@@ -60,7 +57,7 @@ namespace SuperSkill
             arrayC = tempList.ToArray();
             return arrayC;
         }
-        public static byte[] 数组加法(byte[] array1 , byte[] array2 , byte[] array3 , byte[] array4 , byte[] array5,byte[] array6)
+        public static byte[] 数组加法(byte[] array1, byte[] array2, byte[] array3, byte[] array4, byte[] array5, byte[] array6)
         {
             byte[] arrayC;
             List<byte> tempList = new List<byte>();
@@ -78,5 +75,5 @@ namespace SuperSkill
 
 
     }
-    
+
 }

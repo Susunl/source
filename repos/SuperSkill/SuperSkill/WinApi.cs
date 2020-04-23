@@ -1,12 +1,11 @@
 ﻿using ProcessCtr;
 using ReadWrite;
+using SuperSkill;
 using System;
 using System.Diagnostics;
-using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
-using SuperSkill;
 
 //命名空间 读写
 namespace ReadWrite
@@ -15,7 +14,7 @@ namespace ReadWrite
     /// 类:内存读写API
     /// </summary>
 
-    
+
     public class ReadWriteAPI
     {
         public const int PAGE_EXECUTE_READWRITE = 0x4;
@@ -345,7 +344,7 @@ namespace ReadWrite
         public static unsafe bool WriteMemInt(uint Address, int Data)
         {
             //声明变量
-            int a = 0,old = 0;
+            int a = 0, old = 0;
             IntPtr handle = new IntPtr();
             byte[] temp = new byte[4];
             temp = BitConverter.GetBytes(Data);
@@ -393,12 +392,12 @@ namespace ReadWrite
                 return true;
         }
         [DllImport("kernel32.dll")]
-        public static unsafe extern bool VirtualProtectEx(IntPtr handle, int address, int size,int flNewProtect,[Out] int* lpflOldProtect);
+        public static unsafe extern bool VirtualProtectEx(IntPtr handle, int address, int size, int flNewProtect, [Out] int* lpflOldProtect);
         public static unsafe bool WriteMemByteArray(uint Address, byte[] Data, int Size = 0)
         {
             //声明变量
             int a;
-            IntPtr handle ;
+            IntPtr handle;
             int old = 0;
             //VirtualProtectEx(handle, (int)Address, Data.Length, 64, old);
             if (全局变量.进程ID == -1)    //-1为自进程
@@ -418,11 +417,11 @@ namespace ReadWrite
                 return true;
         }
 
-        public static int 读偏移型(uint 基址,uint[] 偏移)
+        public static int 读偏移型(uint 基址, uint[] 偏移)
         {
             int 地址 = (int)基址;
             int i = 0;
-            while (i<偏移.Length)
+            while (i < 偏移.Length)
             {
                 地址 = ReadMemInt((uint)地址);
                 地址 = (int)(地址 + 偏移[i]);
@@ -622,13 +621,13 @@ namespace EncryptionDecrypt
         public static uint Decrypt(int ProcessID, uint Address, uint DecryptionAdd)
         {
             //声明变量
-            uint eax, edx,esi = 0;
+            uint eax, edx, esi = 0;
             eax = ReadWriteCtr.ReadMemInt2(ProcessID, Address);
             esi = ReadWriteCtr.ReadMemInt2(ProcessID, DecryptionAdd);
             edx = eax >> 16;
-            edx = ReadWriteCtr.ReadMemInt2(ProcessID, (uint)(esi + edx * 4 + 36));
+            edx = ReadWriteCtr.ReadMemInt2(ProcessID, esi + edx * 4 + 36);
             eax = eax & 65535;
-            eax = ReadWriteCtr.ReadMemInt2(ProcessID, (uint)(edx + eax * 4 + 8468));
+            eax = ReadWriteCtr.ReadMemInt2(ProcessID, edx + eax * 4 + 8468);
             edx = eax & 65535;
             esi = edx << 16;
             esi = esi | edx;

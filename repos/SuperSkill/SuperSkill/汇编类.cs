@@ -1,9 +1,8 @@
-﻿using System;
+﻿using ReadWrite;
+using SuperSkill;
+using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
-using ReadWrite;
-using SuperSkill;
 namespace SslnEngine
 {
     /// <summary>
@@ -95,7 +94,7 @@ namespace SslnEngine
         {
             string str1;
             string str2 = "";
-            str1 = "0000000" + this.hex(value);
+            str1 = "0000000" + hex(value);
             str1 = str1.Substring(str1.Length - num, num);
             for (int i = 0; i < str1.Length / 2; i++)
             {
@@ -107,7 +106,7 @@ namespace SslnEngine
         {
             string str1;
             string str2 = "";
-            str1 = "0000000" + this.hex(value);
+            str1 = "0000000" + hex(value);
             str1 = str1.Substring(str1.Length - num, num);
             for (int i = 0; i < str1.Length / 2; i++)
             {
@@ -120,122 +119,122 @@ namespace SslnEngine
         {
             if ((addre <= 127) && (addre >= -128))
             {
-                this.Asmcode = this.Asmcode + "83EC" + intTohex(addre, 2);
+                Asmcode = Asmcode + "83EC" + intTohex(addre, 2);
             }
             else
             {
-                this.Asmcode = this.Asmcode + "81EC" + intTohex(addre, 8);
+                Asmcode = Asmcode + "81EC" + intTohex(addre, 8);
             }
         }
 
         public void Nop()
         {
-            this.Asmcode = this.Asmcode + "90";
+            Asmcode = Asmcode + "90";
         }
         public void RetA(int addre)
         {
-            this.Asmcode = this.Asmcode + intTohex(addre, 4);
+            Asmcode = Asmcode + intTohex(addre, 4);
         }
         public void IN_AL_DX()
         {
-            this.Asmcode = this.Asmcode + "EC";
+            Asmcode = Asmcode + "EC";
         }
         public void TEST_EAX_EAX()
         {
-            this.Asmcode = this.Asmcode + "85C0";
+            Asmcode = Asmcode + "85C0";
         }
         public void Leave()
         {
-            this.Asmcode = this.Asmcode + "C9";
+            Asmcode = Asmcode + "C9";
         }
         public void Pushad()
         {
-            this.Asmcode = this.Asmcode + "60";
+            Asmcode = Asmcode + "60";
         }
         public void Pushfd()
         {
-            this.Asmcode = this.Asmcode + "9C";
+            Asmcode = Asmcode + "9C";
         }
         public void Cld()
         {
-            this.Asmcode = this.Asmcode + "FC";
+            Asmcode = Asmcode + "FC";
         }
         public void Rep_Movsb()
         {
-            this.Asmcode = this.Asmcode + "F3A4";
+            Asmcode = Asmcode + "F3A4";
         }
         public void Popad()
         {
-            this.Asmcode = this.Asmcode + "61";
+            Asmcode = Asmcode + "61";
         }
         public void Popfd()
         {
-            this.Asmcode = this.Asmcode + "9D";
+            Asmcode = Asmcode + "9D";
         }
         public void Ret()
         {
-            this.Asmcode = this.Asmcode + "C3";
+            Asmcode = Asmcode + "C3";
         }
 
         #region ADD
         public void Add_EAX_EDX()
         {
-            this.Asmcode = this.Asmcode + "03C2";
+            Asmcode = Asmcode + "03C2";
         }
         public void Add_EBX_EAX()
         {
-            this.Asmcode = this.Asmcode + "03D8";
+            Asmcode = Asmcode + "03D8";
         }
         public void Add_EAX_DWORD_Ptr(int addre)
         {
-            this.Asmcode = this.Asmcode + "0305" + intTohex(addre, 8);
+            Asmcode = Asmcode + "0305" + intTohex(addre, 8);
         }
         public void Add_EBX_DWORD_Ptr(int addre)
         {
-            this.Asmcode = this.Asmcode + "031D" + intTohex(addre, 8);
+            Asmcode = Asmcode + "031D" + intTohex(addre, 8);
         }
         public void Add_EBP_DWORD_Ptr(int addre)
         {
-            this.Asmcode = this.Asmcode + "032D" + intTohex(addre, 8);
+            Asmcode = Asmcode + "032D" + intTohex(addre, 8);
         }
         public void Add_EAX(int addre)
         {
-            this.Asmcode = this.Asmcode + "05" + intTohex(addre, 8);
+            Asmcode = Asmcode + "05" + intTohex(addre, 8);
         }
         public void Add_EBX(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "83C3" + intTohex(addre, 2);
+                Asmcode = Asmcode + "83C3" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "81C3" + intTohex(addre, 8);
+                Asmcode = Asmcode + "81C3" + intTohex(addre, 8);
         }
         public void Add_ECX(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "83C1" + intTohex(addre, 2);
+                Asmcode = Asmcode + "83C1" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "81C1" + intTohex(addre, 8);
+                Asmcode = Asmcode + "81C1" + intTohex(addre, 8);
         }
         public void Add_EDX(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "83C2" + intTohex(addre, 2);
+                Asmcode = Asmcode + "83C2" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "81C2" + intTohex(addre, 8);
+                Asmcode = Asmcode + "81C2" + intTohex(addre, 8);
         }
         public void Add_ESI(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "83C6" + intTohex(addre, 2);
+                Asmcode = Asmcode + "83C6" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "81C6" + intTohex(addre, 8);
+                Asmcode = Asmcode + "81C6" + intTohex(addre, 8);
         }
         public void Add_ESP(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "83C4" + intTohex(addre, 2);
+                Asmcode = Asmcode + "83C4" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "81C4" + intTohex(addre, 8);
+                Asmcode = Asmcode + "81C4" + intTohex(addre, 8);
         }
         #endregion
         #region mov
@@ -243,530 +242,530 @@ namespace SslnEngine
         {
             if ((addre <= 127) && (addre >= -128))
             {
-                this.Asmcode = this.Asmcode + "C740" + intTohex(addre, 2) + intTohex(addre1, 8);
+                Asmcode = Asmcode + "C740" + intTohex(addre, 2) + intTohex(addre1, 8);
             }
             else
             {
-                this.Asmcode = this.Asmcode + "C780" + intTohex(addre, 8) + intTohex(addre1, 8);
+                Asmcode = Asmcode + "C780" + intTohex(addre, 8) + intTohex(addre1, 8);
             }
         }
         public void Mov_DWORD_Ptr_ESP_ADD(int addre, int addre1)
         {
             if ((addre <= 127) && (addre >= -128))
             {
-                this.Asmcode = this.Asmcode + "C74424" + intTohex(addre, 2) + intTohex(addre1, 8);
+                Asmcode = Asmcode + "C74424" + intTohex(addre, 2) + intTohex(addre1, 8);
             }
             else
             {
-                this.Asmcode = this.Asmcode + "C78424" + intTohex(addre, 8) + intTohex(addre1, 8);
+                Asmcode = Asmcode + "C78424" + intTohex(addre, 8) + intTohex(addre1, 8);
             }
         }
         public void Mov_DWORD_Ptr_ESP_ADD_EAX(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
             {
-                this.Asmcode = this.Asmcode + "894424" + intTohex(addre, 2);
+                Asmcode = Asmcode + "894424" + intTohex(addre, 2);
             }
             else
             {
-                this.Asmcode = this.Asmcode + "898424" + intTohex(addre, 8);
+                Asmcode = Asmcode + "898424" + intTohex(addre, 8);
             }
         }
         public void Mov_DWORD_Ptr_ESP(int addre)
         {
-            this.Asmcode = this.Asmcode + "C70424" + intTohex(addre, 8);
+            Asmcode = Asmcode + "C70424" + intTohex(addre, 8);
         }
         public void Mov_DWORD_Ptr_EAX(int addre)
         {
-            this.Asmcode = this.Asmcode + "A3" + intTohex(addre, 8);
+            Asmcode = Asmcode + "A3" + intTohex(addre, 8);
         }
         public void Mov_EBX_DWORD_Ptr(int addre)
         {
-            this.Asmcode = this.Asmcode + "8B1D" + intTohex(addre, 8);
+            Asmcode = Asmcode + "8B1D" + intTohex(addre, 8);
         }
         public void Mov_ECX_DWORD_Ptr(int addre)
         {
-            this.Asmcode = this.Asmcode + "8B0D" + intTohex(addre, 8);
+            Asmcode = Asmcode + "8B0D" + intTohex(addre, 8);
         }
         public void Mov_EAX_DWORD_Ptr(int addre)
         {
-            this.Asmcode = this.Asmcode + "A1" + intTohex(addre, 8);
+            Asmcode = Asmcode + "A1" + intTohex(addre, 8);
         }
         public void Mov_EDX_DWORD_Ptr(int addre)
         {
-            this.Asmcode = this.Asmcode + "8B15" + intTohex(addre, 8);
+            Asmcode = Asmcode + "8B15" + intTohex(addre, 8);
         }
         public void Mov_ESI_DWORD_Ptr(int addre)
         {
-            this.Asmcode = this.Asmcode + "8B35" + intTohex(addre, 8);
+            Asmcode = Asmcode + "8B35" + intTohex(addre, 8);
         }
         public void Mov_ESP_DWORD_Ptr(int addre)
         {
-            this.Asmcode = this.Asmcode + "8B25" + intTohex(addre, 8);
+            Asmcode = Asmcode + "8B25" + intTohex(addre, 8);
         }
         public void Mov_EBP_DWORD_Ptr(int addre)
         {
-            this.Asmcode = this.Asmcode + "8B2D" + intTohex(addre, 8);
+            Asmcode = Asmcode + "8B2D" + intTohex(addre, 8);
         }
         public void Mov_EAX_DWORD_Ptr_EAX(int addre)
         {
-            this.Asmcode = this.Asmcode + "8B00";
+            Asmcode = Asmcode + "8B00";
         }
         public void Mov_EAX_DWORD_Ptr_EAX()
         {
-            this.Asmcode = this.Asmcode + "8B00";
+            Asmcode = Asmcode + "8B00";
         }
         public void Mov_EAX_DWORD_Ptr_EBP()
         {
-            this.Asmcode = this.Asmcode + "8B4500";
+            Asmcode = Asmcode + "8B4500";
         }
         public void Mov_EAX_DWORD_Ptr_EBX()
         {
-            this.Asmcode = this.Asmcode + "8B03";
+            Asmcode = Asmcode + "8B03";
         }
         public void Mov_EAX_DWORD_Ptr_ECX()
         {
-            this.Asmcode = this.Asmcode + "8B01";
+            Asmcode = Asmcode + "8B01";
         }
         public void Mov_EAX_DWORD_Ptr_EDX()
         {
-            this.Asmcode = this.Asmcode + "8B02";
+            Asmcode = Asmcode + "8B02";
         }
         public void Mov_EAX_DWORD_Ptr_EDI()
         {
-            this.Asmcode = this.Asmcode + "8B07";
+            Asmcode = Asmcode + "8B07";
         }
         public void Mov_EAX_DWORD_Ptr_ESP()
         {
-            this.Asmcode = this.Asmcode + "8B0424";
+            Asmcode = Asmcode + "8B0424";
         }
         public void Mov_EAX_DWORD_Ptr_ESI()
         {
-            this.Asmcode = this.Asmcode + "8B06";
+            Asmcode = Asmcode + "8B06";
         }
         public void Mov_EAX_DWORD_Ptr_EAX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
             {
-                this.Asmcode = this.Asmcode + "8B40" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B40" + intTohex(addre, 2);
             }
             else
             {
-                this.Asmcode = this.Asmcode + "8B80" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B80" + intTohex(addre, 8);
             }
         }
         public void Mov_EAX_DWORD_Ptr_ESP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B4424" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B4424" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B8424" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B8424" + intTohex(addre, 8);
         }
         public void Mov_EAX_DWORD_Ptr_EBX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B43" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B43" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B83" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B83" + intTohex(addre, 8);
         }
         public void Mov_EAX_DWORD_Ptr_ECX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B41" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B41" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B81" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B81" + intTohex(addre, 8);
         }
         public void Mov_EAX_DWORD_Ptr_EDX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B42" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B42" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B82" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B82" + intTohex(addre, 8);
         }
         public void Mov_EAX_DWORD_Ptr_EDI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B47" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B47" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B87" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B87" + intTohex(addre, 8);
         }
         public void Mov_EAX_DWORD_Ptr_EBP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B45" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B45" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B85" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B85" + intTohex(addre, 8);
         }
         public void Mov_EAX_DWORD_Ptr_ESI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B46" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B46" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B86" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B86" + intTohex(addre, 8);
         }
         public void Mov_EBX_DWORD_Ptr_EAX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B58" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B58" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B98" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B98" + intTohex(addre, 8);
         }
         public void Mov_EBX_DWORD_Ptr_ESP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B5C24" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B5C24" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B9C24" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B9C24" + intTohex(addre, 8);
         }
         public void Mov_EBX_DWORD_Ptr_EBX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B5B" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B5B" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B9B" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B9B" + intTohex(addre, 8);
         }
         public void Mov_EBX_DWORD_Ptr_ECX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B59" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B59" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B99" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B99" + intTohex(addre, 8);
         }
         public void Mov_EBX_DWORD_Ptr_EDX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B5A" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B5A" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B9A" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B9A" + intTohex(addre, 8);
         }
         public void Mov_EBX_DWORD_Ptr_EDI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B5F" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B5F" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B9F" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B9F" + intTohex(addre, 8);
         }
         public void Mov_EBX_DWORD_Ptr_EBP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B5D" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B5D" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B9D" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B9D" + intTohex(addre, 8);
         }
         public void Mov_EBX_DWORD_Ptr_ESI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B5E" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B5E" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B9E" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B9E" + intTohex(addre, 8);
         }
         public void Mov_ECX_DWORD_Ptr_EAX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B48" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B48" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B88" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B88" + intTohex(addre, 8);
         }
         public void Mov_ECX_DWORD_Ptr_ESP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B4C24" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B4C24" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B8C24" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B8C24" + intTohex(addre, 8);
         }
         public void Mov_ECX_DWORD_Ptr_EBX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B4B" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B4B" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B8B" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B8B" + intTohex(addre, 8);
         }
         public void Mov_ECX_DWORD_Ptr_ECX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B49" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B49" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B89" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B89" + intTohex(addre, 8);
         }
         public void Mov_ECX_DWORD_Ptr_EDX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B4A" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B4A" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B8A" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B8A" + intTohex(addre, 8);
         }
         public void Mov_ECX_DWORD_Ptr_EDI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B4F" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B4F" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B8F" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B8F" + intTohex(addre, 8);
         }
         public void Mov_ECX_DWORD_Ptr_EBP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B4D" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B4D" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B8D" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B8D" + intTohex(addre, 8);
         }
         public void Mov_ECX_DWORD_Ptr_ESI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B4E" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B4E" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B8E" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B8E" + intTohex(addre, 8);
         }
         public void Mov_EDX_DWORD_Ptr_EAX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B50" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B50" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B90" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B90" + intTohex(addre, 8);
         }
         public void Mov_EDX_DWORD_Ptr_ESP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B5424" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B5424" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B9424" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B9424" + intTohex(addre, 8);
         }
         public void Mov_EDX_DWORD_Ptr_EBX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B53" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B53" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B93" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B93" + intTohex(addre, 8);
         }
         public void Mov_EDX_DWORD_Ptr_ECX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B51" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B51" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B91" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B91" + intTohex(addre, 8);
         }
         public void Mov_EDX_DWORD_Ptr_EDX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B52" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B52" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B92" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B92" + intTohex(addre, 8);
         }
         public void Mov_EDX_DWORD_Ptr_EDI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B57" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B57" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B97" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B97" + intTohex(addre, 8);
         }
         public void Mov_EDX_DWORD_Ptr_EBP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B55" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B55" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B95" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B95" + intTohex(addre, 8);
         }
         public void Mov_EDX_DWORD_Ptr_ESI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8B56" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8B56" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8B96" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8B96" + intTohex(addre, 8);
         }
         public void Mov_ECX_EAX()
         {
-            this.Asmcode = this.Asmcode + "8BC8";
+            Asmcode = Asmcode + "8BC8";
         }
         public void Mov_EAX(int addre)
         {
-            this.Asmcode = this.Asmcode + "B8" + intTohex(addre, 8);
+            Asmcode = Asmcode + "B8" + intTohex(addre, 8);
         }
         public void Mov_EBX(int addre)
         {
-            this.Asmcode = this.Asmcode + "BB" + intTohex(addre, 8);
+            Asmcode = Asmcode + "BB" + intTohex(addre, 8);
         }
         public void Mov_ECX(int addre)
         {
-            this.Asmcode = this.Asmcode + "B9" + intTohex(addre, 8);
+            Asmcode = Asmcode + "B9" + intTohex(addre, 8);
         }
         public void Mov_EDX(int addre)
         {
-            this.Asmcode = this.Asmcode + "BA" + intTohex(addre, 8);
+            Asmcode = Asmcode + "BA" + intTohex(addre, 8);
         }
         public void Mov_ESI(int addre)
         {
-            this.Asmcode = this.Asmcode + "BE" + intTohex(addre, 8);
+            Asmcode = Asmcode + "BE" + intTohex(addre, 8);
         }
         public void Mov_ESP(int addre)
         {
-            this.Asmcode = this.Asmcode + "BC" + intTohex(addre, 8);
+            Asmcode = Asmcode + "BC" + intTohex(addre, 8);
         }
         public void Mov_EBP(int addre)
         {
-            this.Asmcode = this.Asmcode + "BD" + intTohex(addre, 8);
+            Asmcode = Asmcode + "BD" + intTohex(addre, 8);
         }
         public void Mov_EDI(int addre)
         {
-            this.Asmcode = this.Asmcode + "BF" + intTohex(addre, 8);
+            Asmcode = Asmcode + "BF" + intTohex(addre, 8);
         }
         public void Mov_ESI_DWORD_Ptr_EAX()
         {
-            this.Asmcode = this.Asmcode + "8B7020";
+            Asmcode = Asmcode + "8B7020";
         }
         public void Mov_EBX_DWORD_Ptr_EAX()
         {
-            this.Asmcode = this.Asmcode + "8B18";
+            Asmcode = Asmcode + "8B18";
         }
         public void Mov_EBX_DWORD_Ptr_EBP()
         {
-            this.Asmcode = this.Asmcode + "8B5D00";
+            Asmcode = Asmcode + "8B5D00";
         }
         public void Mov_EBX_DWORD_Ptr_EBX()
         {
-            this.Asmcode = this.Asmcode + "8B1B";
+            Asmcode = Asmcode + "8B1B";
         }
         public void Mov_EBX_DWORD_Ptr_ECX()
         {
-            this.Asmcode = this.Asmcode + "8B19";
+            Asmcode = Asmcode + "8B19";
         }
         public void Mov_EBX_DWORD_Ptr_EDX()
         {
-            this.Asmcode = this.Asmcode + "8B1A";
+            Asmcode = Asmcode + "8B1A";
         }
         public void Mov_EBX_DWORD_Ptr_EDI()
         {
-            this.Asmcode = this.Asmcode + "8B1F";
+            Asmcode = Asmcode + "8B1F";
         }
         public void Mov_EBX_DWORD_Ptr_ESP()
         {
-            this.Asmcode = this.Asmcode + "8B1C24";
+            Asmcode = Asmcode + "8B1C24";
         }
         public void Mov_EBX_DWORD_Ptr_ESI()
         {
-            this.Asmcode = this.Asmcode + "8B1E";
+            Asmcode = Asmcode + "8B1E";
         }
         public void Mov_ECX_DWORD_Ptr_EAX()
         {
-            this.Asmcode = this.Asmcode + "8B08";
+            Asmcode = Asmcode + "8B08";
         }
         public void Mov_ECX_DWORD_Ptr_EBP()
         {
-            this.Asmcode = this.Asmcode + "8B4D00";
+            Asmcode = Asmcode + "8B4D00";
         }
         public void Mov_ECX_DWORD_Ptr_EBX()
         {
-            this.Asmcode = this.Asmcode + "8B0B";
+            Asmcode = Asmcode + "8B0B";
         }
         public void Mov_ECX_DWORD_Ptr_ECX()
         {
-            this.Asmcode = this.Asmcode + "8B09";
+            Asmcode = Asmcode + "8B09";
         }
         public void Mov_ECX_DWORD_Ptr_EDX()
         {
-            this.Asmcode = this.Asmcode + "8B0A";
+            Asmcode = Asmcode + "8B0A";
         }
         public void Mov_ECX_DWORD_Ptr_EDI()
         {
-            this.Asmcode = this.Asmcode + "8B0F";
+            Asmcode = Asmcode + "8B0F";
         }
         public void Mov_ECX_DWORD_Ptr_ESP()
         {
-            this.Asmcode = this.Asmcode + "8B0C24";
+            Asmcode = Asmcode + "8B0C24";
         }
         public void Mov_ECX_DWORD_Ptr_ESI()
         {
-            this.Asmcode = this.Asmcode + "8B0E";
+            Asmcode = Asmcode + "8B0E";
         }
         public void Mov_EDX_DWORD_Ptr_EAX()
         {
-            this.Asmcode = this.Asmcode + "8B10";
+            Asmcode = Asmcode + "8B10";
         }
         public void Mov_EDX_DWORD_Ptr_EBP()
         {
-            this.Asmcode = this.Asmcode + "8B5500";
+            Asmcode = Asmcode + "8B5500";
         }
         public void Mov_EDX_DWORD_Ptr_EBX()
         {
-            this.Asmcode = this.Asmcode + "8B13";
+            Asmcode = Asmcode + "8B13";
         }
         public void Mov_EDX_DWORD_Ptr_ECX()
         {
-            this.Asmcode = this.Asmcode + "8B11";
+            Asmcode = Asmcode + "8B11";
         }
         public void Mov_EDX_DWORD_Ptr_EDX()
         {
-            this.Asmcode = this.Asmcode + "8B12";
+            Asmcode = Asmcode + "8B12";
         }
         public void Mov_EDX_DWORD_Ptr_EDI()
         {
-            this.Asmcode = this.Asmcode + "8B17";
+            Asmcode = Asmcode + "8B17";
         }
         public void Mov_EDX_DWORD_Ptr_ESI()
         {
-            this.Asmcode = this.Asmcode + "8B16";
+            Asmcode = Asmcode + "8B16";
         }
         public void Mov_EDX_DWORD_Ptr_ESP()
         {
-            this.Asmcode = this.Asmcode + "8B1424";
+            Asmcode = Asmcode + "8B1424";
         }
         public void Mov_EAX_EBP()
         {
-            this.Asmcode = this.Asmcode + "8BC5";
+            Asmcode = Asmcode + "8BC5";
         }
         public void Mov_EAX_EBX()
         {
-            this.Asmcode = this.Asmcode + "8BC3";
+            Asmcode = Asmcode + "8BC3";
         }
         public void Mov_EAX_ECX()
         {
-            this.Asmcode = this.Asmcode + "8BC1";
+            Asmcode = Asmcode + "8BC1";
         }
         public void Mov_EAX_EDI()
         {
-            this.Asmcode = this.Asmcode + "8BC7";
+            Asmcode = Asmcode + "8BC7";
         }
         public void Mov_EAX_EDX()
         {
-            this.Asmcode = this.Asmcode + "8BC2";
+            Asmcode = Asmcode + "8BC2";
         }
         public void Mov_EAX_ESI()
         {
-            this.Asmcode = this.Asmcode + "8BC6";
+            Asmcode = Asmcode + "8BC6";
         }
         public void Mov_EAX_ESP()
         {
-            this.Asmcode = this.Asmcode + "8BC4";
+            Asmcode = Asmcode + "8BC4";
         }
         public void Mov_EBX_EBP()
         {
-            this.Asmcode = this.Asmcode + "8BDD";
+            Asmcode = Asmcode + "8BDD";
         }
         public void Mov_EBX_EAX()
         {
-            this.Asmcode = this.Asmcode + "8BD8";
+            Asmcode = Asmcode + "8BD8";
         }
         public void Mov_EBX_ECX()
         {
-            this.Asmcode = this.Asmcode + "8BD9";
+            Asmcode = Asmcode + "8BD9";
         }
         public void Mov_EBX_EDI()
         {
-            this.Asmcode = this.Asmcode + "8BDF";
+            Asmcode = Asmcode + "8BDF";
         }
         public void Mov_EBX_EDX()
         {
-            this.Asmcode = this.Asmcode + "8BDA";
+            Asmcode = Asmcode + "8BDA";
         }
         public void Mov_EBX_ESI()
         {
-            this.Asmcode = this.Asmcode + "8BDE";
+            Asmcode = Asmcode + "8BDE";
         }
         public void Mov_EBX_ESP()
         {
-            this.Asmcode = this.Asmcode + "8BDC";
+            Asmcode = Asmcode + "8BDC";
         }
         public void Mov_ECX_EBP()
         {
-            this.Asmcode = this.Asmcode + "8BCD";
+            Asmcode = Asmcode + "8BCD";
         }
         /* public void Mov_ECX_EAX() 
          { 
@@ -774,163 +773,163 @@ namespace SslnEngine
          }*/
         public void Mov_ECX_EBX()
         {
-            this.Asmcode = this.Asmcode + "8BCB";
+            Asmcode = Asmcode + "8BCB";
         }
         public void Mov_ECX_EDI()
         {
-            this.Asmcode = this.Asmcode + "8BCF";
+            Asmcode = Asmcode + "8BCF";
         }
         public void Mov_ECX_EDX()
         {
-            this.Asmcode = this.Asmcode + "8BCA";
+            Asmcode = Asmcode + "8BCA";
         }
         public void Mov_ECX_ESI()
         {
-            this.Asmcode = this.Asmcode + "8BCE";
+            Asmcode = Asmcode + "8BCE";
         }
         public void Mov_ECX_ESP()
         {
-            this.Asmcode = this.Asmcode + "8BCC";
+            Asmcode = Asmcode + "8BCC";
         }
         public void Mov_EDX_EBP()
         {
-            this.Asmcode = this.Asmcode + "8BD5";
+            Asmcode = Asmcode + "8BD5";
         }
         public void Mov_EDX_EBX()
         {
-            this.Asmcode = this.Asmcode + "8BD3";
+            Asmcode = Asmcode + "8BD3";
         }
         public void Mov_EDX_ECX()
         {
-            this.Asmcode = this.Asmcode + "8BD1";
+            Asmcode = Asmcode + "8BD1";
         }
         public void Mov_EDX_EDI()
         {
-            this.Asmcode = this.Asmcode + "8BD7";
+            Asmcode = Asmcode + "8BD7";
         }
         public void Mov_EDX_EAX()
         {
-            this.Asmcode = this.Asmcode + "8BD0";
+            Asmcode = Asmcode + "8BD0";
         }
         public void Mov_EDX_ESI()
         {
-            this.Asmcode = this.Asmcode + "8BD6";
+            Asmcode = Asmcode + "8BD6";
         }
         public void Mov_EDX_ESP()
         {
-            this.Asmcode = this.Asmcode + "8BD4";
+            Asmcode = Asmcode + "8BD4";
         }
         public void Mov_ESI_EBP()
         {
-            this.Asmcode = this.Asmcode + "8BF5";
+            Asmcode = Asmcode + "8BF5";
         }
         public void Mov_ESI_EBX()
         {
-            this.Asmcode = this.Asmcode + "8BF3";
+            Asmcode = Asmcode + "8BF3";
         }
         public void Mov_ESI_ECX()
         {
-            this.Asmcode = this.Asmcode + "8BF1";
+            Asmcode = Asmcode + "8BF1";
         }
         public void Mov_ESI_EDI()
         {
-            this.Asmcode = this.Asmcode + "8BF7";
+            Asmcode = Asmcode + "8BF7";
         }
         public void Mov_ESI_EAX()
         {
-            this.Asmcode = this.Asmcode + "8BF0";
+            Asmcode = Asmcode + "8BF0";
         }
         public void Mov_ESI_EDX()
         {
-            this.Asmcode = this.Asmcode + "8BF2";
+            Asmcode = Asmcode + "8BF2";
         }
         public void Mov_ESI_ESP()
         {
-            this.Asmcode = this.Asmcode + "8BF4";
+            Asmcode = Asmcode + "8BF4";
         }
         public void Mov_ESP_EBP()
         {
-            this.Asmcode = this.Asmcode + "8BE5";
+            Asmcode = Asmcode + "8BE5";
         }
         public void Mov_ESP_EBX()
         {
-            this.Asmcode = this.Asmcode + "8BE3";
+            Asmcode = Asmcode + "8BE3";
         }
         public void Mov_ESP_ECX()
         {
-            this.Asmcode = this.Asmcode + "8BE1";
+            Asmcode = Asmcode + "8BE1";
         }
         public void Mov_ESP_EDI()
         {
-            this.Asmcode = this.Asmcode + "8BE7";
+            Asmcode = Asmcode + "8BE7";
         }
         public void Mov_ESP_EAX()
         {
-            this.Asmcode = this.Asmcode + "8BE0";
+            Asmcode = Asmcode + "8BE0";
         }
         public void Mov_ESP_EDX()
         {
-            this.Asmcode = this.Asmcode + "8BE2";
+            Asmcode = Asmcode + "8BE2";
         }
         public void Mov_ESP_ESI()
         {
-            this.Asmcode = this.Asmcode + "8BE6";
+            Asmcode = Asmcode + "8BE6";
         }
         public void Mov_EDI_EBP()
         {
-            this.Asmcode = this.Asmcode + "8BFD";
+            Asmcode = Asmcode + "8BFD";
         }
         public void Mov_EDI_EAX()
         {
-            this.Asmcode = this.Asmcode + "8BF8";
+            Asmcode = Asmcode + "8BF8";
         }
         public void Mov_EDI_EBX()
         {
-            this.Asmcode = this.Asmcode + "8BFB";
+            Asmcode = Asmcode + "8BFB";
         }
         public void Mov_EDI_ECX()
         {
-            this.Asmcode = this.Asmcode + "8BF9";
+            Asmcode = Asmcode + "8BF9";
         }
         public void Mov_EDI_EDX()
         {
-            this.Asmcode = this.Asmcode + "8BFA";
+            Asmcode = Asmcode + "8BFA";
         }
         public void Mov_EDI_ESI()
         {
-            this.Asmcode = this.Asmcode + "8BFE";
+            Asmcode = Asmcode + "8BFE";
         }
         public void Mov_EDI_ESP()
         {
-            this.Asmcode = this.Asmcode + "8BFC";
+            Asmcode = Asmcode + "8BFC";
         }
         public void Mov_EBP_EDI()
         {
-            this.Asmcode = this.Asmcode + "8BDF";
+            Asmcode = Asmcode + "8BDF";
         }
         public void Mov_EBP_EAX()
         {
-            this.Asmcode = this.Asmcode + "8BE8";
+            Asmcode = Asmcode + "8BE8";
         }
         public void Mov_EBP_EBX()
         {
-            this.Asmcode = this.Asmcode + "8BEB";
+            Asmcode = Asmcode + "8BEB";
         }
         public void Mov_EBP_ECX()
         {
-            this.Asmcode = this.Asmcode + "8BE9";
+            Asmcode = Asmcode + "8BE9";
         }
         public void Mov_EBP_EDX()
         {
-            this.Asmcode = this.Asmcode + "8BEA";
+            Asmcode = Asmcode + "8BEA";
         }
         public void Mov_EBP_ESI()
         {
-            this.Asmcode = this.Asmcode + "8BEE";
+            Asmcode = Asmcode + "8BEE";
         }
         public void Mov_EBP_ESP()
         {
-            this.Asmcode = this.Asmcode + "8BEC";
+            Asmcode = Asmcode + "8BEC";
         }
         #endregion
         #region Push
@@ -938,473 +937,473 @@ namespace SslnEngine
         {
             if ((addre <= 127) && (addre >= -128))
             {
-                this.Asmcode = this.Asmcode + "6A" + intTohex(addre, 2);
+                Asmcode = Asmcode + "6A" + intTohex(addre, 2);
             }
             else
             {
-                this.Asmcode = this.Asmcode + "68" + intTohex(addre, 8);
+                Asmcode = Asmcode + "68" + intTohex(addre, 8);
             }
         }
         public void Push_EAX()
         {
-            this.Asmcode = this.Asmcode + "50";
+            Asmcode = Asmcode + "50";
         }
         public void Push_DWORD_Ptr(int addre)
         {
-            this.Asmcode = this.Asmcode + "FF35" + intTohex(addre, 8);
+            Asmcode = Asmcode + "FF35" + intTohex(addre, 8);
         }
         public void Push_ECX()
         {
-            this.Asmcode = this.Asmcode + "51";
+            Asmcode = Asmcode + "51";
         }
         public void Push_EDX()
         {
-            this.Asmcode = this.Asmcode + "52";
+            Asmcode = Asmcode + "52";
         }
         public void Push_EBX()
         {
-            this.Asmcode = this.Asmcode + "53";
+            Asmcode = Asmcode + "53";
         }
         public void Push_ESP()
         {
-            this.Asmcode = this.Asmcode + "54";
+            Asmcode = Asmcode + "54";
         }
         public void Push_EBP()
         {
-            this.Asmcode = this.Asmcode + "55";
+            Asmcode = Asmcode + "55";
         }
         public void Push_ESI()
         {
-            this.Asmcode = this.Asmcode + "56";
+            Asmcode = Asmcode + "56";
         }
         public void Push_EDI()
         {
-            this.Asmcode = this.Asmcode + "57";
+            Asmcode = Asmcode + "57";
         }
         #endregion
         #region Call
         public void Call_EAX()
         {
-            this.Asmcode = this.Asmcode + "FFD0";
+            Asmcode = Asmcode + "FFD0";
         }
         public void Call_EBX()
         {
-            this.Asmcode = this.Asmcode + "FFD3";
+            Asmcode = Asmcode + "FFD3";
         }
         public void Call_ECX()
         {
-            this.Asmcode = this.Asmcode + "FFD1";
+            Asmcode = Asmcode + "FFD1";
         }
         public void Call_EDX()
         {
-            this.Asmcode = this.Asmcode + "FFD2";
+            Asmcode = Asmcode + "FFD2";
         }
         public void Call_ESI()
         {
-            this.Asmcode = this.Asmcode + "FFD6";
+            Asmcode = Asmcode + "FFD6";
         }
         public void Call_ESP()
         {
-            this.Asmcode = this.Asmcode + "FFD4";
+            Asmcode = Asmcode + "FFD4";
         }
         public void Call_EBP()
         {
-            this.Asmcode = this.Asmcode + "FFD5";
+            Asmcode = Asmcode + "FFD5";
         }
         public void Call_EDI()
         {
-            this.Asmcode = this.Asmcode + "FFD7";
+            Asmcode = Asmcode + "FFD7";
         }
         public void Call_DWORD_Ptr(int addre)
         {
-            this.Asmcode = this.Asmcode + "FF15" + intTohex(addre, 8);
+            Asmcode = Asmcode + "FF15" + intTohex(addre, 8);
         }
         public void Call_DWORD_Ptr_EAX()
         {
-            this.Asmcode = this.Asmcode + "FF10";
+            Asmcode = Asmcode + "FF10";
         }
         public void Call_DWORD_Ptr_EBX()
         {
-            this.Asmcode = this.Asmcode + "FF13";
+            Asmcode = Asmcode + "FF13";
         }
         #endregion
         #region Lea
         public void Lea_EAX_DWORD_Ptr_EAX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D40" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D40" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D80" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D80" + intTohex(addre, 8);
         }
         public void Lea_EAX_DWORD_Ptr_EBX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D43" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D43" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D83" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D83" + intTohex(addre, 8);
         }
         public void Lea_EAX_DWORD_Ptr_ECX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D41" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D41" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D81" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D81" + intTohex(addre, 8);
         }
         public void Lea_EAX_DWORD_Ptr_EDX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D42" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D42" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D82" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D82" + intTohex(addre, 8);
         }
         public void Lea_EAX_DWORD_Ptr_ESI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D46" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D46" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D86" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D86" + intTohex(addre, 8);
         }
         public void Lea_EAX_DWORD_Ptr_ESP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D40" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D40" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D80" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D80" + intTohex(addre, 8);
         }
         public void Lea_EAX_DWORD_Ptr_EBP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D4424" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D4424" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D8424" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D8424" + intTohex(addre, 8);
         }
         public void Lea_EAX_DWORD_Ptr_EDI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D47" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D47" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D87" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D87" + intTohex(addre, 8);
         }
         public void Lea_EBX_DWORD_Ptr_EAX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D58" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D58" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D98" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D98" + intTohex(addre, 8);
         }
         public void Lea_EBX_DWORD_Ptr_ESP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D5C24" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D5C24" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D9C24" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D9C24" + intTohex(addre, 8);
         }
         public void Lea_EBX_DWORD_Ptr_EBX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D5B" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D5B" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D9B" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D9B" + intTohex(addre, 8);
         }
         public void Lea_EBX_DWORD_Ptr_ECX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D59" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D59" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D99" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D99" + intTohex(addre, 8);
         }
         public void Lea_EBX_DWORD_Ptr_EDX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D5A" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D5A" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D9A" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D9A" + intTohex(addre, 8);
         }
         public void Lea_EBX_DWORD_Ptr_EDI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D5F" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D5F" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D9F" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D9F" + intTohex(addre, 8);
         }
         public void Lea_EBX_DWORD_Ptr_EBP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D5D" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D5D" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D9D" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D9D" + intTohex(addre, 8);
         }
         public void Lea_EBX_DWORD_Ptr_ESI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D5E" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D5E" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D9E" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D9E" + intTohex(addre, 8);
         }
         public void Lea_ECX_DWORD_Ptr_EAX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D48" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D48" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D88" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D88" + intTohex(addre, 8);
         }
         public void Lea_ECX_DWORD_Ptr_ESP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D4C24" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D4C24" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D8C24" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D8C24" + intTohex(addre, 8);
         }
         public void Lea_ECX_DWORD_Ptr_EBX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D4B" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D4B" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D8B" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D8B" + intTohex(addre, 8);
         }
         public void Lea_ECX_DWORD_Ptr_ECX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D49" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D49" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D89" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D89" + intTohex(addre, 8);
         }
         public void Lea_ECX_DWORD_Ptr_EDX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D4A" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D4A" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D8A" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D8A" + intTohex(addre, 8);
         }
         public void Lea_ECX_DWORD_Ptr_EDI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D4F" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D4F" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D8F" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D8F" + intTohex(addre, 8);
         }
         public void Lea_ECX_DWORD_Ptr_EBP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D4D" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D4D" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D8D" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D8D" + intTohex(addre, 8);
         }
         public void Lea_ECX_DWORD_Ptr_ESI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D4E" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D4E" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D8E" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D8E" + intTohex(addre, 8);
         }
         public void Lea_EDX_DWORD_Ptr_EAX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D50" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D50" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D90" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D90" + intTohex(addre, 8);
         }
         public void Lea_EDX_DWORD_Ptr_ESP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D5424" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D5424" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D9424" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D9424" + intTohex(addre, 8);
         }
         public void Lea_EDX_DWORD_Ptr_EBX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D53" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D53" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D93" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D93" + intTohex(addre, 8);
         }
         public void Lea_EDX_DWORD_Ptr_ECX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D51" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D51" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D91" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D91" + intTohex(addre, 8);
         }
         public void Lea_EDX_DWORD_Ptr_EDX_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D52" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D52" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D92" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D92" + intTohex(addre, 8);
         }
         public void Lea_EDX_DWORD_Ptr_EDI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D57" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D57" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D97" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D97" + intTohex(addre, 8);
         }
         public void Lea_EDX_DWORD_Ptr_EBP_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D55" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D55" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D95" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D95" + intTohex(addre, 8);
         }
         public void Lea_EDX_DWORD_Ptr_ESI_Add(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "8D56" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8D56" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "8D96" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8D96" + intTohex(addre, 8);
         }
         #endregion
         #region POP
         public void Pop_EAX()
         {
-            this.Asmcode = this.Asmcode + "58";
+            Asmcode = Asmcode + "58";
         }
         public void Pop_EBX()
         {
-            this.Asmcode = this.Asmcode + "5B";
+            Asmcode = Asmcode + "5B";
         }
         public void Pop_ECX()
         {
-            this.Asmcode = this.Asmcode + "59";
+            Asmcode = Asmcode + "59";
         }
         public void Pop_EDX()
         {
-            this.Asmcode = this.Asmcode + "5A";
+            Asmcode = Asmcode + "5A";
         }
         public void Pop_ESI()
         {
-            this.Asmcode = this.Asmcode + "5E";
+            Asmcode = Asmcode + "5E";
         }
         public void Pop_ESP()
         {
-            this.Asmcode = this.Asmcode + "5C";
+            Asmcode = Asmcode + "5C";
         }
         public void Pop_EDI()
         {
-            this.Asmcode = this.Asmcode + "5F";
+            Asmcode = Asmcode + "5F";
         }
         public void Pop_EBP()
         {
-            this.Asmcode = this.Asmcode + "5D";
+            Asmcode = Asmcode + "5D";
         }
         #endregion
         #region CMP
         public void Cmp_EAX(int addre)
         {
             if ((addre <= 127) && (addre >= -128))
-                this.Asmcode = this.Asmcode + "83F8" + intTohex(addre, 2);
+                Asmcode = Asmcode + "83F8" + intTohex(addre, 2);
             else
-                this.Asmcode = this.Asmcode + "3D" + intTohex(addre, 8);
+                Asmcode = Asmcode + "3D" + intTohex(addre, 8);
         }
         public void Cmp_EAX_EDX()
         {
-            this.Asmcode = this.Asmcode + "3BC2";
+            Asmcode = Asmcode + "3BC2";
         }
         public void Cmp_EAX_DWORD_Ptr(int addre)
         {
-            this.Asmcode = this.Asmcode + "3B05" + intTohex(addre, 8);
+            Asmcode = Asmcode + "3B05" + intTohex(addre, 8);
         }
         public void Cmp_DWORD_Ptr_EAX(int addre)
         {
-            this.Asmcode = this.Asmcode + "3905" + intTohex(addre, 8);
+            Asmcode = Asmcode + "3905" + intTohex(addre, 8);
         }
         #endregion
         #region DEC
         public void Dec_EAX()
         {
-            this.Asmcode = this.Asmcode + "48";
+            Asmcode = Asmcode + "48";
         }
         public void Dec_EBX()
         {
-            this.Asmcode = this.Asmcode + "4B";
+            Asmcode = Asmcode + "4B";
         }
         public void Dec_ECX()
         {
-            this.Asmcode = this.Asmcode + "49";
+            Asmcode = Asmcode + "49";
         }
         public void Dec_EDX()
         {
-            this.Asmcode = this.Asmcode + "4A";
+            Asmcode = Asmcode + "4A";
         }
         #endregion
         #region idiv
         public void Idiv_EAX()
         {
-            this.Asmcode = this.Asmcode + "F7F8";
+            Asmcode = Asmcode + "F7F8";
         }
         public void Idiv_EBX()
         {
-            this.Asmcode = this.Asmcode + "F7FB";
+            Asmcode = Asmcode + "F7FB";
         }
         public void Idiv_ECX()
         {
-            this.Asmcode = this.Asmcode + "F7F9";
+            Asmcode = Asmcode + "F7F9";
         }
         public void Idiv_EDX()
         {
-            this.Asmcode = this.Asmcode + "F7FA";
+            Asmcode = Asmcode + "F7FA";
         }
         #endregion
         #region Imul
         public void Imul_EAX_EDX()
         {
-            this.Asmcode = this.Asmcode + "0FAFC2";
+            Asmcode = Asmcode + "0FAFC2";
         }
         public void Imul_EAX(int addre)
         {
-            this.Asmcode = this.Asmcode + "6BC0" + intTohex(addre, 2);
+            Asmcode = Asmcode + "6BC0" + intTohex(addre, 2);
         }
         public void ImulB_EAX(int addre)
         {
-            this.Asmcode = this.Asmcode + "69C0" + intTohex(addre, 8);
+            Asmcode = Asmcode + "69C0" + intTohex(addre, 8);
         }
         #endregion
         #region Inc
         public void Inc_EAX()
         {
-            this.Asmcode = this.Asmcode + "40";
+            Asmcode = Asmcode + "40";
         }
         public void Inc_EBX()
         {
-            this.Asmcode = this.Asmcode + "43";
+            Asmcode = Asmcode + "43";
         }
         public void Inc_ECX()
         {
-            this.Asmcode = this.Asmcode + "41";
+            Asmcode = Asmcode + "41";
         }
         public void Inc_EDX()
         {
-            this.Asmcode = this.Asmcode + "42";
+            Asmcode = Asmcode + "42";
         }
         public void Inc_EDI()
         {
-            this.Asmcode = this.Asmcode + "47";
+            Asmcode = Asmcode + "47";
         }
         public void Inc_ESI()
         {
-            this.Asmcode = this.Asmcode + "46";
+            Asmcode = Asmcode + "46";
         }
         public void Inc_DWORD_Ptr_EAX()
         {
-            this.Asmcode = this.Asmcode + "FF00";
+            Asmcode = Asmcode + "FF00";
         }
         public void Inc_DWORD_Ptr_EBX()
         {
-            this.Asmcode = this.Asmcode + "FF03";
+            Asmcode = Asmcode + "FF03";
         }
         public void Inc_DWORD_Ptr_ECX()
         {
-            this.Asmcode = this.Asmcode + "FF01";
+            Asmcode = Asmcode + "FF01";
         }
         public void Inc_DWORD_Ptr_EDX()
         {
-            this.Asmcode = this.Asmcode + "FF02";
+            Asmcode = Asmcode + "FF02";
         }
         #endregion
         #region jmp
         public void JMP_EAX()
         {
-            this.Asmcode = this.Asmcode + "FFE0";
+            Asmcode = Asmcode + "FFE0";
         }
         public byte[] JMP(uint 跳到地址, uint 内存地址, byte[] 附加字节)
         {
@@ -1428,55 +1427,55 @@ namespace SslnEngine
         {
             if (addre <= 127)
             {
-                this.Asmcode = this.Asmcode + "8941" + intTohex(addre, 2);
+                Asmcode = Asmcode + "8941" + intTohex(addre, 2);
             }
             else
             {
-                this.Asmcode = this.Asmcode + "8981" + intTohex(addre, 8);
+                Asmcode = Asmcode + "8981" + intTohex(addre, 8);
             }
         }
 
         public void Mov_DWORD_Ptr_ECX_ECX()
         {
-            this.Asmcode = this.Asmcode + "8909";
+            Asmcode = Asmcode + "8909";
         }
 
         public void Mov_DWORD_Ptr_EAX_EBX()
         {
-            this.Asmcode = this.Asmcode + "8918";
+            Asmcode = Asmcode + "8918";
         }
 
         public void Mov_DWORD_Ptr_EBX_ECX()
         {
-            this.Asmcode = this.Asmcode + "890B";
+            Asmcode = Asmcode + "890B";
         }
 
         public void Mov_ESI_DWORD_Ptr_ESI_ADD(int addre)
         {
-            this.Asmcode = this.Asmcode + "8B76" + intTohex(addre, 2);
+            Asmcode = Asmcode + "8B76" + intTohex(addre, 2);
         }
         public void RushAsm()
         {
-            this.Asmcode = "";
+            Asmcode = "";
         }
 
         #endregion
         public byte[] 取汇编代码()
         {
-            byte[] Asm = this.AsmChangebytes(this.Asmcode);
+            byte[] Asm = AsmChangebytes(Asmcode);
             return Asm;
         }
         public void 清空汇编代码()
         {
-            byte[] Asm = this.AsmChangebytes(this.Asmcode);
-            this.Asmcode = "";
+            byte[] Asm = AsmChangebytes(Asmcode);
+            Asmcode = "";
         }
 
         public void RunAsm1(int pid)
         {
             int hwnd, addre, threadhwnd;
             Ret();
-            byte[] Asm = this.AsmChangebytes(this.Asmcode);
+            byte[] Asm = AsmChangebytes(Asmcode);
             if (pid != 0)
             {
                 hwnd = OpenProcess(PROCESS_ALL_ACCESS | PROCESS_CREATE_THREAD | PROCESS_VM_WRITE, 0, pid);
@@ -1494,11 +1493,11 @@ namespace SslnEngine
                     CloseHandle(hwnd);
                 }
             }
-            this.Asmcode = "";
+            Asmcode = "";
         }
         public void RunAsm(int pid)
         {
-            byte[] 汇编代码 = this.AsmChangebytes(this.Asmcode);
+            byte[] 汇编代码 = AsmChangebytes(Asmcode);
             int a = 汇编代码.Length;
             int 汇编call = (int)基址.内存汇编;
             int 判断地址 = 0x400E00;
@@ -1536,7 +1535,7 @@ namespace SslnEngine
             byte[] code9 = { 195 };
             list.AddRange(code8);
             list.AddRange(code9);
-            ReadWriteCtr.WriteMemInt((uint)判断地址,1);
+            ReadWriteCtr.WriteMemInt((uint)判断地址, 1);
             byte[] byteData = list.ToArray();
             ReadWriteCtr.WriteMemByteArray((uint)内存地址, byteData);
             byte[] i1 = { 233 };
@@ -1549,13 +1548,13 @@ namespace SslnEngine
             ReadWriteCtr.WriteMemByteArray((uint)汇编call, i4);
             byte[] i5 = new byte[汇编代码.Length + 64];
             ReadWriteCtr.WriteMemByteArray((uint)判断地址, i5);
-            this.Asmcode = "";
+            Asmcode = "";
         }
         public void RunAsm2(int pid)
         {
             int hwnd, addre, threadhwnd;
             Ret();
-            byte[] Asm = this.AsmChangebytes(this.Asmcode);
+            byte[] Asm = AsmChangebytes(Asmcode);
             if (pid != 0)
             {
                 hwnd = OpenProcess(PROCESS_ALL_ACCESS | PROCESS_CREATE_THREAD | PROCESS_VM_WRITE, 0, pid);
@@ -1573,7 +1572,7 @@ namespace SslnEngine
                     CloseHandle(hwnd);
                 }
             }
-            this.Asmcode = "";
+            Asmcode = "";
         }
         public void CreateThread(int pid)
         {
@@ -1588,7 +1587,7 @@ namespace SslnEngine
                     //WriteProcessMemory(hwnd, addre, Asm, Asm.Length, 0);
                     threadhwnd = CreateRemoteThread(hwnd, 0, 0, CallWindowProcA_addr, addre, 0, 0);
                     WaitForSingleObject(threadhwnd, -1);
-                   // byte[] RAsm = new byte[Asm.Length];
+                    // byte[] RAsm = new byte[Asm.Length];
                     //WriteProcessMemory(hwnd, addre, RAsm, RAsm.Length, 0);
                     //VirtualFreeEx(hwnd, addre, Asm.Length, MEM_RELEASE);
                     CloseHandle(threadhwnd);

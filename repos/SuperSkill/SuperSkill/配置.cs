@@ -1,15 +1,5 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Runtime.InteropServices;
 using System.Text;
-using System.Runtime.InteropServices;
-using SuperSkill;
-using ReadWrite;
-using EncryptionDecrypt;
-using System.Threading;
-using Transform;
-using System.Windows.Forms;
 
 namespace SuperSkill
 {

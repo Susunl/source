@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SuperSkill
@@ -22,16 +15,16 @@ namespace SuperSkill
         private void Form2_Load(object sender, EventArgs e)
         {
             //设置textBox1文本为要修改的文本
-            this.textBox1.Text = 全局变量.要修改的数据;
+            textBox1.Text = 全局变量.要修改的数据;
             //设置窗口2位置
-            this.Top = f1.Top + 330;
-            this.Left = f1.Left + 64;
+            Top = f1.Top + 330;
+            Left = f1.Left + 64;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            全局变量.要修改的数据 = this.textBox1.Text;
-            this.Close();
+            全局变量.要修改的数据 = textBox1.Text;
+            Close();
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -58,8 +51,8 @@ namespace SuperSkill
             }
             if (e.KeyChar == 0xD)   //按下enter
             {
-                全局变量.要修改的数据 = this.textBox1.Text;
-                this.Close();
+                全局变量.要修改的数据 = textBox1.Text;
+                Close();
             }
         }
     }
