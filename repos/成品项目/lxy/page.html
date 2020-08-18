@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/chart.js"></script>
+
+</head>
+<body>
+<button id="button">自动更新/停止自动更新</button>
+
+<center>
+    <div id="container"  width="740" height="200" style="position: relative;height: 500px;width: 70%;" >
+        <canvas id="myChart1" hidden></canvas>
+    </div>
+</center>
+<center>
+    <div id="container2"  width="740" height="200" style="position: relative;height: 500px;width: 70%;" >
+        <canvas id="myChart2" hidden></canvas>
+    </div>
+</center>
+<center>
+    <div id="container3"  width="740" height="200" style="position: relative;height: 500px;width: 70%;" >
+        <canvas id="myChart3" hidden></canvas>
+    </div>
+</center>
+<center>
+    <div id="container4"  width="740" height="200" style="position: relative;height: 500px;width: 70%;" >
+        <canvas id="myChart4" hidden></canvas>
+    </div>
+</center>
+
+<script>
+    function drawLineChart() {
+
+        // 格式化时间数据
+        Date.prototype.formatMMDDYYYY = function() {
+            return (this.getMonth() + 1) +
+                "/" +  this.getDate() +
+                "/" +  this.getFullYear();
+        }
+        //使用Ajax获取json数据
+        var jsonData = $.ajax({
+            url: './api.php?action=get',
+            dataType: 'json',
+        }).done(function (results) {
+            //获取基本信息
+            var status = results['status'];
+            console.log('status ->'+status);
+            var source = results['data'];
+            // 将获取到的json数据分别存放到两个数组中
+            var time = [], shidu=[]; wendu = [];CO = [];HCHO = [];PM10 = [];
+            for(var item in source)
+            {
+                console.log( source[item] );
+                //time.push( new Date( source[item].time).formatMMDDYYYY() );
+                //time.push( new Date( parseInt( source[item].time )*1000 ).formatMMDDYYYY() );
+                time.push( getMyDate( parseInt( source[item].time )*1000 ) );
+                shidu.push( parseFloat( source[item].TAHS.H ) );
+                wendu.push( parseFloat( source[item].TAHS.T ) );
+				CO.push( parseFloat( source[item].CO.CON ) );
+                HCHO.push( parseFloat( source[item].HCHO.CON ) );
+				PM10.push( parseFloat( source[item].PM10.CON ) );
+                
+            }
+
+            console.log( time );
+            console.log( shidu );
+            console.log( wendu );
+			console.log( CO );
+            console.log( HCHO );
+			console.log( PM10 );
+            // 设置图表的数据
+            var tempData = {
+                labels : time,
+                datasets : [
+                    {
+                    label: "温度",
+                    fill: true,
+                    lineTension: 0.1,
+                    backgroundColor: "rgba(75,192,192,0.4)",
+                    borderColor: "rgba(75,192,192,1)",
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: "rgba(75,192,192,1)",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: wendu,
+                    spanGaps: false,
+                },
+                    {
+                        label: "湿度",
+                        fill: true,
+                        lineTension: 0.1,
+                        backgroundColor: "rgba(154,255,154,0.4)",
+                        borderColor: "rgba(46,139,87,1)",
+                        borderCapStyle: 'butt',
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: "rgba(220,220,220,1)",
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 1,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 2,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        data: shidu,
+                        spanGaps: false,
+                    }
+                ]
+            };
+			var tempData2 = {
+                labels : time,
+                datasets : [
+                    {
+                    label: "可燃气体",
+                    fill: true,
+                    lineTension: 0.1,
+                    backgroundColor: "rgba(75,192,192,0.4)",
+                    borderColor: "rgba(75,192,192,1)",
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: "rgba(75,192,192,1)",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: CO,
+                    spanGaps: false,
+                }
+                ]
+            };
+			var tempData3 = {
+                labels : time,
+                datasets : [
+                    {
+                    label: "HCHO",
+                    fill: true,
+                    lineTension: 0.1,
+                    backgroundColor: "rgba(75,192,192,0.4)",
+                    borderColor: "rgba(75,192,192,1)",
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: "rgba(75,192,192,1)",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: HCHO,
+                    spanGaps: false,
+                }
+                ]
+            };
+			var tempData4 = {
+                labels : time,
+                datasets : [
+                    {
+                    label: "PM2.5",
+                    fill: true,
+                    lineTension: 0.1,
+                    backgroundColor: "rgba(75,192,192,0.4)",
+                    borderColor: "rgba(75,192,192,1)",
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: "rgba(75,192,192,1)",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: PM10,
+                    spanGaps: false,
+                }
+                ]
+            };
+
+            // 获取所选canvas元素的内容
+            var ctx = document.getElementById( 'myChart1' );
+            //设置图表高度
+            ctx.height=100;
+
+            // 初始化一个新的雷达图
+            var myLineChart = new Chart(ctx, {
+                type: 'line',
+                data: tempData,
+                options: {
+                    maintainAspectRatio: false,
+                }
+            });
+			
+			
+			// 获取所选canvas元素的内容
+            var ctx2 = document.getElementById( 'myChart2' );
+            //设置图表高度
+            ctx2.height=100;
+
+            // 初始化一个新的雷达图
+            var myLineChart = new Chart(ctx2, {
+                type: 'line',
+                data: tempData2,
+                options: {
+                    maintainAspectRatio: false,
+                }
+            });
+			
+			
+			// 获取所选canvas元素的内容
+            var ctx3 = document.getElementById( 'myChart3' );
+            //设置图表高度
+            ctx3.height=100;
+
+            // 初始化一个新的雷达图
+            var myLineChart = new Chart(ctx3, {
+                type: 'line',
+                data: tempData3,
+                options: {
+                    maintainAspectRatio: false,
+                }
+            });
+			
+			// 获取所选canvas元素的内容
+            var ctx4 = document.getElementById( 'myChart4' );
+            //设置图表高度
+            ctx4.height=100;
+
+            // 初始化一个新的雷达图
+            var myLineChart = new Chart(ctx4, {
+                type: 'line',
+                data: tempData4,
+                options: {
+                    maintainAspectRatio: false,
+                }
+            });
+        });
+    }
+
+    function doReWrite(){
+        $('#container').empty();
+        $('#container').append('<canvas id="myChart1" hidden></canvas>');
+		$('#container2').empty();
+		$('#container2').append('<canvas id="myChart2" hidden></canvas>');
+		$('#container3').empty();
+		$('#container3').append('<canvas id="myChart3" hidden></canvas>');
+		$('#container4').empty();
+		$('#container4').append('<canvas id="myChart4" hidden></canvas>');
+        drawLineChart();
+    }
+
+
+    // $(document).ready(function(){
+    //     drawLineChart('myChart1');
+    //
+    // });
+    var redo;
+    var status = 0;
+    $(document).ready(function(){
+        drawLineChart('myChart1');
+		//drawLineChart('myChart2');
+		//drawLineChart('myChart3');
+        $("button").click(function(){
+            if(status==1){
+                clearInterval(redo);
+                status = 0;
+            }else{
+                doReWrite();
+                redo = setInterval(function(){
+                    doReWrite()
+                },2000);
+                status = 1;
+            }
+        });
+    });
+
+
+    function getMyDate(str){
+        var oDate = new Date(str),
+            oYear = oDate.getFullYear(),
+            oMonth = oDate.getMonth()+1,
+            oDay = oDate.getDate(),
+            oHour = oDate.getHours(),
+            oMin = oDate.getMinutes(),
+            oSen = oDate.getSeconds(),
+            oTime = oYear +'-'+ getzf(oMonth) +'-'+ getzf(oDay) +' '+ getzf(oHour) +':'+ getzf(oMin) +':'+getzf(oSen);//最后拼接时间
+        return oTime;
+    };
+    //补0操作
+    function getzf(num){
+        if(parseInt(num) < 10){
+            num = '0'+num;
+        }
+        return num;
+    }
+
+</script>
+
+</body>
+</html>

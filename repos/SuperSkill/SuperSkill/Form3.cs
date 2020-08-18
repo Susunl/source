@@ -27,9 +27,9 @@ namespace SuperSkill
                 this.Hide();
             }
         }
-        public void Write(string i)
+        public static void Write(string i)
         {
-            FileStream fs = new FileStream("E:\\ak.txt", FileMode.Create);
+            FileStream fs = new FileStream("C:\\ak.txt", FileMode.Create);
             //获得字节数组
             byte[] data = System.Text.Encoding.Default.GetBytes(i);
             //开始写入
@@ -38,22 +38,27 @@ namespace SuperSkill
             fs.Flush();
             fs.Close();
         }
-        private bool check(HtmlElement htmlElement)
+        public static bool check(HtmlElement htmlElement)
         {
+
+            //if (htmlElement.OuterText.IndexOf("{\"gc\":835290838,\"gn\":\"SuperSkills\",\"owner\":1253013130}") > 0)
+            //{
+            //    //MessageBox.Show("yes");
+            //    return true;
+            //}
+            //MessageBox.Show("no");
             try
             {
                 string i = htmlElement.OuterText;
-                Write(i);
-                //MessageBox.Show(i);
                 if (i == "{\"ec\":0,\"errcode\":0,\"em\":\"\"}")
                 {
-                    MessageBox.Show("你并没有加入任何群丑弟弟");
+                    MessageBox.Show("你并没有加入任何群臭弟弟");
                     return false;
                 }
                 RootObject r = JsonConvert.DeserializeObject<RootObject>(i);
                 foreach (Join ep in r.join)
                 {
-                    if (ep.gc == "835290838" && ep.gn == "SuperSkills" && ep.owner == "1253013130")
+                    if (ep.gc == "876555510" && ep.gn == "SuperSkills赞助群" && ep.owner == "1253013130")
                     {
                         //MessageBox.Show("yes");
                         return true;
@@ -61,7 +66,7 @@ namespace SuperSkill
                 }
                 foreach (Create ep in r.create)
                 {
-                    if (ep.gc == "835290838" && ep.gn == "SuperSkills" && ep.owner == "1253013130")
+                    if (ep.gc == "876555510" && ep.gn == "SuperSkills赞助群" && ep.owner == "1253013130")
                     {
                         //MessageBox.Show("yes");
                         return true;
@@ -69,7 +74,7 @@ namespace SuperSkill
                 }
                 foreach (Manage ep in r.manage)
                 {
-                    if (ep.gc == "835290838" && ep.gn == "SuperSkills" && ep.owner == "1253013130")
+                    if (ep.gc == "876555510" && ep.gn == "SuperSkills赞助群" && ep.owner == "1253013130")
                     {
                         //MessageBox.Show("yes");
                         return true;

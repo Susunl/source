@@ -334,9 +334,9 @@ namespace SuperSkill
             ReadWriteCtr.WriteMemInt((uint)(j - 0x70), 10000);
             byte[] i1 = { 0, 6, 64, 0, 32, 6, 64, 0, 32, 6, 64, 126 };
             公告(j.ToString());
-            ReadWriteCtr.WriteMemByteArray((uint)(j - 0x70 + 0x790), i1);
-            ReadWriteCtr.WriteMemInt((uint)(j - 0x70 + 0x790 + 0x10), 1200000);
-            ReadWriteCtr.WriteMemInt((uint)(j - 0x70 + 0x790 + 0x10 + 4), 1);
+            ReadWriteCtr.WriteMemByteArray((uint)(j - 0x70 + 0x7C0), i1);
+            ReadWriteCtr.WriteMemInt((uint)(j - 0x70 + 0x7C0 + 0x10), 1200000);
+            ReadWriteCtr.WriteMemInt((uint)(j - 0x70 + 0x7C0 + 0x10 + 4), 1);
             ReadWriteCtr.WriteMemInt(0x400600, 106);
             ReadWriteCtr.WriteMemInt(0x400604, 0);
             ReadWriteCtr.WriteMemInt(0x400608, 1);

@@ -1,0 +1,13 @@
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\bin\Debug\MessageServer.exe.config
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\bin\Debug\MessageServer.exe
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\bin\Debug\MessageServer.pdb
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\obj\Debug\MessageServer.MessageServer.resources
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\obj\Debug\MessageServer.Properties.Resources.resources
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\obj\Debug\MessageServer.csproj.GenerateResource.cache
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\obj\Debug\MessageServer.csproj.CoreCompileInputs.cache
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\obj\Debug\MessageServer.exe
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\obj\Debug\MessageServer.pdb
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\obj\Debug\MessageServer.csproj.CopyComplete
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\obj\Debug\MessageServer.csprojAssemblyReference.cache

@@ -62,19 +62,19 @@ namespace SuperSkill
         //初始化被单击
         private void button1_Click(object sender, EventArgs e)                                  //初始化被单击
         {
-            List<string> list = new List<string>();
-            list.Add("601BEC5CCAE628A08BDBD843C6AA773");
-            list.Add("234B2EADC190A1586BDDA11C4C2ADDC9");
-            list.Add("D3E811E8A750E493C9F5596DC6ED7B27");
-            list.Add("F050D6BAD11D67B13E5F47DD31BA1B90");
-            list.Add("3F9B849C4839AE7DDAD9E981C69958AD");
-            list.Add("A425F17D578DDB8CE5D267B0C6D4D4");
-            list.Add("6B40392783FF1D6A9EC18A7F57D8191");
-            list.Add("7335F7D5AD1ADB9FA550F35653282C30");
-            list.Add("EC18BD233ECA7CE46A877B1212F0BB55");
-            list.Add("7054CAF0A74E350624998189E32D4");
-            list.Add("CA8C568338BE50CD2F6783CCAE4D936C");
-            list.Add("CA8C568338BE50CD2F6783CCAE4D936C");
+            //List<string> list = new List<string>();
+            //list.Add("601BEC5CCAE628A08BDBD843C6AA773");
+            //list.Add("234B2EADC190A1586BDDA11C4C2ADDC9");
+            //list.Add("D3E811E8A750E493C9F5596DC6ED7B27");
+            //list.Add("F050D6BAD11D67B13E5F47DD31BA1B90");
+            //list.Add("3F9B849C4839AE7DDAD9E981C69958AD");
+            //list.Add("A425F17D578DDB8CE5D267B0C6D4D4");
+            //list.Add("6B40392783FF1D6A9EC18A7F57D8191");
+            //list.Add("7335F7D5AD1ADB9FA550F35653282C30");
+            //list.Add("EC18BD233ECA7CE46A877B1212F0BB55");
+            //list.Add("7054CAF0A74E350624998189E32D4");
+            //list.Add("CA8C568338BE50CD2F6783CCAE4D936C");
+            //list.Add("CA8C568338BE50CD2F6783CCAE4D936C");
             //list.Add("D43398CBD240682734B0619601EF3A");
             //list.Add("52B71C9EBE463F510E333D21E7B3F55");
             //list.Add("BE7AC1F8CF1DB76229D738151DAD13");
@@ -98,13 +98,13 @@ namespace SuperSkill
             //list.Add("A0ED16806EBEDE50D3CBAC54E7D6A7D");
             //list.Add("18BE1865F8E92664DB21FF97D3CBE3D9");
             //list.Add("6B40392783FF1D6A9EC18A7F57D8191");
-            list.Add("B7E7FB5172A5366AC9ACB3E0FBF9455");// 刘小勇
+            //list.Add("B7E7FB5172A5366AC9ACB3E0FBF9455");// 刘小勇
             //list.Add("3F9B849C4839AE7DDAD9E981C69958AD");
             //list.Add("EC18BD233ECA7CE46A877B1212F0BB55");
             //list.Add("7054CAF0A74E350624998189E32D4");
-            string str1 = 验证.取机器码();
-            if (list.IndexOf(str1) < 0)
-                Environment.Exit(0);
+            //string str1 = 验证.取机器码();
+            //if (list.IndexOf(str1) < 0)
+                //Environment.Exit(0);
             全局变量.进程ID = ProCtr.GetProcessID("DNF");
             if (全局变量.进程ID == -1)
             {
@@ -823,6 +823,11 @@ namespace SuperSkill
             //call.源泉call(62129);
             //自动变怪();
             全局变量.源泉开关 = true;
+        }
+
+        private void ListView_Skill_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

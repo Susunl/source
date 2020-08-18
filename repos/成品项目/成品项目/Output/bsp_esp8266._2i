@@ -1,0 +1,6 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O0 -Otime --apcs=interwork --split_sections -I..\..\Libraries\CMSIS -I..\..\User -I..\..\Libraries\FWlib\inc -I..\..\User\usart -I..\..\User\adc -I..\..\User\dht11 -I..\..\User\dwt_delay -I..\..\User\lcd -I..\..\User\Led -I..\..\User\SysTick -I..\..\User\font -I..\..\User\flash -I..\..\User\dht11 -I..\..\User\ESP8266 -I..\..\User\Test -I..\..\User\Common
+-I C:\Users\Susunl\Desktop\3-ADC—多通道（DMA读取）\Project\RVMDK（uv5）\RTE
+-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include
+-I C:\Keil_v5\ARM\CMSIS\Include
+-D__UVISION_VERSION="515" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER
+-o ..\..\output\bsp_esp8266.o --omf_browse ..\..\output\bsp_esp8266.crf --depend ..\..\output\bsp_esp8266.d --feedback "..\..\Output\ADC-多通道-DMA读取.fed" "..\..\User\ESP8266\bsp_esp8266.c"

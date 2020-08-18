@@ -1,0 +1,12 @@
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\bin\Release\MessageServer.exe.config
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\bin\Release\MessageServer.exe
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\bin\Release\MessageServer.pdb
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\bin\Release\Newtonsoft.Json.dll
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\bin\Release\Newtonsoft.Json.xml
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\obj\Release\MessageServer.MessageServer.resources
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\obj\Release\MessageServer.Properties.Resources.resources
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\obj\Release\MessageServer.csproj.GenerateResource.cache
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\obj\Release\MessageServer.csproj.CoreCompileInputs.cache
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\obj\Release\MessageServer.csproj.CopyComplete
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\obj\Release\MessageServer.exe
+C:\Users\Susunl\Desktop\MessageServer\MessageServer\obj\Release\MessageServer.pdb

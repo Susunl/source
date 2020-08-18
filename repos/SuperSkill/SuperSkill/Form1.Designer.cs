@@ -137,6 +137,7 @@
             this.ListView_Skill.TabStop = false;
             this.ListView_Skill.UseCompatibleStateImageBehavior = false;
             this.ListView_Skill.View = System.Windows.Forms.View.Details;
+            this.ListView_Skill.SelectedIndexChanged += new System.EventHandler(this.ListView_Skill_SelectedIndexChanged);
             this.ListView_Skill.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListView_Skill_MouseDoubleClick);
             // 
             // columnHeader1
@@ -164,7 +165,7 @@
             this.ListView_SkillProperties.FullRowSelect = true;
             this.ListView_SkillProperties.GridLines = true;
             this.ListView_SkillProperties.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.ListView_SkillProperties.Location = new System.Drawing.Point(263, 57);
+            this.ListView_SkillProperties.Location = new System.Drawing.Point(290, 65);
             this.ListView_SkillProperties.Name = "ListView_SkillProperties";
             this.ListView_SkillProperties.Size = new System.Drawing.Size(275, 145);
             this.ListView_SkillProperties.TabIndex = 11;
@@ -324,6 +325,7 @@
             // 独家变怪
             // 
             this.独家变怪.AutoSize = true;
+            this.独家变怪.Enabled = false;
             this.独家变怪.Location = new System.Drawing.Point(633, 62);
             this.独家变怪.Name = "独家变怪";
             this.独家变怪.Size = new System.Drawing.Size(90, 16);
